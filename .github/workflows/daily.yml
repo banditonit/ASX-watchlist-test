@@ -2,7 +2,8 @@ name: Daily ASX watchlist briefing
 
 on:
   schedule:
-    # 00:00 UTC = 08:00 AWST, at the ASX open. Perth does not observe daylight
+    # 00:10 UTC = 08:10 AWST, ten minutes after the ASX open, so the opening
+    # batch of announcements is already lodged. Perth does not observe daylight
     # saving, so this holds all year without seasonal adjustment.
     #
     # Weekdays only. The ASX does not trade at the weekend, so Saturday and
@@ -13,7 +14,7 @@ on:
     #
     # GitHub can start a scheduled job a few minutes late at busy times. That is
     # harmless: a later start only widens the capture window slightly.
-    - cron: "0 0 * * 1-5"
+    - cron: "10 0 * * 1-5"
 
   workflow_dispatch:        # lets anyone re-run it by hand from the Actions tab
     inputs:
@@ -72,11 +73,3 @@ jobs:
           git diff --staged --quiet || git commit -m "archive: $(date -u +%Y-%m-%d)"
           git push || true
 
-      - name: Upload the PDF
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: briefing-pdf
-          path: archive/*.pdf
-          if-no-files-found: ignore
-          retention-days: 90
