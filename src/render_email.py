@@ -19,14 +19,22 @@ WHITE = "#FFFFFF"
 FONT = "'Open Sans','Segoe UI',Helvetica,Arial,sans-serif"
 WIDTH = 680
 
+DISCLAIMER_HEADING = "General Advice Only"
+
 DISCLAIMER = (
-    "This document was prepared by Discovery Capital Partners Pty Ltd exclusively "
-    "for the benefit of the recipient. It does not purport to contain all "
-    "information that may be required to evaluate the subject matter, and each "
-    "recipient should conduct its own independent analysis. The information "
-    "reflects prevailing conditions and the views of Discovery as of this date, "
-    "which are subject to change. All dollar figures are in AUD unless otherwise "
-    "indicated."
+    "This email is for informational purposes only. It does not constitute "
+    "investment or financial advice nor an offer to acquire a financial product. "
+    "Before acting on any information contained in this email, each person should "
+    "obtain independent taxation, financial and legal advice relating to this "
+    "information and consider it carefully before making any decision or "
+    "recommendation."
+    "\n\n"
+    "To the extent this email does contain advice, in preparing any such advice, "
+    "we have not taken into account any particular person's objectives, financial "
+    "situation or needs. Furthermore, you may not rely on this message as advice "
+    "unless subsequently confirmed by letter signed by an authorised representative "
+    "of Discovery Capital Partners Pty Ltd. This email and its contents are intended for wholesale "
+    "investors only."
 )
 
 CONTACTS = [
@@ -34,6 +42,19 @@ CONTACTS = [
     ("Kale Pervan", "Director", "kp@discoverycapital.com.au"),
     ("Darcy Frazer", "Associate", "df@discoverycapital.com.au"),
 ]
+
+
+def _link(text, url, colour=NAVY, weight="bold", size=None):
+    """A ticker that links to its announcement, or plain text when it cannot.
+
+    Colour is set explicitly because email clients otherwise impose their own
+    link styling, which in Outlook is a blue that is not in the house palette.
+    """
+    sz = f"font-size:{size}px;" if size else ""
+    if not url:
+        return f'<span style="font-weight:{weight};{sz}">{escape(text)}</span>'
+    return (f'<a href="{escape(url, quote=True)}" style="color:{colour};'
+            f'font-weight:{weight};{sz}text-decoration:underline;">{escape(text)}</a>')
 
 
 def _p(text, size=15, colour=NAVY, weight="normal", top=0, bottom=14):
@@ -75,17 +96,20 @@ def _table(rows):
         for h in ("Ticker", "Company", "Announcement", "Type", "Date")
     )
     body = []
+    widths = ["10%", "23%", "40%", "13%", "14%"]
     for i, r in enumerate(rows):
         bg = GREY if i % 2 == 0 else WHITE
         cells = [
-            r.get("ticker", ""), r.get("company", ""), r.get("announcement", ""),
-            r.get("type", ""), r.get("date", ""),
+            _link(r.get("ticker", ""), r.get("url")),
+            escape(str(r.get("company", ""))),
+            escape(str(r.get("announcement", ""))),
+            escape(str(r.get("type", ""))),
+            escape(str(r.get("date", ""))),
         ]
-        widths = ["10%", "23%", "40%", "13%", "14%"]
         tds = "".join(
             f'<td width="{w}" style="font-family:{FONT};font-size:12px;'
             f'color:{NAVY};padding:9px 10px;background-color:{bg};'
-            f'vertical-align:top;">{escape(str(c))}</td>'
+            f'vertical-align:top;">{c}</td>'
             for c, w in zip(cells, widths)
         )
         body.append(f"<tr>{tds}</tr>")
@@ -101,10 +125,14 @@ def _table(rows):
     """
 
 
-def _card(heading, paragraphs=None, bullets=None):
+def _card(heading, paragraphs=None, bullets=None, url=None, link_text=None):
+    head = escape(heading)
+    if url and link_text:
+        head = head.replace(escape(link_text),
+                            _link(link_text, url, size=15), 1)
     inner = [
         f'<div style="font-family:{FONT};font-size:15px;font-weight:bold;'
-        f'color:{NAVY};margin-bottom:8px;">{escape(heading)}</div>'
+        f'color:{NAVY};margin-bottom:8px;">{head}</div>'
     ]
     for para in paragraphs or []:
         inner.append(_p(para, size=14, bottom=10))
@@ -144,7 +172,7 @@ def _quarterly(q):
     return f"""
     <tr><td style="font-family:{FONT};font-size:13px;line-height:1.5;
                    color:{NAVY};padding:0 0 11px 0;">
-      <span style="font-weight:bold;">{escape(head)}</span>
+      {_link(head, q.get("url"))}
       <span style="color:{MUTED};">&nbsp;&nbsp;</span>{escape(q.get('summary',''))}
     </td></tr>
     """
@@ -171,7 +199,7 @@ def _contacts():
     """
 
 
-def render(briefing, pack, pdf_name=None):
+def render(briefing, pack):
     """Return (html, plain_text) for one briefing."""
     date = pack.get("date_awst", "")
     rows = briefing.get("rows") or []
@@ -184,7 +212,8 @@ def render(briefing, pack, pdf_name=None):
 
     for s in briefing.get("summaries") or []:
         body.append(_card(f"{s.get('ticker','')}: {s.get('heading','')}",
-                          paragraphs=[s.get("body", "")]))
+                          paragraphs=[s.get("body", "")],
+                          url=s.get("url"), link_text=s.get("ticker", "")))
 
     quarterlies = briefing.get("quarterlies") or []
     if quarterlies:
@@ -194,20 +223,20 @@ def render(briefing, pack, pdf_name=None):
 
     if briefing.get("watch_items"):
         body.append(_card("Watch items", bullets=briefing["watch_items"]))
-    if briefing.get("unconfirmed"):
-        body.append(_card("Unconfirmed and unread", bullets=briefing["unconfirmed"]))
-
     body.append(_band("Day in Brief"))
     body.append(f'<tr><td>{_p(briefing.get("day_in_brief",""))}</td></tr>')
 
-    if pdf_name:
-        body.append(f'<tr><td>{_p("The full briefing is attached as " + pdf_name + ".", size=13, colour=MUTED)}</td></tr>')
-
     body.append(_contacts())
+    paras = "".join(
+        f'<div style="font-family:{FONT};font-size:10px;line-height:1.5;'
+        f'color:{MUTED};padding-bottom:7px;">{escape(b)}</div>'
+        for b in DISCLAIMER.split("\n\n")
+    )
     body.append(
-        f'<tr><td style="padding-top:14px;">'
-        f'<div style="font-family:{FONT};font-size:10px;line-height:1.5;color:{MUTED};">'
-        f"{escape(DISCLAIMER)}</div></td></tr>"
+        f'<tr><td style="padding-top:16px;">'
+        f'<div style="font-family:{FONT};font-size:11px;font-weight:bold;'
+        f'color:{NAVY};padding-bottom:6px;">{escape(DISCLAIMER_HEADING)}</div>'
+        f"{paras}</td></tr>"
     )
 
     html = f"""<!DOCTYPE html>
@@ -229,7 +258,7 @@ def render(briefing, pack, pdf_name=None):
      <div style="font-family:{FONT};font-size:14px;color:{WHITE};padding-top:5px;">
        Daily Announcements Briefing, {escape(date)}</div>
      <div style="font-family:{FONT};font-size:10px;font-weight:bold;color:{ICE};
-                 letter-spacing:1px;padding-top:10px;">INTERNAL USE ONLY</div>
+                 letter-spacing:1px;padding-top:10px;">NOT RESEARCH</div>
    </td></tr>
 
    <tr><td style="padding:22px 18px 26px 18px;">
@@ -250,7 +279,7 @@ def _plain(briefing, pack):
     out = [
         "ASX WATCHLIST CATCH UP",
         f"Daily Announcements Briefing, {pack.get('date_awst','')}",
-        "INTERNAL USE ONLY",
+        "NOT RESEARCH",
         "",
         "CONFIRMED ANNOUNCEMENTS",
         briefing.get("lead", ""),
@@ -269,7 +298,6 @@ def _plain(briefing, pack):
                     f"    {q.get('summary','')}", ""]
     if briefing.get("watch_items"):
         out += ["WATCH ITEMS"] + [f"  - {w}" for w in briefing["watch_items"]] + [""]
-    if briefing.get("unconfirmed"):
-        out += ["UNCONFIRMED AND UNREAD"] + [f"  - {u}" for u in briefing["unconfirmed"]] + [""]
-    out += ["DAY IN BRIEF", briefing.get("day_in_brief", ""), "", DISCLAIMER]
+    out += ["DAY IN BRIEF", briefing.get("day_in_brief", ""), "",
+            DISCLAIMER_HEADING.upper(), DISCLAIMER]
     return "\n".join(out)
