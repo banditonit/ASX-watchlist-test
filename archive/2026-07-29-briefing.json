@@ -1,0 +1,108 @@
+{
+  "lead": "Fourteen announcements were logged across the watchlist in the 24 hours to 29 July 2026, and the most material is Toubani Resources' binding US$208 million (A$302 million) funding package for the Kobada Gold Project in Mali, comprising a US$160 million gold stream with Eagle Eye Asset Holdings and a fully underwritten A$70 million equity raising, disclosed inside its June quarterly. Tolu Minerals also reported further high-grade gold assays at Tolukuma, including 3.9m at 42.35g/t Au from 84.1m, Saturn Metals closed a strongly supported A$100 million two-tranche placement for Apollo Hill, Asara Resources reported broad new gold intercepts south of the Massan Centre at Kada including 47m at 8.0g/t Au from 10m, and Pacgold entered a trading halt pending a capital raising announcement.",
+  "rows": [
+    {
+      "ticker": "TRE",
+      "company": "Toubani Resources",
+      "announcement": "US$208m funding package, Kobada gold stream + raise",
+      "type": "M&A/Financing",
+      "date": "29 July 2026"
+    },
+    {
+      "ticker": "TOK",
+      "company": "Tolu Minerals",
+      "announcement": "New high-grade assays at Tolukuma, up to 42.35g/t Au",
+      "type": "Drilling",
+      "date": "29 July 2026"
+    },
+    {
+      "ticker": "STN",
+      "company": "Saturn Metals",
+      "announcement": "$100m placement completed at $0.40/share for Apollo Hill",
+      "type": "Capital raising",
+      "date": "29 July 2026"
+    },
+    {
+      "ticker": "AS1",
+      "company": "Asara Resources",
+      "announcement": "47m @ 8.0g/t Au incl 8m @ 42.2g/t Au at Kada South",
+      "type": "Drilling",
+      "date": "29 July 2026"
+    },
+    {
+      "ticker": "PGO",
+      "company": "Pacgold",
+      "announcement": "Halted pending capital raising announcement",
+      "type": "Halt",
+      "date": "29 July 2026"
+    },
+    {
+      "ticker": "SKM",
+      "company": "Skylark Minerals",
+      "announcement": "Vavoua acquired for $150k; M'Basso 62m @ 1.41g/t Au",
+      "type": "Quarterly/Acquisition",
+      "date": "29 July 2026"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "TRE",
+      "heading": "Toubani secures US$208 million funding package for Kobada construction",
+      "body": "Disclosed inside Toubani Resources' June quarterly, the Company executed binding documentation for a US$160 million (A$232 million) gold stream with Eagle Eye Asset Holdings Pte, with first drawdown expected in Q3 2026, alongside a fully underwritten US$48 million (A$70 million before costs) Strategic Equity Financing via a 1-for-3.27 accelerated non-renounceable entitlement offer at A$0.30 per share. The institutional component raised A$52 million from approximately 172 million new shares in mid-July; the retail component, targeting a further A$18 million, opened 20 July 2026 and closes 3 August 2026. Toubani is also progressing a term sheet for a Senior Secured Facility of up to US$40 million (A$58 million) with AFG Bank, expected available for drawdown in Q3 2026. Cash at 30 June 2026 was A$73.5 million, with pro forma cash post-raise of A$144 million (before offer costs). Separately, Toubani acquired a 19.9% stake in CSE-listed Avanti Gold Corp via a share swap, issuing 72.9 million Toubani shares for 44.5 million Avanti shares; Avanti's Misisi Gold Project in the DRC hosts an NI43-101 Inferred estimate of 40.8Mt at 2.37g/t for 3.1Moz gold (not JORC-compliant)."
+    },
+    {
+      "ticker": "TOK",
+      "heading": "Tolu Minerals extends high-grade gold intersections at Tolukuma",
+      "body": "New assay results for 17 diamond drill holes across the Tolukuma Gold Mine area returned further high-grade gold, led by 3.9m at 42.35g/t Au from 84.1m (TUD-26-013), 2.0m at 32.01g/t Au from 20.0m and 1.0m at 37.54g/t Au from 149.0m (TSD-26-030), 1.0m at 21.09g/t Au from 14.0m (TMLSDD0012), 1.2m at 12.80g/t Au from 126.0m (TSD-26-034), and 3.0m at 4.67g/t Au from 123.6m (TUD-26-021). The results feed into an updated Mineral Resource Estimate remaining on track for release in late August 2026. The Company's revised geological model now recognises 44 mineralised veins and splays, up from 15 previously, a roughly 15% increase in interpreted mineralised vein volume. A total of 143 drill holes for 22,975 metres had been completed to 30 June 2026 with seven diamond rigs operating and approximately 75,000 metres planned, ahead of a targeted first production by Q1 2027."
+    },
+    {
+      "ticker": "STN",
+      "heading": "Saturn Metals completes $100 million placement for Apollo Hill",
+      "body": "Saturn Metals received firm commitments for a $100 million two-tranche placement at $0.40 per share, an 11.1% discount to the last close of $0.450. Tranche One (63.78 million shares, approximately $25 million) is expected to settle under existing placement capacity on 6 August 2026; Tranche Two (186.2 million shares, approximately $75 million) requires shareholder approval at a General Meeting around 17 September 2026. New cornerstone investor Golden Crane Holdings committed approximately $48.6 million for 121.5 million shares, expected to leave it holding approximately 15% of the Company subject to FIRB approval. The Company's four largest shareholders invested a combined $42.5 million. An accompanying non-underwritten Share Purchase Plan targets a further $5 million at the same price, closing 21 August 2026. Funds are earmarked for front end engineering and design ($12.0 million), construction long lead items ($39.4 million), construction readiness and execution ($16.2 million), exploration drilling ($6.0 million) and permitting ($6.0 million), among other items, following a 26% increase in Apollo Hill's resource to 2.83Moz (174Mt at 0.51g/t Au), including 2.19Moz Measured and Indicated."
+    },
+    {
+      "ticker": "AS1",
+      "heading": "Asara Resources reports broad and high-grade gold hits south of Massan",
+      "body": "First-pass drilling on previously under-drilled southern fence lines at the Massan Deposit (Kada Gold Project, Guinea) returned 47m at 8.0g/t Au from 10m depth including 8m at 42.2g/t Au (MSRC26-167), 66m at 0.7g/t Au from 84m including 3m at 3.8g/t Au (MSRC26-154), and 19m at 2.1g/t Au from 105m including 6m at 3.7g/t Au (MSRC26-151). Drill hole MSRC26-167 returned two consecutive 1m intervals grading more than 130g/t Au, complementing a prior hole 500m to the south that returned an interval exceeding 150g/t Au over 1m. A total of 57 drill holes for 7,146m of RC, diamond and air core drilling were completed and reported, with results to be considered for an updated Mineral Resource Estimate for Kada targeted for August 2026. Asara holds 51% of Kada, which carries an existing Indicated and Inferred Mineral Resource of 30.3Mt at 1.0g/t Au for 923koz."
+    },
+    {
+      "ticker": "PGO",
+      "heading": "Pacgold halted pending capital raising announcement",
+      "body": "Pacgold entered a trading halt at its own request pending release of an announcement regarding a capital raising. Unless ASX decides otherwise, the halt remains in place until the earlier of the commencement of normal trading on Friday, 31 July 2026, or release of the relevant announcement. No further detail on raise size or structure was provided in the halt notice."
+    }
+  ],
+  "quarterlies": [
+    {
+      "ticker": "SMI",
+      "company": "Santana Minerals",
+      "headline": "June Quarter Activities and Cashflow Report",
+      "summary": "Santana advanced Bendigo-Ophir through the Fast-track Approvals process (statutory decision date 16 December 2026), completed its A$130m two-tranche placement plus a A$4.1m SPP, closed the quarter with A$188m cash, and returned RAS/CIT step-out intercepts of 12.0m @ 1.5g/t Au from 815.0m (MDD494) and 13.9m @ 1.1g/t Au from 181.1m (MDD495)",
+      "market_cap": 433734648,
+      "cap_label": "$434m"
+    },
+    {
+      "ticker": "SKM",
+      "company": "Skylark Minerals",
+      "headline": "June Quarter Activities Report",
+      "summary": "Skylark completed Phase 1 RC drilling at M'Basso (Zaranou, Côte d'Ivoire), 38 holes for 6,667m, extending mineralised strike to ~750m with a best intercept of 62m @ 1.41g/t Au from 114m incl 23m @ 2.41g/t Au from 153m, exercised its option to acquire 100% of the Vavoua Project for A$150k, and held cash of A$4.85m (from $7.53m QoQ)",
+      "market_cap": 35307060,
+      "cap_label": "$35m"
+    }
+  ],
+  "watch_items": [
+    "Pacgold (PGO) trading halt pending capital raising announcement: resumes earlier of normal trading Friday 31 July 2026 or release of the announcement.",
+    "Santana Minerals (SMI): BOGP Fast-track Approvals decision expected by 16 December 2026 statutory date; proposed consent conditions due 28 August 2026.",
+    "Tolu Minerals (TOK): updated Mineral Resource Estimate for Tolukuma on track for late August 2026.",
+    "Toubani Resources (TRE): retail entitlement offer closes 3 August 2026; gold stream first drawdown and Senior Secured Facility drawdown both expected Q3 2026.",
+    "Saturn Metals (STN): Tranche Two placement shares subject to shareholder approval at General Meeting around 17 September 2026 and FIRB approval for Golden Crane's holding.",
+    "Asara Resources (AS1): updated Kada MRE targeted for August 2026."
+  ],
+  "unconfirmed": [
+    "Tolu Minerals (TOK) JORC Table 1 section 2 (Geology and subsequent criteria) was cut off mid-sentence in the source text ('Veinin...'); the remainder of the JORC compliance disclosure could not be read and should be checked manually against the full lodged document.",
+    "Black Cat Syndicate (BC8) Appendix 2A for the exercise of 53,000 options: only a routine filing extract was provided, not reviewed in full detail.",
+    "Bellevue Gold (BGL) Appendix 3G notification of 716,963 unquoted securities issued: routine filing, not reviewed in full detail.",
+    "Solstice Minerals (SLS) Appendix 3H notification of cessation of 212,959 performance rights: routine filing, not reviewed in full detail."
+  ],
+  "day_in_brief": "The most material development in the window is Toubani Resources' binding US$208 million (A$302 million) funding package for Kobada, combining a US$160 million gold stream with Eagle Eye Asset Holdings (first drawdown Q3 2026) and a fully underwritten A$70 million equity raising, revealed inside its June quarterly alongside a 19.9% stake acquisition in Avanti Gold Corp. Elsewhere, Tolu Minerals extended its high-grade Tolukuma gold intersections (3.9m at 42.35g/t Au from 84.1m) ahead of a late-August MRE, Saturn Metals closed a A$100 million placement for Apollo Hill, and Asara Resources delivered broad and bonanza-grade hits south of Massan at Kada, including two consecutive 1m intervals over 130g/t Au. Pacgold remains in a trading halt pending a capital raising announcement due by 31 July 2026. Santana Minerals and Skylark Minerals both reported routine but substantive quarterlies with cash positions and drilling progress noted separately.",
+  "subtitle": "Toubani's US$208 million Kobada funding package leads a day dominated by financing and drilling news, with Pacgold halted pending a capital raise."
+}
