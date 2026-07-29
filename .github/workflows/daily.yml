@@ -2,11 +2,25 @@ name: Daily ASX watchlist briefing
 
 on:
   schedule:
-    # 00:00 UTC = 08:00 AWST, at the ASX open.
+    # 00:00 UTC = 08:00 AWST, at the ASX open. Perth does not observe daylight
+    # saving, so this holds all year without seasonal adjustment.
+    #
+    # Weekdays only. The ASX does not trade at the weekend, so Saturday and
+    # Sunday runs would spend credit to report nothing. Monday compensates by
+    # looking back 72 hours instead of 24, which covers Friday's session and
+    # anything lodged over the weekend. That widening happens in the run step
+    # below, not here.
+    #
     # GitHub can start a scheduled job a few minutes late at busy times. That is
-    # harmless here: a later start only widens the capture window slightly.
-    - cron: "0 0 * * *"
+    # harmless: a later start only widens the capture window slightly.
+    - cron: "0 0 * * 1-5"
+
   workflow_dispatch:        # lets anyone re-run it by hand from the Actions tab
+    inputs:
+      hours:
+        description: "How many hours back to look"
+        required: false
+        default: "24"
 
 permissions:
   contents: write           # so the run can commit the day's archive
@@ -25,6 +39,20 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - name: Choose the lookback window
+        id: window
+        run: |
+          # A manual run uses whatever was typed in the box. A scheduled run
+          # uses 24 hours, except on Monday, which reaches back 72 to pick up
+          # Friday's session and the weekend.
+          HOURS="${{ github.event.inputs.hours }}"
+          if [ -z "$HOURS" ]; then
+            HOURS=24
+            [ "$(date -u +%u)" = "1" ] && HOURS=72
+          fi
+          echo "hours=$HOURS" >> "$GITHUB_OUTPUT"
+          echo "Looking back $HOURS hours."
+
       - name: Build and send the briefing
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -33,7 +61,7 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SMTP_FROM: ${{ secrets.SMTP_FROM }}
-        run: python run.py
+        run: python run.py --hours ${{ steps.window.outputs.hours }}
 
       - name: Keep the day's evidence
         if: always()
