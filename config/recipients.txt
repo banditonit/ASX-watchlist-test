@@ -18,7 +18,7 @@
 #
 # ============================================================
 
-Chris <christo@karag@gmail.com>
+Chris <christo.karag@gmail.com>
 
 # ---- Discovery team ----------------------------------------
 # Adam Miethke <am@discoverycapital.com.au>
