@@ -69,28 +69,25 @@ def main():
 
     # -------------------------------------------------------------- summarise
     from summarise import summarise
-    from fmt import enrich
+    from fmt import enrich, add_links
 
     briefing = summarise(pack, ranked)
 
     # Market cap is joined on from collected data rather than written by the
-    # model, then the quarterlies are ordered largest first.
+    # model, then the quarterlies are ordered largest first. Source links are
+    # resolved from document keys and dropped if they cannot be verified.
     briefing["quarterlies"] = enrich(briefing.get("quarterlies") or [],
                                      pack["announcements"])
+    add_links(briefing.get("rows") or [], pack["announcements"])
+    add_links(briefing.get("summaries") or [], pack["announcements"])
 
     with open(os.path.join(ARCHIVE, f"{stamp}-briefing.json"), "w", encoding="utf-8") as fh:
         json.dump(briefing, fh, indent=2, ensure_ascii=False)
 
     # ------------------------------------------------------------------ build
-    from build_pdf import build
     from render_email import render
 
-    dd = datetime.now().strftime("%d%b%y").lower()
-    pdf_path = os.path.join(ARCHIVE, f"watchlist_catchup_{dd}.pdf")
-    build(briefing, pack, pdf_path)
-    print(f"pdf: {pdf_path}")
-
-    html, plain = render(briefing, pack, pdf_name=os.path.basename(pdf_path))
+    html, plain = render(briefing, pack)
     with open(os.path.join(ARCHIVE, f"{stamp}-email.html"), "w", encoding="utf-8") as fh:
         fh.write(html)
 
@@ -105,7 +102,6 @@ def main():
 
     from send import send
     send(html, plain, subject, recipients,
-         attachments=[pdf_path],
          logo=os.path.join(ROOT, "dcp", "assets", "logo-dcp-white.png"))
     print(f"sent to {len(recipients)} recipients: {subject}")
     return 0
