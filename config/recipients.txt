@@ -1,0 +1,27 @@
+# ============================================================
+#  WHO GETS THE DAILY BRIEFING
+# ============================================================
+#
+#  To ADD someone:     put their email on its own line.
+#  To REMOVE someone:  delete their line.
+#  To PAUSE someone:   put a # at the start of their line
+#                      (useful when someone is on leave).
+#
+#  A name is optional. Both of these work:
+#
+#      darcy@discoverycapital.com.au
+#      Darcy Frazer <darcy@discoverycapital.com.au>
+#
+#  Anything after a # is ignored. Blank lines are ignored.
+#  Save the file and the next run picks up the change.
+#  You do not need to touch any other file.
+#
+# ============================================================
+
+Chris <dryagebiltong@gmail.com>
+
+# ---- Discovery team ----------------------------------------
+# Adam Miethke <am@discoverycapital.com.au>
+# Kale Pervan <kp@discoverycapital.com.au>
+# Darcy Frazer <df@discoverycapital.com.au>
+intern@discoverycapital.com.au
