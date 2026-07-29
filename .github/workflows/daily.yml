@@ -1,0 +1,54 @@
+name: Daily ASX watchlist briefing
+
+on:
+  schedule:
+    # 00:00 UTC = 08:00 AWST, at the ASX open.
+    # GitHub can start a scheduled job a few minutes late at busy times. That is
+    # harmless here: a later start only widens the capture window slightly.
+    - cron: "0 0 * * *"
+  workflow_dispatch:        # lets anyone re-run it by hand from the Actions tab
+
+permissions:
+  contents: write           # so the run can commit the day's archive
+
+jobs:
+  briefing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Build and send the briefing
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+        run: python run.py
+
+      - name: Keep the day's evidence
+        if: always()
+        run: |
+          git config user.name "watchlist-bot"
+          git config user.email "actions@github.com"
+          git add archive/*.json archive/*.html 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "archive: $(date -u +%Y-%m-%d)"
+          git push || true
+
+      - name: Upload the PDF
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: briefing-pdf
+          path: archive/*.pdf
+          if-no-files-found: ignore
+          retention-days: 90
