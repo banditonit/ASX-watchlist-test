@@ -1,11 +1,36 @@
 {
-  "window_start_awst": "2026-07-28T16:15:12.390630+08:00",
-  "window_end_awst": "2026-07-29T16:15:12.390630+08:00",
-  "window_start_utc": "2026-07-28T08:15:12.390630+00:00",
-  "window_end_utc": "2026-07-29T08:15:12.390630+00:00",
+  "window_start_awst": "2026-07-28T16:21:47.050883+08:00",
+  "window_end_awst": "2026-07-29T16:21:47.050883+08:00",
+  "window_start_utc": "2026-07-28T08:21:47.050883+00:00",
+  "window_end_utc": "2026-07-29T08:21:47.050883+00:00",
   "date_awst": "29 July 2026",
   "tickers_checked": 91,
   "announcements": [
+    {
+      "ticker": "KZR",
+      "company": "KALAMAZOO RESOURCES LIMITED",
+      "sector": "Materials",
+      "headline": "Becoming a substantial holder",
+      "types": [
+        "Becoming a substantial holder"
+      ],
+      "price_sensitive": false,
+      "document_key": "2924-03115534-6A1336083",
+      "size": "1640KB",
+      "lodged_utc": "2026-07-29T08:17:21+00:00",
+      "lodged_awst": "2026-07-29T16:17:21+08:00",
+      "date_awst": "29 July 2026",
+      "time_awst": "16:17",
+      "text": "ylno\nesu\nlanosrep\nroF\nType text here\n07 2026\n28\nylno\nesu\nlanosrep\nroF",
+      "text_status": "ok",
+      "pages": 2,
+      "market_cap": 47471155,
+      "price_last": 0.12,
+      "price_change_pct": -4.0000000000000036,
+      "volume": 563294,
+      "status_code": "",
+      "long_name": "KALAMAZOO RESOURCES LIMITED"
+    },
     {
       "ticker": "BGL",
       "company": "BELLEVUE GOLD LIMITED",
