@@ -40,6 +40,35 @@ def by_size(records):
     )
 
 
+DOC_URL = "https://asx.api.markitdigital.com/asx-research/1.0/file/{key}"
+
+
+def link_for(entry, announcements):
+    """URL of the announcement an entry refers to, or '' if it cannot be proved.
+
+    The model is asked to echo back the document key it was given. That is
+    trusted only after checking it against the keys actually collected, so a
+    garbled key becomes no link rather than a broken one. Failing that, a
+    ticker with exactly one announcement in the window is unambiguous, so it
+    can be matched on ticker alone.
+    """
+    keys = {a.get("document_key") for a in announcements}
+    claimed = (entry.get("document_key") or "").strip()
+    if claimed and claimed in keys:
+        return DOC_URL.format(key=claimed)
+
+    same = [a for a in announcements if a.get("ticker") == entry.get("ticker")]
+    if len(same) == 1 and same[0].get("document_key"):
+        return DOC_URL.format(key=same[0]["document_key"])
+    return ""
+
+
+def add_links(entries, announcements):
+    for e in entries:
+        e["url"] = link_for(e, announcements)
+    return entries
+
+
 def enrich(entries, announcements):
     """Attach market cap to model output, then sort by size.
 
@@ -53,4 +82,5 @@ def enrich(entries, announcements):
         cap = caps.get(e.get("ticker"))
         e["market_cap"] = cap
         e["cap_label"] = market_cap(cap)
+    add_links(entries, announcements)
     return by_size(entries)
