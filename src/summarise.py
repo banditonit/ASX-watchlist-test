@@ -42,8 +42,47 @@ Rules on substance, which matter more than style:
   date if the notice states one.
 - For exploration results, quote the actual intercepts, the best ones first.
 - For a transaction, give consideration, structure and any premium stated.
-- If an announcement could not be read, say so plainly and name it. Never let a
-  document that exists go unmentioned because it could not be parsed.
+- Copy each item's document key back exactly as it was given to you. It is used
+  to link the briefing to the source, and a key that does not match simply
+  becomes no link.
+- Report only what you can confirm from the source text in front of you. If an
+  item cannot be confirmed, leave it out rather than hedging about it in the
+  briefing.
+
+Summaries are short. Two to four sentences, 40 to 70 words, and fewer if the
+item is simple. Lead with the fact that moves the name, then the figures that
+size it, then the next catalyst if there is one. Stop there.
+
+Cut, every time: adviser, broker, lead manager and underwriter credits; the
+settlement date of each tranche; references to Listing Rule 7.1 and 7.1A
+capacity; FIRB and other conditions precedent unless the deal turns on them;
+every drill hole beyond the best two or three; metallurgical recoveries unless
+recovery is the story.
+
+A worked example. This is too long:
+
+  Saturn Metals completed a two-tranche placement raising $100 million (before
+  costs) at $0.40 per share, an 11.1% discount to last close of $0.450. Tranche
+  One (63.8 million shares, approximately $25 million) proceeds under existing
+  7.1 and 7.1A capacity settles 6 August 2026; Tranche Two (186.2 million
+  shares, approximately $75 million) requires shareholder approval at a general
+  meeting on 17 September 2026. New cornerstone investor Golden Crane Holdings
+  has committed approximately $48.6 million for 121.5 million shares, expected
+  to hold approximately 15% of the company post-raise... Petra Capital acted as
+  sole lead manager, bookrunner and underwriter.
+
+This says the same thing:
+
+  Saturn Metals raised $100m at $0.40, an 11.1% discount, to fund front end
+  engineering and construction readiness at Apollo Hill. Golden Crane Holdings
+  comes in as a cornerstone at roughly $48.6m for about 15% of the company. The
+  $75m second tranche needs shareholder approval on 17 September. Follows a 26%
+  resource upgrade to 2.83Moz.
+
+And a short item stays short:
+
+  Pacgold is halted pending an announcement regarding a capital raising, until
+  the earlier of normal trading on Friday 31 July 2026 or the announcement.
 
 Quarterlies are handled separately and follow the desk's own one-line note
 format. Each goes in the quarterlies array as a SINGLE dense line carrying the
@@ -97,8 +136,15 @@ SCHEMA = {
                         },
                         "type": {"type": "string", "description": "Short label, e.g. Halt, Drilling, M&A."},
                         "date": {"type": "string", "description": "AWST date as '23 July 2026'."},
+                        "document_key": {
+                            "type": "string",
+                            "description": ("The document key of the announcement this "
+                                            "refers to, copied exactly from its block "
+                                            "header. Used to link to the source."),
+                        },
                     },
-                    "required": ["ticker", "company", "announcement", "type", "date"],
+                    "required": ["ticker", "company", "announcement", "type", "date",
+                                 "document_key"],
                 },
             },
             "summaries": {
@@ -109,9 +155,25 @@ SCHEMA = {
                     "properties": {
                         "ticker": {"type": "string"},
                         "heading": {"type": "string"},
-                        "body": {"type": "string"},
+                        "body": {
+                            "type": "string",
+                            "description": (
+                                "Two to four sentences, 40 to 70 words. Lead with the single "
+                                "fact that moves the name, then the figures that size it. A "
+                                "simple item like a trading halt needs one or two sentences, "
+                                "not four. Leave out adviser and broker credits, settlement "
+                                "dates, listing-rule capacity references, and hole-by-hole "
+                                "listings beyond the best two or three."
+                            ),
+                        },
+                        "document_key": {
+                            "type": "string",
+                            "description": ("The document key of the announcement this "
+                                            "refers to, copied exactly from its block "
+                                            "header. Used to link to the source."),
+                        },
                     },
-                    "required": ["ticker", "heading", "body"],
+                    "required": ["ticker", "heading", "body", "document_key"],
                 },
             },
             "quarterlies": {
@@ -139,19 +201,20 @@ SCHEMA = {
                                 "from the source text."
                             ),
                         },
+                        "document_key": {
+                            "type": "string",
+                            "description": ("The document key of the announcement this "
+                                            "refers to, copied exactly from its block "
+                                            "header. Used to link to the source."),
+                        },
                     },
-                    "required": ["ticker", "company", "headline", "summary"],
+                    "required": ["ticker", "company", "headline", "summary",
+                                 "document_key"],
                 },
             },
             "watch_items": {
                 "type": "array",
                 "description": "Live situations with their stated reason and expected resolution timing.",
-                "items": {"type": "string"},
-            },
-            "unconfirmed": {
-                "type": "array",
-                "description": ("Anything that could not be read or confirmed, named explicitly, "
-                                "plus what should be checked manually."),
                 "items": {"type": "string"},
             },
             "day_in_brief": {
@@ -165,7 +228,7 @@ SCHEMA = {
             },
         },
         "required": ["lead", "rows", "summaries", "quarterlies", "watch_items",
-                     "unconfirmed", "day_in_brief", "subtitle"],
+                     "day_in_brief", "subtitle"],
     },
 }
 
