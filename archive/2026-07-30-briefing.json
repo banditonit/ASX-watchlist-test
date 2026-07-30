@@ -1,0 +1,242 @@
+{
+  "lead": "Twenty-two announcements landed across the watchlist in this window, ten of them quarterly reports and the balance dominated by resource and study updates rather than transactional news. The most material item is Horizon Gold's Gum Creek Open Pit DFS confirmation embedded in its quarterly, delivering a maiden Ore Reserve of 728koz gold, average production of 98kozpa over the first five years and pre-tax NPV of A$1,307 million at a 53.1% IRR, alongside fresh high-grade diamond and RC intercepts at Omega, Kingfisher, Swift and Eagle. Legacy Minerals also lifted its Mt Carrington Mineral Resource to 1.6Moz gold-equivalent, a 151% tonnage increase since acquisition, while Minerals 260 completed a PFS at Bullabulling confirming a post-tax NPV of A$2.3 billion and lifted the resource to 6.2Moz.",
+  "rows": [
+    {
+      "ticker": "HRN",
+      "company": "Horizon Gold Limited",
+      "announcement": "Gum Creek DFS: 728koz reserve, A$1.3B NPV",
+      "type": "Study/Quarterly",
+      "date": "30 July 2026",
+      "document_key": "2924-03115799-6A1336237",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115799-6A1336237"
+    },
+    {
+      "ticker": "LGM",
+      "company": "Legacy Minerals Holdings Limited",
+      "announcement": "Mt Carrington MRE grows to 1.6Moz AuEq",
+      "type": "Resource Update",
+      "date": "30 July 2026",
+      "document_key": "2924-03115669-2A1686573",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115669-2A1686573"
+    },
+    {
+      "ticker": "MI6",
+      "company": "Minerals 260 Limited",
+      "announcement": "Bullabulling PFS: A$2.3B NPV, 6.2Moz MRE",
+      "type": "Study/Quarterly",
+      "date": "30 July 2026",
+      "document_key": "2924-03115670-6A1336181",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115670-6A1336181"
+    },
+    {
+      "ticker": "TCG",
+      "company": "Turaco Gold Limited",
+      "announcement": "Afema PFS: 1.91Moz reserve, US$2.1B NPV",
+      "type": "Study/Quarterly",
+      "date": "30 July 2026",
+      "document_key": "2924-03115753-6A1336216",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115753-6A1336216"
+    },
+    {
+      "ticker": "BTR",
+      "company": "Brightstar Resources Limited",
+      "announcement": "Goldfields FID approved, construction underway",
+      "type": "Development/Quarterly",
+      "date": "30 July 2026",
+      "document_key": "2924-03115837-6A1336260",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115837-6A1336260"
+    },
+    {
+      "ticker": "BGD",
+      "company": "Barton Gold Holdings Limited",
+      "announcement": "Tunkillia infill assays ahead of PFS",
+      "type": "Drilling",
+      "date": "30 July 2026",
+      "document_key": "2924-03115733-6A1336207",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115733-6A1336207"
+    },
+    {
+      "ticker": "LAC",
+      "company": "Lac Gold Limited",
+      "announcement": "High-grade Rouyn assays, Golden Patricia acquired",
+      "type": "Drilling/M&A",
+      "date": "30 July 2026",
+      "document_key": "2924-03115840-6A1336261",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115840-6A1336261"
+    },
+    {
+      "ticker": "MBK",
+      "company": "Metal Bank Limited",
+      "announcement": "Kingsley Mining Lease application lodged",
+      "type": "Permitting",
+      "date": "30 July 2026",
+      "document_key": "2924-03115817-3A697876",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115817-3A697884"
+    },
+    {
+      "ticker": "PDI",
+      "company": "Predictive Discovery Limited",
+      "announcement": "Guinea gold refining decree, Kiniero ramp-up",
+      "type": "Quarterly",
+      "date": "30 July 2026",
+      "document_key": "2924-03115675-6A1336171",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115675-6A1336171"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "HRN",
+      "heading": "Horizon Gold: Gum Creek DFS delivers maiden 728koz reserve and A$1.3B NPV",
+      "body": "Horizon's June quarterly confirms the Gum Creek Open Pit DFS, delivering a maiden Ore Reserve of 18.2Mt at 1.24g/t Au for 728koz, average production of 98kozpa over the first five years and 880koz over a 10-year mine life. Pre-production capital is A$350 million, with pre-tax NPV of A$1,307 million, 53.1% IRR and AISC of A$2,995/oz at a A$5,500/oz gold price. Fresh diamond and RC results at Omega, Kingfisher, Swift and Eagle included 14m at 2.87g/t Au from 337m (Omega) and 6m at 5.13g/t Au from 95m (Swift, SFRC002). The company completed a $30 million raise and held $24.0 million cash at quarter end, targeting FID in Q2 2027.",
+      "document_key": "2924-03115799-6A1336237",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115799-6A1336237"
+    },
+    {
+      "ticker": "LGM",
+      "heading": "Legacy Minerals: Mt Carrington resource grows 151% since acquisition to 1.6Moz gold-equivalent",
+      "body": "Legacy Minerals lifted the Mt Carrington open-pit Mineral Resource to 47.9Mt containing 1.6Moz gold-equivalent, including 714koz gold and 35Moz silver, a 39% tonnage increase and 69% jump in Indicated Resources since the 2025 estimate. Growth was driven by new copper and silver domains, updated metal prices and additional drilling. A high-grade component of 493koz AuEq at 3.1g/t AuEq sits within the estimate, and all deposits remain open along strike and at depth, feeding into an upcoming optimised Scoping Study.",
+      "document_key": "2924-03115669-2A1686573",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115669-2A1686573"
+    },
+    {
+      "ticker": "MI6",
+      "heading": "Minerals 260: Bullabulling PFS confirms A$2.3B NPV and resource lifted to 6.2Moz",
+      "body": "Minerals 260 completed a Stage 1 PFS at Bullabulling confirming a post-tax NPV of A$2.3 billion, 43% IRR and average annual production of about 150,000oz over the first ten years from a maiden Ore Reserve of 90Mt at 0.86g/t Au for 2.5Moz. The Mineral Resource was separately increased 38% to 190Mt at 1.0g/t Au for 6.2Moz. Early construction included a $59.1 million village contract with ATCO, and the company held approximately $211 million cash and deposits at quarter end, targeting FID in Q1 2027.",
+      "document_key": "2924-03115670-6A1336181",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115670-6A1336181"
+    },
+    {
+      "ticker": "TCG",
+      "heading": "Turaco Gold: Afema PFS outlines 200,000ozpa producer with 1.91Moz reserve",
+      "body": "Turaco's PFS for the Afema Project in Côte d'Ivoire confirmed a maiden Probable Ore Reserve of 55.1Mt at 1.1g/t for 1.91Moz, supporting average production of approximately 200,000oz per annum over a 10-year-plus mine life. Post-tax NPV5% is US$2.1 billion at a 79% IRR and 13-month payback, with initial development capital of US$410 million and AISC of US$1,508/oz. The Mineral Resource stands at 4.65Moz following infill drilling, and the company held approximately $51 million cash, targeting DFS completion within 12 months.",
+      "document_key": "2924-03115753-6A1336216",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115753-6A1336216"
+    },
+    {
+      "ticker": "BTR",
+      "heading": "Brightstar Resources: Goldfields FID approved, construction ramping toward mid-2027 production",
+      "body": "Brightstar's Board approved Final Investment Decision for the 100%-owned Goldfields Project, with all key regulatory approvals received and an EPC contract executed with GRES for the new 1.5Mtpa Laverton Processing Plant. The project is targeted to commence gold production in June 2027 at approximately 75kozpa over an initial six-year mine life. The company ended the quarter with $122 million cash and $161 million undrawn bond proceeds for total liquidity of $283 million, after closing out its Ocean Partners working capital facility.",
+      "document_key": "2924-03115837-6A1336260",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115837-6A1336260"
+    },
+    {
+      "ticker": "BGD",
+      "heading": "Barton Gold: Tunkillia infill assays support PFS ahead of Q1 CY27 completion",
+      "body": "Barton reported further Phase 2 RC infill assays at the Tunkillia Gold Project, including 29m at 1.24g/t Au from 48m (TKB0618) and 20m at 1.24g/t Au from 205m (TKB0621), infilling the Area 223 North and southern Area 223 pit zones. The Tunkillia PFS, led by GR Engineering, is targeting Q1 CY27 completion, with the underlying Optimised Scoping Study having outlined an NPV7.5% of approximately A$1.4 billion and 73.2% IRR. Further assays remain pending from the approximately 40,000m Phase 2 program.",
+      "document_key": "2924-03115733-6A1336207",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115733-6A1336207"
+    },
+    {
+      "ticker": "LAC",
+      "heading": "Lac Gold: High-grade Rouyn intercepts point to resource growth, Golden Patricia mine acquired",
+      "body": "Lac Gold reported strong drilling results at the Astoria deposit within its Rouyn Gold Project in Québec, including 5.65m at 141.29g/t Au from 148.15m (AS-26-793, including 0.50m at 1,580g/t Au) and 97.50m at 1.04g/t Au from 554.65m (AS-26-787). The results support a 1.66Moz gold Mineral Resource and an evolving interpretation of higher-grade shoots within broad envelopes. The company also completed the acquisition of the historic Golden Patricia Gold Mine from Barrick, and held $13.34 million cash at quarter end.",
+      "document_key": "2924-03115840-6A1336261",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115840-6A1336261"
+    },
+    {
+      "ticker": "MBK",
+      "heading": "Metal Bank lodges Mining Lease application for Kingsley gold deposit",
+      "body": "Metal Bank's subsidiary WesternX applied for a Mining Lease over the Kingsley deposit at the Livingstone Gold Project in WA, which hosts an Inferred Mineral Resource of 1.68Mt at 1.35g/t Au for 73,000oz. Previous preliminary metallurgical test work returned average recoveries of 93.8%. The application follows recent ML lodgements at the Homestead and Winja deposits, part of the company's pathway toward near-term gold production.",
+      "document_key": "2924-03115817-3A697876",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115817-3A697884"
+    },
+    {
+      "ticker": "PDI",
+      "heading": "Predictive Discovery: Guinea refining decree adds compliance step, Kiniero ramp continues",
+      "body": "Guinea's government issued a decree requiring domestic gold refining to 95.5% purity before export from 6 October 2026, prompting a temporary pause in exports before Predictive Discovery shipped approximately 33.8koz for provisional receipts of US$135.7 million. Kiniero poured 54,252oz at AISC of US$1,254/oz, well above nameplate capacity, while the group remains on track for 2026 guidance of 198,000-220,000oz at AISC of US$1,300-1,500/oz. Cash and bullion stood at US$364.3 million, and US$13.8 million in Guinea capital gains tax was agreed relating to the Robex merger.",
+      "document_key": "2924-03115675-6A1336171",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115675-6A1336171"
+    }
+  ],
+  "quarterlies": [
+    {
+      "ticker": "PDI",
+      "company": "Predictive Discovery Limited",
+      "headline": "Quarterly Activities/Appendix 5B Cash Flow Report",
+      "summary": "See material summary above",
+      "document_key": "2924-03115675-6A1336171",
+      "market_cap": 3334552100,
+      "cap_label": "$3.3B",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115675-6A1336171"
+    },
+    {
+      "ticker": "RSG",
+      "company": "Resolute Mining Limited",
+      "headline": "Q2 2026 Activities Report",
+      "summary": "Resolute produced 45,192oz gold at AISC $2,484/oz, cash rose to $317.4m (+$2.0m QoQ) including $53.9m from Ravenswood note repayment; Syama impacted by roaster shutdown, Doropo advanced from FID into construction with $36.7m capex; FY26 guidance maintained at 250-275koz, AISC $2,000-2,200/oz",
+      "document_key": "2924-03115677-6A1336172",
+      "market_cap": 2073295085,
+      "cap_label": "$2.1B",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115677-6A1336172"
+    },
+    {
+      "ticker": "KCN",
+      "company": "Kingsgate Consolidated Limited",
+      "headline": "June 2026 Quarterly Report",
+      "summary": "Kingsgate achieved FY26 guidance with 86,078oz gold and 766,009oz silver produced; AISC (pre-royalties) $1,178/oz, well below guidance range; cash, bullion and doré totalled A$179.2m; acquired Nueva Esperanza royalty and water rights for US$15.6m and paid A$26.6m interim dividend",
+      "document_key": "2924-03115755-2A1686600",
+      "market_cap": 1042908791,
+      "cap_label": "$1.0B",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115755-2A1686600"
+    },
+    {
+      "ticker": "PNR",
+      "company": "Pantoro Gold Limited",
+      "headline": "Quarterly Activities Report",
+      "summary": "Pantoro produced 18,028oz gold at AISC (pre-royalties) $4,107/oz, achieving FY26 guidance; cash and gold fell to $223.4m (-$37.2m QoQ) after $10.8m buyback and $15m Mega Resources advance; FY27 guidance set at 90,000-105,000oz at AISC $2,800-3,400/oz",
+      "document_key": "2924-03115667-6A1336178",
+      "market_cap": 795026030,
+      "cap_label": "$795m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115667-6A1336178"
+    },
+    {
+      "ticker": "BC8",
+      "company": "Black Cat Syndicate Limited",
+      "headline": "June 2026 Quarterly Activities Report",
+      "summary": "Black Cat sold 21,660oz gold at average realised price $6,261/oz, producing 90,833oz for FY26 (66,296oz 100%-owned); Paulsens hit record 10,620oz on Regulus/Lynx discoveries; cash and liquid assets rose to $105.3M (+$13.6m QoQ); FY27 AISC guidance pending with annual results",
+      "document_key": "2924-03115742-6A1336213",
+      "market_cap": 634121227,
+      "cap_label": "$634m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115742-6A1336213"
+    },
+    {
+      "ticker": "AS1",
+      "company": "Asara Resources Limited",
+      "headline": "Quarterly Activities & Cashflow Report - June 2026",
+      "summary": "Asara completed 259 holes for 33,593m at the Massan Deposit, Kada Gold Project, including 82m at 2.2g/t Au from 5m (MSRC26-057); completed A$60m placement at $0.125/share; cash balance $59.753m following the raise; exploration expenditure $10.653m for the quarter",
+      "document_key": "2924-03115787-3A697876",
+      "market_cap": 239910450,
+      "cap_label": "$240m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115787-3A697876"
+    },
+    {
+      "ticker": "TTM",
+      "company": "Titan Minerals Limited",
+      "headline": "Quarterly Activities/Appendix 5B Cash Flow Report",
+      "summary": "Titan completed 2,395m diamond drilling at Cerro Verde and 1,045m at Gissell within its 10,000m program targeting the 3.9Moz gold, 26.1Moz silver Dynasty MRE; trenching confirmed 400m western and 150m eastern extensions at Cerro Verde; cash balance US$5.9m, Scoping Study targeted Q4 2026",
+      "document_key": "2924-03115743-6A1336209",
+      "market_cap": 159849182,
+      "cap_label": "$160m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03115743-6A1336209"
+    },
+    {
+      "ticker": "AAM",
+      "company": "AuMEGA Metals Ltd",
+      "headline": "Managements Discussion and Analysis (June Quarterly Report)",
+      "summary": "AuMEGA advanced field programs at Cape Ray West/Isle aux Morts Granite, Bunker Hill and Hermitage; till sampling at Hermitage returned up to 200ppm antimony; cash rose to $26.7m (+$22.6m QoQ) after $30.1m financing; drilling commenced post-quarter at Cape Ray West and IMG",
+      "market_cap": 46576234,
+      "cap_label": "$47m",
+      "url": ""
+    }
+  ],
+  "watch_items": [
+    "Horizon Gold FID for Gum Creek targeted Q2 2027, pending project financing and approvals",
+    "Minerals 260 FID for Bullabulling targeted Q1 2027 following DFS completion in Q1 2027",
+    "Turaco Gold Afema DFS targeted within 12 months (~Q2 2027)",
+    "Barton Gold Tunkillia PFS targeted Q1 CY27 completion",
+    "Predictive Discovery monitoring Guinea gold refining transition ahead of 6 October 2026 export deadline",
+    "Brightstar Resources Goldfields Project first gold targeted June quarter 2027"
+  ],
+  "day_in_brief": "The most material development across the watchlist today is Horizon Gold's confirmation of the Gum Creek Open Pit DFS within its June quarterly, delivering a maiden Ore Reserve of 728koz gold underpinning average production of 98kozpa over the first five years, pre-tax NPV of A$1,307 million and a 53.1% IRR at A$5,500/oz gold, alongside continued high-grade drill results at Omega and Swift. Elsewhere, Legacy Minerals grew its Mt Carrington resource to 1.6Moz gold-equivalent (up 151% since acquisition) and Minerals 260 confirmed a A$2.3 billion NPV PFS at Bullabulling with the resource lifted to 6.2Moz, while Turaco Gold's Afema PFS outlined a 200,000ozpa producer at a 79% IRR. Ten quarterlies from producers including Resolute, Pantoro, Black Cat, Kingsgate and Predictive Discovery showed a generally healthy production and cash picture, with Kingsgate and Black Cat both outperforming cost guidance and Predictive Discovery navigating a new Guinea gold refining decree.",
+  "subtitle": "Development studies dominate: Gum Creek DFS, Bullabulling PFS and Afema PFS all confirmed robust economics, while ten quarterlies showed broadly on-track production against guidance."
+}
