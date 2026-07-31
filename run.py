@@ -68,18 +68,52 @@ def main():
         return 0
 
     # -------------------------------------------------------------- summarise
-    from summarise import summarise
+    # One API call per announcement, so no announcement can see another's
+    # figures. Only the closing synthesis sees the whole day, and it works from
+    # summaries that have already been checked.
+    from summarise import summarise_items, synthesise
     from fmt import enrich, add_links
+    from verify import audit
 
-    briefing = summarise(pack, ranked)
+    for r in ranked["full"]:
+        r["tier"] = "full"
+    for r in ranked.get("quarterly") or []:
+        r["tier"] = "quarterly"
 
-    # Market cap is joined on from collected data rather than written by the
-    # model, then the quarterlies are ordered largest first. Source links are
-    # resolved from document keys and dropped if they cannot be verified.
-    briefing["quarterlies"] = enrich(briefing.get("quarterlies") or [],
-                                     pack["announcements"])
-    add_links(briefing.get("rows") or [], pack["announcements"])
-    add_links(briefing.get("summaries") or [], pack["announcements"])
+    materials = summarise_items(ranked["full"])
+    quarterlies = summarise_items(ranked.get("quarterly") or [])
+    print(f"summarised: {len(materials)} confirmed, {len(quarterlies)} quarterlies")
+
+    # Every figure must trace back to the announcement it came from.
+    problems = audit(materials) + audit(quarterlies)
+    for p in problems:
+        print(f"  ! UNVERIFIED FIGURES {p['ticker']}: {', '.join(p['figures'])}"
+              f"  ({p['headline'][:44]})")
+    if problems:
+        print(f"  ! {len(problems)} item(s) contain figures not found in their "
+              f"source. Check before relying on them.")
+
+    restated = [q['ticker'] for q in materials + quarterlies if q.get("is_restatement")]
+    if restated:
+        print(f"  restatements flagged: {', '.join(restated)}")
+
+    framing = synthesise(materials, quarterlies, pack)
+
+    briefing = dict(framing)
+    briefing["rows"] = [{k: m.get(k) for k in
+                         ("ticker", "company", "announcement", "type", "date",
+                          "document_key")} for m in materials]
+    briefing["summaries"] = [{k: m.get(k) for k in
+                              ("ticker", "heading", "body", "document_key")}
+                             for m in materials]
+    briefing["quarterlies"] = [{k: q.get(k) for k in
+                                ("ticker", "company", "headline", "summary",
+                                 "document_key")} for q in quarterlies]
+    briefing["_unverified"] = problems
+
+    briefing["quarterlies"] = enrich(briefing["quarterlies"], pack["announcements"])
+    add_links(briefing["rows"], pack["announcements"])
+    add_links(briefing["summaries"], pack["announcements"])
 
     with open(os.path.join(ARCHIVE, f"{stamp}-briefing.json"), "w", encoding="utf-8") as fh:
         json.dump(briefing, fh, indent=2, ensure_ascii=False)
