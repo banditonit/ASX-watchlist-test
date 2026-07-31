@@ -204,6 +204,37 @@ def fetch_quote(ticker, session=None):
     }
 
 
+def fetch_history(ticker, before, days=120, session=None, limit=40):
+    """Headlines this company published in the months before the window.
+
+    Used to tell a first release from a restatement. If a quarterly writes up a
+    definitive feasibility study, and a standalone DFS announcement already sits
+    in this list, the quarterly is restating, not breaking, the news. That is a
+    lookup rather than a judgement, which is what makes it reliable.
+    """
+    session = session or _session()
+    cutoff = before - timedelta(days=days)
+    try:
+        resp = session.get(f"{API}/companies/{ticker}/announcements",
+                           params={"count": limit, "page": 0}, timeout=TIMEOUT)
+        resp.raise_for_status()
+        items = (resp.json().get("data") or {}).get("items") or []
+    except Exception:                                          # noqa: BLE001
+        return []
+
+    out = []
+    for item in items:
+        when = _parse_dt(item.get("date"))
+        if when is None or when >= before or when < cutoff:
+            continue
+        out.append({
+            "headline": (item.get("headline") or "").strip(),
+            "date_awst": to_awst(when).strftime("%-d %B %Y"),
+            "price_sensitive": bool(item.get("isPriceSensitive")),
+        })
+    return out
+
+
 def collect(codes, hours=24, now=None):
     """Full pass: sweep the feed, read every document, then price the names."""
     start, end = window(hours=hours, now=now)
@@ -219,6 +250,14 @@ def collect(codes, hours=24, now=None):
         time.sleep(PAUSE)
     for record in records:
         record.update(quotes.get(record["ticker"]) or {})
+
+    # Prior announcements, so a restatement can be told from a first release.
+    history = {}
+    for ticker in sorted({r["ticker"] for r in records}):
+        history[ticker] = fetch_history(ticker, start, session=session)
+        time.sleep(PAUSE)
+    for record in records:
+        record["prior_announcements"] = history.get(record["ticker"], [])
     return {
         "window_start_awst": to_awst(start).isoformat(),
         "window_end_awst": to_awst(end).isoformat(),
