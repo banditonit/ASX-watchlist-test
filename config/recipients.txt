@@ -25,8 +25,8 @@ Chris <christo.karag@gmail.com>
 # Kale Pervan <kp@discoverycapital.com.au>
 # Darcy Frazer <df@discoverycapital.com.au>
 intern@discoverycapital.com.au
-kp@discoverycapital.com.au
-am@discoverycapital.com.au
 df@discoverycapital.com.au
 mp@discoverycapital.com.au
 kw@discoverycapital.com.au
+
+
