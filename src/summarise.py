@@ -1,299 +1,309 @@
-"""Turns the evidence pack into briefing copy, via the Claude API.
+"""Writes the briefing, one announcement per API call.
 
-The model is given the actual announcement text, not headlines, and is told
-to quote real figures. A forced tool schema is used so the response is always
-structured data rather than prose that has to be parsed.
+Everything used to go to the model in a single prompt. That is cheaper to write,
+and it is how a production figure from one company's quarterly ended up in
+another's summary: nothing stopped it, because every number sat in the same
+context window. Instructions reduce that risk. They do not remove it.
+
+Each announcement now gets its own call, carrying only its own text. A summary
+of Pantoro's quarterly cannot borrow Black Cat's production figure, because the
+model writing it has never seen Black Cat. The isolation is structural rather
+than instructed, which is the only kind that holds.
+
+Only the closing synthesis sees everything, and it works from the per-item
+summaries already written and figure-checked, not from raw announcements.
+
+Cost is close to unchanged. The announcements are the bulk of the tokens and
+each is still sent exactly once. What repeats is the system prompt, which adds
+roughly a fifth on a normal day.
 """
 
-import json
 import os
+import re
+from concurrent.futures import ThreadPoolExecutor
 
 import anthropic
 
-# Sonnet is the right tier here: the job is pulling figures out of a document
-# accurately, which Haiku is measurably weaker at, and which does not need Opus.
-# Override with the CLAUDE_MODEL secret if that judgement changes.
 MODEL = os.environ.get("CLAUDE_MODEL", "claude-sonnet-5")
-MAX_FULL_CHARS = 45_000       # per announcement, generous for a technical release
-MAX_QUARTERLY_CHARS = 22_000  # the numbers that matter sit early in a quarterly
-MAX_DIGEST_CHARS = 2_500
+QUARTERLY_MODEL = os.environ.get("CLAUDE_QUARTERLY_MODEL", MODEL)
 
-SYSTEM = """You write the Discovery Capital Partners daily ASX watchlist briefing.
+# Caps after boilerplate is stripped. A mining announcement carries its argument
+# in the first few pages; what follows is appendices.
+MAX_FULL_CHARS = 20_000
+MAX_QUARTERLY_CHARS = 12_000
+WORKERS = 4
 
-House writing rules, which are absolute:
+# Everything from here on is regulatory appendix, not content. On a real day
+# this is 45% of the text and none of it can inform a summary: JORC Table 1
+# runs to dozens of pages of sampling methodology, and tenement schedules and
+# forward-looking-statement blocks are pure boilerplate. Stripping it is the
+# single largest saving available, and it costs nothing in quality.
+BOILERPLATE = re.compile("|".join([
+    r"JORC Code,? 2012 Edition\s*[-\u2013\u2014]?\s*Table 1",
+    r"\bTable 1\s*[-\u2013\u2014:]?\s*Section 1",
+    r"Section 1[:\s]+Sampling Techniques",
+    r"Sampling Techniques and Data",
+    r"Competent Person'?s?\s+Statement",
+    r"Forward[- ]Looking Statements?",
+    r"Schedule of (?:Mining )?Tenements",
+    r"Tenement Schedule",
+    r"Corporate Directory",
+    r"Appendix 1[:\s]+JORC",
+]), re.I)
+MIN_KEEP = 4_000        # never trim a short announcement to nothing
+
+
+def trim(text, limit):
+    """Drop the regulatory appendices, then cap what remains."""
+    if not text:
+        return "", 0
+    match = BOILERPLATE.search(text, MIN_KEEP)
+    body = text[:match.start()] if match else text
+    return body[:limit], len(text) - len(body[:limit])
+
+HOUSE = """House writing rules, which are absolute:
 - No em dashes anywhere. Use a comma, a colon, parentheses, or a new sentence.
 - No en dashes as punctuation. Write "A$1.20 to A$1.40", not a dash range.
 - Australian English: mineralisation, analyse, metres, tonnes, licence (noun).
-- Third person. Never "we". The firm is "Discovery".
-- Currency unspaced and prefixed: A$5.0M in tables and cards, A$71.5 million in
-  flowing prose. Pick one and stay with it.
+- Third person. Never "we".
+- Currency unspaced and prefixed: A$5.0M in tables, A$71.5 million in prose.
 - No space between a number and its unit: 3km, 5m, 0.9% Cu, 4.73g/t Au.
-- Drill intercepts in house form: 5m @ 2.4% Cu from 17m (WCRC006), with the
-  hole ID in parentheses.
+- Drill intercepts in house form: 5m @ 2.4% Cu from 17m (WCRC006).
 - Dates as "23 July 2026". Never numeric formats.
-- Lead with the conclusion. The first sentence of any section is the finding.
 
-Rules on substance, which matter more than style:
-- Every figure you write must appear in the source text you were given. If a
-  number is not in the text, it does not go in the briefing.
+On figures, which matters more than style:
+- Every figure must appear in the announcement text given to you below. You have
+  been given one announcement and nothing else. If a number is not in that text,
+  it does not go in the briefing. Never supply a figure from memory, from what
+  you know of the company, or from what a comparable producer reported.
 - A trading halt is never reported as a bare "trading halt". Halt notices state
-  their purpose. Report that purpose, for example "halted pending an
-  announcement regarding a capital raising", and give the expected resumption
-  date if the notice states one.
-- For exploration results, quote the actual intercepts, the best ones first.
-- For a transaction, give consideration, structure and any premium stated.
-- Copy each item's document key back exactly as it was given to you. It is used
-  to link the briefing to the source, and a key that does not match simply
-  becomes no link.
-- Report only what you can confirm from the source text in front of you. If an
-  item cannot be confirmed, leave it out rather than hedging about it in the
-  briefing.
+  their purpose. Report that purpose and the expected resumption date."""
 
-Summaries are short. Two to four sentences, 40 to 70 words, and fewer if the
-item is simple. Lead with the fact that moves the name, then the figures that
-size it, then the next catalyst if there is one. Stop there.
+BANNED = """Never write that something was reiterated, restated, previously
+announced, confirmed, or refer the reader to an earlier announcement. Quarterlies
+restate by definition. Saying so is noise, and it wastes the line."""
 
-Cut, every time: adviser, broker, lead manager and underwriter credits; the
-settlement date of each tranche; references to Listing Rule 7.1 and 7.1A
-capacity; FIRB and other conditions precedent unless the deal turns on them;
-every drill hole beyond the best two or three; metallurgical recoveries unless
-recovery is the story.
+QUARTERLY_GUIDE = f"""This is a quarterly. Write the quarter's own numbers and
+nothing else: production, unit costs or AISC, cash and its quarter-on-quarter
+movement, progress against guidance, and any stated catalyst for next quarter.
 
-A worked example. This is too long:
+You are given this company's earlier announcement headlines. Use them only to
+recognise what NOT to write about. A quarterly typically recaps a feasibility
+study, a resource upgrade or a final investment decision that was released
+separately weeks earlier. That material is not what this section is for. Do not
+summarise it, do not quote its economics, and do not mention that the quarterly
+repeated it. Write the operating numbers.
 
-  Saturn Metals completed a two-tranche placement raising $100 million (before
-  costs) at $0.40 per share, an 11.1% discount to last close of $0.450. Tranche
-  One (63.8 million shares, approximately $25 million) proceeds under existing
-  7.1 and 7.1A capacity settles 6 August 2026; Tranche Two (186.2 million
-  shares, approximately $75 million) requires shareholder approval at a general
-  meeting on 17 September 2026. New cornerstone investor Golden Crane Holdings
-  has committed approximately $48.6 million for 121.5 million shares, expected
-  to hold approximately 15% of the company post-raise... Petra Capital acted as
-  sole lead manager, bookrunner and underwriter.
+{BANNED}"""
 
-This says the same thing:
+ITEM_GUIDE = f"""You are given this company's earlier announcement headlines.
+Use them to avoid presenting old material as though it broke today. If the
+substance of this announcement was already released, keep the entry short and
+factual about what is actually new in it.
 
-  Saturn Metals raised $100m at $0.40, an 11.1% discount, to fund front end
-  engineering and construction readiness at Apollo Hill. Golden Crane Holdings
-  comes in as a cornerstone at roughly $48.6m for about 15% of the company. The
-  $75m second tranche needs shareholder approval on 17 September. Follows a 26%
-  resource upgrade to 2.83Moz.
+{BANNED}"""
 
-And a short item stays short:
-
-  Pacgold is halted pending an announcement regarding a capital raising, until
-  the earlier of normal trading on Friday 31 July 2026 or the announcement.
-
-Quarterlies are handled separately and follow the desk's own one-line note
-format. Each goes in the quarterlies array as a SINGLE dense line carrying the
-numbers a reader actually wants: production for the quarter, AISC or unit costs,
-cash at bank and its quarter-on-quarter movement, progress against guidance, and
-any stated catalyst. Worked examples of the exact register and density expected:
-
-  Northern Star sold 433koz gold at AISC $2.7k/oz, lifted cash and bullion to
-  $1.2B (+$52m QoQ), and began commissioning Stage 1 of the KCGM Mill Expansion
-  for a September tie-in
-
-  Ramelius closed the June quarter with $650m cash and gold (+$43.1m QoQ) after
-  producing 53.5koz gold at AISC of $2k/oz
-
-  West African produced 125koz gold at AISC US$1,730/oz, cash plus bullion
-  +US$46m QoQ to US$777m; FY26 guidance maintained
-
-Note the shorthand: koz, Moz, kt, Mt, Mwmt, kt SC6, US$/dmt, and thousands as k
-so that AISC reads $2.7k/oz. Do not open the line with the ticker or the market
-cap, both are added automatically. Do not pad with adjectives. If a quarterly
-contains something genuinely market-moving, a guidance revision, a maiden
-resource or reserve, an impairment, a funding gap, then it does not belong in
-the quarterlies section at all: write it up in summaries with the other material
-items and say in the body that it arrived inside a quarterly."""
-
-SCHEMA = {
-    "name": "briefing",
-    "description": "The written content of one daily watchlist briefing.",
+ITEM_SCHEMA = {
+    "name": "item",
+    "description": "One announcement, written up.",
     "input_schema": {
         "type": "object",
         "properties": {
-            "lead": {
+            "announcement": {
                 "type": "string",
-                "description": ("Lead paragraph for the Confirmed Announcements page. "
-                                "States how many of the watchlist names had a confirmed "
-                                "announcement and leads with the most material item, "
-                                "including its stated reason and real figures."),
+                "description": ("Under 50 characters, for a table cell that does not "
+                                "wrap. The halt reason or headline figure if it fits."),
             },
-            "rows": {
-                "type": "array",
-                "description": "One row per material announcement, most material first.",
-                "items": {
-                    "type": "object",
-                    "properties": {
-                        "ticker": {"type": "string"},
-                        "company": {"type": "string"},
-                        "announcement": {
-                            "type": "string",
-                            "description": ("Under 50 characters. Table cells do not wrap. "
-                                            "Include the halt reason or headline figure if it fits."),
-                        },
-                        "type": {"type": "string", "description": "Short label, e.g. Halt, Drilling, M&A."},
-                        "date": {"type": "string", "description": "AWST date as '23 July 2026'."},
-                        "document_key": {
-                            "type": "string",
-                            "description": ("The document key of the announcement this "
-                                            "refers to, copied exactly from its block "
-                                            "header. Used to link to the source."),
-                        },
-                    },
-                    "required": ["ticker", "company", "announcement", "type", "date",
-                                 "document_key"],
-                },
-            },
-            "summaries": {
-                "type": "array",
-                "description": "A paragraph per material announcement, with the real numbers.",
-                "items": {
-                    "type": "object",
-                    "properties": {
-                        "ticker": {"type": "string"},
-                        "heading": {"type": "string"},
-                        "body": {
-                            "type": "string",
-                            "description": (
-                                "Two to four sentences, 40 to 70 words. Lead with the single "
-                                "fact that moves the name, then the figures that size it. A "
-                                "simple item like a trading halt needs one or two sentences, "
-                                "not four. Leave out adviser and broker credits, settlement "
-                                "dates, listing-rule capacity references, and hole-by-hole "
-                                "listings beyond the best two or three."
-                            ),
-                        },
-                        "document_key": {
-                            "type": "string",
-                            "description": ("The document key of the announcement this "
-                                            "refers to, copied exactly from its block "
-                                            "header. Used to link to the source."),
-                        },
-                    },
-                    "required": ["ticker", "heading", "body", "document_key"],
-                },
-            },
-            "quarterlies": {
-                "type": "array",
-                "description": ("Quarterly activities and cash flow reports, one entry each. "
-                                "Secondary to the material items but always included."),
-                "items": {
-                    "type": "object",
-                    "properties": {
-                        "ticker": {"type": "string"},
-                        "company": {"type": "string"},
-                        "headline": {"type": "string"},
-                        "summary": {
-                            "type": "string",
-                            "description": (
-                                "ONE dense line in house note style. Start with the company name "
-                                "and a verb, then the headline figures separated by commas or "
-                                "semicolons. No leading ticker and no market cap, those are added "
-                                "automatically. Example of the required style: 'Northern Star sold "
-                                "433koz gold at AISC $2.7k/oz, lifted cash and bullion to $1.2B "
-                                "(+$52m QoQ), and began commissioning Stage 1 of the KCGM Mill "
-                                "Expansion for a September tie-in'. Use koz, Moz, kt, Mt, kt SC6, "
-                                "US$/dmt, and thousands as k (AISC $2.7k/oz). Give quarter-on-quarter "
-                                "cash movement in parentheses as (+$52m QoQ). Every figure must come "
-                                "from the source text."
-                            ),
-                        },
-                        "document_key": {
-                            "type": "string",
-                            "description": ("The document key of the announcement this "
-                                            "refers to, copied exactly from its block "
-                                            "header. Used to link to the source."),
-                        },
-                    },
-                    "required": ["ticker", "company", "headline", "summary",
-                                 "document_key"],
-                },
-            },
-            "watch_items": {
-                "type": "array",
-                "description": "Live situations with their stated reason and expected resolution timing.",
-                "items": {"type": "string"},
-            },
-            "day_in_brief": {
+            "type": {"type": "string",
+                     "description": "Short label: Halt, Drilling, M&A, Resource, Capital Raising."},
+            "heading": {"type": "string", "description": "One line, states the finding."},
+            "body": {
                 "type": "string",
-                "description": ("Closing summary. Leads with the most material live situation "
-                                "including its stated reason and real figures."),
+                "description": (
+                    "Two to four sentences, 40 to 70 words, fewer if the item is "
+                    "simple. Lead with the fact that moves the name, then the "
+                    "figures that size it, then the next catalyst. Leave out "
+                    "adviser credits, tranche settlement dates, listing-rule "
+                    "capacity references, and drill holes beyond the best two or "
+                    "three."
+                ),
             },
-            "subtitle": {
+            "is_restatement": {
+                "type": "boolean",
+                "description": "True if this restates something previously announced.",
+            },
+            "restated_from": {
                 "type": "string",
-                "description": "One line stating the day's conclusion, for the Coverage Notes page.",
+                "description": "The earlier headline and date, or empty.",
             },
         },
-        "required": ["lead", "rows", "summaries", "quarterlies", "watch_items",
-                     "day_in_brief", "subtitle"],
+        "required": ["announcement", "type", "heading", "body",
+                     "is_restatement", "restated_from"],
+    },
+}
+
+QUARTERLY_SCHEMA = {
+    "name": "quarterly",
+    "description": "One quarterly, as a single desk-note line.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "summary": {
+                "type": "string",
+                "description": (
+                    "ONE dense line. Open with the company name and a verb, then "
+                    "production, unit costs, cash and its quarter-on-quarter "
+                    "movement, and progress against guidance. Do not open with the "
+                    "ticker or the market cap, those are added automatically. Style "
+                    "to match: 'Ramelius closed the June quarter with $650m cash and "
+                    "gold (+$43.1m QoQ) after producing 53.5koz gold at AISC of "
+                    "$2k/oz'. Use koz, Moz, kt, Mt and thousands as k. Operating "
+                    "numbers only. Do not summarise a study or resource upgrade "
+                    "that was announced separately, and never say anything was "
+                    "reiterated, restated or previously announced."
+                ),
+            },
+            "is_restatement": {"type": "boolean"},
+            "restated_from": {"type": "string"},
+        },
+        "required": ["summary", "is_restatement", "restated_from"],
+    },
+}
+
+BRIEF_SCHEMA = {
+    "name": "briefing",
+    "description": "The framing around the items, written from their summaries.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "lead": {"type": "string",
+                     "description": ("Lead paragraph. Use the counts given verbatim and "
+                                     "lead with the most material item.")},
+            "subtitle": {"type": "string", "description": "One line, the day's conclusion."},
+            "watch_items": {"type": "array", "items": {"type": "string"},
+                            "description": "Live situations with stated reason and timing."},
+            "day_in_brief": {"type": "string",
+                             "description": "Closing summary, most material first."},
+        },
+        "required": ["lead", "subtitle", "watch_items", "day_in_brief"],
     },
 }
 
 
-def _block(record, limit):
-    text = (record.get("text") or "").strip()
-    body = text[:limit] if text else f"[NOT READABLE: {record.get('text_status')}]"
-    return (
-        f"### {record['ticker']} | {record['company']}\n"
-        f"Headline: {record['headline']}\n"
-        f"Lodged: {record['time_awst']} AWST on {record['date_awst']} "
-        f"(document key {record['document_key']})\n"
-        f"Price sensitive: {'yes' if record['price_sensitive'] else 'no'}\n"
-        f"Signals detected: {', '.join(record.get('signals') or []) or 'none'}\n"
-        f"--- announcement text ---\n{body}\n"
-    )
+def _client(api_key=None):
+    return anthropic.Anthropic(api_key=api_key or os.environ["ANTHROPIC_API_KEY"])
 
 
-def build_prompt(pack, ranked):
-    parts = [
-        f"Window: {pack['window_start_awst']} to {pack['window_end_awst']} (AWST).",
-        f"Watchlist size: {pack['tickers_checked']} ticker codes.",
-        f"Announcements found in window: {len(pack['announcements'])}.",
-        "",
-    ]
-
-    if ranked["full"]:
-        parts.append("## MATERIAL ITEMS, full text follows. Summarise each with real figures.\n")
-        parts += [_block(r, MAX_FULL_CHARS) for r in ranked["full"]]
-    else:
-        parts.append("## No material items were identified in this window.\n")
-
-    if ranked.get("quarterly"):
-        parts.append("\n## QUARTERLIES. Put each of these in the quarterlies array with "
-                     "production, unit costs, cash and guidance progress. Promote one to "
-                     "the material items instead if its content warrants it.\n")
-        parts += [_block(r, MAX_QUARTERLY_CHARS) for r in ranked["quarterly"]]
-
-    if ranked["digest"]:
-        parts.append("\n## ROUTINE ITEMS, opening extract only. List them, do not "
-                     "write them up at length. If one of these is clearly more "
-                     "significant than its headline suggests, say so.\n")
-        parts += [_block(r, MAX_DIGEST_CHARS) for r in ranked["digest"]]
-
-    parts.append(
-        "\nWrite the briefing. If nothing was confirmed in the window, say so "
-        "plainly in the lead and return an empty rows array."
-    )
-    return "\n".join(parts)
-
-
-def summarise(pack, ranked, api_key=None, model=None):
-    client = anthropic.Anthropic(api_key=api_key or os.environ["ANTHROPIC_API_KEY"])
-    response = client.messages.create(
+def _call(client, system, prompt, schema, model=None, max_tokens=2000):
+    resp = client.messages.create(
         model=model or MODEL,
-        max_tokens=8000,
-        system=SYSTEM,
-        tools=[SCHEMA],
-        tool_choice={"type": "tool", "name": "briefing"},
-        messages=[{"role": "user", "content": build_prompt(pack, ranked)}],
+        max_tokens=max_tokens,
+        system=system,
+        tools=[schema],
+        tool_choice={"type": "tool", "name": schema["name"]},
+        messages=[{"role": "user", "content": prompt}],
     )
-    for block in response.content:
-        if block.type == "tool_use" and block.name == "briefing":
+    for block in resp.content:
+        if block.type == "tool_use":
             return block.input
-    raise RuntimeError(
-        "The model did not return a briefing payload. Raw response:\n"
-        + json.dumps([b.model_dump() for b in response.content], indent=2)[:2000]
+    raise RuntimeError(f"no {schema['name']} payload returned")
+
+
+def _prior(record):
+    prior = record.get("prior_announcements") or []
+    if not prior:
+        return "No earlier announcements were found for this company."
+    lines = [f"  {p['date_awst']}: {p['headline']}" for p in prior[:25]]
+    return "This company's earlier announcements:\n" + "\n".join(lines)
+
+
+def _prompt(record, limit):
+    text = (record.get("text") or "").strip()
+    body, dropped = trim(text, limit)
+    record["_chars_dropped"] = dropped
+    if not body:
+        body = f"[NOT READABLE: {record.get('text_status')}]"
+    return (
+        f"{record['ticker']}, {record['company']}.\n"
+        f"Headline: {record['headline']}\n"
+        f"Lodged {record['time_awst']} AWST on {record['date_awst']}.\n"
+        f"Price sensitive: {'yes' if record.get('price_sensitive') else 'no'}\n\n"
+        f"{_prior(record)}\n\n"
+        f"--- the announcement ---\n{body}\n"
     )
+
+
+def summarise_item(record, client=None, model=None):
+    client = client or _client()
+    quarterly = record.get("tier") == "quarterly"
+    schema = QUARTERLY_SCHEMA if quarterly else ITEM_SCHEMA
+    limit = MAX_QUARTERLY_CHARS if quarterly else MAX_FULL_CHARS
+    system = (
+        "You write one entry for the Discovery Capital Partners daily ASX "
+        "watchlist briefing. You are given exactly one announcement and must "
+        "write only about that company.\n\n"
+        f"{HOUSE}\n\n{QUARTERLY_GUIDE if quarterly else ITEM_GUIDE}"
+    )
+    out = _call(client, system, _prompt(record, limit), schema,
+                model=model or (QUARTERLY_MODEL if quarterly else MODEL))
+    out.update({
+        "ticker": record["ticker"],
+        "company": record["company"],
+        "headline": record["headline"],
+        "date": record["date_awst"],
+        "document_key": record["document_key"],
+        "_source_text": record.get("text") or "",
+    })
+    return out
+
+
+def summarise_items(records, client=None, model=None):
+    """Each announcement in its own call, a few at a time."""
+    client = client or _client()
+    out = [None] * len(records)
+
+    def one(i):
+        try:
+            out[i] = summarise_item(records[i], client=client, model=model)
+        except Exception as exc:                               # noqa: BLE001
+            print(f"  ! summary failed for {records[i]['ticker']}: {exc}")
+
+    with ThreadPoolExecutor(max_workers=WORKERS) as pool:
+        list(pool.map(one, range(len(records))))
+    return [x for x in out if x]
+
+
+def synthesise(materials, quarterlies, pack, client=None, model=None):
+    """Lead, subtitle, watch items and closing, from the written summaries."""
+    client = client or _client()
+    names = sorted({a["ticker"] for a in pack["announcements"]})
+    parts = [
+        f"Window: 24 hours to {pack['window_end_awst']} (AWST).",
+        "",
+        "COUNTS, use these exact numbers and do not recount:",
+        f"  distinct watchlist names that announced: {len(names)}",
+        f"  confirmed announcements: {len(materials)}",
+        f"  quarterlies: {len(quarterlies)}",
+        f"  watchlist size: {pack['tickers_checked']} ticker codes",
+        "",
+        "CONFIRMED ANNOUNCEMENTS, already written and figure-checked:",
+    ]
+    for m in materials:
+        parts.append(f"  {m['ticker']}: {m.get('heading','')}\n    {m.get('body','')}")
+    if quarterlies:
+        parts.append("\nQUARTERLIES, secondary. Refer to them as a group rather than "
+                     "individually, and never present restated material as news:")
+        for q in quarterlies:
+            parts.append(f"  {q['ticker']}: {q.get('summary','')}")
+    parts.append("\nWrite the framing. Quote only figures that appear above. If "
+                 "nothing was confirmed, say so plainly in the lead.")
+
+    system = (
+        "You write the framing for the Discovery Capital Partners daily ASX "
+        "watchlist briefing, from summaries already written and checked.\n\n"
+        f"{HOUSE}\n\n"
+        "Quarterlies are secondary. Never lead on a quarterly. Never say that "
+        "anything was reiterated, restated or previously announced."
+    )
+    return _call(client, system, "\n".join(parts), BRIEF_SCHEMA, model=model,
+                 max_tokens=3000)
