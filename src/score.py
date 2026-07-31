@@ -55,23 +55,6 @@ QUARTERLY = re.compile(
     re.I,
 )
 
-# Every quarterly mentions production, AISC and guidance by its nature, so the
-# ordinary signal words fire on all of them and would promote the lot. A
-# quarterly is only lifted into the main section when something actually moved,
-# which is what these patterns test for.
-QUARTERLY_ESCALATE = re.compile(
-    r"\brevis\w+\s+(?:its\s+)?(?:full[- ]year\s+|FY\d*\s*)?(?:production\s+)?guidance|"
-    r"\bguidance\s+(?:has been\s+)?(?:revised|reduced|increased|withdrawn|lowered|raised)|"
-    r"\b(?:down|up)graded?\s+(?:its\s+)?guidance|\bwithdraw\w*\s+guidance|"
-    r"\bmaiden\s+(?:mineral\s+)?(?:resource|reserve)|"
-    r"\bimpairment\b|\bwrite[- ]?down\b|\bgoing concern\b|\bfunding shortfall\b|"
-    r"\bsuspend\w*\s+(?:mining|operations|production)|\bcare and maintenance\b|"
-    r"\bfirst (?:gold|pour|ore|production|shipment)\b|"
-    r"\btrading halt\b|\bscheme of arrangement\b|\btakeover\b|"
-    r"\bmaterial(?:ly)?\s+(?:below|above|behind)\b",
-    re.I,
-)
-
 # Routine filings. Present so they can be listed, never summarised at length.
 ROUTINE = re.compile(
     r"^(?:appendix\s*(?:2a|3b|3g|3h|3x|3y|3z|4g)|"
@@ -134,12 +117,21 @@ def score(record):
 
 
 def _tier(record, total, text):
+    """Quarterlies are never promoted, whatever their contents.
+
+    A quarterly restates. When a company writes up its DFS, its resource
+    upgrade or its FID in a quarterly, that material was almost always released
+    separately weeks earlier, so surfacing it as a confirmed announcement
+    reports old news as new. Quarterlies belong in the Quarterlies section and
+    nowhere else. This is a structural rule, not a judgement the model gets to
+    make.
+    """
+    if record.get("is_quarterly"):
+        return "quarterly"
     if record.get("text_status", "") != "ok" and not text:
         return "unreadable"
     if total >= FULL_SUMMARY_AT:
         return "full"
-    if record.get("is_quarterly"):
-        return "quarterly"
     return "digest"
 
 
