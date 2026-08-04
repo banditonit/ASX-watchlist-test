@@ -10,6 +10,15 @@ decision is made on the body of the document.
 Everything gets a score. High scorers are summarised in full. Low scorers are
 still passed to the model as a short digest, so that a wrong call here degrades
 into a thinner summary rather than an invisible announcement.
+
+Conference and investor presentations are the exception to that generosity.
+They are marketing decks. They restate economics that were released separately
+weeks earlier, and because they restate them in full they score highly on
+content: on 4 August 2026 seven of the thirteen confirmed announcements were
+Diggers and Dealers decks, every one of them summarised as containing no new
+figures. They are now dropped before the model ever sees them, which removes
+the noise and the API cost together. A deck whose headline says it carries
+news is kept.
 """
 
 import re
@@ -55,6 +64,42 @@ QUARTERLY = re.compile(
     re.I,
 )
 
+# Marketing decks, judged on the headline alone. Deliberately broad: a slide
+# pack lodged for a conference, a site visit, a roadshow or a webcast is the
+# same document with a different cover. Note this also catches the "Quarterly
+# Results Presentation" that companies lodge alongside the quarterly itself,
+# which is the right outcome, because the Appendix 5B and activities report
+# carry the same numbers and are collected anyway.
+PRESENTATION = re.compile(
+    r"\bpresentation\b|"
+    r"\bslide (?:pack|deck)\b|"
+    r"\bwebcast\b|\bwebinar\b|\broadshow\b|"
+    r"\binvestor (?:day|briefing|update|overview)\b|"
+    r"\bsite (?:visit|tour)\b|"
+    r"\b(?:conference|forum) (?:update|address|materials)\b|"
+    r"\b(?:chairman|chair|ceo|managing director)'?s? address\b|"
+    r"\bcorporate (?:overview|profile)\b",
+    re.I,
+)
+
+# A deck is kept when its own headline says it carries news, which is the only
+# reliable tell. The body cannot be used: a restatement deck quotes NPV, IRR
+# and every drill intercept the company has ever reported, so it reads as
+# material no matter how the text is scored.
+PRESENTATION_KEEP = re.compile(
+    r"\bmaiden\b|\bore reserve\b|\bresource (?:upgrade|estimate|update)\b|"
+    r"\b(?:scoping|feasibility|pre-?feasibility|definitive feasibility)\b|\bPFS\b|\bDFS\b|"
+    r"\bacquisition\b|\bacquire\w*\b|\bmerger\b|\btakeover\b|\bscheme\b|\bbid\b|"
+    r"\bplacement\b|\bentitlement\b|\bcapital raising\b|\bequity raising\b|"
+    r"\bshare purchase plan\b|\bSPP\b|\bIPO\b|\bdemerger\b|"
+    r"\bguidance\b|\bdiscovery\b|\bfirst (?:gold|ore|pour|production|shipment)\b|"
+    r"\bfinal investment decision\b|\bFID\b|\boff-?take\b|\bstrategic review\b|"
+    r"\btrading halt\b|"
+    r"\d+(?:\.\d+)?\s*m\s*@\s*\d+(?:\.\d+)?\s*(?:g/t|%|ppm|ppb)|"   # intercept in the headline
+    r"\d+(?:\.\d+)?\s*m\s+(?:at|of)\s+\d+(?:\.\d+)?\s*(?:g/t|%)",
+    re.I,
+)
+
 # Routine filings. Present so they can be listed, never summarised at length.
 ROUTINE = re.compile(
     r"^(?:appendix\s*(?:2a|3b|3g|3h|3x|3y|3z|4g)|"
@@ -74,6 +119,14 @@ FULL_SUMMARY_AT = 8      # score at or above this gets the full text sent
 MIN_TEXT = 400           # below this many characters, treat as a stub
 
 
+def is_presentation(headline):
+    """True when this is a marketing deck with nothing new on the cover."""
+    headline = headline or ""
+    if not PRESENTATION.search(headline):
+        return False
+    return not PRESENTATION_KEEP.search(headline)
+
+
 def score(record):
     """Attach a score, the reasons behind it, and a tier to one record."""
     text = record.get("text") or ""
@@ -89,6 +142,12 @@ def score(record):
     if record.get("price_sensitive"):
         total += 6
         hits.append("flagged price sensitive")
+
+    # Checked before the quarterly test, so a "Quarterly Results Presentation"
+    # is treated as the deck it is rather than duplicating the quarterly.
+    record["is_presentation"] = is_presentation(headline)
+    if record["is_presentation"]:
+        hits.append("presentation, suppressed")
 
     # Quarterlies are identified but not scored up. A quarterly that happens to
     # contain a guidance change or a maiden reserve will clear the materiality
@@ -117,7 +176,7 @@ def score(record):
 
 
 def _tier(record, total, text):
-    """Quarterlies are never promoted, whatever their contents.
+    """Presentations are dropped and quarterlies are never promoted.
 
     A quarterly restates. When a company writes up its DFS, its resource
     upgrade or its FID in a quarterly, that material was almost always released
@@ -125,7 +184,12 @@ def _tier(record, total, text):
     reports old news as new. Quarterlies belong in the Quarterlies section and
     nowhere else. This is a structural rule, not a judgement the model gets to
     make.
+
+    A presentation restates harder still, and unlike a quarterly it adds no
+    operating numbers of its own, so it earns no section at all.
     """
+    if record.get("is_presentation"):
+        return "presentation"
     if record.get("is_quarterly"):
         return "quarterly"
     if record.get("text_status", "") != "ok" and not text:
@@ -136,13 +200,25 @@ def _tier(record, total, text):
 
 
 def rank(records):
-    """Score everything and split into tiers, most material first."""
+    """Score everything and split into tiers, most material first.
+
+    Presentations come back in their own bucket. run.py does not read that
+    bucket, so they are never summarised and never rendered, but they are
+    printed here so the Actions log shows what was dropped and why. Silent
+    filtering is how a real announcement disappears without anyone noticing.
+    """
     for record in records:
         score(record)
     ordered = sorted(records, key=lambda r: (-r["score"], r["ticker"]))
+    suppressed = [r for r in ordered if r["tier"] == "presentation"]
+    if suppressed:
+        print(f"suppressed {len(suppressed)} presentation(s):")
+        for r in suppressed:
+            print(f"    {r['ticker']}  {r.get('headline','')[:60]}")
     return {
         "full": [r for r in ordered if r["tier"] in ("full", "unreadable")],
         "quarterly": [r for r in ordered if r["tier"] == "quarterly"],
         "digest": [r for r in ordered if r["tier"] == "digest"],
+        "presentation": suppressed,
         "all": ordered,
     }
