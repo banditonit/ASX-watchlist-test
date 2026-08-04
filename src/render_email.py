@@ -7,6 +7,8 @@ modern CSS. The DCP mark is attached and referenced by content ID rather than
 base64, which Outlook blocks.
 """
 
+import re
+from datetime import datetime
 from html import escape
 
 NAVY = "#002B56"
@@ -93,17 +95,20 @@ def _table(rows):
         f'<th align="left" style="font-family:{FONT};font-size:12px;'
         f'font-weight:bold;color:{WHITE};background-color:{NAVY};'
         f'padding:9px 10px;">{escape(h)}</th>'
-        for h in ("Ticker", "Company", "Announcement", "Type", "Date")
+        for h in ("Ticker", "Company", "Announcement", "Date")
     )
     body = []
-    widths = ["10%", "23%", "40%", "13%", "14%"]
+    # Type is gone. It was model-assigned from a free-text label and was wrong
+    # often enough to be misleading: an escrow release and a conference deck
+    # both came back as "Capital Raising" on 4 August. The space it freed goes
+    # to Announcement, which now carries the best drill intercept in full.
+    widths = ["10%", "22%", "52%", "16%"]
     for i, r in enumerate(rows):
         bg = GREY if i % 2 == 0 else WHITE
         cells = [
             _link(r.get("ticker", ""), r.get("url")),
             escape(str(r.get("company", ""))),
             escape(str(r.get("announcement", ""))),
-            escape(str(r.get("type", ""))),
             escape(str(r.get("date", ""))),
         ]
         tds = "".join(
@@ -125,6 +130,45 @@ def _table(rows):
     """
 
 
+def _bullets(value):
+    """Coerce whatever the model returned into a list of bullet strings.
+
+    watch_items is declared as an array of strings and is normally returned as
+    one. Occasionally the model answers the schema in its own tag syntax and
+    the whole block arrives as a single string, which a naive `for b in bullets`
+    then renders one character per bullet. That is what produced the column of
+    single letters in the 4 August email. Summarise normalises the payload
+    upstream; this is the second line of defence, so a malformed field can
+    never again be rendered letter by letter.
+    """
+    if value is None:
+        return []
+    if isinstance(value, str):
+        items = re.findall(r"<item>(.*?)</item>", value, re.S | re.I)
+        if not items:
+            items = re.split(r"\n+|(?:^|\s)[-\u2022]\s+", value)
+        value = items
+    out = []
+    for item in value:
+        text = re.sub(r"</?[a-z_][a-z0-9_.\-]*(?:\s[^<>]*)?/?>", "", str(item or "")).strip()
+        if len(text) > 1:
+            out.append(text)
+    return out
+
+
+def _window_label(pack):
+    """"24 hours to 08:10 AWST", or 72 on a Monday, read from the real window."""
+    start = pack.get("window_start_awst") or ""
+    end = pack.get("window_end_awst") or ""
+    hours = 24
+    try:
+        hours = round((datetime.fromisoformat(end)
+                       - datetime.fromisoformat(start)).total_seconds() / 3600)
+    except (TypeError, ValueError):
+        pass
+    return f"{hours} hours to {end[11:16]} AWST"
+
+
 def _card(heading, paragraphs=None, bullets=None, url=None, link_text=None):
     head = escape(heading)
     if url and link_text:
@@ -136,6 +180,7 @@ def _card(heading, paragraphs=None, bullets=None, url=None, link_text=None):
     ]
     for para in paragraphs or []:
         inner.append(_p(para, size=14, bottom=10))
+    bullets = _bullets(bullets)
     if bullets:
         items = "".join(
             f'<li style="font-family:{FONT};font-size:14px;line-height:1.55;'
@@ -206,7 +251,7 @@ def render(briefing, pack):
     body = []
 
     body.append(_band("Confirmed Announcements",
-                      f"24 hours to {pack.get('window_end_awst','')[11:16]} AWST, {date}"))
+                      f"{_window_label(pack)}, {date}"))
     body.append(f'<tr><td>{_p(briefing.get("lead",""))}</td></tr>')
     body.append(_table(rows))
 
@@ -287,7 +332,7 @@ def _plain(briefing, pack):
     ]
     for r in briefing.get("rows") or []:
         out.append(f"  {r.get('ticker','')}  {r.get('company','')}  "
-                   f"{r.get('announcement','')}  ({r.get('type','')}, {r.get('date','')})")
+                   f"{r.get('announcement','')}  ({r.get('date','')})")
     out.append("")
     for s in briefing.get("summaries") or []:
         out += [f"{s.get('ticker','')}: {s.get('heading','')}", s.get("body", ""), ""]
@@ -296,8 +341,9 @@ def _plain(briefing, pack):
         for q in briefing["quarterlies"]:
             out += [f"  {q.get('ticker','')}  {q.get('company','')}  ({q.get('headline','')})",
                     f"    {q.get('summary','')}", ""]
-    if briefing.get("watch_items"):
-        out += ["WATCH ITEMS"] + [f"  - {w}" for w in briefing["watch_items"]] + [""]
+    watch = _bullets(briefing.get("watch_items"))
+    if watch:
+        out += ["WATCH ITEMS"] + [f"  - {w}" for w in watch] + [""]
     out += ["DAY IN BRIEF", briefing.get("day_in_brief", ""), "",
             DISCLAIMER_HEADING.upper(), DISCLAIMER]
     return "\n".join(out)
