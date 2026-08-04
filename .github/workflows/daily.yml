@@ -1,20 +1,30 @@
 name: Daily ASX watchlist briefing
 
+# GitHub's scheduler is best effort, not a clock. A run booked for 00:10 UTC
+# has been starting at 03:18, 03:30, 03:44 and 03:47 UTC on consecutive days,
+# so the briefing has been landing near 11:30 AWST instead of 08:10. Midnight
+# UTC on the hour is the most heavily booked slot on the platform, and a job
+# queued there waits behind everyone else's.
+#
+# Two changes fix it. First, nothing is scheduled at midnight UTC or on the
+# hour any more. Second, the workflow no longer trusts its own start time: it
+# is woken several times across the morning and the gate step below decides
+# which of those wakes actually sends. A wake that is early sleeps until 08:10
+# exactly; a wake that is late sends immediately; every wake after the day's
+# briefing has gone out exits in about ten seconds.
+
 on:
   schedule:
-    # 00:10 UTC = 08:10 AWST, ten minutes after the ASX open, so the opening
-    # batch of announcements is already lodged. Perth does not observe daylight
-    # saving, so this holds all year without seasonal adjustment.
-    #
-    # Weekdays only. The ASX does not trade at the weekend, so Saturday and
-    # Sunday runs would spend credit to report nothing. Monday compensates by
-    # looking back 72 hours instead of 24, which covers Friday's session and
-    # anything lodged over the weekend. That widening happens in the run step
-    # below, not here.
-    #
-    # GitHub can start a scheduled job a few minutes late at busy times. That is
-    # harmless: a later start only widens the capture window slightly.
-    - cron: "10 0 * * 1-5"
+    # Times are UTC. AWST is UTC+8 all year, Perth has no daylight saving.
+    # Wakes before 16:00 UTC belong to the same AWST day (1-5 = Mon-Fri).
+    # Wakes at or after 16:00 UTC belong to the NEXT AWST day, so they run
+    # Sun-Thu (0-4) to produce a Mon-Fri briefing.
+    - cron: "52 22 * * 0-4"     # 06:52 AWST, insurance
+    - cron: "34 23 * * 0-4"     # 07:34 AWST, sleeps 36 min, sends at 08:10
+    - cron: "04 0 * * 1-5"      # 08:04 AWST, sleeps 6 min, sends at 08:10
+    - cron: "26 0 * * 1-5"      # 08:26 AWST, catches a late start
+    - cron: "08 1 * * 1-5"      # 09:08 AWST, catches a later one
+    - cron: "14 2 * * 1-5"      # 10:14 AWST, last resort
 
   workflow_dispatch:        # lets anyone re-run it by hand from the Actions tab
     inputs:
@@ -26,35 +36,90 @@ on:
 permissions:
   contents: write           # so the run can commit the day's archive
 
+# Only one run at a time. If two wakes arrive together, the second waits for
+# the first to finish and then finds the day's archive already committed, so
+# it exits at the gate instead of sending a duplicate.
+concurrency:
+  group: daily-briefing
+  cancel-in-progress: false
+
+env:
+  TZ: Australia/Perth
+  SEND_AT: "08:10"          # the minute the briefing should leave, AWST
+  PIN_WINDOW_MIN: "45"      # wake this close to SEND_AT and it waits for it
+
 jobs:
   briefing:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 75     # allows for the wait, the run itself takes ~10 min
     steps:
       - uses: actions/checkout@v4
 
+      - name: Is this the run that sends?
+        id: gate
+        run: |
+          set -euo pipefail
+          TODAY=$(date +%F)                       # AWST date, TZ is set above
+          NOW=$(date +%s)
+          TARGET=$(date -d "$TODAY $SEND_AT" +%s)
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "Manual run. Sending now."
+            echo "send=yes" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # The archive the previous run committed is the lock. If today's
+          # email is already in it, the briefing has gone out.
+          if [ -f "archive/${TODAY}-email.html" ]; then
+            echo "archive/${TODAY}-email.html already exists. Already sent today."
+            echo "send=no" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if [ "$NOW" -ge "$TARGET" ]; then
+            echo "It is $(date +%H:%M) AWST, past $SEND_AT. Sending now."
+            echo "send=yes" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          WAIT=$(( TARGET - NOW ))
+          if [ "$WAIT" -le $(( PIN_WINDOW_MIN * 60 )) ]; then
+            echo "Woke at $(date +%H:%M) AWST. Waiting ${WAIT}s to send at $SEND_AT."
+            sleep "$WAIT"
+            echo "send=yes" >> "$GITHUB_OUTPUT"
+          else
+            echo "Woke at $(date +%H:%M) AWST, too early. A later wake will send."
+            echo "send=no" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/setup-python@v5
+        if: steps.gate.outputs.send == 'yes'
         with:
           python-version: "3.12"
           cache: pip
 
       - run: pip install -r requirements.txt
+        if: steps.gate.outputs.send == 'yes'
 
       - name: Choose the lookback window
         id: window
+        if: steps.gate.outputs.send == 'yes'
         run: |
           # A manual run uses whatever was typed in the box. A scheduled run
           # uses 24 hours, except on Monday, which reaches back 72 to pick up
-          # Friday's session and the weekend.
+          # Friday's session and the weekend. The day is read in AWST, because
+          # a run that woke on Sunday evening UTC is a Monday briefing.
           HOURS="${{ github.event.inputs.hours }}"
           if [ -z "$HOURS" ]; then
             HOURS=24
-            [ "$(date -u +%u)" = "1" ] && HOURS=72
+            [ "$(date +%u)" = "1" ] && HOURS=72
           fi
           echo "hours=$HOURS" >> "$GITHUB_OUTPUT"
           echo "Looking back $HOURS hours."
 
       - name: Build and send the briefing
+        if: steps.gate.outputs.send == 'yes'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
@@ -65,11 +130,11 @@ jobs:
         run: python run.py --hours ${{ steps.window.outputs.hours }}
 
       - name: Keep the day's evidence
-        if: always()
+        if: always() && steps.gate.outputs.send == 'yes'
         run: |
           git config user.name "watchlist-bot"
           git config user.email "actions@github.com"
           git add archive/*.json archive/*.html 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "archive: $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "archive: $(date +%Y-%m-%d)"
+          git pull --rebase --autostash || true
           git push || true
-
