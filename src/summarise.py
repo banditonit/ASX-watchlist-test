@@ -111,11 +111,20 @@ ITEM_SCHEMA = {
         "properties": {
             "announcement": {
                 "type": "string",
-                "description": ("Under 50 characters, for a table cell that does not "
-                                "wrap. The halt reason or headline figure if it fits."),
+                "description": (
+                    "The table cell, under 62 characters, no full stop. If the "
+                    "announcement reports drill or assay results this MUST be the "
+                    "single best intercept, written in house form and nothing else: "
+                    "'5.1m @ 9.68g/t Au from 353m'. Add the hole ID in brackets only "
+                    "if it still fits. Choose the intercept the company leads on, "
+                    "normally the highest grade-thickness. Do not write 'high-grade "
+                    "results', 'multiple intercepts' or 'drilling confirms "
+                    "continuity' when a number is available, the number is the "
+                    "point. For anything else: the halt reason and resumption date, "
+                    "the raise size and price, the resource tonnes and grade, or the "
+                    "plainest statement of what happened."
+                ),
             },
-            "type": {"type": "string",
-                     "description": "Short label: Halt, Drilling, M&A, Resource, Capital Raising."},
             "heading": {"type": "string", "description": "One line, states the finding."},
             "body": {
                 "type": "string",
@@ -137,7 +146,7 @@ ITEM_SCHEMA = {
                 "description": "The earlier headline and date, or empty.",
             },
         },
-        "required": ["announcement", "type", "heading", "body",
+        "required": ["announcement", "heading", "body",
                      "is_restatement", "restated_from"],
     },
 }
@@ -188,6 +197,51 @@ BRIEF_SCHEMA = {
         "required": ["lead", "subtitle", "watch_items", "day_in_brief"],
     },
 }
+
+
+# The synthesis call returns a JSON tool payload. Once in a while the model
+# switches mid-payload into its own tag syntax, and the whole of watch_items,
+# day_in_brief and the closing tags arrive as one string in the watch_items
+# field. That is what happened on 4 August 2026: the watch items rendered one
+# character per bullet and the Day in Brief section came out empty, because the
+# key no longer existed. The output is now unpacked and repaired before anyone
+# downstream sees it, and the call is retried once if a field is still missing.
+TAGGED_ITEM = re.compile(r"<item>(.*?)</item>", re.S | re.I)
+LEAKED_FIELD = re.compile(
+    r'<parameter\s+name="([a-z_]+)"\s*>(.*?)(?=</parameter>|<parameter\s|\Z)',
+    re.S | re.I,
+)
+STRAY_TAG = re.compile(r"</?[a-z_][a-z0-9_.\-]*(?:\s[^<>]*)?/?>", re.I)
+TEXT_FIELDS = ("lead", "subtitle", "day_in_brief")
+
+
+def _clean(value):
+    return STRAY_TAG.sub("", str(value or "")).strip()
+
+
+def _watch_list(value):
+    """watch_items must be a list of strings. Sometimes it is one long string."""
+    if isinstance(value, str):
+        value = re.split(r"</watch_items>", value, maxsplit=1, flags=re.I)[0]
+        items = TAGGED_ITEM.findall(value)
+        if not items:
+            items = re.split(r"\n+|(?:^|\s)[-\u2022]\s+", value)
+        value = items
+    return [s for s in (_clean(v) for v in (value or [])) if len(s) > 1]
+
+
+def _normalise_framing(framing):
+    """Repair a framing payload, recovering any field that leaked into another."""
+    out = dict(framing or {})
+    blob = "\n".join(str(out.get(k) or "") for k in ("watch_items",) + TEXT_FIELDS
+                      if isinstance(out.get(k), str))
+    for name, value in LEAKED_FIELD.findall(blob):
+        if name in TEXT_FIELDS and not _clean(out.get(name)):
+            out[name] = value
+    out["watch_items"] = _watch_list(out.get("watch_items"))
+    for key in TEXT_FIELDS:
+        out[key] = _clean(out.get(key))
+    return out
 
 
 def _client(api_key=None):
@@ -305,5 +359,21 @@ def synthesise(materials, quarterlies, pack, client=None, model=None):
         "Quarterlies are secondary. Never lead on a quarterly. Never say that "
         "anything was reiterated, restated or previously announced."
     )
-    return _call(client, system, "\n".join(parts), BRIEF_SCHEMA, model=model,
-                 max_tokens=3000)
+    prompt = "\n".join(parts)
+    framing = _normalise_framing(
+        _call(client, system, prompt, BRIEF_SCHEMA, model=model, max_tokens=4000))
+
+    missing = [k for k in ("lead", "day_in_brief") if not framing.get(k)] \
+        or ([] if framing["watch_items"] else ["watch_items"])
+    if missing:
+        print(f"  ! framing came back without {', '.join(missing)}, retrying once")
+        retry = _normalise_framing(_call(
+            client, system,
+            prompt + "\n\nReturn every field of the tool schema as proper JSON. "
+                     "watch_items is a JSON array of plain strings, with no tags "
+                     "of any kind inside it.",
+            BRIEF_SCHEMA, model=model, max_tokens=4000))
+        for key in TEXT_FIELDS:
+            framing[key] = framing.get(key) or retry.get(key, "")
+        framing["watch_items"] = framing["watch_items"] or retry["watch_items"]
+    return framing
