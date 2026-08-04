@@ -1,0 +1,227 @@
+{
+  "lead": "Thirteen confirmed announcements crossed the wires from 15 watchlist names in the 24 hours to 4 August 2026, dominated by a wave of Diggers and Dealers conference presentations alongside solid drilling updates. Solstice Minerals opened proceedings with its Nanadie copper-gold story, but the session was otherwise led by exploration news: WA Gold's continuous high-grade gold intersections at Abercromby across a minimum 500m strike length, and Matsa's further high-grade diamond drilling results at Fortitude North.",
+  "subtitle": "Diggers and Dealers conference decks dominate a quiet news day, with genuine drilling progress at Abercromby, Fortitude North and Racetrack.",
+  "watch_items": "\n<item>WA Gold: a further 6,000m of resource development and step-out drilling is planned this quarter at Abercromby, targeting a maiden Ore Reserve and Financial Investment Decision during 2027.</item>\n<item>Matsa: the rig is moving onto the lake area at Fortitude North, where a further 6,000m has been designed as part of a larger intended program, following completion of nine holes for 3,404m in the northern part.</item>\n<item>Pantoro Gold: drilling continues with multiple rigs active at Racetrack, with the high-grade zone open to the east and down dip; an FY2027 exploration drive is planned from the upper levels of the OK Decline.</item>\n<item>Kalgoorlie Gold Mining: aircore drilling at the LTZ Flexure target and RC drilling at Lighthorse are ongoing at Pinjin, with results pending.</item>\n<item>Kalamazoo: 625,000 escrowed shares are due for release on 10 August 2026.</item>\n</watch_items>\n<parameter name=\"day_in_brief\">A total of 13 confirmed announcements from 15 watchlist names were logged against a watchlist of 91 ticker codes, with no quarterlies in the window. The bulk of the volume came from Diggers and Dealers 2026 conference presentations, with Medallion Metals, Capricorn Metals, Emerald Resources, Astral Resources, West African Resources and Santana all using the platform to restate existing project economics and corporate positioning rather than disclose new figures; Capricorn explicitly confirmed nothing had materially changed from its 27 July 2026 releases. Brightstar reported its Goldfields Project construction remains on schedule and within budget for first gold in June 2027. The genuine newsflow came from drilling: WA Gold's Abercromby assays returned a weighted average grade of 2.61g/t Au matching the current underground resource grade, Matsa's Fortitude North diamond drilling returned further high-grade intercepts including 5.1m @ 9.68g/t Au from 352.95m, Kalgoorlie Gold Mining extended mineralisation beyond the current Kirgella Gift and Providence resource, and Pantoro Gold confirmed continuity of high-grade mineralisation at Racetrack over 350 metres of strike. Kalamazoo separately advised of an escrow release affecting 625,000 shares issued to Platina Resources Ltd.",
+  "rows": [
+    {
+      "ticker": "SLS",
+      "company": "SOLSTICE MINERALS LIMITED",
+      "announcement": "Investor presentation, Diggers & Dealers 2026",
+      "type": "Capital Raising",
+      "date": "4 August 2026",
+      "document_key": "2924-03117642-6A1337194",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117642-6A1337194"
+    },
+    {
+      "ticker": "MM8",
+      "company": "MEDALLION METALS LIMITED.",
+      "announcement": "D&D presentation: no new figures",
+      "type": "Presentation",
+      "date": "4 August 2026",
+      "document_key": "2924-03117548-6A1337148",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117548-6A1337148"
+    },
+    {
+      "ticker": "CMM",
+      "company": "CAPRICORN METALS LTD",
+      "announcement": "Diggers & Dealers presentation, no new information",
+      "type": "Capital Raising",
+      "date": "4 August 2026",
+      "document_key": "2924-03117507-6A1337131",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117507-6A1337131"
+    },
+    {
+      "ticker": "EMR",
+      "company": "EMERALD RESOURCES NL",
+      "announcement": "Diggers & Dealers presentation, no new figures",
+      "type": "Capital Raising",
+      "date": "4 August 2026",
+      "document_key": "2924-03117556-6A1337153",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117556-6A1337153"
+    },
+    {
+      "ticker": "BTR",
+      "company": "BRIGHTSTAR RESOURCES LIMITED",
+      "announcement": "Goldfields construction on schedule, first gold June 2027",
+      "type": "Drilling",
+      "date": "4 August 2026",
+      "document_key": "2924-03117666-6A1337203",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117666-6A1337203"
+    },
+    {
+      "ticker": "AAR",
+      "company": "ASTRAL RESOURCES NL",
+      "announcement": "Diggers & Dealers deck, no new figures",
+      "type": "Investor Presentation",
+      "date": "4 August 2026",
+      "document_key": "2924-03117709-6A1337225",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117709-6A1337225"
+    },
+    {
+      "ticker": "KAL",
+      "company": "KALGOORLIE GOLD MINING LIMITED",
+      "announcement": "21 RC holes hit broad gold at Kirgella Gift, Providence",
+      "type": "Drilling",
+      "date": "4 August 2026",
+      "document_key": "2924-03117614-6A1337176",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117614-6A1337176"
+    },
+    {
+      "ticker": "WAF",
+      "company": "WEST AFRICAN RESOURCES LIMITED",
+      "announcement": "Diggers & Dealers deck, no new figures",
+      "type": "Presentation",
+      "date": "4 August 2026",
+      "document_key": "2924-03117708-6A1337224",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117708-6A1337224"
+    },
+    {
+      "ticker": "SMI",
+      "company": "SANTANA MINERALS LIMITED",
+      "announcement": "Diggers & Dealers deck: no new figures",
+      "type": "Capital Raising",
+      "date": "4 August 2026",
+      "document_key": "2924-03117702-6A1337223",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117702-6A1337223"
+    },
+    {
+      "ticker": "WAU",
+      "company": "WA GOLD LIMITED",
+      "announcement": "All 7 diamond holes hit eastern lode, up to 35.21g/t Au",
+      "type": "Drilling",
+      "date": "4 August 2026",
+      "document_key": "2924-03117662-6A1337201",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117662-6A1337201"
+    },
+    {
+      "ticker": "MAT",
+      "company": "MATSA RESOURCES LIMITED",
+      "announcement": "More high grade gold, Fortitude North",
+      "type": "Drilling",
+      "date": "4 August 2026",
+      "document_key": "2924-03117630-6A1337192",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117630-6A1337192"
+    },
+    {
+      "ticker": "PNR",
+      "company": "PANTORO GOLD LIMITED",
+      "announcement": "Racetrack drilling confirms bonanza-grade continuity",
+      "type": "Drilling",
+      "date": "4 August 2026",
+      "document_key": "2924-03117554-6A1337150",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117554-6A1337150"
+    },
+    {
+      "ticker": "KZR",
+      "company": "KALAMAZOO RESOURCES LIMITED",
+      "announcement": "625,000 shares released from escrow 10 Aug",
+      "type": "Capital Raising",
+      "date": "3 August 2026",
+      "document_key": "2924-03117477-6A1337115",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117477-6A1337115"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "SLS",
+      "heading": "Solstice presents Nanadie copper-gold story at Diggers & Dealers",
+      "body": "Solstice Minerals lodged a corporate presentation for the Diggers & Dealers 2026 conference, framing the company as delivering Western Australia's next copper-gold growth story. The deck is a general investor overview and contains no new financial or resource figures beyond referencing the company's existing suite of ASX announcements. No new catalyst or date was disclosed in the material.",
+      "document_key": "2924-03117642-6A1337194",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117642-6A1337194"
+    },
+    {
+      "ticker": "MM8",
+      "heading": "Medallion recaps Ravensthorpe project economics at Diggers & Dealers",
+      "body": "Medallion Metals used its Diggers & Dealers slide deck to restate the Ravensthorpe Gold Project feasibility case rather than release new information: A$138 million capex, a base case pre-tax NPV8 of A$443 million, 87% IRR and a 12 month payback, targeting 75kozpa to 80kozpa AuEq with first ore in the second quarter of CY27. The deck also notes 799 million shares on issue, a market capitalisation of A$336 million and cash of A$54 million at 30 June 2026, plus 260kt already contracted at $100/t under the early processing strategy at Cosmic Boy. No new drilling, resource or financial results were disclosed.",
+      "document_key": "2924-03117548-6A1337148",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117548-6A1337148"
+    },
+    {
+      "ticker": "CMM",
+      "heading": "Capricorn presents Range 500 growth story at Diggers and Dealers, no new figures",
+      "body": "Capricorn Metals used its Diggers and Dealers Mining Forum slot to package existing disclosures rather than release new information, with the deck explicitly confirming nothing has materially changed from the 27 July 2026 reserves, Mt Gibson PFS and Range 500 releases. It restates the 5.24 million ounce group Ore Reserve, the Karlawinda Gold Project's 1.57 million ounce reserve and 150koz per annum expansion nearing Q1 FY27 commissioning, and the Mt Gibson Gold Project's 3.68 million ounce reserve targeting 260koz per annum steady state at A$1,870 AISC. Cash and bullion stood at A$507.0 million as at 30 June 2026, with the aspirational Range 500 target of 500koz per annum still flagged as unsupported by current reserves and resources.",
+      "document_key": "2924-03117507-6A1337131",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117507-6A1337131"
+    },
+    {
+      "ticker": "EMR",
+      "heading": "Emerald outlines path from single mine to multi-mine gold producer",
+      "body": "Emerald Resources presented at the Diggers and Dealers Conference, framing its strategy as advancing from a single mine producer of more than 100,000oz per annum to a multi-mine producer targeting more than 300,000oz per annum. The presentation is a corporate overview current as at 31 July 2026 and does not disclose new operational or financial figures beyond that stated growth ambition.",
+      "document_key": "2924-03117556-6A1337153",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117556-6A1337153"
+    },
+    {
+      "ticker": "BTR",
+      "heading": "Goldfields Project construction tracking on schedule and budget for June 2027 first gold",
+      "body": "Brightstar's 1.5Mtpa Laverton processing plant at the Goldfields Project remains on schedule and within budget for first gold in June 2027. Bulk earthworks for the process plant are complete, structural steel and platework for the primary crushing area have commenced, and the Power Purchase Agreement and LNG Supply Agreement have been executed with major long-lead equipment secured. The first two production borefield bores are being drilled and cased, and the Goldfields Project is targeted to produce approximately 75koz p.a. from FY28 over an initial six-year mine life. High-grade mining at Second Fortune continues toward a planned conclusion in August, while Lord Byron open-pit site preparation advances toward mobilisation targeted for December quarter 2026.",
+      "document_key": "2924-03117666-6A1337203",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117666-6A1337203"
+    },
+    {
+      "ticker": "AAR",
+      "heading": "Astral presents Mandilla project update at Diggers and Dealers",
+      "body": "Astral Resources used its Diggers and Dealers Conference slot to reiterate the Mandilla Project's progress towards development, with Managing Director Marc Ducler presenting. The slide pack provided to ASX is largely a corporate and disclaimer-heavy deck, with no new production, financial or drilling figures included beyond what has already been disclosed. Investors should watch for further updates following the recent Theia in-fill and deep drilling results.",
+      "document_key": "2924-03117709-6A1337225",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117709-6A1337225"
+    },
+    {
+      "ticker": "KAL",
+      "heading": "Infill RC drilling extends gold mineralisation beyond current Kirgella Gift and Providence resource",
+      "body": "Kalgoorlie Gold Mining completed 21 RC holes for 3,702m at Kirgella Gift and Providence, part of the Pinjin project's existing 2.34Mt @ 1.0g/t Au for 76,400oz Inferred Resource. Best results include 28m @ 1.15g/t Au from 20m (including 4m @ 2.08g/t Au from 24m) in KGRC26008, and 13m @ 1.54g/t Au from 44m in KGRC26016. Mineralisation remains open at depth at both deposits, with the company planning further drilling to underpin a future resource update. Aircore drilling at the LTZ Flexure target and RC drilling at Lighthorse are ongoing at Pinjin, with results pending.",
+      "document_key": "2924-03117614-6A1337176",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117614-6A1337176"
+    },
+    {
+      "ticker": "WAF",
+      "heading": "West African Resources reiterates growth pitch at Diggers and Dealers",
+      "body": "West African Resources lodged its Diggers and Dealers 2026 conference presentation, pitching itself as a growing West African mid tier producer targeting more than 500,000oz per annum gold production from 2027. The slide pack is largely disclaimer and non-IFRS methodology notes, with the operational and financial detail already covered in the company's recent quarterly reports. Not price sensitive.",
+      "document_key": "2924-03117708-6A1337224",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117708-6A1337224"
+    },
+    {
+      "ticker": "SMI",
+      "heading": "Santana repackages Bendigo-Ophir PFS metrics for Diggers and Dealers audience",
+      "body": "Santana's investor presentation for the Diggers and Dealers conference summarises the Bendigo-Ophir project the company has previously disclosed: a combined 2.34Moz at 2.1g/t Au resource across the RAS, CIT, SRX and SRE deposits, with a 1.24Moz probable ore reserve. The PFS base case remains A$277 million capex for a 1.2Mtpa operation targeting up to 120koz per annum, A$2,100 million after-tax NPV at a 6.5% discount rate and A$6,000/oz gold, with an 85% IRR and 15-month payback. The permitting timeline shown has the final decision due 16 December 2026 and first gold targeted for 2028. Market capitalisation is quoted at approximately A$465 million with net cash at bank of approximately A$185 million.",
+      "document_key": "2924-03117702-6A1337223",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117702-6A1337223"
+    },
+    {
+      "ticker": "WAU",
+      "heading": "Assays confirm 500m of continuous high-grade gold at Abercromby",
+      "body": "WA Gold has received assays from all seven diamond holes of Phase 1 resource development drilling at Abercromby, with every hole intersecting the targeted eastern lode at or near its modelled position across a minimum 500m strike length. Best results include 9m @ 3.07g/t Au including 2.91m @ 5.25g/t Au (26ABDD003), 9.41m @ 2.89g/t Au including 0.38m @ 35.21g/t Au (26ABDD005), and 3m @ 5.90g/t Au from 314m (26ABDD006). A 231m thick alteration zone in 26ABDD001 points to a potentially larger system, and the weighted average grade of 2.61g/t Au across the seven intercepts matches the current underground resource grade. A further 6,000m of resource development and step-out drilling is planned this quarter as the company targets a maiden Ore Reserve and a Financial Investment Decision during 2027.",
+      "document_key": "2924-03117662-6A1337201",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117662-6A1337201"
+    },
+    {
+      "ticker": "MAT",
+      "heading": "Fortitude North diamond drilling returns further high grade gold intercepts",
+      "body": "Matsa's ongoing diamond drilling at Fortitude North, part of the Lake Carey Gold Project, has returned further high-grade results including 26.6m @ 4.48g/t Au from 92.9m (26FNDD018, including 10.3m @ 6.24g/t Au from 108.2m), 5.1m @ 9.68g/t Au from 352.95m and 3.1m @ 5.66g/t Au from 302.05m (both 26FNDD017), 5.8m @ 8.29g/t Au from 274m (26FNDD020) and 9.0m @ 3.27g/t Au from 183m (26FNDD021). Nine holes for 3,404m have now been completed in the northern part of Fortitude North out of a planned 10,000m program, with the rig moving onto the lake area where a further 6,000m has been designed as part of a larger intended program.",
+      "document_key": "2924-03117630-6A1337192",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117630-6A1337192"
+    },
+    {
+      "ticker": "PNR",
+      "heading": "Second-phase infill drilling extends Racetrack high-grade zone over 350m strike",
+      "body": "Pantoro Gold's second phase of infill drilling at the Racetrack Discovery, within the Norseman Gold Project, has confirmed continuity of high-grade mineralisation in the Mainfield, including 4.94m @ 349.14g/t from 603.02m (with 0.91m @ 1,737.37g/t) and 20.36m @ 15.55g/t from 576.29m (including 5.94m @ 43.1g/t). The high-grade zone now extends over 350 metres of strike from near surface to 600 metres depth and remains open to the east and down dip. Management likens the structure to the 500,000-ounce Bullen lode located 600 metres from the OK Underground Mine, with an FY2027 exploration drive planned from the upper levels of the OK Decline. Drilling continues with multiple rigs active.",
+      "document_key": "2924-03117554-6A1337150",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117554-6A1337150"
+    },
+    {
+      "ticker": "KZR",
+      "heading": "625,000 escrowed shares to be released 10 August 2026",
+      "body": "Kalamazoo advises that 625,000 fully paid ordinary shares will be released from voluntary escrow on 10 August 2026, six months after issue. The shares were issued to Platina Resources Ltd as part consideration for the Xanadu Gold Project acquisition. There is no change to the company's issued capital as the shares are already quoted on the ASX.",
+      "document_key": "2924-03117477-6A1337115",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117477-6A1337115"
+    }
+  ],
+  "quarterlies": [],
+  "_unverified": [
+    {
+      "ticker": "EMR",
+      "headline": "Diggers & Dealers Conference Presentation",
+      "figures": [
+        "100,000oz"
+      ]
+    }
+  ]
+}
