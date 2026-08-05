@@ -212,11 +212,29 @@ LEAKED_FIELD = re.compile(
     re.S | re.I,
 )
 STRAY_TAG = re.compile(r"</?[a-z_][a-z0-9_.\-]*(?:\s[^<>]*)?/?>", re.I)
+
+# Where a field's real content stops and the leaked payload begins. A closing
+# tag or the start of the next parameter is always the end of the prose, so the
+# text is cut there rather than having the tags picked out of it. Stripping
+# alone is not enough: it turns "expansion.</body> <parameter
+# name="is_restatement">false" into "expansion. false", which reads as prose and
+# would go out looking deliberate.
+CUT_AT = re.compile(
+    r"</[a-z_][a-z0-9_.\-]*>|<parameter\b|</?(?:function_calls|invoke|tool_use)\b",
+    re.I,
+)
+
 TEXT_FIELDS = ("lead", "subtitle", "day_in_brief")
+ITEM_TEXT_FIELDS = ("announcement", "heading", "body", "summary", "restated_from")
 
 
 def _clean(value):
-    return STRAY_TAG.sub("", str(value or "")).strip()
+    """Cut a field at the first leaked tag, then remove anything left over."""
+    text = str(value or "")
+    cut = CUT_AT.search(text)
+    if cut:
+        text = text[:cut.start()]
+    return STRAY_TAG.sub("", text).strip()
 
 
 def _watch_list(value):
@@ -228,6 +246,34 @@ def _watch_list(value):
             items = re.split(r"\n+|(?:^|\s)[-\u2022]\s+", value)
         value = items
     return [s for s in (_clean(v) for v in (value or [])) if len(s) > 1]
+
+
+def _normalise_item(payload):
+    """Repair one item payload the same way the framing is repaired.
+
+    The 5 August briefing carried a St Barbara summary that ended
+    "...ahead of an FY28 program expansion.</body> <parameter
+    name="is_restatement">false" in the reader's inbox. Same fault as the
+    4 August watch items, one level down: the model finished the prose and then
+    closed the payload in its own tag syntax instead of JSON, so the trailing
+    markup landed inside the body string. Every field the model writes is now
+    cut at the leak, and any field that ended up swallowed by another is
+    recovered from it.
+    """
+    out = dict(payload or {})
+    blob = "\n".join(str(out.get(k) or "")
+                     for k in ITEM_TEXT_FIELDS if isinstance(out.get(k), str))
+    for name, value in LEAKED_FIELD.findall(blob):
+        if name in ITEM_TEXT_FIELDS and not _clean(out.get(name)):
+            out[name] = value
+        elif name == "is_restatement" and not isinstance(out.get(name), bool):
+            out[name] = _clean(value).lower().startswith("true")
+    for key in ITEM_TEXT_FIELDS:
+        if isinstance(out.get(key), str):
+            out[key] = _clean(out[key])
+    if isinstance(out.get("is_restatement"), str):
+        out["is_restatement"] = out["is_restatement"].strip().lower() == "true"
+    return out
 
 
 def _normalise_framing(framing):
@@ -298,8 +344,21 @@ def summarise_item(record, client=None, model=None):
         "write only about that company.\n\n"
         f"{HOUSE}\n\n{QUARTERLY_GUIDE if quarterly else ITEM_GUIDE}"
     )
-    out = _call(client, system, _prompt(record, limit), schema,
-                model=model or (QUARTERLY_MODEL if quarterly else MODEL))
+    prompt = _prompt(record, limit)
+    model = model or (QUARTERLY_MODEL if quarterly else MODEL)
+    out = _normalise_item(_call(client, system, prompt, schema, model=model))
+
+    # A leak that consumed the prose rather than trailing it leaves nothing to
+    # print, so ask once more before publishing an empty card.
+    written = "summary" if quarterly else "body"
+    if not out.get(written):
+        print(f"  ! {record['ticker']} came back with no {written}, retrying once")
+        out = _normalise_item(_call(
+            client, system,
+            prompt + "\n\nReturn every field of the tool schema as proper JSON. "
+                     "Write the prose as plain text with no tags of any kind in it.",
+            schema, model=model))
+
     out.update({
         "ticker": record["ticker"],
         "company": record["company"],
