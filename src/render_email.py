@@ -61,7 +61,7 @@ def _link(text, url, colour=NAVY, weight="bold", size=None):
 
 def _p(text, size=15, colour=NAVY, weight="normal", top=0, bottom=14):
     """Render text as one or more paragraphs, preserving blank-line breaks."""
-    blocks = [b.strip() for b in (text or "").split("\n\n") if b.strip()]
+    blocks = [b.strip() for b in _text(text).split("\n\n") if b.strip()]
     if not blocks:
         return ""
     return "".join(
@@ -107,9 +107,9 @@ def _table(rows):
         bg = GREY if i % 2 == 0 else WHITE
         cells = [
             _link(r.get("ticker", ""), r.get("url")),
-            escape(str(r.get("company", ""))),
-            escape(str(r.get("announcement", ""))),
-            escape(str(r.get("date", ""))),
+            escape(_text(r.get("company"))),
+            escape(_text(r.get("announcement"))),
+            escape(_text(r.get("date"))),
         ]
         tds = "".join(
             f'<td width="{w}" style="font-family:{FONT};font-size:12px;'
@@ -130,6 +130,28 @@ def _table(rows):
     """
 
 
+# Second line of defence against a malformed model payload. summarise.py
+# repairs the fields before they are archived; this makes sure that a leak of a
+# shape nobody has seen yet cannot reach a reader's inbox, because escape()
+# would otherwise render the stray markup as visible text. That is how
+# "</body> <parameter name=\"is_restatement\">false" appeared at the end of the
+# St Barbara summary on 5 August.
+_CUT_AT = re.compile(
+    r"</[a-z_][a-z0-9_.\-]*>|<parameter\b|</?(?:function_calls|invoke|tool_use)\b",
+    re.I,
+)
+_STRAY_TAG = re.compile(r"</?[a-z_][a-z0-9_.\-]*(?:\s[^<>]*)?/?>", re.I)
+
+
+def _text(value):
+    """Cut at the first leaked tag, drop anything left, return plain prose."""
+    text = str(value or "")
+    cut = _CUT_AT.search(text)
+    if cut:
+        text = text[:cut.start()]
+    return _STRAY_TAG.sub("", text).strip()
+
+
 def _bullets(value):
     """Coerce whatever the model returned into a list of bullet strings.
 
@@ -148,12 +170,7 @@ def _bullets(value):
         if not items:
             items = re.split(r"\n+|(?:^|\s)[-\u2022]\s+", value)
         value = items
-    out = []
-    for item in value:
-        text = re.sub(r"</?[a-z_][a-z0-9_.\-]*(?:\s[^<>]*)?/?>", "", str(item or "")).strip()
-        if len(text) > 1:
-            out.append(text)
-    return out
+    return [t for t in (_text(item) for item in value) if len(t) > 1]
 
 
 def _window_label(pack):
@@ -170,7 +187,7 @@ def _window_label(pack):
 
 
 def _card(heading, paragraphs=None, bullets=None, url=None, link_text=None):
-    head = escape(heading)
+    head = escape(_text(heading))
     if url and link_text:
         head = head.replace(escape(link_text),
                             _link(link_text, url, size=15), 1)
@@ -218,7 +235,7 @@ def _quarterly(q):
     <tr><td style="font-family:{FONT};font-size:13px;line-height:1.5;
                    color:{NAVY};padding:0 0 11px 0;">
       {_link(head, q.get("url"))}
-      <span style="color:{MUTED};">&nbsp;&nbsp;</span>{escape(q.get('summary',''))}
+      <span style="color:{MUTED};">&nbsp;&nbsp;</span>{escape(_text(q.get('summary')))}
     </td></tr>
     """
 
@@ -327,23 +344,24 @@ def _plain(briefing, pack):
         "NOT RESEARCH",
         "",
         "CONFIRMED ANNOUNCEMENTS",
-        briefing.get("lead", ""),
+        _text(briefing.get("lead")),
         "",
     ]
     for r in briefing.get("rows") or []:
-        out.append(f"  {r.get('ticker','')}  {r.get('company','')}  "
-                   f"{r.get('announcement','')}  ({r.get('date','')})")
+        out.append(f"  {r.get('ticker','')}  {_text(r.get('company'))}  "
+                   f"{_text(r.get('announcement'))}  ({_text(r.get('date'))})")
     out.append("")
     for s in briefing.get("summaries") or []:
-        out += [f"{s.get('ticker','')}: {s.get('heading','')}", s.get("body", ""), ""]
+        out += [f"{s.get('ticker','')}: {_text(s.get('heading'))}", _text(s.get("body")), ""]
     if briefing.get("quarterlies"):
         out.append("QUARTERLIES")
         for q in briefing["quarterlies"]:
-            out += [f"  {q.get('ticker','')}  {q.get('company','')}  ({q.get('headline','')})",
-                    f"    {q.get('summary','')}", ""]
+            out += [f"  {q.get('ticker','')}  {_text(q.get('company'))}  "
+                    f"({_text(q.get('headline'))})",
+                    f"    {_text(q.get('summary'))}", ""]
     watch = _bullets(briefing.get("watch_items"))
     if watch:
         out += ["WATCH ITEMS"] + [f"  - {w}" for w in watch] + [""]
-    out += ["DAY IN BRIEF", briefing.get("day_in_brief", ""), "",
+    out += ["DAY IN BRIEF", _text(briefing.get("day_in_brief")), "",
             DISCLAIMER_HEADING.upper(), DISCLAIMER]
     return "\n".join(out)
