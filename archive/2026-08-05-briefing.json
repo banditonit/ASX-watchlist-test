@@ -1,0 +1,146 @@
+{
+  "lead": "Eight confirmed announcements from the watchlist over the past 24 hours, led by high-grade drilling at Lefroy Exploration's Mt Martin project, where results including 8m @ 3.93g/t Au from 141m (LEFR1161) and 6m @ 5.48g/t Au from 69m (LEFR1148) extend mineralisation beyond the current 460,000oz resource. Fourteen watchlist names announced in total across the window.",
+  "subtitle": "Lefroy's Mt Martin high-grade hits headline a day dominated by gold sector development news and substantial holder movements.",
+  "watch_items": [
+    "LEX: Mt Martin Scoping Study due for completion in the September quarter, alongside resource modelling updates at the Burns high-grade domain.",
+    "WGX: Westgold's Cue mill motor upgrade (2.9MW to 4.2MW) targets FY28 completion, lifting throughput to 1.7Mtpa and adding about 15kozpa once commissioned.",
+    "SBM: St Barbara's Nova Scotia RC drilling program is due to start mid-August 2026, running approximately two months across five to seven targets.",
+    "TRE: Toubani's new shares from the entitlement offer are expected to be allotted on 10 August 2026 and begin trading on 11 August 2026.",
+    "RRL: Two separate substantial holder notices (State Street and Macquarie) both show reduced stakes in Regis Resources, worth monitoring for further register movement."
+  ],
+  "day_in_brief": "Beyond the Lefroy Exploration lead, Westgold Resources confirmed a capital-light expansion of its Cue processing hub, lifting throughput from 1.4Mtpa to 1.7Mtpa in FY28 via a A$22 million mill motor upgrade with a 10 month payback, and improving Cue's NPV by about A$400 million at a A$5,500/oz gold price. St Barbara lifted its Nova Scotia exploration budget 64% to A$4.1 million for FY27, doubling its exploration team ahead of an expanded drilling campaign. Toubani Resources completed the retail component of its entitlement offer, raising approximately A$70 million before costs. Substantial holder notices were lodged for Predictive Discovery (Citigroup, 5.0246%) and Regis Resources, where both State Street and Macquarie reported reduced voting power below 7% and 6% respectively. Novo Resources filed a routine monthly CDI statement reflecting transmutation of TSX common shares. No quarterlies featured in the window.\"",
+  "rows": [
+    {
+      "ticker": "LEX",
+      "company": "LEFROY EXPLORATION LIMITED",
+      "announcement": "8m @ 3.93g/t Au from 141m (LEFR1161)",
+      "type": null,
+      "date": "5 August 2026",
+      "document_key": "2924-03117977-6A1337345",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117977-6A1337345"
+    },
+    {
+      "ticker": "WGX",
+      "company": "WESTGOLD RESOURCES LIMITED.",
+      "announcement": "Cue hub expansion to 1.7Mtpa in FY28, A$22M capex",
+      "type": null,
+      "date": "5 August 2026",
+      "document_key": "2924-03117933-6A1337326",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117933-6A1337326"
+    },
+    {
+      "ticker": "SBM",
+      "company": "ST BARBARA LIMITED",
+      "announcement": "FY27 exploration spend to rise 64% to A$4.1 million",
+      "type": null,
+      "date": "5 August 2026",
+      "document_key": "2924-03117943-3A698194",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117943-3A698194"
+    },
+    {
+      "ticker": "PDI",
+      "company": "PREDICTIVE DISCOVERY LIMITED",
+      "announcement": "Citigroup becomes substantial holder with 5.0246% voting power",
+      "type": null,
+      "date": "4 August 2026",
+      "document_key": "2924-03117842-6A1337277",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117842-6A1337277"
+    },
+    {
+      "ticker": "RRL",
+      "company": "REGIS RESOURCES LIMITED",
+      "announcement": "State Street stake reduced to 6.50% (from 7.53%)",
+      "type": null,
+      "date": "4 August 2026",
+      "document_key": "2924-03117887-6A1337298",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117887-6A1337298"
+    },
+    {
+      "ticker": "RRL",
+      "company": "REGIS RESOURCES LIMITED",
+      "announcement": "MQG voting power falls to 5.38% (from 6.64%)",
+      "type": null,
+      "date": "4 August 2026",
+      "document_key": "2924-03117859-6A1337286",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117859-6A1337286"
+    },
+    {
+      "ticker": "TRE",
+      "company": "TOUBANI RESOURCES LIMITED",
+      "announcement": "Retail entitlement offer raises approximately A$70 million",
+      "type": null,
+      "date": "5 August 2026",
+      "document_key": "2924-03118008-6A1337354",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03118008-6A1337354"
+    },
+    {
+      "ticker": "NVO",
+      "company": "NOVO RESOURCES CORP.",
+      "announcement": "137,192,081 CDIs on issue, up 840,000 in July",
+      "type": null,
+      "date": "4 August 2026",
+      "document_key": "2924-03117812-6A1337260",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117812-6A1337260"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "LEX",
+      "heading": "High-grade Mt Martin intercepts extend well beyond current resource",
+      "body": "Lefroy Exploration has returned high-grade RC results from Mt Martin, including 8m @ 3.93g/t Au from 141m (LEFR1161) and 6m @ 5.48g/t Au from 69m (LEFR1148), with several intercepts sitting outside the existing 460,000oz Mineral Resource Estimate. East Shear results confirm down-plunge continuity across an under-drilled 1km strike length and identify open, untested shoots. The Mt Martin Scoping Study remains on track for completion in the September quarter, alongside resource modelling updates at the Burns high-grade domain.",
+      "document_key": "2924-03117977-6A1337345",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117977-6A1337345"
+    },
+    {
+      "ticker": "WGX",
+      "heading": "Westgold commits to capital-light Cue hub expansion",
+      "body": "Westgold will lift Cue processing throughput from 1.4Mtpa to 1.7Mtpa in FY28, a ~21% increase, via a mill motor upgrade from 2.9MW to 4.2MW. Indicative capital is A$22 million with a 10 month payback, adding about 15kozpa once commissioned. Study shows life of mine production of 1.1 to 1.3Moz at AISC of A$2,916 to A$3,564/oz, with Cue NPV improving by about A$400 million at a A$5,500/oz gold price. Brownfields drilling at Big Bell South and Cuddingwarra has begun to define further ore sources.",
+      "document_key": "2924-03117933-6A1337326",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117933-6A1337326"
+    },
+    {
+      "ticker": "SBM",
+      "heading": "St Barbara lifts Nova Scotia exploration budget and drilling",
+      "body": "St Barbara will increase Nova Scotia exploration spend 64% from A$2.5 million in FY26 to A$4.1 million in FY27, doubling its exploration team. The program includes up to 105 RC/IFRC holes for 4,400m across five to seven targets, a 50km2 UAV magnetic survey, and over 2,000 till and rock chip samples across 14 targets. RC drilling is due to start mid-August 2026, running about two months, ahead of an FY28 program expansion.</body>\n<parameter name=\"is_restatement\">false",
+      "document_key": "2924-03117943-3A698194",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117943-3A698194"
+    },
+    {
+      "ticker": "PDI",
+      "heading": "Citigroup emerges as substantial holder in PDI",
+      "body": "Citigroup Global Markets Australia and related entities became a substantial holder in Predictive Discovery on 31 July 2026, with a relevant interest in 248,218,716 shares representing 5.0246% voting power. The holding is largely tied to securities lending arrangements rather than a direct market purchase.",
+      "document_key": "2924-03117842-6A1337277",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117842-6A1337277"
+    },
+    {
+      "ticker": "RRL",
+      "heading": "State Street's stake in Regis Resources falls below 7%",
+      "body": "State Street Corporation and its subsidiaries' voting power in Regis Resources moved from 7.53% (57,011,733 shares) to 6.50% (49,201,162 shares) following changes effective 31 July 2026. The notice reflects routine custodial, lending and collateral movements across State Street's fund management entities rather than a single transaction.",
+      "document_key": "2924-03117887-6A1337298",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117887-6A1337298"
+    },
+    {
+      "ticker": "RRL",
+      "heading": "Macquarie trims Regis Resources stake below 6%",
+      "body": "Macquarie Group and its controlled entities' voting power in Regis Resources fell to 5.38% from 6.64%, with the relevant interest reducing to 40,743,471 shares from 50,284,410. The change followed dealings across various Macquarie investment management and custodial entities.",
+      "document_key": "2924-03117859-6A1337286",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117859-6A1337286"
+    },
+    {
+      "ticker": "TRE",
+      "heading": "Toubani completes retail entitlement offer",
+      "body": "Toubani Resources has completed the retail component of its 1-for-3.27 accelerated non-renounceable entitlement offer, raising approximately A$70 million before costs. Around 60,961,054 shortfall shares were allocated per the offer's shortfall policy, including to underwriter Canaccord Genuity. New shares are expected to be allotted on 10 August 2026 and begin trading on 11 August 2026.",
+      "document_key": "2924-03118008-6A1337354",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03118008-6A1337354"
+    },
+    {
+      "ticker": "NVO",
+      "heading": "Novo reports monthly CDI statement, routine transfer from TSX",
+      "body": "Novo's Appendix 4A shows 137,192,081 CDIs on issue at end of July 2026, up 840,000 from 136,352,081 the previous month. The change reflects common shares held on the TSX transmuted to CDIs on the ASX, with common shares over which CDIs have not been issued falling to 295,410,438. Warrants and options on issue were unchanged at 8,200,000 and 3,000,000 respectively.",
+      "document_key": "2924-03117812-6A1337260",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03117812-6A1337260"
+    }
+  ],
+  "quarterlies": [],
+  "_unverified": []
+}
