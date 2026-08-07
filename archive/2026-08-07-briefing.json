@@ -1,0 +1,63 @@
+{
+  "lead": "Three watchlist names reported over the past 24 hours, with Aurum Resources leading on high-grade drilling results at Boundiali, alongside a new drilling start from Maritana Minerals and a routine capital structure filing from Orezone.",
+  "subtitle": "Aurum extends high-grade gold outside the resource at Boundiali as Maritana begins drilling near Black Swan.",
+  "watch_items": [
+    "AUE: next Boundiali resource update targeted for end of Q3 CY2026, ahead of a DFS due late CY2026",
+    "MRT: assay results from the Wilsons Gold aircore program expected late September or early October 2026"
+  ],
+  "day_in_brief": "Aurum Resources returned assays from 36 diamond holes (9,452m) across BMT3, BMT2 and BMT1 at its 3.22Moz Boundiali Gold Project in Côte d'Ivoire, with the standout intercept 1.76m @ 150.87g/t Au from 485.94m, including 0.72m @ 367.05g/t Au, at BMT3, extending mineralisation outside the current resource. Maritana Minerals commenced a 4,000 metre aircore drilling program at Wilsons Gold, approximately 400m from its Black Swan Processing Hub, testing gold potential beneath a 2.5km by 1.5km gold-in-soil anomaly where past rock chips graded up to 1.25g/t Au and historical drilling returned 0.4m @ 6.41g/t Au. Orezone's Appendix 4A showed CDIs on issue at 43,352,323 as at end July 2026, down 834,900 from 44,187,223 the prior month, reflecting net transfers to TSX-quoted common stock, which rose to 624,750,667; options over 400,000 shares expiring 16 July 2026 were exercised during the period. No quarterlies were reported in the window.",
+  "rows": [
+    {
+      "ticker": "AUE",
+      "company": "AURUM RESOURCES LIMITED",
+      "announcement": "0.72m @ 367.05g/t Au from 485.94m (MBDD397), BMT3",
+      "type": null,
+      "date": "7 August 2026",
+      "document_key": "2924-03118828-6A1337678",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03118828-6A1337678"
+    },
+    {
+      "ticker": "MRT",
+      "company": "MARITANA MINERALS LIMITED",
+      "announcement": "4,000m aircore drilling underway at Wilsons Gold Prospect",
+      "type": null,
+      "date": "7 August 2026",
+      "document_key": "2924-03118784-6A1337664",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03118784-6A1337664"
+    },
+    {
+      "ticker": "ORE",
+      "company": "OREZONE GOLD CORPORATION",
+      "announcement": "CDIs on issue fall to 43,352,323 at end July 2026",
+      "type": null,
+      "date": "7 August 2026",
+      "document_key": "2924-03118956-6A1337711",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03118956-6A1337711"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "AUE",
+      "heading": "Aurum extends high-grade gold at BMT3, Boundiali",
+      "body": "Aurum Resources has returned assays from 36 diamond holes (9,452m) across BMT3, BMT2 and BMT1 at its 3.22Moz Boundiali Gold Project in Côte d'Ivoire. The standout intercept was 1.76m @ 150.87g/t Au from 485.94m, including 0.72m @ 367.05g/t Au, at BMT3, with mineralisation extending outside the current resource. Results will feed into the next Boundiali resource update, targeted for the end of Q3 CY2026, ahead of a DFS due late CY2026.",
+      "document_key": "2924-03118828-6A1337678",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03118828-6A1337678"
+    },
+    {
+      "ticker": "MRT",
+      "heading": "Maritana starts drilling at Wilsons Gold, 400m from Black Swan hub",
+      "body": "Maritana Minerals has commenced a 4,000 metre aircore drilling program at the Wilsons Gold Prospect, located approximately 400m from its Black Swan Processing Hub. The program is the first drilling to test gold potential beneath a 2.5km by 1.5km gold-in-soil anomaly, where past rock chips graded up to 1.25g/t Au and historical drilling returned 0.4m @ 6.41g/t Au. Assay results are expected in late September or early October 2026.",
+      "document_key": "2924-03118784-6A1337664",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03118784-6A1337664"
+    },
+    {
+      "ticker": "ORE",
+      "heading": "Monthly CDI count edges down as holders shift to TSX common stock",
+      "body": "Orezone's routine Appendix 4A shows CDIs on issue at 43,352,323 as at end July 2026, down 834,900 from 44,187,223 the prior month, reflecting net transfers between CDIs and TSX-quoted common stock. Common stock on issue rose to 624,750,667. Options over 400,000 shares expiring 16 July 2026 were exercised during the period.",
+      "document_key": "2924-03118956-6A1337711",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03118956-6A1337711"
+    }
+  ],
+  "quarterlies": [],
+  "_unverified": []
+}
