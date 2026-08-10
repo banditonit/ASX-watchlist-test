@@ -59,6 +59,13 @@ def _link(text, url, colour=NAVY, weight="bold", size=None):
             f'font-weight:{weight};{sz}text-decoration:underline;">{escape(text)}</a>')
 
 
+def _plain_label(text, weight="bold", size=None):
+    """Bold navy text that is not a link, for a label with no single target."""
+    sz = f"font-size:{size}px;" if size else ""
+    return (f'<span style="font-weight:{weight};{sz}color:{NAVY};">'
+            f'{escape(text)}</span>')
+
+
 def _p(text, size=15, colour=NAVY, weight="normal", top=0, bottom=14):
     """Render text as one or more paragraphs, preserving blank-line breaks."""
     blocks = [b.strip() for b in _text(text).split("\n\n") if b.strip()]
@@ -70,6 +77,56 @@ def _p(text, size=15, colour=NAVY, weight="normal", top=0, bottom=14):
         f'font-weight:{weight};">{escape(b)}</p>'
         for i, b in enumerate(blocks)
     )
+
+
+# How several announcements from one name are laid out in the Announcement
+# cell. "line" gives each its own line, "pipe" runs them together separated by
+# a rule. Flip this one word to change it.
+MULTI_SEPARATOR = "line"
+
+
+def _group_by_ticker(entries):
+    """[(ticker, [entry, ...]), ...] in first-appearance order.
+
+    Order is preserved rather than sorted, because the caller has already
+    ranked by materiality: a group lands where its strongest announcement would
+    have, which is where the reader expects to find the name.
+    """
+    order, groups = [], {}
+    for entry in entries or []:
+        ticker = entry.get("ticker") or ""
+        if ticker not in groups:
+            groups[ticker] = []
+            order.append(ticker)
+        groups[ticker].append(entry)
+    return [(t, groups[t]) for t in order]
+
+
+def _date_span(entries):
+    """One date, or a range when a group straddles days.
+
+    Only bites on a Monday, when the window reaches back 72 hours and a name
+    can have lodged on Friday and again this morning.
+    """
+    dates = list(dict.fromkeys(
+        d for d in (_text(e.get("date")) for e in entries) if d))
+    if len(dates) <= 1:
+        return dates[0] if dates else ""
+    parsed = []
+    for d in dates:
+        try:
+            parsed.append((datetime.strptime(d, "%d %B %Y"), d))
+        except ValueError:
+            return f"{dates[0]} to {dates[-1]}"
+    parsed.sort()
+    first, last = parsed[0][0], parsed[-1][0]
+    if (first.month, first.year) == (last.month, last.year):
+        return f"{first.day} to {last.day} {last.strftime('%B %Y')}"
+    if first.year == last.year:
+        return (f"{first.day} {first.strftime('%B')} to "
+                f"{last.day} {last.strftime('%B %Y')}")
+    return (f"{first.day} {first.strftime('%B %Y')} to "
+            f"{last.day} {last.strftime('%B %Y')}")
 
 
 def _band(title, subtitle=None):
@@ -103,13 +160,25 @@ def _table(rows):
     # both came back as "Capital Raising" on 4 August. The space it freed goes
     # to Announcement, which now carries the best drill intercept in full.
     widths = ["10%", "22%", "52%", "16%"]
-    for i, r in enumerate(rows):
+    # One row per name, not per announcement. A company that lodges three
+    # documents before the open is one line of the day's story, not three: on
+    # 10 August 2026 Wia Gold filed a DFS, a resource upgrade and a trading
+    # halt, and the table read as three unrelated companies. Every announcement
+    # keeps its own link inside the cell, so merging the row loses nothing.
+    for i, (ticker, items) in enumerate(_group_by_ticker(rows)):
         bg = GREY if i % 2 == 0 else WHITE
+        # The link goes on the announcement, never on the ticker. Underlining
+        # both put two rules on every row and four on a name that filed three
+        # times, which read as clutter. The ticker is a label; the announcement
+        # is the thing you click, and it is also the thing that identifies
+        # which document you are opening when a name filed more than once.
+        parts = [_link(_text(it.get("announcement")), it.get("url"),
+                       weight="normal") for it in items]
         cells = [
-            _link(r.get("ticker", ""), r.get("url")),
-            escape(_text(r.get("company"))),
-            escape(_text(r.get("announcement"))),
-            escape(_text(r.get("date"))),
+            _plain_label(ticker),
+            escape(_text(items[0].get("company"))),
+            _join_parts(parts),
+            escape(_date_span(items)),
         ]
         tds = "".join(
             f'<td width="{w}" style="font-family:{FONT};font-size:12px;'
@@ -128,6 +197,17 @@ def _table(rows):
     </td></tr>
     <tr><td style="height:20px;line-height:20px;font-size:0;">&nbsp;</td></tr>
     """
+
+
+def _join_parts(parts):
+    """Lay several announcements out inside one cell."""
+    if len(parts) == 1:
+        return parts[0]
+    if MULTI_SEPARATOR == "pipe":
+        return f'<span style="color:{MUTED};">&nbsp;|&nbsp;</span>'.join(parts)
+    return "".join(
+        f'<div style="padding-bottom:{0 if n == len(parts) - 1 else 5}px;">{p}</div>'
+        for n, p in enumerate(parts))
 
 
 # Second line of defence against a malformed model payload. summarise.py
@@ -213,6 +293,63 @@ def _card(heading, paragraphs=None, bullets=None, url=None, link_text=None):
     """
 
 
+def _item_card(ticker, item):
+    """One announcement. The ticker labels it, the heading links to the document."""
+    heading = (
+        f'<div style="font-family:{FONT};font-size:15px;font-weight:bold;'
+        f'color:{NAVY};margin-bottom:8px;">{_plain_label(ticker + ":", size=15)} '
+        f'{_link(_text(item.get("heading")), item.get("url"), size=15)}</div>'
+    )
+    return f"""
+    <tr><td style="background-color:{GREY};padding:16px 18px;">
+      {heading}{_p(item.get("body", ""), size=14, bottom=0)}
+    </td></tr>
+    <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
+    """
+
+
+def _multi_card(ticker, items):
+    """One card for a name that lodged several announcements.
+
+    The paragraphs are the per-announcement summaries exactly as written. They
+    are not re-summarised into one: each came from a call that saw only its own
+    document, which is what stops a figure crossing between them. Wia Gold's
+    1.95Moz Probable Reserve and its 3.78Moz resource are precisely the pair a
+    single writer would confuse, so they stay in separate paragraphs written by
+    separate calls, and are merged only here on the page.
+    """
+    # Same rule as everywhere else: the ticker is a plain label and each
+    # heading links to its own document.
+    inner = [
+        f'<div style="font-family:{FONT};font-size:15px;font-weight:bold;'
+        f'color:{NAVY};margin-bottom:12px;">{_plain_label(ticker, size=15)}</div>'
+    ]
+    for n, item in enumerate(items):
+        inner.append(
+            f'<div style="font-family:{FONT};font-size:14px;font-weight:bold;'
+            f'color:{NAVY};margin:{0 if n == 0 else 15}px 0 6px 0;">'
+            f'{_link(_text(item.get("heading")), item.get("url"), size=14)}</div>'
+        )
+        inner.append(_p(item.get("body", ""), size=14, bottom=0))
+    return f"""
+    <tr><td style="background-color:{GREY};padding:16px 18px;">
+      {''.join(inner)}
+    </td></tr>
+    <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
+    """
+
+
+def _summary_cards(summaries):
+    """A card per name. A single announcement keeps the established one-line head."""
+    out = []
+    for ticker, items in _group_by_ticker(summaries):
+        if len(items) == 1:
+            out.append(_item_card(ticker, items[0]))
+        else:
+            out.append(_multi_card(ticker, items))
+    return out
+
+
 def _subheading(text):
     """A quieter divider than the navy band, for secondary sections."""
     return f"""
@@ -224,18 +361,30 @@ def _subheading(text):
     """
 
 
-def _quarterly(q):
-    """One quarterly as a single dense line, desk-note style.
+def _quarterly(ticker, items):
+    """One name as a dense desk line, or several lines if it filed more than once.
 
-        NST ($29B)  Northern Star sold 433koz gold at AISC $2.7k/oz ...
+        KZR ($35m)  Kalamazoo closed the June quarter with A$2.1m cash ...
+                    Kalamazoo ended the June quarter with $2.06m cash ...
+
+    Companies routinely lodge the activities report and the Appendix 5B
+    cashflow as two documents. They are complementary, one operational and one
+    financial, so both are kept, but under one ticker rather than as two
+    apparently unrelated names. On 31 July 2026 that turned eight lines from
+    six companies into six.
     """
-    cap = q.get("cap_label") or ""
-    head = f"{q.get('ticker','')} ({cap})" if cap else q.get("ticker", "")
+    cap = items[0].get("cap_label") or ""
+    head = f"{ticker} ({cap})" if cap else ticker
+    lines = [f'{_link(head, items[0].get("url"))}'
+             f'<span style="color:{MUTED};">&nbsp;&nbsp;</span>'
+             f'{escape(_text(items[0].get("summary")))}']
+    for item in items[1:]:
+        lines.append(f'<div style="padding:5px 0 0 16px;">'
+                     f'{escape(_text(item.get("summary")))}</div>')
     return f"""
     <tr><td style="font-family:{FONT};font-size:13px;line-height:1.5;
                    color:{NAVY};padding:0 0 11px 0;">
-      {_link(head, q.get("url"))}
-      <span style="color:{MUTED};">&nbsp;&nbsp;</span>{escape(_text(q.get('summary')))}
+      {''.join(lines)}
     </td></tr>
     """
 
@@ -272,16 +421,13 @@ def render(briefing, pack):
     body.append(f'<tr><td>{_p(briefing.get("lead",""))}</td></tr>')
     body.append(_table(rows))
 
-    for s in briefing.get("summaries") or []:
-        body.append(_card(f"{s.get('ticker','')}: {s.get('heading','')}",
-                          paragraphs=[s.get("body", "")],
-                          url=s.get("url"), link_text=s.get("ticker", "")))
+    body += _summary_cards(briefing.get("summaries") or [])
 
     quarterlies = briefing.get("quarterlies") or []
     if quarterlies:
         body.append(_subheading("Quarterlies"))
-        for q in quarterlies:
-            body.append(_quarterly(q))
+        for ticker, items in _group_by_ticker(quarterlies):
+            body.append(_quarterly(ticker, items))
 
     if briefing.get("watch_items"):
         body.append(_card("Watch items", bullets=briefing["watch_items"]))
@@ -344,18 +490,28 @@ def _plain(briefing, pack):
         _text(briefing.get("lead")),
         "",
     ]
-    for r in briefing.get("rows") or []:
-        out.append(f"  {r.get('ticker','')}  {_text(r.get('company'))}  "
-                   f"{_text(r.get('announcement'))}  ({_text(r.get('date'))})")
+    for ticker, items in _group_by_ticker(briefing.get("rows") or []):
+        company, when = _text(items[0].get("company")), _date_span(items)
+        if len(items) == 1:
+            out.append(f"  {ticker}  {company}  "
+                       f"{_text(items[0].get('announcement'))}  ({when})")
+        else:
+            out.append(f"  {ticker}  {company}  ({when})")
+            out += [f"       {_text(i.get('announcement'))}" for i in items]
     out.append("")
-    for s in briefing.get("summaries") or []:
-        out += [f"{s.get('ticker','')}: {_text(s.get('heading'))}", _text(s.get("body")), ""]
+    for ticker, items in _group_by_ticker(briefing.get("summaries") or []):
+        if len(items) == 1:
+            out += [f"{ticker}: {_text(items[0].get('heading'))}",
+                    _text(items[0].get("body")), ""]
+        else:
+            out.append(ticker)
+            for s in items:
+                out += [f"  {_text(s.get('heading'))}", _text(s.get("body")), ""]
     if briefing.get("quarterlies"):
         out.append("QUARTERLIES")
-        for q in briefing["quarterlies"]:
-            out += [f"  {q.get('ticker','')}  {_text(q.get('company'))}  "
-                    f"({_text(q.get('headline'))})",
-                    f"    {_text(q.get('summary'))}", ""]
+        for ticker, items in _group_by_ticker(briefing["quarterlies"]):
+            out.append(f"  {ticker}  {_text(items[0].get('company'))}")
+            out += [f"    {_text(q.get('summary'))}" for q in items] + [""]
     watch = _bullets(briefing.get("watch_items"))
     if watch:
         out += ["WATCH ITEMS"] + [f"  - {w}" for w in watch] + [""]
