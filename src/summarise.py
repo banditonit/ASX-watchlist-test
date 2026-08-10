@@ -21,6 +21,7 @@ roughly a fifth on a normal day.
 import os
 import re
 from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime
 
 import anthropic
 
@@ -276,6 +277,39 @@ def _normalise_item(payload):
     return out
 
 
+# The absence of quarterlies is not news and never earns a word. The prompt
+# above says so, but an instruction is the same lever that produced the
+# sentence in the first place, so the prose is also cleaned in code.
+#
+# Matching is deliberately narrow: only the noun forms that name the section
+# count, so "no quarterlies were lodged" is caught while "did not change
+# quarterly guidance" is left alone. A clause hanging off a comma is cut on its
+# own, which keeps the rest of the sentence; a sentence that is wholly about
+# the absence goes entirely.
+_Q = r"(?:quarterlies|quarterly\s+(?:report|result|activities|filing|announcement)s?)"
+ABSENT_CLAUSE = re.compile(
+    rf",\s*(?:and\s+|but\s+|with\s+|although\s+|though\s+|while\s+)*"
+    rf"(?:there\s+(?:were|was)\s+)?(?:no|nil|zero|not\s+a\s+single)\s+{_Q}[^.;]*",
+    re.I,
+)
+ABSENT_PHRASE = re.compile(
+    rf"\b(?:no|nil|zero)\s+{_Q}|{_Q}\s+(?:\w+\s+){{0,2}}?(?:were|was)\s+"
+    rf"(?:absent|nil|none|not\b)",
+    re.I,
+)
+SENTENCE = re.compile(r"(?<=[.!?])\s+")
+
+
+def _drop_absent_quarterlies(text):
+    """Remove any statement that no quarterlies were lodged. Returns (text, cut)."""
+    original = str(text or "")
+    cleaned = ABSENT_CLAUSE.sub("", original)
+    kept = [s for s in SENTENCE.split(cleaned) if not ABSENT_PHRASE.search(s)]
+    cleaned = re.sub(r"\s{2,}", " ", " ".join(kept)).strip()
+    cleaned = re.sub(r"\s+([.,;])", r"\1", cleaned)
+    return cleaned, cleaned != original.strip()
+
+
 def _normalise_framing(framing):
     """Repair a framing payload, recovering any field that leaked into another."""
     out = dict(framing or {})
@@ -307,6 +341,21 @@ def _call(client, system, prompt, schema, model=None, max_tokens=2000):
         if block.type == "tool_use":
             return block.input
     raise RuntimeError(f"no {schema['name']} payload returned")
+
+
+def _window_hours(pack):
+    """The real length of the window. Mondays reach back 72 hours, not 24.
+
+    The prompt used to state 24 unconditionally, so every Monday lead opened on
+    "in the past 24 hours" while the header above it correctly read 72. The
+    10 August briefing is the most recent example.
+    """
+    try:
+        span = (datetime.fromisoformat(pack["window_end_awst"])
+                - datetime.fromisoformat(pack["window_start_awst"]))
+        return max(1, round(span.total_seconds() / 3600))
+    except (KeyError, TypeError, ValueError):
+        return 24
 
 
 def _prior(record):
@@ -391,13 +440,22 @@ def synthesise(materials, quarterlies, pack, client=None, model=None):
     client = client or _client()
     names = sorted({a["ticker"] for a in pack["announcements"]})
     parts = [
-        f"Window: 24 hours to {pack['window_end_awst']} (AWST).",
+        f"Window: {_window_hours(pack)} hours to {pack['window_end_awst']} (AWST).",
         "",
         "COUNTS, use these exact numbers and do not recount:",
         f"  distinct watchlist names that announced: {len(names)}",
         f"  confirmed announcements: {len(materials)}",
-        f"  quarterlies: {len(quarterlies)}",
         f"  watchlist size: {pack['tickers_checked']} ticker codes",
+    ]
+    # The quarterly count is only stated when there is one. Given
+    # "quarterlies: 0" the model reports it, which is why all six briefings
+    # since 3 August 2026 that had no quarterlies closed on a variation of
+    # "No quarterlies were reported in the window". An empty section is not a
+    # finding. Told nothing, the model writes nothing, and the Quarterlies
+    # heading exists only on days that have them.
+    if quarterlies:
+        parts.append(f"  quarterlies: {len(quarterlies)}")
+    parts += [
         "",
         "CONFIRMED ANNOUNCEMENTS, already written and figure-checked:",
     ]
@@ -411,12 +469,20 @@ def synthesise(materials, quarterlies, pack, client=None, model=None):
     parts.append("\nWrite the framing. Quote only figures that appear above. If "
                  "nothing was confirmed, say so plainly in the lead.")
 
+    quarterly_rule = (
+        "Quarterlies are secondary. Never lead on a quarterly."
+        if quarterlies else
+        "There are no quarterlies today. Do not mention quarterlies at all: not "
+        "in the lead, not in the closing, not in a subordinate clause. Their "
+        "absence is not news and is never worth a word. Write as though the "
+        "category does not exist."
+    )
     system = (
         "You write the framing for the Discovery Capital Partners daily ASX "
         "watchlist briefing, from summaries already written and checked.\n\n"
         f"{HOUSE}\n\n"
-        "Quarterlies are secondary. Never lead on a quarterly. Never say that "
-        "anything was reiterated, restated or previously announced."
+        f"{quarterly_rule} Never say that anything was reiterated, restated or "
+        "previously announced."
     )
     prompt = "\n".join(parts)
     framing = _normalise_framing(
@@ -435,4 +501,13 @@ def synthesise(materials, quarterlies, pack, client=None, model=None):
         for key in TEXT_FIELDS:
             framing[key] = framing.get(key) or retry.get(key, "")
         framing["watch_items"] = framing["watch_items"] or retry["watch_items"]
+
+    if not quarterlies:
+        for key in TEXT_FIELDS:
+            framing[key], cut = _drop_absent_quarterlies(framing.get(key))
+            if cut:
+                print(f"  removed a 'no quarterlies' statement from {key}")
+        framing["watch_items"] = [
+            w for w in framing["watch_items"] if not ABSENT_PHRASE.search(w)
+        ]
     return framing
