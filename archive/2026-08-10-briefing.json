@@ -1,0 +1,178 @@
+{
+  "lead": "Ten confirmed announcements from 13 watchlist names crossed the tape in the past 24 hours, led by Wia Gold's Kokoseb DFS, which confirms robust economics and an agreed Sprott debt facility, alongside a separate 29% resource upgrade to 3.78Moz Au and a trading halt pending a capital raising announcement.",
+  "subtitle": "Wia Gold dominates the news flow with a DFS, a resource upgrade and a capital raising halt, while gold explorers across the watchlist report extension and infill drilling success.",
+  "watch_items": [
+    "WIA: trading halt to lift at the earlier of normal trading on 12 August 2026 or release of the capital raising announcement.",
+    "YRL: results from a further ten holes at Arrakis, including three diamond core tails, are due throughout August, with a maiden exploration target scheduled for the third quarter of 2026.",
+    "GA8: final grade control assays from 21,000m of drilling are expected within two weeks, ahead of a new 6,600m RC program.",
+    "TRE: the updated Kobada Mineral Resource Estimate is targeted for completion by end of Q3 2026, ahead of an Ore Reserve and mine plan update in Q4 2026.",
+    "WIA: Sprott debt facility financial close targeted for the fourth quarter of 2026, with first gold pour targeted for the fourth quarter of 2028."
+  ],
+  "day_in_brief": "Wia Gold was the standout, delivering a Kokoseb DFS with a maiden Probable Ore Reserve of 69.8Mt at 0.87g/t Au for 1.95Moz and a post-tax NPV of US$1.2bn (A$1.7bn) at 41% IRR, agreeing indicative terms with Sprott for a US$360m debt facility plus a US$15m equity subscription, separately lifting its Kokoseb resource 29% to 113Mt at 1.0g/t Au for 3.78Moz, and then entering a trading halt pending a capital raising announcement. Elsewhere, Pilbara Gold secured 367sqkm of mineral rights at Mt York from PLS, including a 1,500m extension to the Main Hill deposit. Turaco extended high-grade zones at Adiopan-Asupiri with 15m @ 4.72g/t gold from 122m including 6m @ 8.71g/t gold from 127m. GoldArc gained development approval for Mt Stirling. Yandal reported its highest-grade intercept yet at Arrakis, 20m @ 8.7g/t Au from 84m including 3m @ 52.8g/t Au. Toubani reported further infill results at Kobada, including 44m at 3.12g/t gold from 164m. Medallion Metals began an airborne EM survey at Ravensthorpe, and Franklin Resources lifted its substantial holding in Saturn Metals to 9.39% following participation in an A$11.5 million placement. No quarterlies were confirmed in the period.",
+  "rows": [
+    {
+      "ticker": "WIA",
+      "company": "WIA GOLD LIMITED",
+      "announcement": "DFS: 1.95Moz Probable Reserve, US$1.2bn NPV, US$360m Sprott facility",
+      "type": null,
+      "date": "10 August 2026",
+      "document_key": "2924-03119459-6A1337914",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119459-6A1337914"
+    },
+    {
+      "ticker": "PGL",
+      "company": "PILBARA GOLD LIMITED",
+      "announcement": "Mt York Mineral Rights Agreement declared unconditional",
+      "type": null,
+      "date": "10 August 2026",
+      "document_key": "2924-03119321-3A698440",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119321-3A698440"
+    },
+    {
+      "ticker": "TCG",
+      "company": "TURACO GOLD LIMITED",
+      "announcement": "15m @ 4.72g/t Au from 122m (ADIDD0049)",
+      "type": null,
+      "date": "10 August 2026",
+      "document_key": "2924-03119339-6A1337879",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119339-6A1337879"
+    },
+    {
+      "ticker": "WIA",
+      "company": "WIA GOLD LIMITED",
+      "announcement": "Kokoseb MRE up 29% to 113Mt @ 1.0g/t Au for 3.78Moz",
+      "type": null,
+      "date": "10 August 2026",
+      "document_key": "2924-03119448-6A1337906",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119448-6A1337906"
+    },
+    {
+      "ticker": "GA8",
+      "company": "GOLDARC RESOURCES LIMITED",
+      "announcement": "MDCP approval clears final hurdle for Mt Stirling development",
+      "type": null,
+      "date": "10 August 2026",
+      "document_key": "2924-03119296-6A1337850",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119296-6A1337850"
+    },
+    {
+      "ticker": "YRL",
+      "company": "YANDAL RESOURCES LIMITED",
+      "announcement": "20m @ 8.7g/t Au from 84m (26IWBRC0120)",
+      "type": null,
+      "date": "10 August 2026",
+      "document_key": "2924-03119287-6A1337844",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119287-6A1337844"
+    },
+    {
+      "ticker": "TRE",
+      "company": "TOUBANI RESOURCES LIMITED",
+      "announcement": "44m @ 3.12g/t Au from 164m (KBRC26_157B)",
+      "type": null,
+      "date": "10 August 2026",
+      "document_key": "2924-03119333-6A1337878",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119333-6A1337878"
+    },
+    {
+      "ticker": "WIA",
+      "company": "WIA GOLD LIMITED",
+      "announcement": "Trading halt pending capital raising announcement, resumes 12 Aug 2026",
+      "type": null,
+      "date": "10 August 2026",
+      "document_key": "2924-03119372-6A1337889",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119372-6A1337889"
+    },
+    {
+      "ticker": "MM8",
+      "company": "MEDALLION METALS LIMITED.",
+      "announcement": "Airborne EM survey begins over 120km² Ravensthorpe corridor",
+      "type": null,
+      "date": "10 August 2026",
+      "document_key": "2924-03119425-6A1337900",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119425-6A1337900"
+    },
+    {
+      "ticker": "STN",
+      "company": "SATURN METALS LIMITED",
+      "announcement": "Franklin Resources raises stake to 9.39% (from 8.07%)",
+      "type": null,
+      "date": "10 August 2026",
+      "document_key": "2924-03119244-6A1337827",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119244-6A1337827"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "WIA",
+      "heading": "Kokoseb DFS confirms robust economics, Sprott debt facility agreed",
+      "body": "Wia Gold's DFS for Kokoseb delivers a maiden Probable Ore Reserve of 69.8Mt at 0.87g/t Au for 1.95Moz, supporting a 14-year mine life averaging 150koz per annum over the first 10 years. At US$3,600/oz gold, post-tax NPV is US$1.2bn (A$1.7bn) with a 41% IRR and 1.8-year payback, against a US$475m capital cost. Wia has agreed indicative terms with Sprott for a US$360m senior debt facility plus a US$15m equity subscription, with financial close targeted for the fourth quarter of 2026 and first gold pour targeted for the fourth quarter of 2028.",
+      "document_key": "2924-03119459-6A1337914",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119459-6A1337914"
+    },
+    {
+      "ticker": "PGL",
+      "heading": "PGL secures 367sqkm mineral rights at Mt York from PLS",
+      "body": "Pilbara Gold's Mineral Rights Agreement with PLS Group at the 2.1Moz Mt York Gold Project has been declared unconditional, handing PGL mineral rights (excluding lithium and tantalum) over three PLS exploration licences and one application covering 367sqkm of neighbouring greenstone geology. The rights include a 1,500m extension to the Main Hill deposit, where drilling has returned 16m @ 2.60g/t Au from 157m. PGL's 50,000m-plus drilling program continues, alongside a planned airborne electro-magnetic survey over the Greater Mt York region.",
+      "document_key": "2924-03119321-3A698440",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119321-3A698440"
+    },
+    {
+      "ticker": "TCG",
+      "heading": "Turaco extends high-grade zones at Adiopan-Asupiri, Afema",
+      "body": "Further drilling at the Adiopan extension of the 1.28Moz Asupiri deposit (part of the 4.65Moz Afema Project) returned 15m @ 4.72g/t gold from 122m including 6m @ 8.71g/t gold from 127m, plus 15m @ 3.62g/t gold from 164m and 66m @ 1.07g/t gold from 77m. Mineralisation remains open in all directions, including a new parallel western zone identified in hole ADIDD0046. Follow-up drilling is planned to test down-plunge extensions and underground potential beyond the current PFS pit design.",
+      "document_key": "2924-03119339-6A1337879",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119339-6A1337879"
+    },
+    {
+      "ticker": "WIA",
+      "heading": "Wia lifts Kokoseb resource 29% to 3.78Moz Au",
+      "body": "Wia Gold's updated Kokoseb MRE has grown 29% to 113Mt at 1.0g/t Au for 3.78Moz, including an open pit estimate of 105Mt at 0.96g/t Au for 3.23Moz (2.01Moz Indicated) and a maiden underground Inferred resource of 7.9Mt at 2.2g/t Au for 0.56Moz. Mineralisation remains open at depth along more than 5km of strike, with six diamond rigs continuing to test extensions for further underground resource growth.",
+      "document_key": "2924-03119448-6A1337906",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119448-6A1337906"
+    },
+    {
+      "ticker": "GA8",
+      "heading": "GoldArc gains development approval for Mt Stirling gold project",
+      "body": "DMPE has approved GoldArc's Mining Development and Closure Proposal covering the Mt Stirling and Mt Stirling Well deposits, the final regulatory milestone before development with partner BML Ventures. The deposits sit 10km from the King of the Hills mill. Final grade control assays from 21,000m of drilling are expected within two weeks, ahead of a new 6,600m RC program.",
+      "document_key": "2924-03119296-6A1337850",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119296-6A1337850"
+    },
+    {
+      "ticker": "YRL",
+      "heading": "Yandal hits highest-grade intercept yet at Arrakis",
+      "body": "Infill RC drilling at the Arrakis gold discovery within Yandal's IWB Gold Project has returned 20m @ 8.7g/t Au from 84m, including 3m @ 52.8g/t Au, the highest-grade intercept recorded at the project to date. A second hole, 12m @ 1.8g/t Au from 31m, was the shallowest intercept yet at Arrakis, pointing to a possible new high-grade domain. Results from a further ten holes, including three diamond core tails, are due throughout August, with a maiden exploration target for Arrakis scheduled for the third quarter of 2026.",
+      "document_key": "2924-03119287-6A1337844",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119287-6A1337844"
+    },
+    {
+      "ticker": "TRE",
+      "heading": "More high-grade infill results firm up Kobada resource model",
+      "body": "Toubani has reported further infill assays from the northern Kobada MRE area, including 44m at 3.12g/t gold from 164m (KBRC26_157B) and 58m at 1.22g/t gold from 96m (KBRC26_157). The update to the 2.2Moz Kobada Mineral Resource Estimate has now commenced, targeted for completion by end of Q3 2026, ahead of an Ore Reserve and mine plan update in Q4 2026 supporting first mining in early 2027.",
+      "document_key": "2924-03119333-6A1337878",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119333-6A1337878"
+    },
+    {
+      "ticker": "WIA",
+      "heading": "Wia Gold halted ahead of capital raising news",
+      "body": "Wia Gold entered a trading halt pending an announcement on a proposed capital raising. The halt will lift at the earlier of normal trading on 12 August 2026 or release of the capital raising announcement.",
+      "document_key": "2924-03119372-6A1337889",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119372-6A1337889"
+    },
+    {
+      "ticker": "MM8",
+      "heading": "MM8 starts first airborne EM survey at Ravensthorpe",
+      "body": "Medallion Metals has commenced a helicopter-borne Airborne EM survey covering 120km² and approximately 1,245-line kilometres across the Mt Cattlin, Kundip and Trilogy corridor, aiming to identify new gold-copper sulphide targets. The program is co-funded with a $135,000 WA Government Exploration Incentive Scheme grant, taking total EIS co-funding secured to $310,274. Results are due to prioritise follow-up drilling through 2026 and 2027.",
+      "document_key": "2924-03119425-6A1337900",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119425-6A1337900"
+    },
+    {
+      "ticker": "STN",
+      "heading": "Franklin Resources lifts substantial holding in Saturn Metals",
+      "body": "Franklin Resources, Inc. and its affiliates increased their voting power in Saturn Metals from 8.07% to 9.39%, now holding 57,380,478 shares. The change was driven largely by participation in a A$11.5 million placement on 6 August 2026, alongside a series of smaller on-market purchases and sales.",
+      "document_key": "2924-03119244-6A1337827",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119244-6A1337827"
+    }
+  ],
+  "quarterlies": [],
+  "_unverified": []
+}
