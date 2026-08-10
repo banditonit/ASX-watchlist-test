@@ -438,12 +438,16 @@ def summarise_items(records, client=None, model=None):
 def synthesise(materials, quarterlies, pack, client=None, model=None):
     """Lead, subtitle, watch items and closing, from the written summaries."""
     client = client or _client()
-    names = sorted({a["ticker"] for a in pack["announcements"]})
+    # Names actually in the briefing, not every name in the raw pack. The pack
+    # count includes suppressed presentations and routine filings, so the
+    # 10 August lead opened on "13 watchlist names" above a table showing 8.
+    names = sorted({m["ticker"] for m in materials}
+                   | {q["ticker"] for q in quarterlies})
     parts = [
         f"Window: {_window_hours(pack)} hours to {pack['window_end_awst']} (AWST).",
         "",
         "COUNTS, use these exact numbers and do not recount:",
-        f"  distinct watchlist names that announced: {len(names)}",
+        f"  distinct watchlist names in this briefing: {len(names)}",
         f"  confirmed announcements: {len(materials)}",
         f"  watchlist size: {pack['tickers_checked']} ticker codes",
     ]
@@ -467,7 +471,10 @@ def synthesise(materials, quarterlies, pack, client=None, model=None):
         for q in quarterlies:
             parts.append(f"  {q['ticker']}: {q.get('summary','')}")
     parts.append("\nWrite the framing. Quote only figures that appear above. If "
-                 "nothing was confirmed, say so plainly in the lead.")
+                 "nothing was confirmed, say so plainly in the lead. Where one "
+                 "name appears more than once above, those are separate filings "
+                 "from the same company on the same day: treat them as one "
+                 "name's news, not as several companies.")
 
     quarterly_rule = (
         "Quarterlies are secondary. Never lead on a quarterly."
