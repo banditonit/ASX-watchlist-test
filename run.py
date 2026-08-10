@@ -11,6 +11,7 @@ clean-looking empty briefing going out unnoticed.
 """
 
 import argparse
+import glob
 import json
 import os
 import sys
@@ -23,6 +24,48 @@ from config import load_recipients, load_watchlist, ConfigError, env  # noqa: E4
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 ARCHIVE = os.path.join(ROOT, "archive")
+
+
+# How many archived days to read back when working out what has already been
+# reported. Comfortably more than any window, cheap to scan, and short enough
+# that it can never suppress something from a previous month.
+HISTORY_DAYS = 10
+
+
+def previous_run(archive=None):
+    """Where the last briefing stopped, and every document it already covered.
+
+    Only packs that produced an email count. A pack is written before the
+    summaries are built, so a run that collected announcements and then died
+    would otherwise mark them as reported and they would never be seen. The
+    rendered email beside it is the proof the day actually went out.
+    """
+    archive = archive or ARCHIVE
+    paths = sorted(glob.glob(os.path.join(archive, "*-pack.json")))[-HISTORY_DAYS:]
+    # Today's own archive is ignored, so re-running by hand on a day that has
+    # already gone out rebuilds that day in full rather than reporting an empty
+    # window because everything in it was already sent.
+    today = os.path.join(archive, f"{datetime.now().strftime('%Y-%m-%d')}-pack.json")
+    latest, seen = None, set()
+    for path in paths:
+        if os.path.abspath(path) == os.path.abspath(today):
+            continue
+        if not os.path.exists(path.replace("-pack.json", "-email.html")):
+            continue
+        try:
+            with open(path, encoding="utf-8") as fh:
+                pack = json.load(fh)
+        except (OSError, ValueError):
+            continue
+        for a in pack.get("announcements") or []:
+            if a.get("document_key"):
+                seen.add(a["document_key"])
+        try:
+            end = datetime.fromisoformat(pack["window_end_utc"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        latest = end if latest is None else max(latest, end)
+    return latest, seen
 
 
 def main():
@@ -44,8 +87,26 @@ def main():
         print(f"loaded pack: {args.pack}")
     else:
         from collect import collect
-        pack = collect(tickers, hours=args.hours)
-        print(f"found {len(pack['announcements'])} announcements in window")
+        since, already_seen = previous_run()
+        if since:
+            print(f"last briefing covered up to {since.isoformat()}")
+        pack = collect(tickers, hours=args.hours, since=since)
+        print(f"window: {pack['window_start_awst'][:16]} to "
+              f"{pack['window_end_awst'][:16]} AWST "
+              f"({pack.get('window_hours', args.hours)}h)")
+
+        # The window deliberately overlaps the previous one so nothing can fall
+        # between two runs. Anything already reported is dropped here, by
+        # document key, so the overlap never shows up as a repeat.
+        repeats = [a for a in pack["announcements"]
+                   if a.get("document_key") in already_seen]
+        if repeats:
+            keys = {a["document_key"] for a in repeats}
+            pack["announcements"] = [a for a in pack["announcements"]
+                                     if a.get("document_key") not in keys]
+            print(f"skipped {len(repeats)} already reported in an earlier "
+                  f"briefing: {', '.join(sorted({a['ticker'] for a in repeats}))}")
+        print(f"found {len(pack['announcements'])} new announcements in window")
 
     pack["all_tickers"] = tickers
     stamp = datetime.now().strftime("%Y-%m-%d")
