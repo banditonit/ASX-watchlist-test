@@ -319,8 +319,6 @@ def render(briefing, pack):
        ASX Watchlist Catch Up</div>
      <div style="font-family:{FONT};font-size:14px;color:{WHITE};padding-top:5px;">
        Daily Announcements Briefing, {escape(date)}</div>
-     <div style="font-family:{FONT};font-size:10px;font-weight:bold;color:{ICE};
-                 letter-spacing:1px;padding-top:10px;">NOT RESEARCH</div>
    </td></tr>
 
    <tr><td style="padding:22px 18px 26px 18px;">
@@ -341,7 +339,6 @@ def _plain(briefing, pack):
     out = [
         "ASX WATCHLIST CATCH UP",
         f"Daily Announcements Briefing, {pack.get('date_awst','')}",
-        "NOT RESEARCH",
         "",
         "CONFIRMED ANNOUNCEMENTS",
         _text(briefing.get("lead")),
