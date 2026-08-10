@@ -42,16 +42,31 @@ def _session():
     return s
 
 
-def window(hours=24, now=None):
+MAX_LOOKBACK_HOURS = 168     # a week, so a long outage cannot fetch forever
+
+
+def window(hours=24, now=None, since=None):
     """Return (start, end) as timezone-aware UTC datetimes.
 
     The briefing is always described in AWST, so the AWST calendar date is
     computed here once, explicitly, rather than being read off a UTC string
     somewhere downstream. Getting this backwards is the single easiest way to
     misdate an announcement lodged late in the UTC evening.
+
+    `since` is where the previous run stopped. Without it the window is simply
+    the last N hours measured from whenever this run happens, which leaves a
+    hole every time a run lands later than the one before it: the 7 August 2026
+    run started at 09:38 after GitHub queued it, so 6 August 08:10 to 09:38 was
+    covered by neither day. Passing the previous window end makes the two abut,
+    and a run that is late reaches further back by exactly the amount it is
+    late. Announcements already reported are dropped by document key
+    afterwards, so the overlap costs nothing.
     """
     end = now or datetime.now(timezone.utc)
-    return end - timedelta(hours=hours), end
+    start = end - timedelta(hours=hours)
+    if since is not None and since < start:
+        start = since
+    return max(start, end - timedelta(hours=MAX_LOOKBACK_HOURS)), end
 
 
 def to_awst(dt):
@@ -235,9 +250,9 @@ def fetch_history(ticker, before, days=120, session=None, limit=40):
     return out
 
 
-def collect(codes, hours=24, now=None):
+def collect(codes, hours=24, now=None, since=None):
     """Full pass: sweep the feed, read every document, then price the names."""
-    start, end = window(hours=hours, now=now)
+    start, end = window(hours=hours, now=now, since=since)
     session = _session()
     records = sweep(codes, start, end, session=session)
     for record in records:
@@ -265,5 +280,6 @@ def collect(codes, hours=24, now=None):
         "window_end_utc": end.isoformat(),
         "date_awst": to_awst(end).strftime("%-d %B %Y"),
         "tickers_checked": len(codes),
+        "window_hours": round((end - start).total_seconds() / 3600, 2),
         "announcements": records,
     }
