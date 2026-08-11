@@ -1,0 +1,129 @@
+{
+  "lead": "Seven confirmed announcements crossed the Discovery Capital Partners watchlist of 91 ticker codes in the 24 hours to 11 August 2026, led by GoldArc's (GA8) best-yet Mt Stirling Well intercept of 2m @ 69.7g/t Au from 23m, including 1m @ 137.0g/t Au (26BSWRC906).",
+  "subtitle": "GoldArc's high-grade run continues as substantial holder moves and register changes dominate the rest of the day.",
+  "watch_items": [
+    "GoldArc's (GA8) 6,600m RC program around Mt Stirling, set to start in August 2026, is worth tracking for follow-up grade control results.",
+    "Drilling is underway at Los Gatos Mining's (LGM) Mascotte Prospect to test the newly defined IP chargeability anomalies outside the current 1.6Moz AuEq Mineral Resource at Mt Carrington.",
+    "Corazon Mining's (CZN) proposed zero exercise price options to incoming Non-Executive Chair Rob Curtis remain subject to shareholder approval.",
+    "Toubani Resources' (TRE) Eagle Eye/Gagan Gupta group stake, now diluted to 31.82%, may see further movement as the entitlement offer settles."
+  ],
+  "day_in_brief": "The day's news was led by GoldArc (GA8), whose fifth consecutive high-grade grade control batch at Mt Stirling Well delivered the deposit's strongest intercept yet, 2m @ 69.7g/t Au from 23m including 1m @ 137.0g/t Au (26BSWRC906), from 85 holes across a program that has now drilled approximately 27,537m combined, with a 6,600m RC program due to start around Mt Stirling in August 2026. Los Gatos Mining (LGM) reported ground IP surveys at Mascotte Prospect, Mt Carrington, defining untested chargeability anomalies exceeding 30mV/V along a 300m strike outside the existing 1.6Moz AuEq resource, with drilling now underway. Corazon Mining (CZN) appointed Rob Curtis, formerly of Oxiana, OZ Minerals and EMR Capital, as Non-Executive Chair on $75,000 per annum plus superannuation, replacing the resigned Kristie Young, as the company advances its Chalice Gold Project (191,000oz at 2.7g/t Au) alongside Two Pools and Feather Cap. Pacgold (PGO) issued 83,233,336 shares under Tranche 1 of its A$13 million placement, cleansed under Chapter 2M and sections 674/674A. On the register side, Capital DI cut its Asara Resources (AS1) holding from 11.46% to 9.59% via a A$4,041,900 on-market sale of 36,000,000 shares, retaining 200,000,000 shares; Eagle Eye Asset Holdings and Gagan Gupta entities saw their Toubani Resources (TRE) stake diluted to 31.82% from 34.66% after a A$23,973,532.50 institutional entitlement offer subscription; and Franklin Resources emerged as a substantial holder in Valiant Gold (VAL) with 27,403,800 shares (5.07%), built through on-market buying between 4 May 2026 and 7 August 2026, including 3,060,000 shares acquired on 7 August 2026 for A$672,966.",
+  "rows": [
+    {
+      "ticker": "GA8",
+      "company": "GOLDARC RESOURCES LIMITED",
+      "announcement": "2m @ 69.7g/t Au from 23m incl 1m @ 137.0g/t Au (26BSWRC906)",
+      "type": null,
+      "date": "11 August 2026",
+      "document_key": "2924-03119853-6A1338081",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119853-6A1338081"
+    },
+    {
+      "ticker": "CZN",
+      "company": "CORAZON MINING LIMITED",
+      "announcement": "Rob Curtis appointed Non-Executive Chair",
+      "type": null,
+      "date": "11 August 2026",
+      "document_key": "2924-03119703-6A1338022",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119703-6A1338022"
+    },
+    {
+      "ticker": "LGM",
+      "company": "LEGACY MINERALS HOLDINGS LIMITED",
+      "announcement": "IP survey defines untested >30mV/V gold-silver targets at Mascotte",
+      "type": null,
+      "date": "11 August 2026",
+      "document_key": "2924-03119726-2A1688840",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119726-2A1688840"
+    },
+    {
+      "ticker": "AS1",
+      "company": "ASARA RESOURCES LIMITED",
+      "announcement": "Capital DI Limited cuts stake to 9.59% after on-market sale",
+      "type": null,
+      "date": "10 August 2026",
+      "document_key": "2924-03119636-3A698513",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119636-3A698513"
+    },
+    {
+      "ticker": "TRE",
+      "company": "TOUBANI RESOURCES LIMITED",
+      "announcement": "Voting power falls to 31.82% after entitlement offer take-up",
+      "type": null,
+      "date": "11 August 2026",
+      "document_key": "2924-03119826-6A1338070",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119826-6A1338070"
+    },
+    {
+      "ticker": "PGO",
+      "company": "PACGOLD LIMITED",
+      "announcement": "83.2M shares issued under Tranche 1 of A$13M placement",
+      "type": null,
+      "date": "10 August 2026",
+      "document_key": "2924-03119634-3A698512",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119634-3A698512"
+    },
+    {
+      "ticker": "VAL",
+      "company": "VALIANT GOLD LIMITED",
+      "announcement": "Franklin Resources becomes substantial holder with 5.07%",
+      "type": null,
+      "date": "11 August 2026",
+      "document_key": "2924-03119713-6A1338030",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119713-6A1338030"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "GA8",
+      "heading": "GoldArc hits best Mt Stirling Well intercept yet in fifth grade control batch",
+      "body": "GoldArc's fifth grade control batch at Mt Stirling Well (M37/1305) returned the deposit's strongest intercept to date of 2m @ 69.7g/t Au from 23m, including 1m @ 137.0g/t Au (26BSWRC906), from 85 holes totalling approximately 2,245m. Five consecutive batches have now returned high-grade results, feeding directly into mining models. The program, fully funded by BML Ventures under a 50/50 net profit share, has completed approximately 27,537m combined, with a 6,600m RC program set to start around Mt Stirling in August 2026.",
+      "document_key": "2924-03119853-6A1338081",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119853-6A1338081"
+    },
+    {
+      "ticker": "CZN",
+      "heading": "Corazon appoints Rob Curtis as Non-Executive Chair",
+      "body": "Corazon Mining has appointed Rob Curtis, formerly of Oxiana, OZ Minerals and EMR Capital, as Non-Executive Chair, replacing Kristie Young who has resigned from the board. Curtis will receive director's fees of $75,000 per annum plus superannuation, and is proposed to receive zero exercise price options subject to shareholder approval. The appointment comes as Corazon advances its Chalice Gold Project, which hosts a resource of 191,000oz at 2.7g/t Au, alongside the Two Pools and Feather Cap projects in Western Australia.",
+      "document_key": "2924-03119703-6A1338022",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119703-6A1338022"
+    },
+    {
+      "ticker": "LGM",
+      "heading": "New IP survey defines untested gold-silver target at Mt Carrington",
+      "body": "Ground IP surveys at the Mascotte Prospect, Mt Carrington, have defined multiple large, untested chargeability anomalies exceeding 30mV/V, sitting outside the current 1.6Moz AuEq Mineral Resource. The zones lie along a 300m strike, open to the northeast and southwest, adjacent to prior drilling including 40m @ 1.0g/t Au from 151m (MSDD001). Drilling is underway to test the targets.",
+      "document_key": "2924-03119726-2A1688840",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119726-2A1688840"
+    },
+    {
+      "ticker": "AS1",
+      "heading": "Capital DI reduces Asara holding to 9.59%",
+      "body": "Capital DI Limited's voting power in Asara Resources fell from 11.46% to 9.59% after selling 36,000,000 shares on market on 6 August 2026 for A$4,041,900. This followed earlier additions via a placement and an on-market purchase in June and July 2026. Capital DI now holds 200,000,000 ordinary shares.",
+      "document_key": "2924-03119636-3A698513",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119636-3A698513"
+    },
+    {
+      "ticker": "TRE",
+      "heading": "Eagle Eye group's stake diluted to 31.82% in Toubani",
+      "body": "Eagle Eye Asset Holdings and associated Gagan Gupta entities now hold 341,223,281 shares in Toubani Resources, with voting power easing to 31.82% from 34.66%. The change follows a A$23,973,532.50 subscription for 79,911,775 shares under the institutional component of the entitlement offer, taken up in full pro rata.",
+      "document_key": "2924-03119826-6A1338070",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119826-6A1338070"
+    },
+    {
+      "ticker": "PGO",
+      "heading": "Pacgold issues Tranche 1 shares from A$13 million placement",
+      "body": "Pacgold has issued 83,233,336 fully paid ordinary shares under Tranche 1 of the A$13 million placement announced on 31 July 2026. The cleansing notice confirms compliance with Chapter 2M and sections 674 and 674A of the Corporations Act, allowing the shares to trade freely.",
+      "document_key": "2924-03119634-3A698512",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119634-3A698512"
+    },
+    {
+      "ticker": "VAL",
+      "heading": "Franklin Resources emerges as substantial holder in Valiant Gold",
+      "body": "Franklin Resources, Inc. and its affiliates became a substantial holder in Valiant Gold on 7 August 2026, holding 27,403,800 ordinary shares representing 5.07% voting power. The stake was built through a series of on-market acquisitions between 4 May 2026 and 7 August 2026, including 3,060,000 shares bought on 7 August 2026 for A$672,966.",
+      "document_key": "2924-03119713-6A1338030",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03119713-6A1338030"
+    }
+  ],
+  "quarterlies": [],
+  "_unverified": []
+}
