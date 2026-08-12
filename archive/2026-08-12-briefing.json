@@ -1,0 +1,193 @@
+{
+  "lead": "Eleven confirmed announcements landed across 10 watchlist names (from a 91-code list) in the 24 hours to 12 August 2026, led by Wia Gold's completed A$125 million placement to fund Kokoseb through to first gold.",
+  "subtitle": "Wia Gold locks in Kokoseb funding as drilling news flows from Patronus, Orezone and Great Southern.",
+  "watch_items": [
+    "Wia Gold's A$125 million placement remains subject to shareholder approval at a general meeting expected late September or early October 2026; watch for the notice of meeting and Sprott US$360 million debt facility progress.",
+    "Maritana's Clearing Permit application is targeting a 30 day assessment; approval would clear a remaining hurdle for the Black Swan Processing Hub ahead of H2 CY2027 first gold.",
+    "Great Southern Mining has assays pending from 16 holes at Mon Ami and 38 holes at Golden Boulder, with a further 68 holes planned at Golden Boulder once Amy Clarke drilling concludes.",
+    "Medallion Metals' Macmahon underground contract at Ravensthorpe is at preferred tenderer stage, with box-cut excavation due to begin in August ahead of a fourth quarter 2026 start."
+  ],
+  "day_in_brief": "Wia Gold dominated newsflow, both reprising its Kokoseb DFS in an investor call deck and confirming firm commitments for a A$125 million placement at A$0.425 per share, funding the project through construction alongside a proposed US$360 million Sprott facility. Drilling updates featured across three names: Patronus Resources reported shallow gold at Davies No.2, including 10m @ 2.05g/t Au from 52m, in its first modern drilling there in over 30 years; Orezone extended Bomboré mineralisation with results including 223.25g/t over 1.0m and a 600 metre strike extension at P16; and Great Southern Mining began an 18 hole RC program at the Amy Clarke discovery within Duketon. Maritana secured further approvals for its Black Swan Processing Hub, and Pacgold appointed mining engineer Rodney Jacobs to its board. Substantial holder moves were notable: Helikon lifted its Resolute Mining stake to 19.10% after a A$46.3 million on market buy, UBS Group emerged as a substantial holder in Tolu Minerals at 6.43%, and Aigle Royal exited its West African Resources substantial holding after disposing of 250,000 shares for A$878,750.00. Medallion Metals also named Macmahon Underground as preferred contractor for Ravensthorpe's underground works, priced around A$240 million.",
+  "rows": [
+    {
+      "ticker": "WIA",
+      "company": "WIA GOLD LIMITED",
+      "announcement": "Investor call presentation on Kokoseb DFS and funding",
+      "type": null,
+      "date": "12 August 2026",
+      "document_key": "2924-03120288-6A1338246",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120288-6A1338246"
+    },
+    {
+      "ticker": "WIA",
+      "company": "WIA GOLD LIMITED",
+      "announcement": "A$125m placement at A$0.425/share completes Kokoseb funding",
+      "type": null,
+      "date": "12 August 2026",
+      "document_key": "2924-03120285-6A1338242",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120285-6A1338242"
+    },
+    {
+      "ticker": "PTN",
+      "company": "PATRONUS RESOURCES LIMITED",
+      "announcement": "2m @ 6.03g/t Au from 27m (GD26RC006)",
+      "type": null,
+      "date": "12 August 2026",
+      "document_key": "2924-03120103-6A1338184",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120103-6A1338184"
+    },
+    {
+      "ticker": "ORE",
+      "company": "OREZONE GOLD CORPORATION",
+      "announcement": "2.97g/t Au over 34.0m (BBD1393)",
+      "type": null,
+      "date": "12 August 2026",
+      "document_key": "2924-03120127-6A1338211",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120127-6A1338211"
+    },
+    {
+      "ticker": "MRT",
+      "company": "MARITANA MINERALS LIMITED",
+      "announcement": "MDCP and CIL Works Approval granted, BSPH on track for H2 CY2027",
+      "type": null,
+      "date": "12 August 2026",
+      "document_key": "2924-03120130-6A1338196",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120130-6A1338196"
+    },
+    {
+      "ticker": "GSN",
+      "company": "GREAT SOUTHERN MINING LIMITED",
+      "announcement": "2m @ 23.9g/t Au from 10m (hole 25ACAC0007)",
+      "type": null,
+      "date": "12 August 2026",
+      "document_key": "2924-03120212-6A1338247",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120212-6A1338247"
+    },
+    {
+      "ticker": "PGO",
+      "company": "PACGOLD LIMITED",
+      "announcement": "Rodney Jacobs appointed Non-Executive Director",
+      "type": null,
+      "date": "12 August 2026",
+      "document_key": "2924-03120136-3A698602",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120136-3A698602"
+    },
+    {
+      "ticker": "RSG",
+      "company": "RESOLUTE MINING LIMITED",
+      "announcement": "Helikon increases stake to 19.10%",
+      "type": null,
+      "date": "12 August 2026",
+      "document_key": "2924-03120204-6A1338241",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120204-6A1338241"
+    },
+    {
+      "ticker": "TOK",
+      "company": "TOLU MINERALS LIMITED.",
+      "announcement": "UBS becomes substantial holder with 6.43% (18,054,213 shares)",
+      "type": null,
+      "date": "11 August 2026",
+      "document_key": "2924-03120052-6A1338173",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120052-6A1338173"
+    },
+    {
+      "ticker": "WAF",
+      "company": "WEST AFRICAN RESOURCES LIMITED",
+      "announcement": "Aigle Royal entities cease substantial holder after selling 250,000 shares",
+      "type": null,
+      "date": "12 August 2026",
+      "document_key": "2924-03120101-6A1338217",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120101-6A1338217"
+    },
+    {
+      "ticker": "MM8",
+      "company": "MEDALLION METALS LIMITED.",
+      "announcement": "Macmahon preferred tenderer, A$240M underground contract",
+      "type": null,
+      "date": "12 August 2026",
+      "document_key": "2924-03120192-6A1338220",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120192-6A1338220"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "WIA",
+      "heading": "Wia Gold reprises Kokoseb DFS in investor call deck",
+      "body": "Wia Gold has released a presentation to accompany an investor conference call covering the Kokoseb DFS and project financing update. The company confirms the resource estimate, production target and forecast financial information underpinning the DFS remain unchanged from its 10 August 2026 announcements. No new figures are disclosed in this deck.",
+      "document_key": "2924-03120288-6A1338246",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120288-6A1338246"
+    },
+    {
+      "ticker": "WIA",
+      "heading": "Wia completes Kokoseb funding with A$125m placement",
+      "body": "Wia Gold has received firm commitments for a A$125 million placement at A$0.425 per share, a nil discount to last close and 2% discount to the 5-day VWAP, issuing about 294.1 million new shares. Together with the proposed US$360 million Sprott debt facility and existing cash, the raise fully funds Kokoseb through construction to first gold, targeted for the fourth quarter of 2028. The placement is subject to shareholder approval at a general meeting expected in late September or early October 2026.",
+      "document_key": "2924-03120285-6A1338242",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120285-6A1338242"
+    },
+    {
+      "ticker": "PTN",
+      "heading": "Patronus hits shallow gold in first modern drilling at Davies No.2",
+      "body": "Patronus Resources has returned significant shallow gold intercepts from the first modern drilling in more than 30 years at the Davies No.2 prospect, part of the Golden Dyke area of its Pine Creek Project in the Northern Territory. Six RC holes for 472m included 10m @ 2.05g/t Au from 52m and 2m @ 6.03g/t Au from 27m, with historical validation confirming 36m @ 1.51g/t Au from surface. Davies No.2 remains open along strike and at depth within a 4.3km by 1.8km gold in soil anomaly hosting at least four known prospects, with follow-up drilling planned.",
+      "document_key": "2924-03120103-6A1338184",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120103-6A1338184"
+    },
+    {
+      "ticker": "ORE",
+      "heading": "Orezone drilling extends Bomboré mineralisation ahead of 2027 resource update",
+      "body": "Orezone reported new step-out and resource definition results from Bomboré, including 2.97g/t over 34.0m (BBD1393) and 223.25g/t over 1.0m (BBD1437). Follow-up drilling confirmed a 600 metre strike extension at P16, sub-parallel to the high-grade P17 trend. A Mineral Resource and Reserve update incorporating about 100,000m of additional drilling is expected in the first quarter of 2027.",
+      "document_key": "2924-03120127-6A1338211",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120127-6A1338211"
+    },
+    {
+      "ticker": "MRT",
+      "heading": "Key approvals secured for Black Swan Processing Hub",
+      "body": "Maritana's Mining Development and Closure Proposal for the Black Swan Processing Hub was approved by DMPE in late July 2026, followed by DWER's Works Approval for the new Carbon-in-Leach circuit in early August 2026. A Clearing Permit application has been lodged, targeting a 30 day assessment, while a A$1.3 million borefield refurbishment is underway to supply construction water. First gold production remains targeted for H2 CY2027.",
+      "document_key": "2924-03120130-6A1338196",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120130-6A1338196"
+    },
+    {
+      "ticker": "GSN",
+      "heading": "Maiden RC drilling starts at Amy Clarke discovery",
+      "body": "Great Southern Mining has commenced an 18 hole (~2,300m) maiden RC program at the Amy Clarke discovery within its 100%-owned Duketon Gold Project in Western Australia, testing gold mineralisation defined over a 4.7km strike by prior air core drilling. Best historic aircore intercepts include 2m at 23.9g/t Au from 10m and 8m at 6.7g/t Au from 33m. Assays are pending from 16 holes at Mon Ami and 38 holes at Golden Boulder, with a further 68 holes planned there once Amy Clarke is complete.",
+      "document_key": "2924-03120212-6A1338247",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120212-6A1338247"
+    },
+    {
+      "ticker": "PGO",
+      "heading": "Pacgold appoints mining executive Rodney Jacobs to board",
+      "body": "Pacgold has appointed Rodney Jacobs, a mining engineer with over 35 years' experience including roles at Bellevue Gold, Doray Minerals and IGO Limited, as a Non-Executive Director effective immediately. Subject to shareholder approval at the upcoming AGM, he will receive 500,000 options exercisable at 22.5 cents each, with a three-year term and 12-month vesting period. The appointment supports the restart and expansion of gold production at the White Dam operations in South Australia.",
+      "document_key": "2924-03120136-3A698602",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120136-3A698602"
+    },
+    {
+      "ticker": "RSG",
+      "heading": "Helikon lifts Resolute Mining stake after A$46.3 million buy",
+      "body": "Helikon Investments and related entities increased their substantial holding in Resolute Mining from 17.15% to 19.10% of voting power. The move follows an on market purchase of 41,197,762 shares on 10 August 2026 at A$1.250 per share, worth A$46.3 million.",
+      "document_key": "2924-03120204-6A1338241",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120204-6A1338241"
+    },
+    {
+      "ticker": "TOK",
+      "heading": "UBS Group emerges as substantial holder in Tolu Minerals",
+      "body": "UBS Group AG and related bodies became a substantial holder in Tolu Minerals on 7 August 2026, with a relevant interest in 18,054,213 ordinary shares representing 6.43% voting power. Most of the position, 17,881,973 shares, is held via UBS AG London Branch under a prime broking agreement, with the balance held beneficially by UBS Securities Australia Ltd.",
+      "document_key": "2924-03120052-6A1338173",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120052-6A1338173"
+    },
+    {
+      "ticker": "WAF",
+      "heading": "Aigle Royal exits substantial holder status in West African Resources",
+      "body": "Aigle Royal Group entities linked to Tony Poli ceased to be substantial holders in West African Resources on 12 August 2026, after disposing of 250,000 ordinary shares for A$878,750.00. The prior notice was dated 28 November 2025.",
+      "document_key": "2924-03120101-6A1338217",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120101-6A1338217"
+    },
+    {
+      "ticker": "MM8",
+      "heading": "Macmahon selected as preferred underground mining contractor at Ravensthorpe",
+      "body": "Medallion Metals has selected Macmahon Underground as preferred tenderer for the Ravensthorpe Gold Project underground mining contract, covering portal establishment, development and production works over 36 months. Estimated contract value is approximately A$240 million, around A$20 million below the Feasibility Study's A$260 million assumption for the same scope. Works are expected to start in the fourth quarter of calendar 2026, with box-cut excavation at Ravensthorpe due to begin in August.",
+      "document_key": "2924-03120192-6A1338220",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120192-6A1338220"
+    }
+  ],
+  "quarterlies": [],
+  "_unverified": []
+}
