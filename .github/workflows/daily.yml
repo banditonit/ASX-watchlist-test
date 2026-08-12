@@ -12,6 +12,12 @@ name: Daily ASX watchlist briefing
 # which of those wakes actually sends. A wake that is early sleeps until 08:10
 # exactly; a wake that is late sends immediately; every wake after the day's
 # briefing has gone out exits in about ten seconds.
+#
+# The gate reads the lock from the remote branch and then claims the day with
+# a tag before anything is sent. It cannot read it from its own checkout: a run
+# is pinned to the commit that existed when GitHub created it, which for a wake
+# queued behind a sleeping run is minutes older than the archive that run is
+# about to push. That is what sent two emails on 12 August 2026.
 
 on:
   schedule:
@@ -34,11 +40,10 @@ on:
         default: "24"
 
 permissions:
-  contents: write           # so the run can commit the day's archive
+  contents: write           # so the run can commit the day's archive and tag
 
-# Only one run at a time. If two wakes arrive together, the second waits for
-# the first to finish and then finds the day's archive already committed, so
-# it exits at the gate instead of sending a duplicate.
+# Only one run at a time. A second wake that arrives while one is in progress
+# waits rather than running alongside it.
 concurrency:
   group: daily-briefing
   cancel-in-progress: false
@@ -53,15 +58,29 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 75     # allows for the wait, the run itself takes ~10 min
     steps:
+      # ref is named explicitly so the checkout is the tip of the branch at the
+      # moment this step runs, not the commit that triggered the wake.
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
 
       - name: Is this the run that sends?
         id: gate
+        env:
+          BRANCH: ${{ github.event.repository.default_branch }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           TODAY=$(date +%F)                       # AWST date, TZ is set above
           NOW=$(date +%s)
           TARGET=$(date -d "$TODAY $SEND_AT" +%s)
+
+          # Has the day's briefing already gone out? Asked of the remote, never
+          # of this checkout, which can be minutes stale.
+          already_sent () {
+            git fetch --quiet --depth=1 origin "$BRANCH" || return 1
+            git cat-file -e "FETCH_HEAD:archive/${TODAY}-email.html" 2>/dev/null
+          }
 
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "Manual run. Sending now."
@@ -69,27 +88,48 @@ jobs:
             exit 0
           fi
 
-          # The archive the previous run committed is the lock. If today's
-          # email is already in it, the briefing has gone out.
-          if [ -f "archive/${TODAY}-email.html" ]; then
-            echo "archive/${TODAY}-email.html already exists. Already sent today."
+          if already_sent; then
+            echo "archive/${TODAY}-email.html is already on $BRANCH. Nothing to do."
             echo "send=no" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-          if [ "$NOW" -ge "$TARGET" ]; then
-            echo "It is $(date +%H:%M) AWST, past $SEND_AT. Sending now."
-            echo "send=yes" >> "$GITHUB_OUTPUT"
+          if [ "$NOW" -lt "$TARGET" ]; then
+            WAIT=$(( TARGET - NOW ))
+            if [ "$WAIT" -gt $(( PIN_WINDOW_MIN * 60 )) ]; then
+              echo "Woke at $(date +%H:%M) AWST, too early. A later wake will send."
+              echo "send=no" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "Woke at $(date +%H:%M) AWST. Waiting ${WAIT}s to send at $SEND_AT."
+            sleep "$WAIT"
+          else
+            echo "It is $(date +%H:%M) AWST, past $SEND_AT."
+          fi
+
+          # A sleeping run knows nothing about what happened while it slept, so
+          # the question is asked again on waking.
+          if already_sent; then
+            echo "Another run sent the briefing while this one waited."
+            echo "send=no" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-          WAIT=$(( TARGET - NOW ))
-          if [ "$WAIT" -le $(( PIN_WINDOW_MIN * 60 )) ]; then
-            echo "Woke at $(date +%H:%M) AWST. Waiting ${WAIT}s to send at $SEND_AT."
-            sleep "$WAIT"
+          # Claim the day before sending, not after. Creating a git ref through
+          # the API either creates it or fails with "Reference already exists",
+          # and only one caller can be the one that created it. That is what
+          # makes a second email impossible rather than merely unlikely.
+          if OUT=$(gh api -X POST "repos/${GITHUB_REPOSITORY}/git/refs" \
+                     -f ref="refs/tags/sent-${TODAY}" \
+                     -f sha="${GITHUB_SHA}" 2>&1); then
+            echo "Claimed ${TODAY}. Sending."
             echo "send=yes" >> "$GITHUB_OUTPUT"
+          elif echo "$OUT" | grep -qi "already exists"; then
+            echo "Another run has already claimed ${TODAY}. Standing down."
+            echo "send=no" >> "$GITHUB_OUTPUT"
           else
-            echo "Woke at $(date +%H:%M) AWST, too early. A later wake will send."
+            echo "Could not claim ${TODAY}, so this run will not send:"
+            echo "$OUT"
             echo "send=no" >> "$GITHUB_OUTPUT"
           fi
 
@@ -119,6 +159,7 @@ jobs:
           echo "Looking back $HOURS hours."
 
       - name: Build and send the briefing
+        id: build
         if: steps.gate.outputs.send == 'yes'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -138,3 +179,16 @@ jobs:
           git diff --staged --quiet || git commit -m "archive: $(date +%Y-%m-%d)"
           git pull --rebase --autostash || true
           git push || true
+
+      # If the send failed, the day was claimed but nothing was delivered, and
+      # a claim nobody honoured would silence every later wake. Hand it back so
+      # 08:26, 09:08 and 10:14 can still try. Remove this step if you would
+      # rather a failed morning stay silent than risk a second copy of a
+      # briefing that failed after the mail server had already accepted it.
+      - name: Release the claim if the send failed
+        if: failure() && steps.gate.outputs.send == 'yes'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api -X DELETE \
+            "repos/${GITHUB_REPOSITORY}/git/refs/tags/sent-$(date +%F)" || true
