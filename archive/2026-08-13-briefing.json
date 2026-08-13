@@ -1,0 +1,145 @@
+{
+  "lead": "Eight confirmed announcements crossed the Discovery Capital Partners watchlist of 91 ticker codes in the 24 hours to 13 August 2026, spanning six distinct names, led by Orezone Gold's three separate filings covering its H1-2026 MD&A and record Casa Berardi-driven quarterly results.",
+  "subtitle": "Orezone's Casa Berardi integration drives record quarterly numbers as Genesis Minerals and Corazon advance drilling programs.",
+  "watch_items": [
+    "GBM: roughly 11,500m of Stage 2 assay results at Twin Hills remain outstanding after laboratory borax shortages, with results expected to recommence within a fortnight.",
+    "CZN: maiden 2,000m, 20-hole RC drilling at Wembley prospect mobilises 14 August 2026 and finishes by end of August, with assays due in October 2026.",
+    "ORE: Casa Berardi Life-of-Mine Study due in September 2026, and Bomboré Stage 2A expansion tracking toward Q4-2026 commissioning.",
+    "CYL: 313,448 shares for tenement acquisition proposed for issue on 12 October 2026."
+  ],
+  "day_in_brief": "Orezone Gold dominated the day with three filings: an H1-2026 Management's Discussion and Analysis, and two separate releases on record Q2 production of 58,566oz and record revenue of US$271.6 million following the Hecla Quebec (Casa Berardi) acquisition, with net earnings reported as US$45.2 million in one filing and US$53.1 million in another, cash from operations for the half of US$284.9 million, and total assets up to US$1,363.1 million from US$666.9 million at year end. Genesis Minerals (GBM) confirmed the BXM gold host horizon extends at least 700m south of the 309 Mineral Resource at Twin Hills, including 8m @ 1.31g/t Au from 126m in THDH005, though roughly 11,500m of Stage 2 assays remain outstanding due to laboratory borax shortages. Corazon Mining (CZN) will begin maiden RC drilling at the Wembley gold prospect on 14 August 2026. Catalyst Metals (CYL) will issue 313,448 shares valued at approximately A$2.0 million for a tenement acquisition. Two routine substantial holder notices rounded out the day: State Street exited its position in Kingsgate Consolidated (KCN), and reduced its holding in Vault Minerals (VAU) to 6.54% from 7.71%.",
+  "rows": [
+    {
+      "ticker": "ORE",
+      "company": "OREZONE GOLD CORPORATION",
+      "announcement": "MD&A for the six months ended 30 June 2026 lodged",
+      "type": null,
+      "date": "13 August 2026",
+      "document_key": "2924-03120609-6A1338391",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120609-6A1338391"
+    },
+    {
+      "ticker": "GBM",
+      "company": "GBM RESOURCES LIMITED.",
+      "announcement": "8m @ 1.31g/t Au from 126m (THDH005)",
+      "type": null,
+      "date": "13 August 2026",
+      "document_key": "2924-03120742-6A1338432",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120742-6A1338432"
+    },
+    {
+      "ticker": "ORE",
+      "company": "OREZONE GOLD CORPORATION",
+      "announcement": "Record Q2 revenue US$271.6M, AISC US$2,449/oz gold sold",
+      "type": null,
+      "date": "13 August 2026",
+      "document_key": "2924-03120613-6A1338393",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120613-6A1338393"
+    },
+    {
+      "ticker": "CZN",
+      "company": "CORAZON MINING LIMITED",
+      "announcement": "Maiden 2,000m RC drilling to commence at Wembley, Feather Cap",
+      "type": null,
+      "date": "13 August 2026",
+      "document_key": "2924-03120610-6A1338375",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120610-6A1338375"
+    },
+    {
+      "ticker": "ORE",
+      "company": "OREZONE GOLD CORPORATION",
+      "announcement": "Q2 net earnings US$53.1M as revenue triples to US$271.6M",
+      "type": null,
+      "date": "13 August 2026",
+      "document_key": "2924-03120611-6A1338392",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120611-6A1338392"
+    },
+    {
+      "ticker": "CYL",
+      "company": "CATALYST METALS LIMITED",
+      "announcement": "313,448 shares issued for tenement acquisition, worth A$2.0M",
+      "type": null,
+      "date": "13 August 2026",
+      "document_key": "2924-03120772-6A1338441",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120772-6A1338441"
+    },
+    {
+      "ticker": "KCN",
+      "company": "KINGSGATE CONSOLIDATED LIMITED.",
+      "announcement": "State Street ceases substantial holder status",
+      "type": null,
+      "date": "12 August 2026",
+      "document_key": "2924-03120542-2A1689197",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120542-2A1689197"
+    },
+    {
+      "ticker": "VAU",
+      "company": "VAULT MINERALS LIMITED",
+      "announcement": "State Street stake cut to 6.54% from 7.71%",
+      "type": null,
+      "date": "12 August 2026",
+      "document_key": "2924-03120544-6A1338365",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120544-6A1338365"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "ORE",
+      "heading": "Orezone lodges H1-2026 Management Discussion and Analysis",
+      "body": "Orezone Gold has filed its Management's Discussion and Analysis for the three and six months ended 30 June 2026, covering the Bomboré and Casa Berardi operations. The document sets out H1-2026 results against 2026 guidance, financing activity and liquidity position. Detailed financial figures accompany the interim consolidated financial statements filed alongside this MD&A.",
+      "document_key": "2924-03120609-6A1338391",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120609-6A1338391"
+    },
+    {
+      "ticker": "GBM",
+      "heading": "BXM gold host confirmed 700m south of 309, Twin Hills",
+      "body": "Step-out drilling at the Stella prospect has confirmed the prospective BXM host horizon extends at least 700m south of the 309 Mineral Resource at Twin Hills, with gold mineralisation intersected in all four deep holes drilled, including 8m @ 1.31g/t Au from 126m in THDH005. About 11,500m of Stage 2 drilling remains awaiting assay results, delayed by laboratory borax shortages, with samples now split across two Queensland labs and results expected to recommence within a fortnight.",
+      "document_key": "2924-03120742-6A1338432",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120742-6A1338432"
+    },
+    {
+      "ticker": "ORE",
+      "heading": "Orezone posts record Q2 production and revenue after Casa Berardi deal",
+      "body": "First full quarter as a two-mine producer delivered record gold production of 58,566oz and record revenue of US$271.6 million, with Adjusted EBITDA of US$134.5 million and net earnings of US$45.2 million (US$0.07/share). AISC came in at US$2,449/oz sold, cash stood at US$96.7 million at quarter end. Bomboré Stage 2A expansion remains on track for Q4-2026 commissioning, while a Casa Berardi Life-of-Mine Study is due in September 2026.",
+      "document_key": "2924-03120613-6A1338393",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120613-6A1338393"
+    },
+    {
+      "ticker": "CZN",
+      "heading": "Corazon starts maiden drilling at Wembley gold prospect",
+      "body": "Corazon will begin a maiden 2,000m, 20-hole RC program at the Wembley gold prospect within its Feather Cap Gold Project, with drilling to mobilise on 14 August 2026 and finish by the end of August. Historical intercepts include 7m @ 6.21g/t Au from 6m (WRLD10) and 2m @ 6.33g/t Au from 68m (WBRC003). Assay results are expected in October 2026.",
+      "document_key": "2924-03120610-6A1338375",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120610-6A1338375"
+    },
+    {
+      "ticker": "ORE",
+      "heading": "Orezone Q2 earnings surge on Casa Berardi acquisition",
+      "body": "Orezone's Q2 revenue rose to US$271.6 million from US$94.5 million a year earlier, with net earnings of US$53.1 million, after the March 2026 acquisition of Hecla Quebec (Casa Berardi mine) added a second operating segment alongside Bomboré. Cash from operations for the half was US$284.9 million, including a US$100.0 million gold stream deposit received. Total assets grew to US$1,363.1 million from US$666.9 million at year end, with cash of US$96.7 million at 30 June 2026.",
+      "document_key": "2924-03120611-6A1338392",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120611-6A1338392"
+    },
+    {
+      "ticker": "CYL",
+      "heading": "Catalyst Metals to issue shares for mining tenement acquisition",
+      "body": "Catalyst Metals will issue 313,448 fully paid ordinary shares to acquire mining tenements under an Asset Purchase Agreement, with the consideration valued at approximately A$2.0 million. The shares will be issued without security holder approval using the company's 15% placement capacity under listing rule 7.1, and are proposed for issue on 12 October 2026.",
+      "document_key": "2924-03120772-6A1338441",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120772-6A1338441"
+    },
+    {
+      "ticker": "KCN",
+      "heading": "State Street Corporation exits substantial holder position in Kingsgate",
+      "body": "State Street Corporation and its subsidiaries ceased to be a substantial holder in Kingsgate Consolidated on 10 August 2026, following stock lending and collateral movements across its custodial holdings. This is a routine holding notice with no operational implications for the Chatree expansion or the company's underlying business.",
+      "document_key": "2924-03120542-2A1689197",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120542-2A1689197"
+    },
+    {
+      "ticker": "VAU",
+      "heading": "State Street reduces substantial holding in Vault Minerals",
+      "body": "State Street Corporation's voting power in Vault Minerals fell to 6.54% (67,709,316 shares) from 7.71% (79,782,118 shares) previously. The change was largely driven by movements in securities lending and collateral arrangements across its custodial and asset management subsidiaries.",
+      "document_key": "2924-03120544-6A1338365",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120544-6A1338365"
+    }
+  ],
+  "quarterlies": [],
+  "_unverified": []
+}
