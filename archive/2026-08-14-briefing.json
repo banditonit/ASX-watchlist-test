@@ -1,0 +1,129 @@
+{
+  "lead": "Seven confirmed announcements touch seven watchlist names (of 91 tracked) in the 24 hours to 14 August 2026, led by Medallion Metals' drill results extending Lounge Lizard gold mineralisation at McMahon's ahead of an initial resource estimate targeted for Q3 CY26.",
+  "subtitle": "Exploration, M&A and a governance stoush dominate a quiet news day.",
+  "watch_items": [
+    "MM8: ~6,700m diamond and RC programme starts this month, with an initial resource estimate at Lounge Lizard targeted for Q3 CY26.",
+    "CMM: Geological and regolith mapping, geochemical sampling and targeted drilling planned to test the largely untested Piastri strike for gold-antimony mineralisation, following the A$1.5 million acquisition from Latitude 66.",
+    "KAL: Assay results from the 225-hole, 7,212m LTZ Flexure aircore program are expected in around 6 weeks; RC drilling at Lighthorse due to conclude next week; further AC campaign at Rebecca planned for late September or early October 2026.",
+    "NST: Watch for further correspondence in the Elliott Investment Management board renewal dispute, with Terry Bowen joining as Non-Executive Director from 1 September and new CEO Suresh Vadnagra starting 5 October 2026."
+  ],
+  "day_in_brief": "Medallion Metals reported first exploration and resource drilling at Lounge Lizard has extended mineralisation down dip and plunge and identified a new hangingwall lode, with best results of 5m @ 5.80g/t Au from 106m (MMRC028) and 3m @ 3.61g/t Au from 112m (MMRC027); a ~6,700m diamond and RC programme starts this month ahead of a Q3 CY26 initial resource estimate. Capricorn Metals agreed to acquire the 15.2km² Piastri Project tenement package from Latitude 66 for A$1.5 million in scrip, contiguous to its Golden Range tenure near the Ricciardo deposit (24.5Mt @ 2.5g/t AuEq for 1.96Moz AuEq). KalGold completed its largest-ever single aircore program, 7,212m across 225 holes averaging 32m depth, at LTZ Flexure within Pinjin, coming in at about two-thirds of budgeted cost, with assays due in roughly six weeks. Catalyst Metals upsized and extended its revolving credit facility to A$200 million over four years, adding HSBC alongside Westpac, NAB and Societe Generale; combined with A$331 million in cash and bullion at 30 June 2026, available liquidity now stands at A$531 million. State Street Corporation disclosed a routine substantial holder notice in Kingsgate Consolidated, with a 5.46% voting interest (14,526,853 shares), the bulk held via State Street Global Advisors, Australia, Limited. Many Peaks Minerals shareholders passed all 13 poll resolutions at their 13 August 2026 General Meeting, covering placement share ratification and approval, Atlantic Resources option consideration shares, and performance rights for three directors. Northern Star chairman Michael Chaney rejected Elliott Investment Management's board renewal push, noting Elliott's 5.35% interest is held via cash-settled swaps with no disclosed shareholding, and pointed to the Board's own succession plan, including Terry Bowen's appointment from 1 September and incoming CEO Suresh Vadnagra from 5 October, as evidence renewal is already underway.",
+  "rows": [
+    {
+      "ticker": "MM8",
+      "company": "MEDALLION METALS LIMITED.",
+      "announcement": "5m @ 5.80g/t Au from 106m (MMRC028)",
+      "type": null,
+      "date": "14 August 2026",
+      "document_key": "2924-03121072-6A1338548",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121072-6A1338548"
+    },
+    {
+      "ticker": "CMM",
+      "company": "CAPRICORN METALS LTD",
+      "announcement": "Acquires Piastri tenure for A$1.5 million in shares",
+      "type": null,
+      "date": "14 August 2026",
+      "document_key": "2924-03121010-6A1338524",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121010-6A1338524"
+    },
+    {
+      "ticker": "KAL",
+      "company": "KALGOORLIE GOLD MINING LIMITED",
+      "announcement": "7,212m AC completed at LTZ Flexure, Pinjin, assays in 6 weeks",
+      "type": null,
+      "date": "14 August 2026",
+      "document_key": "2924-03121009-6A1338523",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121009-6A1338523"
+    },
+    {
+      "ticker": "CYL",
+      "company": "CATALYST METALS LIMITED",
+      "announcement": "RCF increased to A$200m, undrawn, liquidity now A$531m",
+      "type": null,
+      "date": "14 August 2026",
+      "document_key": "2924-03121119-6A1338562",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121119-6A1338562"
+    },
+    {
+      "ticker": "KCN",
+      "company": "KINGSGATE CONSOLIDATED LIMITED.",
+      "announcement": "State Street becomes substantial holder with 5.46% (14,526,853 shares)",
+      "type": null,
+      "date": "13 August 2026",
+      "document_key": "2924-03120949-2A1689393",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120949-2A1689393"
+    },
+    {
+      "ticker": "MPK",
+      "company": "MANY PEAKS MINERALS LTD",
+      "announcement": "All 13 resolutions passed at General Meeting",
+      "type": null,
+      "date": "13 August 2026",
+      "document_key": "2924-03120849-6A1338458",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120849-6A1338458"
+    },
+    {
+      "ticker": "NST",
+      "company": "NORTHERN STAR RESOURCES LTD",
+      "announcement": "Chairman rebuffs Elliott's board demands, defends renewal process",
+      "type": null,
+      "date": "13 August 2026",
+      "document_key": "2924-03120869-6A1338468",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120869-6A1338468"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "MM8",
+      "heading": "Drilling extends Lounge Lizard gold mineralisation at McMahon's",
+      "body": "Medallion Metals' first exploration and resource drilling at Forrestania's Lounge Lizard deposit has extended mineralisation down dip and plunge and identified a new hangingwall lode at McMahon's pit. Best results include 5m @ 5.80g/t Au from 106m (MMRC028) and 3m @ 3.61g/t Au from 112m (MMRC027). Historical re-assays averaged ~20% higher grades, and a ~6,700m diamond and RC programme starts this month ahead of an initial resource estimate targeted for Q3 CY26.",
+      "document_key": "2924-03121072-6A1338548",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121072-6A1338548"
+    },
+    {
+      "ticker": "CMM",
+      "heading": "Capricorn buys Piastri Project beside Golden Range tenure",
+      "body": "Capricorn Metals has agreed to acquire the Piastri Project tenement package from Latitude 66 for A$1.5 million, settled in Capricorn shares at the 20-day VWAP prior to completion. The 15.2km² licence sits contiguous to Capricorn's Golden Range tenure, about 200m east of infrastructure at the Ricciardo deposit (24.5Mt @ 2.5g/t AuEq for 1.96Moz AuEq). Capricorn plans geological and regolith mapping, geochemical sampling and targeted drilling to test the largely untested strike for gold-antimony mineralisation.",
+      "document_key": "2924-03121010-6A1338524",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121010-6A1338524"
+    },
+    {
+      "ticker": "KAL",
+      "heading": "KalGold completes AC drilling at LTZ Flexure, Pinjin",
+      "body": "KalGold has finished its largest single aircore program to date at the LTZ Flexure target within Pinjin, 7,212m across 225 holes averaging 32m depth. Shallower than expected drilling let the company cover first-pass exploration at about two-thirds of budgeted cost. Assay results are expected in around 6 weeks, while RC drilling at Lighthorse is due to conclude next week and a further AC campaign at the Rebecca sequence is planned for late September or early October 2026.",
+      "document_key": "2924-03121009-6A1338523",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121009-6A1338523"
+    },
+    {
+      "ticker": "CYL",
+      "heading": "Catalyst upsizes credit facility to A$200m, adds HSBC",
+      "body": "Catalyst Metals has extended and upsized its revolving credit facility from A$100m to A$200m, with tenor lengthened from three to four years. HSBC has joined existing lenders Westpac, NAB and Societe Generale, and the facility remains undrawn. Combined with A$331m in cash and bullion at 30 June 2026, available liquidity now stands at A$531m to support the company's growth plans.",
+      "document_key": "2924-03121119-6A1338562",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121119-6A1338562"
+    },
+    {
+      "ticker": "KCN",
+      "heading": "State Street Corporation becomes substantial holder in Kingsgate",
+      "body": "State Street Corporation and subsidiaries became a substantial holder in Kingsgate Consolidated on 11 August 2026, with a relevant interest in 14,526,853 ordinary shares representing 5.46% voting power. The bulk of the holding sits with State Street Global Advisors, Australia, Limited at 10,988,554 shares. This is a routine custodial and index-manager filing rather than a strategic stake.",
+      "document_key": "2924-03120949-2A1689393",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120949-2A1689393"
+    },
+    {
+      "ticker": "MPK",
+      "heading": "Many Peaks shareholders approve placement and Atlantic option resolutions",
+      "body": "Many Peaks Minerals shareholders passed all 13 resolutions on a poll at the General Meeting held 13 August 2026, including ratification of Tranche 1 placement shares and approval of Tranche 2 placement shares to directors and unrelated participants. Shareholders also approved fixed and variable consideration shares to vendors under the Atlantic Resources option agreement, and performance rights to directors Schwertfeger, Scully and Harper.",
+      "document_key": "2924-03120849-6A1338458",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120849-6A1338458"
+    },
+    {
+      "ticker": "NST",
+      "heading": "Chairman responds to Elliott Investment Management engagement",
+      "body": "Chairman Michael Chaney has written to shareholders rejecting Elliott Investment Management's push for board renewal, noting Elliott holds only a 5.35% economic interest via cash-settled swaps with no disclosed shareholding. The letter details Elliott's demands, including a \"framework agreement\" for four board nominees and a minimum of three appointments, which the Board declined. It points to the Board's own succession process, including Terry Bowen's appointment as Non-Executive Director from 1 September and new CEO Suresh Vadnagra joining 5 October, as evidence renewal is already underway.",
+      "document_key": "2924-03120869-6A1338468",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03120869-6A1338468"
+    }
+  ],
+  "quarterlies": [],
+  "_unverified": []
+}
