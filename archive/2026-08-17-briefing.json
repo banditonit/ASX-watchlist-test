@@ -1,0 +1,193 @@
+{
+  "lead": "Eleven confirmed announcements from 10 watchlist names lead today's briefing, headlined by Aurum Resources' extended gold intercepts at Boundiali's BST1 and BST2, including 3m @ 80.09g/t Au from 66m (BSDD0091), alongside a cluster of high-grade gold drilling updates from Rox Resources, Astral Resources, GoldArc, Gorilla Gold and Great Southern Nickel, and corporate moves from Meeka Metals, Novo Resources, Kalamazoo Resources and Ausgold.",
+  "subtitle": "Gold drilling dominates a busy 72 hours, with Ausgold halted on a potential change of control.",
+  "watch_items": [
+    "AUC: trading halt remains until the earlier of normal trading on 19 August 2026 or release of a change of control announcement, expected before trading resumes.",
+    "AAR: 8 of 21 planned deep diamond holes at Theia Deeps still to report, after results including 52.75m at 4.67g/t Au from 445.25m.",
+    "GSN: assays pending for a further 10 RC holes at the Blanc Platt target near Mon Ami, expected within 1 to 2 weeks.",
+    "MEK: A$10 million deferred consideration for Mt Holland South falls due 13 November 2026, with maiden JORC resources for Blue Vein, Bushpig and Razorback due October 2026."
+  ],
+  "day_in_brief": "Gold explorers supplied most of the day's news. Aurum Resources extended high-grade mineralisation at both BST1 and BST2 at Boundiali, feeding into a Q3 CY2026 resource update and a DFS due late CY2026, with A$54.7 million cash on hand at 30 June 2026. Rox Resources reported further high-grade underground intercepts at Youanmi's United North, including 2.24m @ 39.33g/t Au from 220.70m, alongside mining advance ahead of DFS rates and a new power purchase agreement with Pacific Energy. Astral Resources extended high-grade mineralisation below the Theia resource shell at Mandilla, having expanded its deep diamond program from 6 to 21 holes. GoldArc completed its sixth and final grade control round at Mt Stirling Well, returning 1m @ 59.9g/t Au from 24m, ahead of a ~6,600m RC program starting in August 2026. Gorilla Gold grew the Val discovery at Vivien to over 400m of strike, sitting just 30m from the existing pit wall. Great Southern Nickel extended mineralisation at Mon Ami with 16m at 3.37g/t Au from 178m, from the first six of 16 planned holes. On the corporate side, Meeka Metals completed its acquisition of the Mt Holland South deposits near Mt Holland, issuing 117,804,881 shares as part consideration alongside A$10 million cash and A$10 million deferred to 13 November 2026. Novo Resources' interim MD&A showed cash and short-term investments rising to A$9,579,000 at 30 June 2026, with a 2,500m diamond program planned at Belltopper for Q4 2026. Kalamazoo Resources appointed Teresa Pacey as CFO effective 28 September 2026. Ausgold entered a trading halt pending a change of control announcement, with trading to resume by 19 August 2026 at the latest.",
+  "rows": [
+    {
+      "ticker": "AUE",
+      "company": "AURUM RESOURCES LIMITED",
+      "announcement": "3m @ 80.09g/t Au from 66m (BSDD0091)",
+      "type": null,
+      "date": "17 August 2026",
+      "document_key": "2924-03121528-6A1338743",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121528-6A1338743"
+    },
+    {
+      "ticker": "MEK",
+      "company": "MEEKA METALS LIMITED",
+      "announcement": "Completes A$20M+shares Mt Holland acquisition (Blue Vein, Bushpig, Razorback)",
+      "type": null,
+      "date": "17 August 2026",
+      "document_key": "2924-03121584-6A1338756",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121584-6A1338756"
+    },
+    {
+      "ticker": "NVO",
+      "company": "NOVO RESOURCES CORP.",
+      "announcement": "Cash A$9.6M at 30 Jun 2026, up from A$7.7M at Dec 2025",
+      "type": null,
+      "date": "17 August 2026",
+      "document_key": "2924-03121461-6A1338693",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121461-6A1338693"
+    },
+    {
+      "ticker": "RXL",
+      "company": "ROX RESOURCES LIMITED",
+      "announcement": "2.24m @ 39.33g/t Au from 220.70m (UNN26_014)",
+      "type": null,
+      "date": "17 August 2026",
+      "document_key": "2924-03121482-6A1338702",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121482-6A1338702"
+    },
+    {
+      "ticker": "AAR",
+      "company": "ASTRAL RESOURCES NL",
+      "announcement": "52.75m @ 4.67g/t Au from 445.25m (AMRCD378)",
+      "type": null,
+      "date": "17 August 2026",
+      "document_key": "2924-03121628-6A1338769",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121628-6A1338769"
+    },
+    {
+      "ticker": "GA8",
+      "company": "GOLDARC RESOURCES LIMITED",
+      "announcement": "1m @ 59.9g/t Au from 24m (26BSWRC973)",
+      "type": null,
+      "date": "17 August 2026",
+      "document_key": "2924-03121511-6A1338725",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121511-6A1338725"
+    },
+    {
+      "ticker": "GG8",
+      "company": "GORILLA GOLD MINES LTD",
+      "announcement": "0.9m @ 23.0g/t Au from 311.3m (VIVEX025)",
+      "type": null,
+      "date": "17 August 2026",
+      "document_key": "2924-03121568-6A1338752",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121568-6A1338752"
+    },
+    {
+      "ticker": "GSN",
+      "company": "GREAT SOUTHERN MINING LIMITED",
+      "announcement": "16m @ 3.37g/t Au from 178m (26MARC001)",
+      "type": null,
+      "date": "17 August 2026",
+      "document_key": "2924-03121541-6A1338744",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121541-6A1338744"
+    },
+    {
+      "ticker": "KZR",
+      "company": "KALAMAZOO RESOURCES LIMITED",
+      "announcement": "Teresa Pacey appointed CFO, effective 28 September 2026",
+      "type": null,
+      "date": "17 August 2026",
+      "document_key": "2924-03121484-6A1338704",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121484-6A1338704"
+    },
+    {
+      "ticker": "AUC",
+      "company": "AUSGOLD LIMITED",
+      "announcement": "Halted re change of control; resumes 19 August 2026",
+      "type": null,
+      "date": "17 August 2026",
+      "document_key": "2924-03121632-6A1338771",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121632-6A1338771"
+    },
+    {
+      "ticker": "MEK",
+      "company": "MEEKA METALS LIMITED",
+      "announcement": "117,804,881 shares issued for Mt Holland South acquisition",
+      "type": null,
+      "date": "17 August 2026",
+      "document_key": "2924-03121575-6A1338754",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121575-6A1338754"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "AUE",
+      "heading": "Aurum extends gold at Boundiali's BST1 and BST2",
+      "body": "Aurum Resources reported assays from 46 diamond holes (8,835.14m) at Boundiali's BST tenement, including 3m @ 80.09g/t Au from 66m (BSDD0091) at the 22Mt @ 0.8g/t Au BST1 deposit and 3m @ 27.65g/t Au from 144m (BSDD0077) at the BST2 prospect, which sits outside the current resource. Results feed into the next Boundiali MRE update targeted for end Q3 CY2026, ahead of a DFS expected late CY2026. Aurum holds A$54.7 million cash (30 June 2026, unaudited) and is running 16 owned diamond rigs across a 130,000m CY2026 drilling program.",
+      "document_key": "2924-03121528-6A1338743",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121528-6A1338743"
+    },
+    {
+      "ticker": "MEK",
+      "heading": "Meeka completes Mt Holland South gold deposits acquisition",
+      "body": "Meeka has completed acquisition of the Blue Vein, Bushpig and Razorback gold deposits near Mt Holland, WA, covering 71km2 of tenure over ~24km of gold-hosting BIF units in a district that produced ~1.2Moz @ 5.12g/t Au historically. Consideration comprises A$10 million cash at completion, A$10 million deferred to 13 November 2026, and 117,804,881 shares (3.8% of enlarged capital). JORC 2012 resources for the three deposits are due in October 2026, with drilling at Blue Vein to start January 2027.",
+      "document_key": "2924-03121584-6A1338756",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121584-6A1338756"
+    },
+    {
+      "ticker": "NVO",
+      "heading": "Novo's H1 2026 MD&A details Belltopper target and cash build",
+      "body": "Novo's interim MD&A for the six months to 30 June 2026 shows cash and short-term investments of A$9,579,000, up from A$7,741,000 at December 2025, after two placement tranches raised approximately A$5,900,000 and A$1,930,000. The Belltopper Exploration Target stands at 2.1Mt to 3.1Mt at 6.7g/t Au to 8.9g/t Au for 460koz to 880koz Au, with a 2,500m diamond drilling program planned for Q4 2026. Maiden RC drilling was completed at Wyloo SE and Cronus in the Pilbara, and a 2700m RC program is planned at Tibooburra in H2 2026.",
+      "document_key": "2924-03121461-6A1338693",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121461-6A1338693"
+    },
+    {
+      "ticker": "RXL",
+      "heading": "High-grade drill results and construction progress at Youanmi",
+      "body": "Underground diamond drilling at United North has returned further high-grade intercepts, including 2.24m @ 39.33g/t Au from 220.70m (UNN26_014) and 5.00m @ 6.39g/t Au from 108.00m (UNN26_011). Ore drive development is now extending beyond the DFS mine plan, with July mining advance of 522m exceeding DFS rates. Rox has also signed a Power Purchase Agreement with Pacific Energy for a thermal, solar and battery facility, with first gold still targeted for mid-CY2027.",
+      "document_key": "2924-03121482-6A1338702",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121482-6A1338702"
+    },
+    {
+      "ticker": "AAR",
+      "heading": "Theia Deeps drilling extends high-grade mineralisation below resource",
+      "body": "New diamond drill assays from AMRCD262, AMRCD376 and AMRCD378 at the Mandilla Gold Project's Theia deposit have returned broad zones of mineralisation below the April 2026 resource shell, including 52.75m at 4.67g/t Au from 445.25m and 45m at 1.39g/t Au from 389m. The deep diamond program has been expanded from 6 to 21 holes (11,000m), with 13 holes now completed and results pending for the remainder.",
+      "document_key": "2924-03121628-6A1338769",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121628-6A1338769"
+    },
+    {
+      "ticker": "GA8",
+      "heading": "Final grade control round confirms high-grade shoots at Mt Stirling Well",
+      "body": "GoldArc's sixth and final grade control round at Mt Stirling Well (M37/1305) returned 1m @ 59.9g/t Au from 24m (26BSWRC973), with seven further intercepts above 10g/t Au. Six consecutive rounds have now returned high-grade gold well above the deposit's 2.3g/t Au resource grade (198,000t for 15,000oz), with grade control coverage now complete and feeding into Mt Stirling mine planning. A ~6,600m RC program testing soil gold anomalies around the Mt Stirling deposits is set to start in August 2026.",
+      "document_key": "2924-03121511-6A1338725",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121511-6A1338725"
+    },
+    {
+      "ticker": "GG8",
+      "heading": "Val discovery grows further at Vivien, next to permitted mine",
+      "body": "Drilling has extended the high-grade Val discovery at Gorilla's 100%-owned Vivien Gold Project to over 400m of strike and 400m down-dip across multiple lodes, remaining open in all directions. Best results include 0.9m @ 23.0g/t Au from 311.3m and 4.5m @ 4.0g/t Au from 321.9m in VIVEX025, with a new footwall position identified in VIVEX020 alongside a DHEM conductor. Val sits 30m from the Vivien pit wall and 70m from underground infrastructure, with drilling set to recommence in coming weeks.",
+      "document_key": "2924-03121568-6A1338752",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121568-6A1338752"
+    },
+    {
+      "ticker": "GSN",
+      "heading": "Deep extensions confirmed at Mon Ami with high-grade RC results",
+      "body": "Assays from the first six of 16 RC holes at the 100%-owned Mon Ami Gold Project near Laverton have extended known mineralisation up to 70m down dip and 55m down plunge. The standout intercept was 16m at 3.37g/t Au from 178m, including 4m at 8.54g/t Au, in hole 26MARC001. Mon Ami hosts a JORC resource of 1.56Mt at 1.11g/t Au for 55.5Koz gold on a granted mining licence. Assays are pending for a further 10 holes at the Blanc Platt target, expected within 1-2 weeks.",
+      "document_key": "2924-03121541-6A1338744",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121541-6A1338744"
+    },
+    {
+      "ticker": "KZR",
+      "heading": "Kalamazoo appoints Teresa Pacey as Chief Financial Officer",
+      "body": "Kalamazoo has appointed Teresa Pacey as Chief Financial Officer effective 28 September 2026. Ms Pacey is a Fellow CPA with more than 17 years' finance experience, most recently as Group Financial Controller and Head of Finance at CoMade Group. The appointment adds financial and commercial capability as Kalamazoo progresses the 1.44Moz Ashburton Gold Project through its Pre-Feasibility Study.",
+      "document_key": "2924-03121484-6A1338704",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121484-6A1338704"
+    },
+    {
+      "ticker": "AUC",
+      "heading": "Ausgold halted pending change of control announcement",
+      "body": "Ausgold requested a trading halt pending an announcement on a potential change of control transaction. The halt remains until the earlier of normal trading on 19 August 2026 or release of the announcement, which the company expects to make before trading resumes on that date.",
+      "document_key": "2924-03121632-6A1338771",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121632-6A1338771"
+    },
+    {
+      "ticker": "MEK",
+      "heading": "Meeka issues shares as consideration for Mt Holland South",
+      "body": "Meeka Metals issued 117,804,881 fully paid ordinary shares as part consideration for the acquisition of the Mt Holland South project. The issue is covered by a section 708A(5)(e) cleansing notice, with an Appendix 2A lodged the same day. No new operational or financial detail on the project was provided.",
+      "document_key": "2924-03121575-6A1338754",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03121575-6A1338754"
+    }
+  ],
+  "quarterlies": [],
+  "_unverified": []
+}
