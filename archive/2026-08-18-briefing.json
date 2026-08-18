@@ -1,0 +1,115 @@
+{
+  "lead": "Six confirmed announcements across six watchlist names (of 91 tracked codes) feature in this briefing, led by Westgold Resources' maiden 1.1Moz Fletcher Ore Reserve at Beta Hunt.",
+  "subtitle": "Gold and silver exploration dominates, with Westgold's Fletcher reserve upgrade the standout among six confirmed filings.",
+  "watch_items": [
+    "WGX: Definitive Feasibility Study on the 4Mtpa Beta Hunt processing case is being advanced, with results expected by end of FY27.",
+    "STM: A resource update for Bramaderos/Porotillo is planned for the December quarter, with the deep Limon porphyry hole heading to 1,200m depth (currently at 387m).",
+    "NXM: Remaining Crusader and Clement assays at Wallbrook are due by end of August 2026, feeding into an updated resource targeted for completion by the end of the September quarter.",
+    "AAR: The Mandilla DFS, now fully covered by land use agreements across all tenements, is scheduled for completion in the March Quarter 2027.",
+    "BGD: Metallurgical testwork on composited Tolmer samples is the next step following the latest assay results.",
+    "WAU: A SAM survey is planned for September 2026 at Bullabulling North, ahead of deeper RC drilling from October 2026."
+  ],
+  "day_in_brief": "Westgold's maiden 1.1Moz Fletcher Ore Reserve at Beta Hunt headlines the day, lifting total Beta Hunt reserves to 21.7Mt at 2.34g/t Au for 1.6Moz and underpinning a shift to a 4Mtpa processing case. Sunstone Metals extended Porotillo mineralisation to a 550m by 240m footprint outside the 3.6Moz Bramaderos resource, with all 26 holes drilled there returning mineralised intersections. Barton Gold pushed the Tolmer silver-gold discovery's strike beyond 500m with further high-grade assays, including 16m @ 493g/t Ag & 0.66g/t Au from 50m. WA Gold reported reconnaissance drilling at Bullabulling North identifying new gold vectors, including a 2.6km trend along a regional ultramafic contact. Astral Resources secured a Land Use Agreement covering the remaining Mandilla and Spargoville tenements, meaning all Mandilla DFS ground is now under agreement. Nexus Minerals extended the high-grade Templar structure at Wallbrook by approximately 200m, with best assays of 7m at 7.53g/t Au including 1m at 41.27g/t Au. No trading halts were reported among these six filings.",
+  "rows": [
+    {
+      "ticker": "STM",
+      "company": "SUNSTONE METALS LTD",
+      "announcement": "175.8m @ 0.50g/t Au-Eq from surface (PTDD020)",
+      "type": null,
+      "date": "18 August 2026",
+      "document_key": "2924-03122162-2A1690062",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03122162-2A1690062"
+    },
+    {
+      "ticker": "WGX",
+      "company": "WESTGOLD RESOURCES LIMITED.",
+      "announcement": "Maiden Fletcher Ore Reserve: 13.5Mt @ 2.6g/t Au for 1.1Moz",
+      "type": null,
+      "date": "18 August 2026",
+      "document_key": "2924-03122059-6A1338914",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03122059-6A1338914"
+    },
+    {
+      "ticker": "BGD",
+      "company": "BARTON GOLD HOLDINGS LIMITED",
+      "announcement": "1m @ 2,240g/t Ag & 22.8g/t Au from 53m (TBM0246)",
+      "type": null,
+      "date": "18 August 2026",
+      "document_key": "2924-03122167-6A1338935",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03122167-6A1338935"
+    },
+    {
+      "ticker": "WAU",
+      "company": "WA GOLD LIMITED",
+      "announcement": "4m @ 0.25g/t Au from 40m (26BBRC027)",
+      "type": null,
+      "date": "18 August 2026",
+      "document_key": "2924-03122136-6A1338929",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03122136-6A1338929"
+    },
+    {
+      "ticker": "AAR",
+      "company": "ASTRAL RESOURCES NL",
+      "announcement": "Land Use Agreement signed with Marlinyu Ghoorlie for Mandilla",
+      "type": null,
+      "date": "18 August 2026",
+      "document_key": "2924-03122112-6A1338923",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03122112-6A1338923"
+    },
+    {
+      "ticker": "NXM",
+      "company": "NEXUS MINERALS LIMITED",
+      "announcement": "7m @ 7.53g/t Au inc 1m @ 41.27g/t Au from 48m (NMWBRC26-978)",
+      "type": null,
+      "date": "18 August 2026",
+      "document_key": "2924-03122092-6A1338922",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03122092-6A1338922"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "STM",
+      "heading": "Sunstone extends Porotillo mineralisation outside Bramaderos resource",
+      "body": "Final assays from Sunstone Metals' Porotillo drilling returned 175.8m @ 0.50g/t Au-Eq (0.32g/t Au, 0.11% Cu) from surface in hole PTDD020, including 58.6m @ 0.66g/t Au-Eq. The result extends the Porotillo mineralised footprint to 550m by 240m, with all 26 holes drilled outside the 3.6Moz Bramaderos resource returning mineralised intersections. A deep exploration hole at the Limon porphyry target is at 387m depth, heading to 1,200m, ahead of a resource update planned for the December quarter.",
+      "document_key": "2924-03122162-2A1690062",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03122162-2A1690062"
+    },
+    {
+      "ticker": "WGX",
+      "heading": "Westgold declares maiden 1.1Moz Fletcher Ore Reserve at Beta Hunt",
+      "body": "Westgold has booked a maiden Ore Reserve for the Fletcher deposit at its Beta Hunt complex of 13.5Mt at 2.6g/t Au for 1.1Moz, following a Pre-Feasibility Study. Fletcher's Mineral Resource has grown 30% to 40.1Mt at 2.3g/t Au for 3.0Moz, with Indicated ounces up 426% to 1.55Moz. Total Beta Hunt Ore Reserve now stands at 21.7Mt at 2.34g/t Au for 1.6Moz. The scale increase supports a shift to a 4Mtpa processing case, with a Definitive Feasibility Study now being advanced ahead of the previously planned 2.6Mtpa Higginsville expansion; results expected by end of FY27.",
+      "document_key": "2924-03122059-6A1338914",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03122059-6A1338914"
+    },
+    {
+      "ticker": "BGD",
+      "heading": "New assays extend Tolmer silver discovery to 500m strike",
+      "body": "Barton Gold has returned further high-grade assays from 3,677m of RC drilling at the Tolmer silver-gold discovery within its Tarcoola project in South Australia, infilling the shallow 'western silver zone' and extending its strike to over 500m. Results include 16m @ 493g/t Ag & 0.66g/t Au from 50m (TBM0259) and 13m @ 364g/t Ag & 0.74g/t Au from 44m (TBM0260), alongside broad gold intersections in the 'eastern gold zone' such as 8m @ 9.34g/t Au & 13.6g/t Ag from 90m (TBM0290). Metallurgical testwork on composited samples is next, following prior trial concentrates grading over 100,000g/t Ag.",
+      "document_key": "2924-03122167-6A1338935",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03122167-6A1338935"
+    },
+    {
+      "ticker": "WAU",
+      "heading": "Reconnaissance drilling defines new gold vectors at Bullabulling",
+      "body": "WA Gold completed 41 RC holes for 1,897m across two priority target areas at its Bullabulling North tenure, wedged between Minerals 260's 4.5Moz Bullabulling project and the Gekko Gold Project. Results included 2m @ 0.16g/t Au from 52m (26BBRC008) near the Bullabulling Shear Zone and a +20ppb Au trend over 2.6km of strike along a regional ultramafic contact. A SAM survey is planned for September 2026 ahead of deeper RC drilling from October 2026.",
+      "document_key": "2924-03122136-6A1338929",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03122136-6A1338929"
+    },
+    {
+      "ticker": "AAR",
+      "heading": "Astral secures land use deal covering all Mandilla DFS tenements",
+      "body": "Astral's subsidiary Mandilla Gold has executed a Land Use Agreement with the Marlinyu Ghoorlie Native Title Claim Group covering the Mandilla and Spargoville tenements, 70km south of Kalgoorlie. Combined with an earlier Feysville agreement from October 2025, all tenements subject to the Mandilla DFS are now covered by an LUA. The Mandilla DFS is scheduled for completion in the March Quarter 2027.",
+      "document_key": "2924-03122112-6A1338923",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03122112-6A1338923"
+    },
+    {
+      "ticker": "NXM",
+      "heading": "Nexus extends high-grade Templar structure at Wallbrook",
+      "body": "Final assays from 22 RC holes (1,810m) at the Templar prospect confirm a shallow, high-grade structure extending approximately 200m beyond previous modelling and remaining open to the north. Best results include 7m at 7.53g/t Au including 1m at 41.27g/t Au from 48m, and 6m at 5.63g/t Au including 1m at 15.29g/t Au from 51m. With 171 of 196 planned holes now reported, remaining Crusader and Clement assays are due by end of August, feeding into an updated multi-prospect Wallbrook resource targeted for completion by the end of the September quarter.",
+      "document_key": "2924-03122092-6A1338922",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03122092-6A1338922"
+    }
+  ],
+  "quarterlies": [],
+  "_unverified": []
+}
