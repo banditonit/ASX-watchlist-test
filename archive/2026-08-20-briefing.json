@@ -1,0 +1,254 @@
+{
+  "subtitle": "Beacon's 325% Ore Reserve leap at Iguana headlines a heavy gold news day across the watchlist",
+  "lead": "Fourteen confirmed announcements today span 12 of the watchlist's 93 names, led by Beacon Minerals' 325% Ore Reserve increase at Iguana, with the new 11.0Mt at 1.20g/t Au for 430,200oz reserve underpinning a Pre-Feasibility Study showing pre-tax free cash flow of A$841 million undiscounted over a 9 year mine life at A$5,500/oz gold, rising to A$1,085 million at spot gold of A$6,190/oz.",
+  "watch_items": [
+    "Beacon Minerals: Jaurdi process plant upgrade due to complete in November, ahead of the Iguana ore haul commencing over 43km.",
+    "Barton Gold: Prefeasibility Study for Tunkillia targeted for publication in Q1 CY27, following completed sterilisation drilling and pending Resource upgrades.",
+    "Odyssey Gold: a further 89 holes at Cable and Bollard remain in the laboratory, with assays pending to feed updated Mineral Resource Estimates.",
+    "Many Peaks Minerals: assays pending from a further 65 RC holes (7,979m) and 43 diamond holes (over 12,000m) at Ouarigue, with an MRE update planned for the December quarter.",
+    "OzAurum Resources: dangerous goods permit is the only outstanding approval for the Mulgabbie North heap leach build, with a possible Patricia gold project sale under consideration.",
+    "Titan Minerals: further drilling at Cerro Verde to start within a fortnight, testing repetitions and extensions ahead of a Dynasty resource update expected in early 2027.",
+    "Dart Mining: completion of the Yamarna acquisition targeted following a general meeting in late September 2026, with securities under the related placement to be issued 5 October 2026.",
+    "Artemis Resources: maiden diamond drilling at Cassowary planned to start in early September 2026, following heritage clearance for four drill sites."
+  ],
+  "day_in_brief": "A gold-heavy session across the watchlist. Beacon Minerals dominates with a 325% Ore Reserve increase and A$841 million pre-tax cash flow study at Iguana, while Maritana Resources posted a 148% Ore Reserve lift on maiden Crake and Kalpini pits and WGR grew its Gold Duke resource 29% to 277koz. Resolute Mining reported H1 2026 net profit after tax of A$162.6 million, more than double the prior year's A$71.0 million, as a higher realised gold price offset lower production and rising AISC. Exploration news flowed from Minerals 260 at Bullabulling, Many Peaks Minerals at Ouarigue, Barton Gold at Tunkillia, Odyssey Gold at Tuckanarra, Titan Minerals at Dynasty's Cerro Verde, and Artemis Resources at Cassowary, while OzAurum advanced construction at Mulgabbie North and Dart Mining detailed its Yamarna acquisition and A$2 million placement.",
+  "rows": [
+    {
+      "ticker": "BCN",
+      "company": "BEACON MINERALS LIMITED",
+      "announcement": "11.0Mt @ 1.20g/t Au for 430,200oz Ore Reserve, Iguana",
+      "type": null,
+      "date": "20 August 2026",
+      "document_key": "2924-03123532-6A1339420",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123532-6A1339420"
+    },
+    {
+      "ticker": "MI6",
+      "company": "MINERALS 260 LIMITED",
+      "announcement": "7.8m @ 9.0g/t Au from 15.7m (BBDD0067)",
+      "type": null,
+      "date": "20 August 2026",
+      "document_key": "2924-03123289-6A1339359",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123289-6A1339359"
+    },
+    {
+      "ticker": "MRT",
+      "company": "MARITANA MINERALS LIMITED",
+      "announcement": "Gold Reserves up 148% to 204koz, Resources up 6.3% to 1.86Moz",
+      "type": null,
+      "date": "20 August 2026",
+      "document_key": "2924-03123312-6A1339366",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123312-6A1339366"
+    },
+    {
+      "ticker": "MPK",
+      "company": "MANY PEAKS MINERALS LTD",
+      "announcement": "12m @ 5.50g/t Au from 109m, incl 2m @ 26.9g/t Au (FNRC268)",
+      "type": null,
+      "date": "20 August 2026",
+      "document_key": "2924-03123415-6A1339394",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123415-6A1339394"
+    },
+    {
+      "ticker": "BGD",
+      "company": "BARTON GOLD HOLDINGS LIMITED",
+      "announcement": "Sterilisation drilling begins at Tunkillia infrastructure sites",
+      "type": null,
+      "date": "20 August 2026",
+      "document_key": "2924-03123399-6A1339391",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123399-6A1339391"
+    },
+    {
+      "ticker": "ODY",
+      "company": "ODYSSEY GOLD LTD",
+      "announcement": "2m @ 29.1g/t Au from 81m (CBRC0414), Anchor deposit",
+      "type": null,
+      "date": "20 August 2026",
+      "document_key": "2924-03123426-6A1339396",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123426-6A1339396"
+    },
+    {
+      "ticker": "OZM",
+      "company": "OZAURUM RESOURCES LIMITED",
+      "announcement": "Water bores underway, plant relocated to Kalgoorlie, foundations cured",
+      "type": null,
+      "date": "20 August 2026",
+      "document_key": "2924-03123510-6A1339421",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123510-6A1339421"
+    },
+    {
+      "ticker": "TTM",
+      "company": "TITAN MINERALS LIMITED",
+      "announcement": "33.5m @ 6.6g/t Au, 55.5g/t Ag from 236.7m (CVDD26-199)",
+      "type": null,
+      "date": "20 August 2026",
+      "document_key": "2924-03123380-6A1339386",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123380-6A1339386"
+    },
+    {
+      "ticker": "WGR",
+      "company": "WESTERN GOLD RESOURCES LIMITED.",
+      "announcement": "4.84Mt @ 1.8g/t Au for 277koz total Mineral Resource",
+      "type": null,
+      "date": "20 August 2026",
+      "document_key": "2924-03123468-6A1339409",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123468-6A1339409"
+    },
+    {
+      "ticker": "RSG",
+      "company": "RESOLUTE MINING LIMITED",
+      "announcement": "H1 2026 net profit after tax A$162.6 million, up from A$71.0 million",
+      "type": null,
+      "date": "20 August 2026",
+      "document_key": "2924-03123270-6A1339355",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123270-6A1339355"
+    },
+    {
+      "ticker": "DTM",
+      "company": "DART MINING NL",
+      "announcement": "Binding deal for 865km2 Yamarna gold project, $2M placement",
+      "type": null,
+      "date": "20 August 2026",
+      "document_key": "2924-03123552-3A699280",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123552-3A699280"
+    },
+    {
+      "ticker": "RSG",
+      "company": "RESOLUTE MINING LIMITED",
+      "announcement": "H1 2026 net profit A$162.6M, up 129% on higher gold price",
+      "type": null,
+      "date": "20 August 2026",
+      "document_key": "2924-03123267-6A1339354",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123267-6A1339354"
+    },
+    {
+      "ticker": "DTM",
+      "company": "DART MINING NL",
+      "announcement": "301.1M shares and 249.4M options proposed, incl. placement at A$0.0085",
+      "type": null,
+      "date": "20 August 2026",
+      "document_key": "2924-03123553-3A699284",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123553-3A699284"
+    },
+    {
+      "ticker": "ARV",
+      "company": "ARTEMIS RESOURCES LIMITED",
+      "announcement": "Heritage clearance received for Cassowary drill sites",
+      "type": null,
+      "date": "20 August 2026",
+      "document_key": "2924-03123333-6A1339368",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123333-6A1339368"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "BCN",
+      "heading": "Beacon lifts Iguana Ore Reserve 325%, A$841M pre-tax cash flow",
+      "body": "Beacon's new Ore Reserve at the Iguana deposit stands at 11.0Mt at 1.20g/t Au for 430,200oz, a 325% increase, underpinning a Pre-Feasibility Study with estimated pre-tax free cash flow of A$841 million undiscounted over a 9 year mine life at A$5,500/oz gold and AISC of A$3,283/oz. At spot gold of A$6,190/oz, pre-tax free cash flow rises to A$1,085 million. The updated Mineral Resource is 11.5Mt at 1.4g/t Au for 533,000oz, a 266% increase, with ore to be hauled 43km to the Jaurdi process plant, whose upgrade is due to complete in November.",
+      "document_key": "2924-03123532-6A1339420",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123532-6A1339420"
+    },
+    {
+      "ticker": "MI6",
+      "heading": "More high-grade infill hits at Bullabulling gold project",
+      "body": "Minerals 260 has reported assays from a further 46 holes (11,163m) across the Phoenix, Bacchus, Kraken and Gibraltar deposits at its 100%-owned, 6.2Moz Bullabulling project near Coolgardie, Western Australia. Best results include 7.8m @ 9.0g/t Au from 15.7m (including 2.1m @ 30.4g/t Au from 17.0m) at Bacchus and 19m @ 1.5g/t Au from 172m at Phoenix. Gibraltar results are already in the July 2026 resource estimate, while the rest will feed a mid-CY2027 update.",
+      "document_key": "2924-03123289-6A1339359",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123289-6A1339359"
+    },
+    {
+      "ticker": "MRT",
+      "heading": "Maritana lifts gold Ore Reserves 148% on maiden Crake, Kalpini pits",
+      "body": "Annual Mineral Resources and Ore Reserves statement to 30 June 2026 shows gold Mineral Resources up 6.3% year on year to 1.86Moz after mining depletion, and gold Ore Reserves up 148% to 204koz, driven by maiden Crake and Kalpini Open Pit Reserves and an updated Boorara Open Pit Reserve. The company also holds 20.2Moz silver and 104kt zinc Resources, plus 293kt nickel and 5,800t cobalt, and has completed divestment of the Lake Johnston Nickel Project. A Burbanks Resource update and Rose Hill Reserve update are expected soon alongside a 60,000m drilling program.",
+      "document_key": "2924-03123312-6A1339366",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123312-6A1339366"
+    },
+    {
+      "ticker": "MPK",
+      "heading": "New RC results extend Ouarigue mineralisation over 800m strike",
+      "body": "Many Peaks reported assays from 54 RC holes (5,988m) at the Ouarigue prospect, Ferké project in Cote d'Ivoire, including 44m @ 1.51g/t gold from 22m (FNRC275) and 12m @ 5.50g/t gold from 109m including 2m @ 26.9g/t gold (FNRC268). Results confirm continuity within the Inferred portion of the 26.7Mt @ 1.54g/t gold (1,323,000oz) Ouarigue MRE and support potential upgrade to Indicated status. Assays remain pending from a further 65 RC holes (7,979m) and 43 diamond holes (over 12,000m), with an MRE update planned for the December quarter.",
+      "document_key": "2924-03123415-6A1339394",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123415-6A1339394"
+    },
+    {
+      "ticker": "BGD",
+      "heading": "Barton starts sterilisation drilling at Tunkillia ahead of PFS",
+      "body": "Barton Gold has begun sterilisation drilling at Tunkillia to test potential sites for waste dumps, tailings storage and the processing plant, ensuring infrastructure avoids valuable mineralisation. It follows 57,653m of RC and diamond drilling completed to upgrade the open pit mineralisation to Measured and Indicated JORC categories, with gold and silver Resource upgrades pending. A Prefeasibility Study is underway and targeted for publication in Q1 CY27, ahead of a Mining Lease application.",
+      "document_key": "2924-03123399-6A1339391",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123399-6A1339391"
+    },
+    {
+      "ticker": "ODY",
+      "heading": "Resource drilling confirms high-grade mineralisation at Tuckanarra",
+      "body": "Odyssey Gold has returned resource definition drilling results from Anchor, Maybelle and Lucknow deposits at the Tuckanarra Gold Project, part of a 249 hole, approximately 20,000m program. Anchor returned high-grade intersections beneath historical workings including 2m @ 29.1g/t Au from 81m (CBRC0414) and 3m @ 8.6g/t Au from 51m (CBRC0417), with several results outside the current Inferred MRE of 90kt @ 2.6g/t Au for 7koz. Maybelle and Lucknow drilling supports updated Mineral Resource Estimates, with the broader Tuckanarra project holding Indicated and Inferred Resources of 6.3Mt @ 2.2g/t Au for 451koz. A further 89 holes at Cable and Bollard remain in the laboratory with assays pending.",
+      "document_key": "2924-03123426-6A1339396",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123426-6A1339396"
+    },
+    {
+      "ticker": "OZM",
+      "heading": "Mulgabbie North construction advances toward first gold",
+      "body": "OzAurum reports progress across its low-capex heap leach build at Mulgabbie North, targeting a 260,000oz resource open along a 4km trend. Two production water bores are being drilled within the mining lease, the heap leach plant has been transported from Perth to a Kalgoorlie staging point, and site foundations have cured for plant installation. The dangerous goods permit is the only outstanding approval, with the Company also weighing a possible sale of its Patricia gold project after MinesOnline interest.",
+      "document_key": "2924-03123510-6A1339421",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123510-6A1339421"
+    },
+    {
+      "ticker": "TTM",
+      "heading": "Titan finds new shear-hosted gold zone at Dynasty's Cerro Verde",
+      "body": "Titan Minerals has identified a new shear and vein hosted gold-silver mineralisation style at the Cerro Verde prospect within its Dynasty Gold Project, outside the current resource. The discovery, highlighted by 33.5m @ 6.6g/t Au, 55.5g/t Ag from 236.7m in CVDD26-199, sits within a northwest trending structural corridor spanning roughly 1.6km by 800m. Further drilling to test repetitions and extensions is planned to start within a fortnight, with results feeding into a Dynasty resource update expected in early 2027.",
+      "document_key": "2924-03123380-6A1339386",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123380-6A1339386"
+    },
+    {
+      "ticker": "WGR",
+      "heading": "Gold Duke resource grows to 277koz, Measured tonnes jump",
+      "body": "WGR's annual Mineral Resource Statement for the 100%-owned Gold Duke Project lifts the estimate to 4.84Mt @ 1.8g/t Au for 277koz, up 29% year-on-year in contained gold. Measured and Indicated Resources rose 44% to 104koz, with Measured ounces jumping from 3koz to 81koz after 33,980m of close-spaced grade control and infill drilling. The upgraded resource underpins WGR's Expanded Scoping Study, updating the 2025 study and assessing mine life extensions.",
+      "document_key": "2924-03123468-6A1339409",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123468-6A1339409"
+    },
+    {
+      "ticker": "RSG",
+      "heading": "Resolute half-year profit more than doubles on higher gold price",
+      "body": "Resolute reported H1 2026 revenue of A$584.7 million (up 31%) and EBITDA of A$323.9 million (up 42%), with net profit after tax of A$162.6 million versus A$71.0 million a year earlier. Gold production fell to 104,795oz (H1 2025: 151,460oz) as Syama was hit by roaster shutdown and explosive supply issues, while AISC rose 38% to A$2,327/oz. Net cash grew to A$317.4 million, and group guidance remains toward the lower end of 250 to 275koz for 2026.",
+      "document_key": "2924-03123270-6A1339355",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123270-6A1339355"
+    },
+    {
+      "ticker": "DTM",
+      "heading": "Dart Mining to acquire WA Yamarna gold project, raises $2 million",
+      "body": "Dart Mining has signed a binding agreement to acquire 100% of tenements covering 865km2 in WA's Yamarna district, about 25km west of the 8Moz Gruyere gold mine. The Yamarna South and North package is considered prospective for gold and lithium. Consideration includes $50,000 cash, approximately 37.65 million shares worth $320,000, options and a 1% net smelter royalty. A two-tranche placement at $0.0085 per share has raised firm commitments for $2 million, to fund exploration and the acquisition, with completion targeted following a general meeting in late September 2026.",
+      "document_key": "2924-03123552-3A699280",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123552-3A699280"
+    },
+    {
+      "ticker": "RSG",
+      "heading": "Resolute posts sharply higher H1 profit as gold price offsets lower output",
+      "body": "Revenue rose 31% to $584.7 million and EBITDA climbed 42% to $323.9 million in H1 2026, lifting net profit after tax to $162.6 million from $71.0 million. Gains came despite production falling to 104,795oz from 151,460oz and AISC rising to $2,327/oz, as the average realised gold price jumped to $4,712/oz from $3,076/oz. Net cash and bullion stood at $317.4 million, up from $109.9 million a year earlier, with no interim dividend declared.",
+      "document_key": "2924-03123267-6A1339354",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123267-6A1339354"
+    },
+    {
+      "ticker": "DTM",
+      "heading": "Dart Mining details placement and Yamama acquisition share issue",
+      "body": "Dart Mining plans to issue 301,117,648 shares and 249,382,354 options exercisable at A$0.011 expiring 30 September 2029. This includes 235,294,118 placement shares at A$0.0085, 37,647,059 shares valued at A$320,000 for the Yamama project acquisition, and shares and options for lead manager and referral fees. Shareholder approval for parts of the issue is targeted for 30 September 2026, with securities to be issued 5 October 2026.",
+      "document_key": "2924-03123553-3A699284",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123553-3A699284"
+    },
+    {
+      "ticker": "ARV",
+      "heading": "Artemis clears heritage hurdle for Cassowary copper-gold drilling",
+      "body": "Artemis has received heritage clearance for four drill sites, access tracks and campsites at its Cassowary Copper-Gold target within the Madura Project, 440km east of Kalgoorlie. The interpreted target lies 400 to 550m below surface, with initial diamond holes planned to 750m depth across a magnetic anomaly over 4km in diameter. Drilling contractor engagement is underway, with maiden drilling planned to start in early September 2026.",
+      "document_key": "2924-03123333-6A1339368",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123333-6A1339368"
+    }
+  ],
+  "quarterlies": [],
+  "_unverified": [
+    {
+      "ticker": "DTM",
+      "headline": "Proposed issue of securities - DTM",
+      "figures": [
+        "249,382,354",
+        "249.4M"
+      ]
+    }
+  ]
+}
