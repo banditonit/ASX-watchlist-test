@@ -1,0 +1,153 @@
+{
+  "lead": "Eight confirmed announcements crossed the watchlist of 93 tickers in the 24 hours to 21 August 2026, dominated by gold producer earnings, with Ramelius (RMS), Regis Resources (RRL) and Astral (AAR) among the five names in focus, alongside Meeka (MEK) and Javelin (JAV) drilling news.",
+  "subtitle": "Gold sector FY26 results show record revenue and dividends but sharply lower profits on rising costs.",
+  "watch_items": [
+    "MEK: assays for 26TBRD010, the deepest hole drilled at Turnberry with visible gold at 632.8m downhole, expected in September 2026.",
+    "JAV: two-hole, 1,800m diamond program at Coogee North and West to begin 1 September 2026, with results expected after the roughly six-week program.",
+    "RMS: updated 4-year production outlook to FY30, including FY27 guidance, planned for next month.",
+    "AAR: Think Big grade control model update ahead of mining, still targeted for the March 2027 quarter with revenue from June 2027."
+  ],
+  "day_in_brief": "Regis Resources led the day with a record FY26 net profit after tax of A$715 million, up A$461 million, on EBITDA of A$1.345 billion and a 57% margin, declaring a record fully franked final dividend of 20 cents per share (A$151 million, comprising 15 cents ordinary and 5 cents special funded from the VAU break fee), taking total FY26 dividends to 35 cents per share (A$265 million) for a 6.1% yield; record date is 11 September 2026 and payment 7 October 2026. Regis also lodged its FY2026 Corporate Governance Statement, disclosing a majority independent board chaired by Mr James Mactier and 25% female workforce participation against a 22% industry average as at 30 June 2026. Ramelius reported FY26 revenue up 1% to A$1,032.8 million but net profit after tax attributable to members fell 75% to A$118.8 million, with underlying EBITDA down 7% to A$765.4 million at a record 74% margin, underlying NPAT down 33% to A$319.9 million, gold sold of 190,261oz and AISC up 28% to A$1,983/oz; a fully franked final dividend of 3.0 cents per share will be paid 13 October 2026, taking full year dividends to 6.0 cents per share, alongside A$141.7 million in share buy-backs completed to date. In exploration, Astral's 92-hole (5,229m) infill RC program at Think Big returned 11m at 7.34g/t Au from 38m (26TBRC004) and 12m at 5.89g/t Au from 30m (26TBRC040), with a Native Vegetation Clearing Permit also received. Meeka's diamond drilling at Turnberry intersected visible gold at 632.8m downhole in 26TBRD010, the deepest hole drilled to date, prompting mobilisation of a second diamond rig. Javelin contracted a diamond rig to test two untested magnetic anomalies at its Coogee Gold Project from 1 September 2026, below the existing resource of 3.6Mt at 1.08g/t Au and 1.0Mt at 0.41% Cu.",
+  "rows": [
+    {
+      "ticker": "RMS",
+      "company": "RAMELIUS RESOURCES LIMITED",
+      "announcement": "FY26 NPAT down 75% to A$118.8 million, final dividend 3.0cps",
+      "type": null,
+      "date": "21 August 2026",
+      "document_key": "2924-03123865-6A1339567",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123865-6A1339567"
+    },
+    {
+      "ticker": "AAR",
+      "company": "ASTRAL RESOURCES NL",
+      "announcement": "11m @ 7.34g/t Au from 38m (26TBRC004)",
+      "type": null,
+      "date": "21 August 2026",
+      "document_key": "2924-03124042-6A1339603",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03124042-6A1339603"
+    },
+    {
+      "ticker": "MEK",
+      "company": "MEEKA METALS LIMITED",
+      "announcement": "Visible gold at 632.8m depth in deepest hole, assays pending (26TBRD010)",
+      "type": null,
+      "date": "21 August 2026",
+      "document_key": "2924-03124018-6A1339596",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03124018-6A1339596"
+    },
+    {
+      "ticker": "JAV",
+      "company": "JAVELIN MINERALS LIMITED",
+      "announcement": "Diamond drilling to start 1 Sept at Coogee North and West targets",
+      "type": null,
+      "date": "21 August 2026",
+      "document_key": "2924-03124128-6A1339618",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03124128-6A1339618"
+    },
+    {
+      "ticker": "RMS",
+      "company": "RAMELIUS RESOURCES LIMITED",
+      "announcement": "FY26 underlying EBITDA A$765.4M, final dividend 3.0cps",
+      "type": null,
+      "date": "21 August 2026",
+      "document_key": "2924-03123955-6A1339587",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123955-6A1339587"
+    },
+    {
+      "ticker": "RRL",
+      "company": "REGIS RESOURCES LIMITED",
+      "announcement": "Record NPAT A$715M, final dividend 20cps (A$151M)",
+      "type": null,
+      "date": "21 August 2026",
+      "document_key": "2924-03123862-6A1339564",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123862-6A1339564"
+    },
+    {
+      "ticker": "RRL",
+      "company": "REGIS RESOURCES LIMITED",
+      "announcement": "A$0.20/share dividend (fully franked), incl. A$0.05 special",
+      "type": null,
+      "date": "21 August 2026",
+      "document_key": "2924-03123859-6A1339558",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123859-6A1339558"
+    },
+    {
+      "ticker": "RRL",
+      "company": "REGIS RESOURCES LIMITED",
+      "announcement": "FY2026 Corporate Governance Statement lodged",
+      "type": null,
+      "date": "21 August 2026",
+      "document_key": "2924-03123861-6A1339562",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123861-6A1339562"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "RMS",
+      "heading": "Ramelius FY26 profit falls 75% despite record revenue",
+      "body": "Ramelius reported FY26 revenue up 1% to A$1,032.8 million but net profit after tax attributable to members fell 75% to A$118.8 million, hit by lower underlying EBITDA (down 7% to A$765.4 million) and a A$6.6 million loss from discontinued operations. Gold production was 192,182oz at an AISC of A$1,983/oz. A fully franked final dividend of 3.0 cents per share will be paid on 13 October 2026, taking full year dividends to 6.0 cents per share.",
+      "document_key": "2924-03123865-6A1339567",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123865-6A1339567"
+    },
+    {
+      "ticker": "AAR",
+      "heading": "Think Big infill drilling confirms shallow, high-grade supergene gold",
+      "body": "Astral has completed a 92-hole (5,229m) infill RC program at the Think Big deposit within its 100%-owned Feysville project, with best results including 11m at 7.34g/t Au from 38m (26TBRC004) and 12m at 5.89g/t Au from 30m (26TBRC040). The results will feed an updated grade control model ahead of mining under the fully funded MMS joint venture. Astral also received the Native Vegetation Clearing Permit for Think Big, with mining still targeted for the March 2027 quarter and revenue from June 2027.",
+      "document_key": "2924-03124042-6A1339603",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03124042-6A1339603"
+    },
+    {
+      "ticker": "MEK",
+      "heading": "Visible gold found 300m below Turnberry reserve",
+      "body": "Diamond drilling at Turnberry has hit visible gold at 632.8m downhole in 26TBRD010, the deepest hole drilled to date, within a broad shear zone bearing chalcopyrite, pyrite, albite and magnetite. A second diamond rig has been mobilised to accelerate testing of extensions and a potential deeper source. Assays for the hole are expected in September 2026.",
+      "document_key": "2924-03124018-6A1339596",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03124018-6A1339596"
+    },
+    {
+      "ticker": "JAV",
+      "heading": "Javelin to drill deep Coogee gold-copper intrusive targets",
+      "body": "Javelin has contracted a diamond rig, mobilising late August to drill two untested magnetic anomalies at its Coogee Gold Project, 55km south-east of Kalgoorlie, from 1 September. The 1,800m, two-hole program, co-funded via the WA Government's EIS, will test Coogee North (below the existing 3.6Mt at 1.08g/t Au and 1.0Mt at 0.41% Cu resource) and Coogee West to around 800m to 1,000m depth. Results expected once the roughly six-week program is completed.",
+      "document_key": "2924-03124128-6A1339618",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03124128-6A1339618"
+    },
+    {
+      "ticker": "RMS",
+      "heading": "Ramelius posts A$765.4M EBITDA, record 74% margin, declares final dividend",
+      "body": "Ramelius reported FY26 underlying EBITDA of A$765.4 million, down 7% on FY25 but at a record margin of 74%. Underlying NPAT fell 33% to A$319.9 million as gold sold dropped to 190,261oz, while AISC rose 28% to A$1,983/oz. A fully franked final dividend of 3.0cps was declared, taking FY26 total dividends to 6.0cps, alongside A$141.7 million in share buy-backs completed to date. An updated 4-year production outlook to FY30, including FY27 guidance, is planned for next month.",
+      "document_key": "2924-03123955-6A1339587",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123955-6A1339587"
+    },
+    {
+      "ticker": "RRL",
+      "heading": "Regis posts record profit, declares record 20cps final dividend",
+      "body": "Regis Resources delivered record FY26 net profit after tax of A$715 million, up A$461 million, on EBITDA of A$1.345 billion and an EBITDA margin of 57%. A fully franked final dividend of 20 cents per share (A$151 million), comprising a 15 cents ordinary and 5 cents special dividend, takes total FY26 dividends to 35 cents per share (A$265 million), a 6.1% yield. Cash and bullion rose to A$1.184 billion at 30 June 2026. FY27 guidance reaffirmed at 360,000 to 400,000oz group production at AISC of A$2,990 to A$3,390/oz.",
+      "document_key": "2924-03123862-6A1339564",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123862-6A1339564"
+    },
+    {
+      "ticker": "RRL",
+      "heading": "Regis declares A$0.20 fully franked dividend including special component",
+      "body": "Regis Resources will pay a total distribution of AUD0.20 per share for the period ended 30 June 2026, fully franked. This comprises an ordinary dividend of AUD0.15 and a special dividend of AUD0.05, the latter funded from the break fee paid by VAU following termination of the Scheme Implementation Deed. Record date is 11 September 2026, ex date 10 September 2026, with payment on 7 October 2026.",
+      "document_key": "2924-03123859-6A1339558",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123859-6A1339558"
+    },
+    {
+      "ticker": "RRL",
+      "heading": "Regis Resources releases FY2026 governance statement",
+      "body": "Regis Resources has lodged its Corporate Governance Statement for the 2026 reporting period, confirming compliance with the ASX Corporate Governance Council's recommendations. The statement discloses board composition, including a majority independent board chaired by Mr James Mactier, and reports female workforce participation of 25% against a 22% industry average as at 30 June 2026. No new strategic or financial information is disclosed.",
+      "document_key": "2924-03123861-6A1339562",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03123861-6A1339562"
+    }
+  ],
+  "quarterlies": [],
+  "_unverified": [
+    {
+      "ticker": "RRL",
+      "headline": "Record Profit Delivers Record 20cps Final Dividends",
+      "figures": [
+        "1.184 billion"
+      ]
+    }
+  ]
+}
