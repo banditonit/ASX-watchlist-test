@@ -1,0 +1,98 @@
+{
+  "lead": "Five confirmed announcements across the 93-name watchlist in the 72 hours to 24 August 2026: Pilbara Gold extended high-grade mineralisation at Mt York, Benz Mining raised A$150 million to accelerate Glenburgh drilling, Predictive Discovery secured shareholder approval for its rebrand to PDI Gold and a share consolidation, Matsa Resources entered a trading halt ahead of a Devon Pit Gold Project update, and Norwest Minerals pushed back its Bulgera heap leach Scoping Study.",
+  "subtitle": "Gold explorers dominate, with funding, corporate restructuring and drilling news outpacing a halt and a study delay.",
+  "watch_items": [
+    "MAT: trading halt pending a Devon Pit Gold Project announcement, resumption due Wednesday 26 August 2026 or earlier if the update lands first.",
+    "PDI: 5-into-1 share consolidation effective 24 August 2026, with the rebrand to PDI Gold Limited effective on ASX from 9 September 2026 and consolidated normal settlement trading from 7 September 2026.",
+    "BNZ: A$150 million placement CDIs settle 28 August 2026, funding six additional rigs toward a maiden Glenburgh Mineral Resource Estimate targeted for H1 2027.",
+    "NWM: Bulgera heap leach Scoping Study now expected early October 2026, pending completion of the 70-day column leach and IBRT metallurgical programs.",
+    "PGL: Mt York's 60,000m drill program is 28,635m complete, with mineralisation open at depth ahead of an updated Mineral Resource Estimate due early 2027 and a PFS in mid-2027."
+  ],
+  "day_in_brief": "Norwest Minerals closed out the day by pushing its Bulgera Gold Heap Leach Project Scoping Study to early October 2026, awaiting full column leach and IBRT metallurgical results, with column leach recoveries on coarse-crushed oxide material tracking in line with initial bottle-roll work. Matsa Resources remains in a trading halt pending a Devon Pit Gold Project update, due to lift by Wednesday 26 August 2026 at the latest. Predictive Discovery shareholders approved both the rebrand to PDI Gold Limited and a 5-into-1 consolidation, with the corporate changes taking effect between 24 August and 9 September 2026. Benz Mining locked in a A$150 million placement at A$3.71 per CDI, a nil discount, to fund six extra rigs and accelerate the 450,000m Glenburgh drill program toward a maiden resource in H1 2027. Pilbara Gold led on drilling substance, extending high-grade gold at Mt York and Main Hill Extension, including 10m @ 4.02g/t Au from 262m (26MYRCD004), with mineralisation open at depth and a resource update due early 2027.",
+  "rows": [
+    {
+      "ticker": "PGL",
+      "company": "PILBARA GOLD LIMITED",
+      "announcement": "10m @ 4.02g/t Au from 262m (26MYRCD004)",
+      "type": null,
+      "date": "24 August 2026",
+      "document_key": "2924-03124742-3A699553",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03124742-3A699553"
+    },
+    {
+      "ticker": "BNZ",
+      "company": "BENZ MINING CORP.",
+      "announcement": "A$150M placement at A$3.71 to fund 14-rig Glenburgh drilling",
+      "type": null,
+      "date": "24 August 2026",
+      "document_key": "2924-03124679-6A1339814",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03124679-6A1339814"
+    },
+    {
+      "ticker": "PDI",
+      "company": "PREDICTIVE DISCOVERY LIMITED",
+      "announcement": "Name change to PDI Gold Limited, 1:5 consolidation approved",
+      "type": null,
+      "date": "24 August 2026",
+      "document_key": "2924-03124773-6A1339820",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03124773-6A1339820"
+    },
+    {
+      "ticker": "MAT",
+      "company": "MATSA RESOURCES LIMITED",
+      "announcement": "Trading halt pending Devon Pit update, resumes 26 August 2026",
+      "type": null,
+      "date": "24 August 2026",
+      "document_key": "2924-03124804-6A1339853",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03124804-6A1339853"
+    },
+    {
+      "ticker": "NWM",
+      "company": "NORWEST MINERALS LIMITED",
+      "announcement": "Bulgera Scoping Study delayed to early October for metallurgical data",
+      "type": null,
+      "date": "24 August 2026",
+      "document_key": "2924-03124597-6A1339797",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03124597-6A1339797"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "PGL",
+      "heading": "More high-grade gold hits extend Mt York at depth",
+      "body": "Pilbara Gold's latest drilling at the 2.1Moz Mt York Project has extended gold mineralisation at Main Hill and Main Hill Extension, with best results including 10m @ 4.02g/t Au from 262m (26MYRCD004) and 22m @ 2.04g/t Au from 122m (26MYDD024A). Mineralisation remains open at depth and is thickening at Main Hill Extension. The 60,000m program (increased from 50,000m) is 28,635m complete, with an updated Mineral Resource Estimate due early 2027 and a PFS in mid-2027.",
+      "document_key": "2924-03124742-3A699553",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03124742-3A699553"
+    },
+    {
+      "ticker": "BNZ",
+      "heading": "Benz raises A$150 million to fast-track Glenburgh resource",
+      "body": "Benz Mining has secured firm commitments for a A$150 million institutional placement of 40.4 million CDIs at A$3.71 each, a nil discount to last close. Proceeds will add six rigs to lift the Glenburgh fleet to 14 rigs across 20 shifts, accelerating the planned 450,000m drill program. The company is targeting a maiden Mineral Resource Estimate for Glenburgh in H1 2027, with New CDIs settling 28 August 2026.",
+      "document_key": "2924-03124679-6A1339814",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03124679-6A1339814"
+    },
+    {
+      "ticker": "PDI",
+      "heading": "Predictive Discovery becomes PDI Gold, shares to consolidate 5-into-1",
+      "body": "Shareholders approved the company's rebrand from Predictive Discovery Limited to PDI Gold Limited, effective on ASX from 9 September 2026, with the ticker remaining PDI on both ASX and TSX. A 5-into-1 share consolidation was also approved, effective 24 August 2026, with normal settlement trading on a consolidated basis to commence 7 September 2026.",
+      "document_key": "2924-03124773-6A1339820",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03124773-6A1339820"
+    },
+    {
+      "ticker": "MAT",
+      "heading": "Matsa halts trading ahead of Devon Pit Gold Project update",
+      "body": "Matsa Resources requested a trading halt pending an announcement on operations at its Devon Pit Gold Project. The halt applies until trading resumes on Wednesday 26 August 2026, or earlier if the announcement is released first. No detail on the nature of the update was given.",
+      "document_key": "2924-03124804-6A1339853",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03124804-6A1339853"
+    },
+    {
+      "ticker": "NWM",
+      "heading": "Norwest pushes back Bulgera heap leach Scoping Study",
+      "body": "Norwest Minerals will delay release of the Bulgera Gold Heap Leach Project Scoping Study until complete results from the 70-day column leach and fresh rock IBRT metallurgical programs are incorporated, now expected in early October 2026. The column leach testwork on coarse-crushed oxide material is tracking in line with initial bottle-roll recoveries. Results will feed into processing and financial models via KCAA ahead of the study's release.",
+      "document_key": "2924-03124597-6A1339797",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03124597-6A1339797"
+    }
+  ],
+  "quarterlies": [],
+  "_unverified": []
+}

@@ -1,0 +1,463 @@
+{
+  "window_start_awst": "2026-08-21T08:10:10.472060+08:00",
+  "window_end_awst": "2026-08-24T08:10:10.472060+08:00",
+  "window_start_utc": "2026-08-21T00:10:10.472060+00:00",
+  "window_end_utc": "2026-08-24T00:10:10.472060+00:00",
+  "date_awst": "24 August 2026",
+  "tickers_checked": 93,
+  "window_hours": 72.0,
+  "announcements": [
+    {
+      "ticker": "MAT",
+      "company": "MATSA RESOURCES LIMITED",
+      "sector": "Materials",
+      "headline": "Trading Halt Request",
+      "types": [
+        "Trading Halt Request"
+      ],
+      "price_sensitive": true,
+      "document_key": "2924-03124804-6A1339853",
+      "size": "190KB",
+      "lodged_utc": "2026-08-23T23:28:25+00:00",
+      "lodged_awst": "2026-08-24T07:28:25+08:00",
+      "date_awst": "24 August 2026",
+      "time_awst": "07:28",
+      "text": "MMaatstsaa R Reessoouurcrceess L Limimitietedd\n21 August 2026\nMs Nicola Mullen\nListings Adviser\nAustralian Securities Exchange Limited\nLevel 40, Central Park\n152-158 St George’s Terrace\nPerth WA 6000\nDear Nicola,\nRequest for Trading Halt\nMatsa Resources Limited (“the Company”) hereby requests a trading halt in its securities with\nimmediate effect in accordance with Listing Rule 17.1 pending an announcement regarding an update\non the operations of the Devon Pit Gold Project.\nThe Company requests that the trading halt remain in place until the earlier of the commencement of\nnormal trading on Wednesday 26 August 2026, or when the anticipated announcement referred to\nabove is released to the market.\nThe Company is not aware of any reason why the trading halt should not be granted and is not aware\nof any other information that is necessary to inform the market about the trading halt.\nThis ASX announcement is authorised for release by the Board of Matsa Resources Limited.\nFor and on behalf of the Board\nAndrew Chapman\nDirector/Company Secretary\nFor further information please contact:\nPaul Poli\nExecutive Chairman\nT: 08 9230 3555\nE: reception@matsa.com.au\nMatsa Resources Limited | www.matsa.com.au | ABN 48 106 732 487\nHead office: 11/139 Newcastle Street, Perth Western Australia 6000 | T 08 9230 3555 | reception@matsa.com.au\nylno\nesu\nlanosrep\nroF",
+      "text_status": "ok",
+      "pages": 1,
+      "market_cap": 45646032,
+      "price_last": 0.047,
+      "price_change_pct": 0,
+      "volume": 0,
+      "status_code": "",
+      "long_name": "MATSA RESOURCES LIMITED",
+      "prior_announcements": [
+        {
+          "headline": "Fortitude North Delivers More High Grade Gold Intercepts",
+          "date_awst": "4 August 2026",
+          "price_sensitive": true
+        },
+        {
+          "headline": "30 June 2026 Quarterly Repoprt",
+          "date_awst": "31 July 2026",
+          "price_sensitive": true
+        },
+        {
+          "headline": "Fortitude North Multiple High Grade Gold Results",
+          "date_awst": "10 July 2026",
+          "price_sensitive": true
+        }
+      ]
+    },
+    {
+      "ticker": "TRE",
+      "company": "TOUBANI RESOURCES LIMITED",
+      "sector": "Materials",
+      "headline": "First Drawdown Proceeds Received under Gold Stream",
+      "types": [
+        "Progress Report"
+      ],
+      "price_sensitive": true,
+      "document_key": "2924-03124801-6A1339852",
+      "size": "173KB",
+      "lodged_utc": "2026-08-23T23:26:15+00:00",
+      "lodged_awst": "2026-08-24T07:26:15+08:00",
+      "date_awst": "24 August 2026",
+      "time_awst": "07:26",
+      "text": "ASX ANNOUNCEMENT 24 AUGUST 2026\nFIRST DRAWDOWN PROCEEDS RECEIVED\nUNDER GOLD STREAM\nToubani Resources Limited (ASX:TRE) (\"Toubani\" or the \"Company\") is pleased to announce the\nfirst drawdown proceeds of US$25 million under the Gold Stream with Eagle Eye Asset Holdings\nPte (\"EEA\") announced on 13 July 2026 (\"Gold Stream\") have been received, following satisfaction\nof all remaining conditions precedent to financial close and the first drawdown.\nThe agreed drawdown schedule calls for regular drawdowns for the remainder of the Project\ntimeline to support the construction execution plan. Refer to the Company's ASX announcement\ntitled \"Funding Secured to Advance the Kobada Gold Mine into Production\" dated 13 July 2026 for\nfurther information.\nManaging Director, Phil Russo said: \"The first drawdown of US$25 million under the Gold Stream\nis a key milestone as we advance construction activities at the Kobada Gold Mine. We appreciate\nthe support that Eagle Eye Asset Holdings Pte has provided to Toubani through this process. We\nlook forward to becoming a gold producer in 2027.\"\nEagle Eye Asset Holdings Pte Representative, Aryann Gupta said: \"The first drawdown under the\nGold Stream is an important milestone for the Kobada Gold Mine and for our partnership with\nToubani. We see Toubani becoming a significant gold producer in 2027 and building into a mid-tier\ngold producer over the next few years. The Company and its management team have our full\nsupport in delivering that.\"\nAbout Toubani Resources Limited\nToubani Resources (ASX: TRE) is a development Company with a focus on advancing Africa’s next\nlarge gold development project with its oxide-dominant Kobada Gold Project. The Company has a\nhighly experienced Board and management team with a proven African track record in advancing\nprojects through exploration, development and into production. For more information regarding\nToubani Resources visit our website at toubaniresources.com.\nThis announcement has been authorised for release by the Managing Director of Toubani\nResources Limited.\nPhil Russo\nManaging Director\ninfo@toubaniresources.com\nASX:TRE\ninfo@toubaniresources.com\n3 Richardson Street\nWest Perth, WA 6005\ntoubaniresources.com\n1\nylno\nesu\nlanosrep\nroF",
+      "text_status": "ok",
+      "pages": 1,
+      "market_cap": 306036021,
+      "price_last": 0.3,
+      "price_change_pct": 0,
+      "volume": 0,
+      "status_code": "",
+      "long_name": "TOUBANI RESOURCES LIMITED",
+      "prior_announcements": [
+        {
+          "headline": "Adjustment to Option Exercise Price",
+          "date_awst": "14 August 2026",
+          "price_sensitive": false
+        },
+        {
+          "headline": "Application for quotation of securities - TRE",
+          "date_awst": "14 August 2026",
+          "price_sensitive": false
+        },
+        {
+          "headline": "Change in substantial holding",
+          "date_awst": "12 August 2026",
+          "price_sensitive": false
+        },
+        {
+          "headline": "Change of Director's Interest Notice",
+          "date_awst": "12 August 2026",
+          "price_sensitive": false
+        }
+      ]
+    },
+    {
+      "ticker": "PDI",
+      "company": "PREDICTIVE DISCOVERY LIMITED",
+      "sector": "Materials",
+      "headline": "Name Change and Consolidation Approved",
+      "types": [
+        "Company Administration - Other",
+        "Change of Company Name"
+      ],
+      "price_sensitive": false,
+      "document_key": "2924-03124773-6A1339820",
+      "size": "138KB",
+      "lodged_utc": "2026-08-23T23:17:50+00:00",
+      "lodged_awst": "2026-08-24T07:17:50+08:00",
+      "date_awst": "24 August 2026",
+      "time_awst": "07:17",
+      "text": "ANNOUNCEMENT\n24 August 2026\nNAME CHANGE AND\nCONSOLIDATION APPROVED\nPDI Gold Limited (ASX:PDI, TSX:PDI) (“PDI Gold” or the “Company”) (previously Predictive\nDiscovery Limited) advises that following shareholder approval obtained at the general\nmeeting on 21 August 2026 (“Meeting”), the Company’s name has officially changed to PDI\nGold Limited with the Australian Securities and Investments Commission.\nThe name change will be effective on the Australian Securities Exchange (“ASX”) from market\nopen on 9 September 2026 which is expected to align with the Toronto Stock Exchange\n(“TSX”).\nPDI Gold’s ticker code will remain ‘PDI’ on both the ASX and TSX.\nA new PDI Gold website has been established at www.pdigold.com, which hosts information\nregarding the Company and its projects, together with investor information.\nFollowing approval at the Meeting, the Company’s share capital will be consolidated with\nevery five (5) securities to be consolidated into one (1) security (“Consolidation”).\nSet out below is the indicative timetable for the Consolidation on the ASX. The Consolidation\nis expected to be effective on the TSX on Thursday, 27 August 2026.\nAction Indicative date\nEffective Date Monday, 24 August 2026\nLast day for pre-Consolidation trading Tuesday, 25 August 2026\nPost-Consolidation trading starts on a deferred settlement basis Wednesday, 26 August 2026\nRecord Date (last day for the Company to register transfers on a\nThursday, 27 August 2026\npre-Consolidation basis)\nFirst day for the Company to update its register and send holding\nstatements (or DRS or share certificates, as applicable) to security Friday, 28 August 2026\nholders reflecting the change in their holdings\nLast day for entity to update its register and send holding statements\n(or DRS or share certificates, as applicable) to security holders\nFriday, 4 September 2026\nreflecting the change in their holdings and notify ASX that this has\noccurred\nCommencement of normal settlement trading of securities on a\nMonday, 7 September 2026\nconsolidated basis\nThe above timetable is indicative only and the Company reserves the right to vary the\ntimetable subject to compliance with the Listing Rules.\nPDI Gold Limited\nABN 11 127 171 877 | T +61 8 9216 1000 ASX: PDI | TSX: PDI\n4 Charles Street, South Perth WA 6151 pdigold.com\nylno\nesu\nlanosrep\nroF\n- END -\nThis announcement is authorised for release by the PDI Gold Board of Directors.\nNeither the Toronto Stock Exchange nor its Regulation Services Provider (as that term is\ndefined in the policies of the Toronto Stock Exchange) accepts responsibility for the\nadequacy or accuracy of this release.\nFor further information:\nInvestor Enquiries Media Enquiries\nMatthew Wilcox Nathan Ryan\nCEO & Managing Director NWR Communications\nE: info@pdigold.com E: nathan.ryan@nwrcommunications.com.au\nP: +61 8 9216 1000 P: +61 420 582 887\nABOUT PDI GOLD\nPDI Gold is a leading West African gold production and development company, combining\na portfolio of high quality assets with a proven execution capability and strong financial\nplatform.\nThe Company’s asset portfolio is anchored by the Kiniero Gold Mine in Guinea, which\ncommenced production in late 2025, and the Nampala Gold Mine in Mali, which has been\noperating since 2017. These production assets provide momentum and strong cash flows as\nthe Company advances its growth plans.\nPDI Gold’s long-life growth asset is the Tier-1 Bankan Gold Project in Guinea, one of the\nlargest undeveloped gold projects in Africa. Bankan is approaching construction-ready status\nwith expected production of ~250,000oz per annum over more than 12 years.\nOnce Bankan is in production, the Company is targeting annual production exceeding\n400,000oz by 2029 from its low-cost mining hub in Guinea, leveraging the proximity and\nsynergies of the Kiniero and Bankan assets.\nPDI Gold’s is at a pivotal stage in its evolution, growing into a mid-tier, multi-mine West African\ngold producer, with a clear focus on sustainably developing its portfolio to create long-term\nvalue for shareholders and stakeholders.\nCOMPLIANCE STATEMENTS\nNot an Offer\nThis announcement does not constitute an offer to sell or the solicitation of an offer to buy\nany securities. No securities regulatory authority has approved or disapproved the contents of\nthis announcement. The securities referred to in this announcement have not been, and will\nnot be, registered under the U.S. Securities Act of 1933, as amended, and may not be offered\nor sold in the United States, or to, or for the account or benefit of, U.S. persons, except\npursuant to an exemption from, or in a transaction not subject to, U.S. registration\nrequirements.\nPage 2 of 3\nylno\nesu\nlanosrep\nroF\nForward-Looking Statements\nThis announcement contains forward looking statements and forward looking\ninformation within the meaning of applicable securities laws. Forward looking statements\ninclude, but are not limited to, statements regarding gold production and guidance,\nexpectations regarding exploration and development activities and potential, expectations\nregarding permitting and development funding for the Bankan Project. Forward looking\nstatements are based on assumptions and expectations as at the date of this announcement\nand are subject to known and unknown risks and uncertainties that may cause actual results\nto differ materially. Forward looking statements are generally identified by words such as “will”,\n“expect”, “anticipate”, “may”, “could”, “should”, “plan”, “estimate” and similar expressions.\nAlthough PDI Gold believes that the expectations reflected in the forward-looking statements\nare reasonable, undue reliance should not be placed on forward-looking statements since no\nassurance can be provided that such expectations will prove to be correct. Forward-looking\nstatements are based on information available at the time those statements are made and/or\ngood faith belief of the officers and directors of PDI Gold as of that time with respect to future\nevents and are subject to risks and uncertainties that could cause actual results to differ\nmaterially from those expressed in or suggested by the forward-looking statements. Forward-\nlooking statements involve numerous risks and uncertainties. Factors that could cause actual\nresults to differ materially include, but are not limited to, commodity price fluctuations, foreign\nexchange movements and general economic conditions, geopolitical, social and regulatory\nrisks, operating and cost risks, the speculative nature of exploration and project development\nincluding the risks of obtaining necessary approvals, licenses, permits and funding, diminishing\nquantities or grades of reserves, changes to the legal and regulatory framework within which\nPDI Gold operates or may in the future operate, environmental conditions including extreme\nweather conditions, recruitment and retention of personnel, industrial relations issues and\nlitigation and other risks described in PDI Gold’s public disclosure documents filed on ASX and\non SEDAR+.\nForward looking statements speak only as of the date they are made. Except as required by\napplicable law, PDI Gold undertakes no obligation to update or revise any forward looking\nstatements contained in this announcement. All forward-looking statements contained in this\nannouncement are expressly qualified in its entirety by the above cautionary statement.\nProduction Targets\nThis announcement refers to PDI Gold having expected production of more than 400,000oz per\nannum by 2029. The production targets in respect of the Bankan Project were released to ASX\non 25 June 2025 in an announcement by PDI Gold titled “Bankan DFS Confirms Outstanding\nProject Economics”. The production targets in respect of the Kiniero Project were released to\nASX on 22 August 2025 in an announcement by Robex Resources titled “Amendment to Kiniero\nGold Project Technical Report”. PDI Gold confirms that all the material assumptions\nunderpinning the production targets in the previous announcements continue to apply and\nhave not materially changed.\nPage 3 of 3\nylno\nesu\nlanosrep\nroF",
+      "text_status": "ok",
+      "pages": 3,
+      "market_cap": 4544871010,
+      "price_last": 0.89,
+      "price_change_pct": 0,
+      "volume": 0,
+      "status_code": "RE",
+      "long_name": "PREDICTIVE DISCOVERY LIMITED",
+      "prior_announcements": [
+        {
+          "headline": "Change in substantial holding",
+          "date_awst": "11 August 2026",
+          "price_sensitive": false
+        },
+        {
+          "headline": "General Meeting Webinar Invite",
+          "date_awst": "6 August 2026",
+          "price_sensitive": false
+        },
+        {
+          "headline": "Ceasing to be a substantial holder",
+          "date_awst": "5 August 2026",
+          "price_sensitive": false
+        }
+      ]
+    },
+    {
+      "ticker": "WIA",
+      "company": "WIA GOLD LIMITED",
+      "sector": "Materials",
+      "headline": "Appendix 3Y - Josef El-Raghy",
+      "types": [
+        "Change of Director's Interest Notice"
+      ],
+      "price_sensitive": false,
+      "document_key": "2924-03124748-6A1339836",
+      "size": "346KB",
+      "lodged_utc": "2026-08-23T23:09:55+00:00",
+      "lodged_awst": "2026-08-24T07:09:55+08:00",
+      "date_awst": "24 August 2026",
+      "time_awst": "07:09",
+      "text": "Appendix 3Y\nChange of Director’s Interest Notice\nRule 3.19A.2\nAppendix 3Y\nChange of Director’s Interest Notice\nInformation or documents not available now must be given to ASX as soon as available. Information and\ndocuments given to ASX become ASX’s property and may be made public.\nIntroduced 30/09/01 Amended 01/01/11\nName of entity: WIA GOLD LIMITED\nACN: 141 940 230\nWe (the entity) give ASX the following information under listing rule 3.19A.2 and as agent for the\ndirector for the purposes of section 205G of the Corporations Act.\nName of Director Josef El-Raghy\nDate of last notice 22 May 2026\nPart 1 - Change of director’s relevant interests in securities\nIn the case of a trust, this includes interests in the trust made available by the responsible entity of the trust\nNote: In the case of a company, interests which come within paragraph (i) of the definition of “notifiable interest of a director” should be\ndisclosed in this part.\nDirect or indirect interest Indirect\nNature of indirect interest Montana Realty Pty Ltd (Mr El-Raghy is a director\n(including registered holder) of Montana Realty Pty Ltd)\nNote: Provide details of the circumstances giving rise to the relevant\ninterest. El-Raghy Kriewaldt Pty Ltd (Mr El-Raghy is a\ndirector of El-Raghy Kriewaldt and a beneficiary\nof the trust that holds all of the shares in El-Raghy\nKriewaldt Pty Ltd)\nDate of change 20-21 August 2026\nNo. of securities held prior to change Montana Realty Pty Ltd\n17,000,000 ordinary shares\nEl-Raghy Kriewaldt Pty Ltd\n69,666,667 ordinary shares\nDirect\n20,000,000 ordinary shares\n5,000,000 unlisted Performance Rights expiring\n24 April 2028\nClass Ordinary shares\nNumber acquired 3,333,333 ordinary shares\n+ See chapter 19 for defined terms.\n01/01/2011 Appendix 3Y Page 1\nylno\nesu\nlanosrep\nroF\nAppendix 3Y\nChange of Director’s Interest Notice\nNumber disposed Nil\nValue/Consideration $1,565,726.45 (average price per share - $0.469)\nNote: If consideration is non-cash, provide details and estimated valuation\nNo. of securities held after change Montana Realty Pty Ltd\n17,000,000 ordinary shares\nEl-Raghy Kriewaldt Pty Ltd\n73,000,000 ordinary shares\nDirect\n20,000,000 ordinary shares\n5,000,000 unlisted Performance Rights expiring\n24 April 2028\nNature of change On-mark et trade\nExample: on-market trade, off-market trade, exercise of options, issue of\nsecurities under dividend reinvestment plan, participation in buy-back\nPart 2 – Change of director’s interests in contracts\nNote: In the case of a company, interests which come within paragraph (ii) of the definition of “notifiable interest of a director” should be\ndisclosed in this part.\nDetail of contract N/A\nNature of interest N/A\nName of registered holder N/A\n(if issued securities)\nDate of change N/A\nNo. and class of securities to which N/A\ninterest related prior to change\nNote: Details are only required for a contract in relation\nto which the interest has changed\nInterest acquired N/A\nInterest disposed N/A\nValue/Consideration N/A\nNote: If consideration is non-cash, provide details and an\nestimated valuation\nInterest after change N/A\n+ See chapter 19 for defined terms.\nAppendix 3Y Page 2 01/01/2011\nylno\nesu\nlanosrep\nroF\nAppendix 3Y\nChange of Director’s Interest Notice\nPart 3 – +Closed period\nWere the interests in the securities or contracts detailed No\nabove traded during a +closed period where prior written\nclearance was required?\nIf so, was prior written clearance provided to allow the N/A\ntrade to proceed during this period?\nIf prior written clearance was provided, on what date was N/A\nthis provided?\n+ See chapter 19 for defined terms.\n01/01/2011 Appendix 3Y Page 3\nylno\nesu\nlanosrep\nroF",
+      "text_status": "ok",
+      "pages": 3,
+      "market_cap": 799880904,
+      "price_last": 0.49,
+      "price_change_pct": 0,
+      "volume": 0,
+      "status_code": "",
+      "long_name": "WIA GOLD LIMITED",
+      "prior_announcements": [
+        {
+          "headline": "Notice of General Meeting/Proxy Form",
+          "date_awst": "19 August 2026",
+          "price_sensitive": false
+        },
+        {
+          "headline": "DFS and Funding Investor Presentation",
+          "date_awst": "12 August 2026",
+          "price_sensitive": false
+        },
+        {
+          "headline": "Proposed issue of securities - WIA",
+          "date_awst": "12 August 2026",
+          "price_sensitive": false
+        },
+        {
+          "headline": "A$125m Placement Completes Funding for Kokoseb",
+          "date_awst": "12 August 2026",
+          "price_sensitive": true
+        }
+      ]
+    },
+    {
+      "ticker": "PGL",
+      "company": "PILBARA GOLD LIMITED",
+      "sector": "Materials",
+      "headline": "More Solid Mt York Drilling Results",
+      "types": [
+        "Progress Report"
+      ],
+      "price_sensitive": true,
+      "document_key": "2924-03124742-3A699553",
+      "size": "4001KB",
+      "lodged_utc": "2026-08-23T23:09:15+00:00",
+      "lodged_awst": "2026-08-24T07:09:15+08:00",
+      "date_awst": "24 August 2026",
+      "time_awst": "07:09",
+      "text": "ASX:PGL | 24 August 2026\nMt York delivers more gold with resource and PFS\ndrilling now 50% complete\nHIGHLIGHTS\n• Drill results extend gold mineralisation at both Main Hill and Main Hill Extension, with\nmineralisation remaining open at depth, at the 2.1Moz Mt York Project, WA.\nMain Hill\n6m @ 2.93g/t Au from 170m incl. 3m @ 5.43g/t Au from 173m &\no\n9m @ 1.32g/t Au from 229m incl. 2m @ 2.44g/t Au from 233m &\no\n10m @ 4.02g/t Au from 262m incl. 7m @ 5.54g/t Au from 262m (all from 26MYRCD004)\no\n12m @ 3.63g/t Au from 295m incl. 5m @ 7.69g/t Au from 301m (26MYRCD001)\no\n25m @ 1.21/gt Au from 320m incl. 8m @ 3.1 g/t Au from 336m (26MYDD031)\no\nMain Hill Extension\n22m @ 2.04g/t Au from 122m incl. 3m @ 3.98g/t Au from 122m and 5m @ 4.06g/t Au\no\nfrom 130m and 2m @ 4.4g/t Au from 140m (26MYDD024A)\n5m @ 5.47g/t Au from 81m incl. 2m @ 10.66 g/t Au from 83m (26MYDD016)\no\n21m @ 1.26g/t Au from 74m (26MYDD019)\no\nGossan Hill\n5m @ 4.08g/t Au from 136m (26MYDD001).\no\n• Main Hill Extension mineralisation is thickening at depth, a positive attribute ahead of a new\nMRE\n• Mineralisation extends at depth below previous drilling at Main Hill and Main Hill Extension,\ngiving immediate encouragement for increased mineral resources\n• Five rigs on site at Mt York, with a sixth rig due in September\n• 28,635m of PGL’s +50,000m program of drilling over the Mt York deposit completed to date,\nassay results expected on a continuing basis as drilling progresses\n• Drilling is focused at Main Hill and Main Hill Extension, where mineralisation is open at\ndepth and opportunities exist to add resource below the optimal pit shell\n• Mt York Mineral Resource Estimate update expected early 2027.\nPilbara Gold Limited (ASX: PGL) (‘PGL’ or the ‘Company’) is pleased to provide the latest results\nfrom its 2026 drilling program at the 2.1Moz Mt York Gold Project in WA’s Pilbara, where a\n+50,000m drilling program is 50% complete.\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 1 of 21\nylno\nesu\nlanosrep\nroF\nDrilling is testing extensions of the deposit at depth, targeting a large open-pit operation\nand to increase the confidence of the resources ahead of a maiden reserve estimation for\nthe prefeasibility study (PFS).\nPilbara Gold’s Managing Director Dr Peter Turner said: “With 2026 drilling now 50% complete\nat Mt York, we are on track to deliver a new Mineral Resource Estimate in early 2027 and a PFS\nmid-way through 2027.\nThe drilling program has been increased to 60,000m due to the tenor of results to date and wide\nzones of sulphidic Banded Iron Formation (BIF) we are seeing in and around the ‘Monster Zone’\nbeneath Main Hill and its Extension to the NW. This evidence, coupled with reports that the BIF\nand mineralisation are increasing in width below Main Hill Extension means that there is plenty\nof exciting drilling to undertake on the project in the coming months.”\nMt York Drilling Results\nMt York currently hosts 2.1Moz of gold in a continuous, 4.2km-long Banded Iron Formation (BIF),\nand Pilbara Gold’s +50,000m drill program in 2026 is targeting a significant increase in gold\nresources at depth along the entire 4,200m BIF host rock, along with infill drilling to increase the\nresource classification within the optimised resource pit shell.\nA total of 28,635m of diamond and RC drilling has been completed in 2026 to date, with the latest\nresults in this announcement concentrated at Main Hill and Main Hill Extension prospects.\nInfill and local extensional drilling at Main Hill continues to intercept significant zones of\nmineralisation associated with strong to moderate sulphide mineralisation within the BIF host\nrock. Main Hill is characterised by 60-100m wide BIF with multiple stacked zones of mineralisation\nidentified over significant widths. Results from recent drilling at Main Hill has confirmed and\nextended wide zones of higher-grade mineralisation, with 6m @ 2.93g/t Au, 9m @ 1.93g/t Au &\n10m @ 4.02g/t Au including 7m @ 5.54g/t Au intersected in 26MYRCD004 (Figure 1), 25m @\n1.21g/t Au including 8m @ 3.10g/t Au intercepted in 26MYDD031, and 12m @ 3.63g/t Au\nincluding 5m @ 7.96g/t Au intercepted in 26MYRCD001.\nThese results both confirm and increase the confidence in the mineralisation model at Main Hill\nand support the case for additional planned drillholes to test and extend the mineralisation below\nthe current resource pit shell.\nDrilling at Main Hill Extension has focussed on extending at depth the near-surface high-grade\nmineralisation identified in BIF during drilling in 2025. The average depth of drilling along 1,500m\nat this prospect in 2025 was approximately 100m and the 2026 deeper drilling to extend the\nresources at depth is beginning to show that not only is the mineralisation continuing at depth, it\nis showing that the width of mineralisation in the host BIFs is also increasing, sometimes in\nmultiple BIF units. Results to date are indicating these zones of significant high-grade may be\nvertically extensive with drillhole 26MYDD024A returning 22m @ 2.04 g/t Au including 3m @\n3.98g/t Au & 5m @ 4.40g/t Au down dip of 9m @ 2.66g/t Au intercepted in 2025 drillhole\n25MYRC026 and below the base of the optimised Resource pit shell (Figure 2).\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 2 of 21\nylno\nesu\nlanosrep\nroF\nFigure 1. Cross-section through Main Hill with infill drillhole 26MYRC004 confirming multiple zones of\nhigher-grade mineralisation down dip and along strike of existing drilling. Assays pending for drill hole\n26MYDD033.\nImportantly this area, like much of Main Hill Extension, has only been drilled to 100m vertical\ndepth, and additional step-out drilling is planned to follow up this and other significant results\ndown-dip to extend known mineralisation well below the current resource.\nSeveral holes were also completed at the far eastern end of Gossan Hill in order to tighten up the\ndrill spacing in an under-drilled part of the prospect and potentially extend mineralisation beyond\nthe pit shell. Results include 5m @ 4.08g/t Au in 26MYDD001 which is coincident with a major\nstructural bend and sudden thinning out in the host BIF. The interpretation suggests a major fault\ndisplacement at the eastern end of Gossan Hill that has dislocated the continuity of both the BIF\nand the mineralisation. Work is currently underway to understand if there may be a zone of\nmineralisation displaced by this offset that may be identified through further drilling.\nFigure 3 and Figure 4 show the location of the drilling in plan view and long-section view\nrespectively.\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 3 of 21\nylno\nesu\nlanosrep\nroF\nFigure 2. Cross-section at Main Hill Extension showing hole 26MYDD0020 & 26MYDD024A. Current drill\nresults are shown in the yellow box. Historic results are shown in white boxes.\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 4 of 21\nylno\nesu\nlanosrep\nroF\nFigure 3. Drill plan of the Mt York Gold Project showing drill holes reported in this release (yellow boxes).\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au\nylno\nesu\nlanosrep\nroF\nFigure 4. Long-section of the Mt York Gold Project showing all intercept points for current (yellow box) and historic drilling. Planned intercept points for 2026\ndrilling shown as white dots. Drilling completed (results awaited) shown as black dots with white outline.\nFigure 4 is a visual representation provided for illustrative purposes only. Apparent drill intersection widths and the continuity of mineralisation\nshown are not necessarily representative of true widths or geological continuity. The conceptual pit shell is included for visual context only and\nshould not be interpreted as a mine plan or development proposal.\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au\nylno\nesu\nlanosrep\nroF\nNext Steps\n• Complete 60,000m infill and extensional drilling program at Mt York\n• Analyse and report drill results as they are received\n• Progress Mt York PFS study, due for completion in H1 CY2026\n• Commence airborne electro-magnetic (AEM) survey for the Greater Mt York area\n• Complete 12,000m drilling at the Company’s Roe Hills Gold Project near Kalgoorlie.\nThis announcement has been approved for release by the Board of Pilbara Gold Limited.\nDr Peter Turner Simon Lill\nManaging Director Non-Executive Chairman\n– ENDS –\nFor more information, please contact:\nNathan Ryan – NWR Communications\n0420 582 887\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 7 of 21\nylno\nesu\nlanosrep\nroF\nAbout Pilbara Gold Limited\nPilbara Gold Limited (ASX: PGL) (formerly “Kairos Minerals Limited”) owns 100% of the flagship 2.1 Moz\nMt York Gold Project in the Pilbara of Western Australia that was partially mined by Lynas Gold NL\nbetween 1994 and 1998. Pilbara Gold has recognised that the resource, hosted in an Archaean Banded\nIron Formation or BIF, has significant potential to grow further from its current 2.1 Moz base with\nsignificant exploration potential existing within the Mt York ‘Main Trend’ and its extension towards the\nnorthwest where Pilbara Gold owns the mineral rights for gold. Current resources are estimated within\na pit shell using a A$5,500/oz gold price and a 0.4 g/t Au lower cutoff grade (table below).\nIndicated Inferred Total\nCut-off\nDeposit Tonnes Au Ounces Tonnes Au Ounces Tonnes Au Ounces\n(g/t Au)\n(Mt) (g/t) (koz) (Mt) (g/t) (koz) (Mt) (g/t) (koz)\nMt York 0.4 42.1 1.02 1,380 19.7 1.11 703 61.7 1.05 2,082\nScoping study results released in November 2024 point to a robust, open-cut mining operation through\na conventional CIL process route. In 2026, Pilbara Gold will complete a 50,000m of extensional and infill\ndrilling programme where resources are expected to grow further for incorporation into the\nPrefeasibility Study or PFS. During the resource expansion work, Pilbara Gold will collect important\nadditional information to fine-tune metallurgical processing, geotechnical engineering and mine\nscheduling.\nPilbara Gold is pursuing a maiden gold resource in 2026 at its 100% owned Roe Hills Project, located\n120km east of Kalgoorlie in WA’s Eastern Goldfields. The Terra and Caliburn Prospects that have many\ngeological similarities to some of the deposits at the giant St Ives gold camp, have 1,500m of solid gold\nintercepts in historic drilling that the Company recognises as a valuable asset in an area surrounded\nby gold mills and mines.\nCompetent Person Statement:\nThe information in this report that relates to Exploration Results is based on and fairly represents\ninformation compiled and reviewed by Mr Mark Falconer, who is a full-time employee of Pilbara Gold\nLtd and who is also a Member of the Australian Institute of Geoscientists (AIG). Mr Falconer has\nsufficient experience that is relevant to the style of mineralisation and type of deposits under\nconsideration and to the activity which they are undertaking to qualify as Competent Persons as\ndefined in the 2012 Edition of the ‘Australasian Code for Reporting of Exploration Results, Mineral\nResources and Ore Reserves.’ (the JORC Code 2012). Mr Falconer has provided his prior written consent\nto the inclusion in the report of the matters based on their information in the form and context in\nwhich it appears.\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 8 of 21\nylno\nesu\nlanosrep\nroF\nThe Mineral Resources were first reported in this announcement dated 13 April 2026 (Announcement).\nThe Company confirms that it is not aware of any new information or data that materially affects the\ninformation included in the Announcement and, in the case of estimates of mineral resources, that all\nmaterial assumptions and technical parameters underpinning the estimates continue to apply and\nhave not materially changed.\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 9 of 21\nylno\nesu\nlanosrep\nroF\nAppendix 1 - Drill hole information & results\nEasting Northing RL Azi Dip HoleDepth Hole From To Interval True Width Grade\nHoleID Prospect\nMGA94 MGA94 (m) Degrees Degrees (m) Type (m) (m) (m) (m) g/t Au\n26MYDD001 Gossan Hill 699157 7664158 192 23 -52 186.4 DD 136 141 5 3.8 4.08\nand 152 155 3 2.3 1.34\n26MYDD002 Gossan Hill 699161 7664165 192 180 -85 193.6 DD No significant intercepts\n26MYDD003 Gossan Hill 699191 7664151 193 25 -60 177.5 DD 100 101 1 1.77\n26MYDD010 Extension 696802 7665542 179 45 -60 141.5 DD 23 27 4 2.0 1.60\nincluding 23 25 2 1.0 2.56\n26MYDD016 Extension 696818 7665501 177 60 -60 168.6 DD 54 57 3 2.0 2.07\nand 81 86 5 3.5 5.47\nincluding 83 85 2 1.4 10.66\nand 104 110 6 4.0 1.00\n26MYDD017 Extension 696469 7665961 184 60 -55 181.0 DD No significant intercepts\n26MYDD018 Extension 696549 7665719 183 60 -60 447.9 DD 362 363 1 1.63\n26MYDD019 Extension 696615 7665838 181 60 -60 120.8 DD 74 95 21 1.26\nincluding 78 80 2 4.48\nand 91 93 2 6.92\n26MYDD020 Extension 696896 7665408 182 60 -60 147.7 DD 98 118 20 0.73\nincluding 102 103 1 2.12\nincluding 108 109 1 2.72\n26MYDD021 Extension 696490 7666080 185 65 -60 177.8 DD 95 101 6 1.01\nincluding 99 100 1 3.53\n26MYDD023 Extension 696694 7665764 186 60 -55 186.7 DD 133 136 3 1.07\n26MYDD024A Extension 696892 7665395 183 43 -63 181.1 DD 122 144 22 18.0 2.04\nincluding 122 125 3 2.4 3.98\nand 130 135 5 4.0 4.06\nand 140 142 2 1.6 4.40\n26MYDD026 Main Hill 697095 7665146 175 50 -55 200.0 DD No significant intercepts\n26MYDD027 Breccia Hill 697803 7664122 177 35 -66 387.7 DD 345 350 5 1.18\nincluding 347 348 1 4.03\n26MYDD028 Main Hill 697188 7664605 178 38 -52 302.8 DD 210 229 19 1.09\nincluding 210 211 1 3\nincluding 216 218 2 2.64\nincluding 223 229 6 1.85\nand 282 285 3 1.88\nincluding 284 285 1 3.67\n26MYDD029 Main Hill 697035 7664748 170 41 -65 420.7 DD 326 334 8 5.0 1.70\nincluding 330 331 1 0.6 7.49\nand 364 365 1 0.6 3.79\n26MYDD030A Breccia Hill 697906 7664234 177 77 -78 306.8 DD 178 195 17 8.5 0.77\nand 203 205 2 1.0 1.22\nand 209 210 1 0.5 1.03\nand 221 227 6 3.0 0.69\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 10 of 21\nylno\nesu\nlanosrep\nroF\nEasting Northing RL Azi Dip HoleDepth Hole From To Interval True Width Grade\nHoleID Prospect\nMGA94 MGA94 (m) Degrees Degrees (m) Type (m) (m) (m) (m) g/t Au\nand 288 289 1 0.5 1.07\n26MYDD031 Main Hill 697186 7664607 177 35 -71 369.9 DD 123 124 1 1.17\nand 283 286 3 1.23\nand 320 345 25 1.21\nincluding 336 344 8 3.1\n26MYDD032 Main Hill 697033 7664751 173 40 -44 363.5 DD 270 281 11 0.83\nincluding 270 272.27 2.27 2.8\nand 291 316 25 1.07\nincluding 305 312 7 2.04\n26MYDD034 Main Hill 697117 7664669 175 26 -63 381.8 DD 235 238 2 1.5 0.83\nand 279 280 1 0.8 1.47\nand 293 294 1 0.8 1.05\nand 331 332 2 1.5 2.28\n26MYRCD001 Main Hill 697303 7664555 179 55 -72 333.9 RCDD 177 179 2 1.5 1.95\nand 195 210 15 11.3 0.8\nincluding 197 203 6 4.5 1.2\nand 276 278 2 1.5 2.25\nand 295 307 12 9.0 3.63\nincluding 301 306 5 3.8 7.69\n26MYRCD004 Main Hill 697300 7664615 174 26 -70 315.9 RCDD 170 176 6 2.93\nincluding 173 176 3 5.43\nand 212 215 3 0.89\nand 222 223 1 1.76\nand 229 238 9 1.32\nincluding 233 235 2 2.44\nand 262 272 10 4.02\nincluding 262 269 7 5.54\n26MYRC026 Extension 696767 7665736 183 62 -55 144.0 RC 37 42 5 3.8 1.85\nincluding 39 41 2 1.5 3.85\n26MYDD033 Main Hill 697189 7664609 172 57 -64 366.8 DD awaiting assays\n26MYRCD002B Main Hill 697347 7664390 178 45 -60 361.9 RCDD awaiting assays\n26MYRCD003 Main Hill 697078 7664995 177 45 -75 354.30 RCDD awaiting assays\n26MYRCD005 Main Hill 697302 7664615 174 48 -70 294.4 RCDD awaiting assays\n26MYRCD006 Main Hill 697396 7664535 175 34 -70 285.4 RCDD awaiting assays\n26MYRCD007 Main Hill 697457 7664506 174 227 -78 487.0 RCDD awaiting assays\n26MYRCD009 Main Hill 697402 7664338 180 45 -70 402.2 RCDD awaiting assays\n26MYRCD012 Main Hill 697562 7664191 182 45 -68 453.3 RCDD awaiting assays\n26MYRCD014 Breccia Hill 697709 7664195 185 60 -56 378.5 RCDD awaiting assays\n26MYRCD015 Main Hill 697497 7664376 179 355 -55 315.6 RCDD awaiting assays\n26MYRCD016 Breccia Hill 697724 7664202 184 83 -50 425.4 RCDD awaiting assays\n26MYRCD017 Main Hill 697499 7664374 177 355 -70 339.3 RCDD awaiting assays\n26MYRCD018 Breccia Hill 697708 7664197 183 0 -70 390.8 RCDD awaiting assays\n26MYRCD019 Main Hill 697500 7664387 178 66 -80 345.3 RCDD awaiting assays\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 11 of 21\nylno\nesu\nlanosrep\nroF\nEasting Northing RL Azi Dip HoleDepth Hole From To Interval True Width Grade\nHoleID Prospect\nMGA94 MGA94 (m) Degrees Degrees (m) Type (m) (m) (m) (m) g/t Au\n26MYRC024 Main Hill 697049 7665198 180 50 -55 99.0 RC awaiting assays\n26MYRC025 Main Hill 697097 7665200 179 230 -75 90.0 RC awaiting assays\n26MYRC038 Main Hill 697045 7665105 180 50 -55 184.0 RC awaiting assays\n26MYRCD039 Gossan Hill 698901 7664099 181 31 -68 228.0 RCDD awaiting assays\n26MYRCD040 Main Hill 697089 7664999 176 65 -50 156.0 RCDD awaiting assays\n26MYRC041 Breccia Hill 698283 7664289 185 0 -90 60.0 RC awaiting assays\n26MYRC042 Main Hill 697136 7665111 188 50 -55 140.0 RC awaiting assays\n26MYRC043 Breccia Hill 698267 7664290 185 0 -90 70.0 RC awaiting assays\n26MYRC044 Main Hill 697118 7665094 188 45 -55 154.0 RC awaiting assays\n26MYRC045 Breccia Hill 698282 7664280 185 0 -90 100.0 RC awaiting assays\n26MYRCD046 Extension 696382 7666125 180 60 -60 207.0 RCDD awaiting assays\n26MYRC047 Breccia Hill 698302 7664287 185 0 -90 30.0 RC awaiting assays\n26MYRC048 Breccia Hill 698299 7664276 185 0 -90 80.0 RC awaiting assays\n26MYRC049 Extension 696591 7665855 179 60 -60 160.0 RC awaiting assays\n26MYRC050 Breccia Hill 698318 7664279 190 0 -60 54.0 RC awaiting assays\n26MYRC051 Extension 696555 7665834 177 60 -60 220.0 RC awaiting assays\n26MYRC052 Breccia Hill 698336 7664281 189 2 -84 100.0 RC awaiting assays\n26MYRCD053 Extension 696616 7665809 184 60 -60 150.0 RCDD awaiting assays\n26MYRC054 Breccia Hill 698358 7664283 185 0 -60 42.0 RC awaiting assays\n26MYRC055 Breccia Hill 696631 7665780 181 60 -60 160.0 RC awaiting assays\n26MYRC056 Breccia Hill 698373 7664282 185 0 -90 80.0 RC awaiting assays\n26MYRC058 Breccia Hill 698376 7664285 185 0 -60 36.0 RC awaiting assays\n26MYRC060 Breccia Hill 698403 7664284 185 0 -70 37.0 RC awaiting assays\n26MYRC062 Breccia Hill 698417 7664281 185 0 -80 35.0 RC awaiting assays\n26MYRC064 Breccia Hill 698417 7664283 185 0 -90 60.0 RC awaiting assays\n26MYRC066 Breccia Hill 698480 7664279 185 0 -90 84.0 RC awaiting assays\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 12 of 21\nylno\nesu\nlanosrep\nroF\nAppendix 2 - JORC Code, 2012 Edition – Table 1\nSection 1 Sampling Techniques and Data\nCriteria JORC Code explanation Commentary\nSampling • Nature and quality of sampling (eg cut • Sampling was undertaken using\nchannels, random chips, or specific diamond drilling\ntechniques\nspecialised industry standard measurement • All drilling and sampling was\ntools appropriate to the minerals under undertaken using industry standard\ninvestigation, such as down hole gamma methods.\nsondes, or handheld XRF instruments, etc). • Diamond drilling depths and run\nThese examples should not be taken as lengths were measured and recorded\nlimiting the broad meaning of sampling. by the driller and written on core\n• Include reference to measures taken to blocks and inserted into the core\nensure sample representivity and the trays. Rod counts were conducted to\nappropriate calibration of any verify drill hole and sample depths\nmeasurement tools or systems used. • Diamond drill core was logged\n• Aspects of the determination of geologically, marked up for sampling,\nmineralisation that are Material to the and photographed. Samples were\nPublic Report. selected on nominal 1m intervals in\n• In cases where ‘industry standard’ work has and around mineralised zones, with\nbeen done this would be relatively simple variations to interval lengths based on\n(eg ‘reverse circulation drilling was used to geological boundaries.\nobtain 1 m samples from which 3 kg was • Sampling was carried out under\npulverised to produce a 30 g charge for fire Pilbara Gold sampling protocols and\nassay’). In other cases more explanation QAQC procedures.\nmay be required, such as where there is • The samples are considered\ncoarse gold that has inherent sampling representative and appropriate for\nproblems. Unusual commodities or the methods of drilling used.\nmineralisation types (eg submarine • Diamond core samples were assayed\nnodules) may warrant disclosure of detailed for gold by Photon Assay at Intertek\ninformation. Genalysis Laboratory in Perth.\nDrilling • Drill type (eg core, reverse circulation, open- • Diamond drilling was conducted using\nhole hammer, rotary air blast, auger, HQ3 diameter (61mm) drilling to fresh\ntechniques\nBangka, sonic, etc) and details (eg core rock with NQ2 diameter (51mm)\ndiameter, triple or standard tube, depth of drilling for the remainder of the hole.\ndiamond tails, face-sampling bit or other • All NQ drill core is oriented using\ntype, whether core is oriented and if so, by orientation tools at the drill site and\nwhat method, etc). then joined and marked up by Pilbara\nGold field personnel.\n• RC pre-collars were utilised for some\ndiamond holes\nDrill sample • Method of recording and assessing core • Sample recovery was routinely close\nand chip sample recoveries and results to 100% recovery through the main\nrecovery\nassessed. banded iron formation mineralised\n• Measures taken to maximise sample host rock\nrecovery and ensure representative nature • Weathered material near the top of\nof the samples. holes had varying recoveries but was\n• Whether a relationship exists between generally >85% with care taken to\nsample recovery and grade and whether maximise recovery.\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 13 of 21\nylno\nesu\nlanosrep\nroF\nCriteria JORC Code explanation Commentary\nsample bias may have occurred due to • Drill core recovery is measured for\npreferential loss/gain of fine/coarse each drilling run by the driller and\nmaterial. recorded on core blocks inserted into\nthe core trays. These measurements\nare verified by the geological staff\nduring the mark up and logging\nprocess by physical measurement\nwith a tape measure.\n• No sample bias has been observed.\nLogging • Whether core and chip samples have been • All drill core is geologically logged by\ngeologically and geotechnically logged to a company geologists using the Pilbara\nlevel of detail to support appropriate Gold logging scheme.\nMineral Resource estimation, mining • Logging of diamond core records\nstudies and metallurgical studies. colour, lithology, grain size, structure,\n• Whether logging is qualitative or mineralogy, alteration, weathering,\nquantitative in nature. Core (or costean, rock quality and various other\nchannel, etc) photography. features of the samples.\n• The total length and percentage of the • All holes were logged in full.\nrelevant intersections logged. • All diamond core was photographed\nboth dry and wet in core trays after\nlogging and prior to cutting and\nsampling.\nSub- • If core, whether cut or sawn and whether • NQ and HQ drill core samples is cut in\nquarter, half or all core taken. half, with half core samples submitted\nsampling\n• If non-core, whether riffled, tube sampled, for analysis and the other half\ntechniques rotary split, etc and whether sampled wet retained on site in core trays. Half\nor dry. core drill samples typically ranged in\nand sample\n• For all sample types, the nature, quality weight from 2.7kg – 3.6kg.\npreparation and appropriateness of the sample • All drill core cutting is conducted at\npreparation technique. the Mt York project site.\n• Quality control procedures adopted for all • Samples are prepared at Intertek\nsub-sampling stages to maximise Genalysis in Perth for PhotonAssay.\nrepresentivity of samples. Samples are dried and crushed to\n• Measures taken to ensure that the sampling 3mm.\nis representative of the in situ material • A >500g split is created from the 3mm\ncollected, including for instance results for crushed material and placed in\nfield duplicate/second-half sampling. sample jars for the PhotonAssay\n• Whether sample sizes are appropriate to process\nthe grain size of the material being • All remaining crushed material is\nsampled. bagged retained for future use if\nrequired\n• Sample sizes are considered\nappropriate for the material sampled.\nQuality of • The nature, quality and appropriateness of • Samples were analysed by Intertek\nthe assaying and laboratory procedures Genalysis in Perth.\nassay data\nused and whether the technique is • The analytical method used for gold\nand considered partial or total. analysis is PhotonAssay with\n• For geophysical tools, spectrometers, laboratory code PAAU02 and a quoted\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 14 of 21\nylno\nesu\nlanosrep\nroF\nCriteria JORC Code explanation Commentary\nlaboratory handheld XRF instruments, etc, the detection range of limit of 0.03ppm –\nparameters used in determining the 350ppm Au.\ntests\nanalysis including instrument make and • PhotonAssay provides non-destructive\nmodel, reading times, calibrations factors analysis of a larger volume of sample\napplied and their derivation, etc. material, is considered appropriate for\n• Nature of quality control procedures the nature of the material and\nadopted (eg standards, blanks, duplicates, mineralisation, and is a well-\nexternal laboratory checks) and whether established method within the gold\nacceptable levels of accuracy (ie lack of industry\nbias) and precision have been established. • PhotonAssay results are periodically\nverified with a parallel 50g fire assay\nconducted on the same sample\nmaterial to provide further QAQC\ninformation. Fire assay results\nreceived to date have been in line with\nPhotonAssay results and have not\nidentified any systematic bias\nbetween the two methods.\n• A 48-element analysis is conducted on\ndiamond samples at a minimum rate\nof 1:10 samples using Intertek\nGenalysis method 4A/MS48 involving\na four-acid digest and ICP-MS and ICP-\nOES finish\n• Certified standards and blanks were\nregularly inserted into the sample\nsequence at a minimum rate of 1:25\nfor standards and 1:25 for blanks to\nassess the accuracy of the analysis\nmethod.\n• The laboratory performed regular\nperformance checks through analysis\nof internal laboratory standards,\nrepeats, and control blanks.\n• QAQC performance was monitored by\nPilbara Gold staff with action taken\nwith the laboratory if required.\n• Acceptable levels of accuracy and\nprecision have been established\nthrough monitoring and assessment\nof QAQC performance.\nVerification • The verification of significant intersections • Significant mineralised intersections\nby either independent or alternative were checked by the Exploration\nof sampling\ncompany personnel. Manager and validated against the\nand assaying • The use of twinned holes. drill core and logging. Additional\n• Documentation of primary data, data entry checks were performed by other\nprocedures, data verification, data storage members of the Pilbara Gold geology\n(physical and electronic) protocols. team.\n• Discuss any adjustment to assay data. • No twinned drillholes were completed\nfor this program.\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 15 of 21\nylno\nesu\nlanosrep\nroF\nCriteria JORC Code explanation Commentary\n• All assay and geological data is stored\nin an electronic Micromine Geobank\ndatabase on a secure Microsoft Azure\ncloud server.\n• Primary laboratory data is emailed\ndirectly to the company’s database\nadministrator for upload directly into\nthe company database.\n• Laboratory data is also provided as a\n.pdf file for verification of original data\nfiles\n• Results are checked and verified by\ncompany geologists.\n• No adjustments have been made to\nthe assay data.\n• Assay intersections are reported on a\nlength-weighted basis.\nLocation of • Accuracy and quality of surveys used to • Diamond collar locations were set out\nlocate drill holes (collar and down-hole using handheld GPS, with an accuracy\ndata points\nsurveys), trenches, mine workings and other of +/- 5m in both easting and\nlocations used in Mineral Resource northing.\nestimation. • Diamond collars were surveyed post-\n• Specification of the grid system used. drilling with handheld GPS\n• Quality and adequacy of topographic immediately post-drilling.\ncontrol. • Collars are periodically surveyed with\nDGPS system operated by a qualified\nsurveyor supplied by an external\nsurvey company, with expected\naccuracies of +/- 20mm horizontally\nand +/- 30mm vertically prior to\nupdating the resource model.\n• Downhole surveys were completed on\nall drill holes using Axis north-seeking\ngyro survey instruments.\n• All location data is recorded in GDA94\nMGA Zone 50.\n• Topographic control is through a DTM\ngenerated through stereoscopic\nphotogrammetry of 5cm resolution\naerial imagery. The accuracy of the\nDTM is estimated as better than 0.5m\nin elevation.\nData spacing • Data spacing for reporting of Exploration • Drill spacing ranges from 100m x\nResults. 100m for extensional exploration\nand\n• Whether the data spacing and distribution drillholes down-dip and along strike,\ndistribution is sufficient to establish the degree of to broadly 50m x 100m and 50m x\ngeological and grade continuity 50m for infill and local extensional\nappropriate for the Mineral Resource and holes.\nOre Reserve estimation procedure(s) and • The data spacing and distribution is\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 16 of 21\nylno\nesu\nlanosrep\nroF\nCriteria JORC Code explanation Commentary\nclassifications applied. considered appropriate and sufficient\n• Whether sample compositing has been to establish the geological and grade\napplied. continuity required for the anticipated\nestimation procedures and\nclassifications based on previous\ndrilling, resource modelling and\ngeological work.\n• No compositing of samples has been\napplied.\nOrientation • Whether the orientation of sampling • Drilling was generally oriented\nachieves unbiased sampling of possible approximately perpendicular to the\nof data in\nstructures and the extent to which this is strike and dip of mineralisation.\nrelation to known, considering the deposit type. • Where holes are drilled at low angle to\n• If the relationship between the drilling the mineralisation the intercepts are\ngeological\norientation and the orientation of key also reported as true widths.\nstructure mineralised structures is considered to • Drill holes were angled between -60°\nhave introduced a sampling bias, this and -75° to provide good intersection\nshould be assessed and reported if angles with mineralisation that dips\nmaterial. between -40° to -70°.\n• No biases have been identified based\non drilling angles and known\nstructures.\n• The drill orientation is considered\nappropriate and representative.\nSample • The measures taken to ensure sample • All samples were collected in the field\nsecurity. at the project site in number-coded\nsecurity\ncalico bags and placed within secure,\nlabelled polyweave bags by company\nfield personnel.\n• All samples were delivered directly to\na freight contractor in secure bulka\nbags for secure transport to Intertek\nGenalysis in Perth for final analysis.\nAudits or • The results of any audits or reviews of • No audits have been conducted\nsampling techniques and data. outside of routine QAQC reviews.\nreviews\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 17 of 21\nylno\nesu\nlanosrep\nroF\nSection 2 Reporting of Exploration Results\nCriteria JORC Code explanation Commentary\nMineral • Type, reference name/number, • The Mt York project comprises Mining\nlocation and ownership including Lease M45/1306 and adjacent PLS\ntenement and\nagreements or material issues with tenement E45/2241\nland tenure third parties such as joint ventures, • Pilbara Gold Limited owns 100% of Mining\npartnerships, overriding royalties, Lease M45/1306 Mt York Gold Project\nstatus\nnative title interests, historical sites, through its wholly owned subsidiary Mount\nwilderness or national park and York Operations Pty Ltd. The security of the\nenvironmental settings. tenements is in good standing.\n• The security of the tenure held at the • Kairos Minerals has access to explore on\ntime of reporting along with any exploration licences E45/2241, E45/2363,\nknown impediments to obtaining a E45/4894 and application E 45/6298 (once\nlicence to operate in the area. granted) held by PLS via a Mineral Rights\nAgreement for all minerals except lithium\nand tantalum.\n• The project is located on Wallareenya and\nStrelley Pastoral Co pastoral leases.\n• Pilbara Gold is not aware of any existing\nimpediments nor of any potential\nimpediments which may impact ongoing\nexploration and development activities.\nExploration • Acknowledgment and appraisal of • Significant past work has been carried out\nexploration by other parties. by other parties including open pit mining\ndone by other\nof previously defined gold resources.\nparties • During the early to mid-1970’s, the Lynas\nFind project area was part of a large area\nheld and explored for volcanogenic base\nmetal deposits, initially by McIntyre Mines\nPty Ltd, and then by Esso Minerals. Esso\ncompleted some induced polarization and\nground magnetic geophysical surveys, and\nsome diamond drilling over the area\nincluding the Main Trend at Mt York.\n• The Main Trend at Mt York was discovered\nby Carpentaria Exploration Company Pty\nLtd in 1986. Lynas Gold NL acquired the\nproject in the early 1990’s and mined a\nnumber of deposits as a successful open\npit operation by that company between\n1994 – 1998. Other companies to have\nexplored the area include Austamax, MIM\nand Trafford Resources.\n• Significant historical Au exploration\nincluding, surface geochemical sampling,\nairborne and ground electromagnetic\ngeophysical surveys, RAB, AC, RC, and DD\ndrilling. This is acknowledged in past ASX\nannouncements and Company reports.\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 18 of 21\nylno\nesu\nlanosrep\nroF\nCriteria JORC Code explanation Commentary\nGeology • Deposit type, geological setting and • The Pilbara Gold Project lies within the East\nstyle of mineralisation. Strelley Greenstone Belt of the Archaean\nPilbara Craton. The Pilbara Craton is\ncomposed of greenstone and sediment\nunits which have been deformed by tight\nisoclinal folds during the intrusion of\ndiapiric granites.\n• The Main Trend system at Mt York is a\nstructurally controlled, Banded Iron\nFormation-hosted orogenic gold deposit\nsituated on the limb of a folded greenstone\nsequence\n• The Main Trend geology comprises (from\nNE to SW) – felsic volcanics and cherts,\nmafic-ultramafic volcanics and\namphibolite, banded iron formation (BIF),\nand fine to coarse-grained classic\nsediments.\n• The sequence has been metamorphosed\nto amphibolite facies and has been broadly\nfolded\n• The dominant mineralogy of the BIF\nconsists of magnetite, silica and Fe-rich\ngrunerite amphibole.\n• Gold mineralisation is hosted primarily\nwithin the BIF sequence, and is associated\nwith weak to strongly disseminated\narsenopyrite and disseminated to massive\npyrrhotite associated with visible folding\nand deformation of the BIF layering.\n• The Gilt Dragon prospect sits within the\nEuro basalt sequence of mafic-ultramafic\ngreenstones. It is prospective for Mt York-\nstyle gold, and VMS base metal\nmineralisation\nDrill hole • A summary of all information • All drill hole location, orientation, hole\nmaterial to the understanding of the length and interception depth and length\nInformation\nexploration results including a information material to the understanding\ntabulation of the following of the exploration results is provided in the\ninformation for all Material drill tables and figures included within the body\nholes: of this announcement.\neasting and northing of the drill • Information from historic holes drilled by\no\nhole collar Pilbara Gold at Mt York can be found in\nelevation or RL (Reduced Level – previous ASX releases.\no\nelevation above sea level in • No drill hole information from the reported\nmetres) of the drill hole collar program was excluded from this release.\ndip and azimuth of the hole\no\ndown hole length and\no\ninterception depth\nhole length.\no\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 19 of 21\nylno\nesu\nlanosrep\nroF\nCriteria JORC Code explanation Commentary\n• If the exclusion of this information is\njustified on the basis that the\ninformation is not Material and this\nexclusion does not detract from the\nunderstanding of the report, the\nCompetent Person should clearly\nexplain why this is the case.\nData • In reporting Exploration Results, • Results are reported as down hole length\nweighting averaging techniques, weighted averages using a 0.3g/t gold\naggregation\nmaximum and/or minimum grade minimum cut-off grade.\nmethods truncations (eg cutting of high • Reported intercepts may include a\ngrades) and cut-off grades are maximum of 4m of internal dilution below\nusually Material and should be the 0.3g/t minimum cut-off grade.\nstated. • No top cuts have been applied to the\n• Where aggregate intercepts reporting of the assay results.\nincorporate short lengths of high\ngrade results and longer lengths of\nlow grade results, the procedure\nused for such aggregation should be\nstated and some typical examples of\nsuch aggregations should be shown\nin detail.\n• The assumptions used for any\nreporting of metal equivalent values\nshould be clearly stated.\nRelationship • These relationships are particularly • All mineralisation widths for exploration\nimportant in the reporting of holes are reported as down hole lengths.\nbetween\nExploration Results. • Where drilling is not perpendicular to the\nmineralisation • If the geometry of the mineralisation strike and dip of the mineralisation the\nwith respect to the drill hole angle is true widths are less than down hole\nwidths and\nknown, its nature should be widths.\nintercept reported. • True widths have been estimated in Table\n• If it is not known and only the down 1.\nlengths\nhole lengths are reported, there\nshould be a clear statement to this\neffect (eg ‘down hole length, true\nwidth not known’).\nDiagrams • Appropriate maps and sections (with • Refer to Figures and Tables provided in the\nscales) and tabulations of intercepts body of this announcement.\nshould be included for any\nsignificant discovery being reported\nThese should include, but not be\nlimited to a plan view of drill hole\ncollar locations and appropriate\nsectional views.\nBalanced • Where comprehensive reporting of • All verified and validated exploration\nall Exploration Results is not results received from the drill program at\nreporting\npracticable, representative reporting the time of data compilation for this\nof both low and high grades and/or announcement have been reported,\nwidths should be practiced to avoid including drill holes with low grades or no\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 20 of 21\nylno\nesu\nlanosrep\nroF\nCriteria JORC Code explanation Commentary\nmisleading reporting of Exploration significant intercepts.\nResults. • The information reported in considered\nfair, balanced, and provided in context.\nOther • Other exploration data, if • All meaningful and material exploration\nmeaningful and material, should be data has been included in the body of this\nsubstantive\nreported including (but not limited document.\nexploration to): geological observations; • Metallurgical test work is ongoing and\ngeophysical survey results; samples for further metallurgical test work\ndata\ngeochemical survey results; bulk are to be selected as assay results have\nsamples – size and method of been returned from the program.\ntreatment; metallurgical test results; • The company is progressing with a Pre-\nbulk density, groundwater, Feasibility Study which includes ongoing\ngeotechnical and rock environmental, geotechnical, and mining\ncharacteristics; potential deleterious studies.\nor contaminating substances.\nFurther work • The nature and scale of planned • Mineralisation at Mt York remains open at\nfurther work (eg tests for lateral depth and along strike and additional\nextensions or depth extensions or diamond drill holes have been planned to\nlarge-scale step-out drilling). extend the known mineralisation.\n• Diagrams clearly highlighting the • Additional drillholes for metallurgical and\nareas of possible extensions, geotechnical test work are also being\nincluding the main geological planned.\ninterpretations and future drilling\nareas, provided this information is\nnot commercially sensitive.\nT +61 (0) 8 6380 1904 | E info@pilbaragold.com.au | W www.pilbaragold.com.au Page 21 of 21\nylno\nesu\nlanosrep\nroF",
+      "text_status": "ok",
+      "pages": 21,
+      "market_cap": 119348174,
+      "price_last": 0.495,
+      "price_change_pct": 0,
+      "volume": 0,
+      "status_code": "RE",
+      "long_name": "PILBARA GOLD LIMITED",
+      "prior_announcements": [
+        {
+          "headline": "Mineral Rights Agreement Update",
+          "date_awst": "10 August 2026",
+          "price_sensitive": true
+        },
+        {
+          "headline": "Letter to Shareholders",
+          "date_awst": "30 July 2026",
+          "price_sensitive": false
+        },
+        {
+          "headline": "Notice of Extraordinary General Meeting/Proxy Form",
+          "date_awst": "30 July 2026",
+          "price_sensitive": false
+        },
+        {
+          "headline": "Drilling Extends Gold Mineralisation at Mt York",
+          "date_awst": "22 July 2026",
+          "price_sensitive": true
+        }
+      ]
+    },
+    {
+      "ticker": "BNZ",
+      "company": "BENZ MINING CORP.",
+      "sector": "Materials",
+      "headline": "Proposed issue of securities - BNZ",
+      "types": [
+        "Appendix 3B (Proposed issue of securities)"
+      ],
+      "price_sensitive": false,
+      "document_key": "2924-03124691-6A1339817",
+      "size": "15KB",
+      "lodged_utc": "2026-08-23T22:43:05+00:00",
+      "lodged_awst": "2026-08-24T06:43:05+08:00",
+      "date_awst": "24 August 2026",
+      "time_awst": "06:43",
+      "text": "Appendix 3B - Proposed issue of securities\nAnnouncement Summary\nEntity name\nBENZ MINING CORP.\nAnnouncement Type\nNew announcement\nDate of this announcement\n24/8/2026\nThe Proposed issue is:\nA placement or other type of issue\nTotal number of +securities proposed to be issued for a placement or other type of issue\nMaximum Number of\nASX +security code +Security description +securities to be issued\nBNZ CHESS DEPOSITARY INTERESTS 1:1 40,431,267\nProposed +issue date\n31/8/2026\nRefer to next page for full details of the announcement\nAppendix 3B - Proposed issue of securities 1 / 5\nylno\nesu\nlanosrep\nroF\nAppendix 3B - Proposed issue of securities\nPart 1 - Entity and announcement details\n1.1 Name of +Entity\nBENZ MINING CORP.\nWe (the entity named above) give ASX the following information about a proposed issue of +securities and, if ASX agrees\nto +quote any of the +securities (including any rights) on a +deferred settlement basis, we agree to the matters set out in\nAppendix 3B of the ASX Listing Rules.\nIf the +securities are being offered under a +disclosure document or +PDS and are intended to be quoted on ASX, we also\napply for quotation of all of the +securities that may be issued under the +disclosure document or +PDS on the terms set\nout in Appendix 2A of the ASX Listing Rules (on the understanding that once the final number of +securities issued under\nthe +disclosure document or +PDS is known, in accordance with Listing Rule 3.10.3C, we will complete and lodge with ASX\nan Appendix 2A online form notifying ASX of their issue and applying for their quotation).\n1.2 Registered Number Type Registration Number\nARBN 642228804\n1.3 ASX issuer code\nBNZ\n1.4 The announcement is\nNew announcement\n1.5 Date of this announcement\n24/8/2026\n1.6 The Proposed issue is:\nA placement or other type of issue\nAppendix 3B - Proposed issue of securities 2 / 5\nylno\nesu\nlanosrep\nroF\nAppendix 3B - Proposed issue of securities\nPart 7 - Details of proposed placement or other issue\nPart 7A - Conditions\n7A.1 Do any external approvals need to be obtained or other conditions satisfied before the placement or other\ntype of issue can proceed on an unconditional basis?\nNo\nPart 7B - Issue details\nIs the proposed security a 'New Will the proposed issue of this\nclass' (+securities in a class that is +security include an offer of\nnot yet quoted or recorded by ASX) attaching +securities?\nor an 'Existing class' (additional No\nsecurities in a class that is already\nquoted or recorded by ASX)?\nExisting class\nDetails of +securities proposed to be issued\nASX +security code and description\nBNZ : CHESS DEPOSITARY INTERESTS 1:1\nNumber of +securities proposed to be issued\n40,431,267\nOffer price details\nAre the +securities proposed to be issued being issued for a cash\nconsideration?\nYes\nIn what currency is the cash What is the issue price per\nconsideration being paid? +security?\nAUD - Australian Dollar AUD 3.71000\nWill these +securities rank equally in all respects from their issue date with\nthe existing issued +securities in that class?\nYes\nAppendix 3B - Proposed issue of securities 3 / 5\nylno\nesu\nlanosrep\nroF\nAppendix 3B - Proposed issue of securities\nPart 7C - Timetable\n7C.1 Proposed +issue date\n31/8/2026\nPart 7D - Listing Rule requirements\n7D.1 Has the entity obtained, or is it obtaining, +security holder approval for the entire issue under listing rule 7.1?\nNo\n7D.1b Are any of the +securities proposed to be issued without +security holder approval using the entity's 15%\nplacement capacity under listing rule 7.1?\nYes\n7D.1b ( i ) How many +securities are proposed to be issued without security holder approval using the entity's 15%\nplacement capacity under listing rule 7.1?\n40,431,267\n7D.1c Are any of the +securities proposed to be issued without +security holder approval using the entity's\nadditional 10% placement capacity under listing rule 7.1A (if applicable)?\nNo\n7D.2 Is a party referred to in listing rule 10.11 participating in the proposed issue?\nNo\n7D.3 Will any of the +securities to be issued be +restricted securities for the purposes of the listing rules?\nNo\n7D.4 Will any of the +securities to be issued be subject to +voluntary escrow?\nNo\nPart 7E - Fees and expenses\n7E.1 Will there be a lead manager or broker to the proposed issue?\nYes\n7E.1a Who is the lead manager/broker?\nCanaccord Genuity (Australia) Limited acted as Global Coordinator, Joint Lead Manager and Sole Bookrunner to the\nPlacement. Euroz Hartleys Group Limited acted as Joint Lead Manager and Shaw and Partners Limited acted as\nCo-Manager to the Placement.\n7E.1b What fee, commission or other consideration is payable to them for acting as lead manager/broker?\nA 4% fee is payable.\n7E.2 Is the proposed issue to be underwritten?\nNo\n7E.4 Details of any other material fees or costs to be incurred by the entity in connection with the proposed issue\nPart 7F - Further Information\n7F.01 The purpose(s) for which the entity is issuing the securities\nAdditional working capital\nAppendix 3B - Proposed issue of securities 4 / 5\nylno\nesu\nlanosrep\nroF\nAppendix 3B - Proposed issue of securities\n7F.1 Will the entity be changing its dividend/distribution policy if the proposed issue proceeds?\nNo\n7F.2 Any other information the entity wishes to provide about the proposed issue\n7F.3 Any on-sale of the +securities proposed to be issued within 12 months of their date of issue will comply with\nthe secondary sale provisions in sections 707(3) and 1012C(6) of the Corporations Act by virtue of:\nThe publication of a cleansing notice under section 708A(5), 708AA(2)(f), 1012DA(5) or 1012DAA(2)(f)\nAppendix 3B - Proposed issue of securities 5 / 5\nylno\nesu\nlanosrep\nroF",
+      "text_status": "ok",
+      "pages": 5,
+      "market_cap": 1294579141,
+      "price_last": 3.71,
+      "price_change_pct": 0,
+      "volume": 0,
+      "status_code": "",
+      "long_name": "BENZ MINING CORP.",
+      "prior_announcements": [
+        {
+          "headline": "Results of Meeting",
+          "date_awst": "17 August 2026",
+          "price_sensitive": false
+        },
+        {
+          "headline": "Statement of CDIs on issue - BNZ",
+          "date_awst": "5 August 2026",
+          "price_sensitive": false
+        },
+        {
+          "headline": "Benz Mining Investor Presentation - Diggers & Dealers 2026",
+          "date_awst": "3 August 2026",
+          "price_sensitive": false
+        }
+      ]
+    },
+    {
+      "ticker": "BNZ",
+      "company": "BENZ MINING CORP.",
+      "sector": "Materials",
+      "headline": "$150M PLACEMENT TO ACCELERATE GLENBURGH MAIDEN RESOURCE",
+      "types": [
+        "Placement"
+      ],
+      "price_sensitive": true,
+      "document_key": "2924-03124679-6A1339814",
+      "size": "263KB",
+      "lodged_utc": "2026-08-23T22:40:40+00:00",
+      "lodged_awst": "2026-08-24T06:40:40+08:00",
+      "date_awst": "24 August 2026",
+      "time_awst": "06:40",
+      "text": "24 August 2026\nA$150M PLACEMENT TO ACCELERATE DELIVERY OF\nGLENBURGH MAIDEN RESOURCE\n14 RIGS TARGETING MAIDEN RESOURCE IN H1 2027\nNot for release to US wire services or distribution in the United States\nHIGHLIGHTS\n• Benz has received firm commitments to raise A$150 million via a targeted institutional\nplacement driven by inbound interest from a select group of long-only, global specialist\nresources investors\n• Placement proceeds will accelerate Benz’s planned 450,000m Glenburgh drill program,\nadding 6 additional drill rigs to take the on-site fleet to 14 rigs operating across 20 shifts\n• The 450,000m campaign represents one of the largest planned gold exploration drilling\nprograms in Australia and, by scale, among the largest globally\n• Expanded drilling fleet to rapidly advance the planned 450,000m campaign in\npreparation for Benz’s maiden Mineral Resource Estimate, targeted for H1 2027\nBenz Mining Corp. (ASX:BNZ, TSXV:BZ) (Benz or the Company) is pleased to announce that it\nhas received firm commitments for an institutional placement of 40.4 million new fully paid\nCHESS Depositary Interests (New CDIs) in the Company at an issue price of A$3.71 per CDI\n(Issue Price) to raise A$150 million (before costs) (Placement).\nThe Placement was strongly supported by new and existing investors and was driven by\ninbound interest from a select group of long-only, global specialist resources investors. The\nsignificant demand received from these high-quality institutions demonstrates strong support\nfor the Company’s ongoing exploration strategy.\nUse of Funds\nProceeds from the Placement will be applied as follows:\n• To accelerate Benz’s planned 450,000m drill program at Glenburgh through the\naddition of six drill rigs, increasing the on-site fleet to 14 rigs operating across 20 shifts.\nAt 450,000m, the campaign is expected to rank among the largest gold exploration\ndrilling programs underway in Australia and, by scale, among the largest globally. The\nexpanded fleet will focus on rapid infill drilling to support preparation of Benz’s maiden\nMineral Resource Estimate, targeted for H1 2027, while continuing resource growth and\nextension drilling across the broader Glenburgh system;\n• To advance geological modelling, assay analysis, interpretation and technical studies\nin parallel with the accelerated drilling program, enabling rapid conversion of drilling\nresults into resource definition and supporting the commencement of feasibility studies\ninto FY2027;\n• To undertake field activities and permitting, including drill access preparation, heritage\nclearances, environmental approvals and associated field costs across the Company’s\nproject portfolio; and\n• For working capital, including general corporate and administrative costs to support\nongoing operations and exploration activities.\nylno\nesu\nlanosrep\nroF\nBenz Chair, Mr Evan Cranston, commented:\n“We are advancing Glenburgh at a pace that very few gold projects in Australia can currently\nmatch. Our planned 450,000 metre drill program is one of the country’s most aggressive gold\nexploration campaigns and, by scale, among the largest globally. This financing allows us to\naccelerate that program by adding six rigs, taking the fleet to 14 rigs on site operating across\n20 shifts.\n“We are maintaining that momentum because systematic drilling is adding value to the\nproject so quickly. With the expanded fleet, our immediate objective is to rapidly infill and build\nthe geological confidence required to deliver Benz’s maiden Mineral Resource Estimate in the\nfirst half of 2027.\n“The reason we are drilling at this intensity is simple: the more systematically we drill Glenburgh,\nthe more compelling the scale of the opportunity becomes. This funding enables us to bring\nforward a huge amount of drilling, compress the exploration timeline and move Glenburgh\nrapidly towards a defined resource and, ultimately, development.”\nPlacement Details\nThe Placement will be conducted at a price of A$3.71 per CDI, which represents a 0% discount\nto the last close price of A$3.71 on Friday, 21 August 2026.\nThe Company will issue 40.4 million New CDIs under its existing placement capacity pursuant\nto ASX Listing Rule 7.1. It is anticipated that settlement of the Placement will occur on Friday,\n28 August 2026 and the New CDIs will be allotted and commence trading on Monday, 31\nAugust 2026.\nCanaccord Genuity (Australia) Limited acted as Global Coordinator, Joint Lead Manager and\nSole Bookrunner to the Placement.\nEuroz Hartleys Group Limited acted as Joint Lead Manager and Shaw and Partners Limited\nacted as Co-Manager to the Placement.\nFurther details are set out in the Appendix 3B accompanying this announcement.\nThis announcement has been approved for release by the Board of Benz Mining Corp.\nFor more information please contact:\nMark Lynch-Staunton\nChief Executive Officer Benz Mining Corp.\nE: mstaunton@benzmining.com\nT: +61 8 6143 6702\n2\nylno\nesu\nlanosrep\nroF\nAbout Benz Mining Corp.\nBenz Mining Corp. (TSXV:BZ, ASX: BNZ) is a pure-play gold exploration company dual-listed on\nthe TSX Venture Exchange and Australian Securities Exchange. The Company owns the\nEastmain Gold Project in Quebec, and the recently acquired Glenburgh and Mt Egerton Gold\nProjects in Western Australia.\nBenz’s key point of difference lies in its team’s deep geological expertise and the use of\nadvanced geological techniques, particularly in high-metamorphic terrane exploration. The\nCompany aims to rapidly grow its global resource base and solidify its position as a leading\ngold explorer across two of the world’s most prolific gold regions.\nFor more information, please visit: https://benzmining.com/.\n3\nylno\nesu\nlanosrep\nroF\nForward-Looking Statements\nStatements contained in this news release that are not historical facts are \"forward-looking\ninformation\" or “forward looking statements” (collectively Forward-Looking Information) as\nsuch term is used in applicable Canadian securities laws. Forward-Looking Information\nincludes, but is not limited to, disclosure regarding the Placement, including proposed\ncompletion, use of proceeds from the Placement, including but not limited to the drilling,\nexploration and development work contemplated thereby, as well as the completion of an\ninitial Mineral Resource Estimate and subsequent technical reports, and planned exploration\nand related activities on the Glenburgh project. In certain cases, Forward-Looking Information\ncan be identified by the use of words and phrases or variations of such words and phrases or\nstatements such as “anticipates”, “complete”, “become”, “expects”, “next steps”,\n“commitments” and “potential”, in relation to certain actions, events or results “could”, “may”,\n“will”, “would”, be achieved. In preparing the Forward-Looking Information in this news release,\nthe Company has applied several material assumptions, including, but not limited to, that the\nresults of exploration at the Glenburgh property will continue as anticipated , and all conditions\nprecedent to completion of the Placement will be satisfied, in a timely manner; the Company\nwill be able to raise additional capital as necessary; the current exploration, development,\nenvironmental and other objectives concerning the Company’s Projects (including\nGlenburgh) can be achieved; and the continuity of the price of gold and other metals,\neconomic and political conditions, and operations.\nForward-looking information is subject to a variety of risks and uncertainties and other factors\nthat could cause plans, estimates and actual results to vary materially from those projected in\nsuch forward-looking information. Factors that could cause the forward-looking information in\nthis news release to change or to be inaccurate include, but are not limited to, the risk that\nany of the assumptions referred to prove not to be valid or reliable, that occurrences such as\nthose referred to above are realized and result in delays, or cessation in planned work, that\nthe Company's financial condition and development plans change, and delays in regulatory\napproval, as well as the other risks and uncertainties applicable to the Company as set forth\nin the Company's continuous disclosure filings filed under the Company's profile at\nwww.sedarplus.ca and www.asx.com.au. Accordingly, readers should not place undue\nreliance on Forward-Looking Information. The Forward-looking information in this news release\nis based on plans, expectations, and estimates of management at the date the information is\nprovided and the Company undertakes no obligation to update these forward-looking\nstatements, other than as required by applicable law.\nNEITHER THE TSX VENTURE EXCHANGE NOR ITS REGULATION SERVICES PROVIDER (AS THAT TERM\nIS DEFINED IN THE POLICIES OF THE TSX VENTURE EXCHANGE) ACCEPTS RESPONSIBILITY FOR THE\nACCURACY OR ADEQUACY OF THIS RELEASE.\nNot an offer of securities\nThis announcement has been prepared for publication in Australia and may not be released\nto US wire services or distributed in the United States. This announcement does not constitute\nan offer to sell, or a solicitation of an offer to buy, securities in the United States or any other\njurisdiction. Any securities described in this announcement have not been, and will not be,\nregistered under the US Securities Act of 1933 and may not be offered or sold in the United\nStates except in transactions exempt from, or not subject to, the registration requirements of\nthe US Securities Act and applicable US state securities laws.\n4\nylno\nesu\nlanosrep\nroF",
+      "text_status": "ok",
+      "pages": 4,
+      "market_cap": 1294579141,
+      "price_last": 3.71,
+      "price_change_pct": 0,
+      "volume": 0,
+      "status_code": "",
+      "long_name": "BENZ MINING CORP.",
+      "prior_announcements": [
+        {
+          "headline": "Results of Meeting",
+          "date_awst": "17 August 2026",
+          "price_sensitive": false
+        },
+        {
+          "headline": "Statement of CDIs on issue - BNZ",
+          "date_awst": "5 August 2026",
+          "price_sensitive": false
+        },
+        {
+          "headline": "Benz Mining Investor Presentation - Diggers & Dealers 2026",
+          "date_awst": "3 August 2026",
+          "price_sensitive": false
+        }
+      ]
+    },
+    {
+      "ticker": "NWM",
+      "company": "NORWEST MINERALS LIMITED",
+      "sector": "Materials",
+      "headline": "Bulgera Gold Project Scoping Study update",
+      "types": [
+        "Progress Report"
+      ],
+      "price_sensitive": false,
+      "document_key": "2924-03124597-6A1339797",
+      "size": "301KB",
+      "lodged_utc": "2026-08-23T22:08:24+00:00",
+      "lodged_awst": "2026-08-24T06:08:24+08:00",
+      "date_awst": "24 August 2026",
+      "time_awst": "06:08",
+      "text": "ASX ANNOUNCEMENT ASX: NWM\n24 August 2026\nBulgera Scoping Study Timetable Updated to\nIncorporate Key Metallurgical Data\nNorwest Minerals Limited (ASX: NWM) (\"Norwest\" or \"the Company\") wishes to advise that\nthe release of the Scoping Study for its 100%-owned Bulgera Gold Heap Leach Project will be\nfinalised following the incorporation of complete results from ongoing column leach and fresh\nrock Intermittent Bottle Roll Test (IBRT) programs.\nThese metallurgical datasets represent fundamental operational parameters for the study.\nIncorporating these final results ensures the Scoping Study accurately reflects the true\neconomic potential, process flowsheets, and dynamic recovery models for the project.\nKEY HIGHLIGHTS\n• Column Leach Progress: Formal 70-day column leach testwork on coarse-crushed ( mm)\nhighly weathered (HW) and moderately weathered (MW) oxide material is progressing as\n−25\nscheduled at ALS Laboratories, tracking in line with initial bottle-roll recoveries.\n• Fresh Rock IBRT Integration: The inclusion of primary fresh rock IBRT test results will provide\ndirect metallurgical data to refine process assumptions beyond the current conservative\nestimates.\n• Optimised Scoping Study Outcomes: Integrating these full datasets will enable lead\nconsultants Orelogy Mining Consultants and processing specialists KCAA and NewPro to\ndeliver a comprehensive, robust, and highly reliable evaluation of the heap leach operation.\nNorwest’s CEO, Charles Schaus, commented:\n“The column leach testwork program is progressing well. Given how foundational both the\ncolumn leach dynamics and fresh rock metallurgical responses are to the overall Bulgera\ndevelopment model, it is logical to fully capture these results within the Scoping Study.\nIntegrating these finalised numbers ensures we deliver the most accurate, reliable, and\ncompelling economic picture possible for our shareholders and project stakeholders.”\nylno\nesu\nlanosrep\nroF\nNext Steps & Reporting Timeline\nThe complete metallurgical results are currently being compiled and will be delivered to heap\nleach technical advisors Kappes, Cassiday & Associates Australia (KCAA) for final review and\nintegration into the processing and financial models.\nThe Company anticipates finalizing and releasing the completed Bulgera Gold Heap Leach\nScoping Study promptly following the receipt and evaluation of the complete metallurgical\ntestwork suite which is expected in early October.\nThis ASX announcement has been authorised for release by the Board of Norwest Minerals\nLimited.\nFor further information, visit www.norwestminerals.com.au or contact\nCharles Schaus\nChief Executive Officer and Director\nE: info@norwestminerals.com.au\nFORWARD LOOKING STATEMENTS\nThis release contains statements regarding planned studies, potential metallurgical outcomes\nand project development scenarios. These statements are forward-looking and subject to\nmarket, technical and economic uncertainties. All production or cashflow references are\nconceptual in nature; no Ore Reserves have been declared, and no production target has been\ndefined. Actual outcomes may differ materially.\nThe forward-looking statements reflect the Company’s views and assumptions with respect\nto future events as of the date of this announcement and are subject to a variety of\nunpredictable risks, uncertainties, and other unknowns. Actual and future results and trends\ncould differ materially from those set forth in such statements due to various factors, many\nof which are beyond our ability to control or predict. Given these uncertainties, no one should\nplace undue reliance on any forward-looking statements attributable to the Company, or any\nof its affiliates or persons acting on its behalf. The Company does not undertake any obligation\nto update or revise any forward-looking statements, whether as a result of new information,\nfuture events or otherwise. Neither the Company nor any other person, gives any\nrepresentation, warranty, assurance, nor will guarantee that the occurrence of the events\nexpressed or implied in any forward-looking statement will actually occur. To the maximum\nextent permitted by law, the Company and each of its advisors, affiliates, related bodies\ncorporate, directors, officers, partners, employees and agents disclaim any responsibility for\nthe accuracy or completeness of any forward-looking statements whether as a result of new\ninformation, future events or results or otherwise.\nylno\nesu\nlanosrep\nroF\nCompetent Person’s Statement\nThe information in this report that relates to Metallurgical Testwork is based on information\ncompiled by Mr. Charles Schaus, a Competent Person who is a Member of the Australasian\nInstitute of Mining and Metallurgy. Mr. Schaus is CEO of Norwest Minerals Limited. Mr.\nSchaus consents to the inclusion in the report of the matters based on his information in the\nform and context in which it appears.\nylno\nesu\nlanosrep\nroF",
+      "text_status": "ok",
+      "pages": 3,
+      "market_cap": 12166976,
+      "price_last": 0.009,
+      "price_change_pct": 0,
+      "volume": 0,
+      "status_code": "",
+      "long_name": "NORWEST MINERALS LIMITED",
+      "prior_announcements": [
+        {
+          "headline": "Change in substantial holding",
+          "date_awst": "13 August 2026",
+          "price_sensitive": false
+        },
+        {
+          "headline": "Change in substantial holding",
+          "date_awst": "13 August 2026",
+          "price_sensitive": false
+        },
+        {
+          "headline": "Change of Director's Interest Notice x 6",
+          "date_awst": "12 August 2026",
+          "price_sensitive": false
+        },
+        {
+          "headline": "Application for quotation of securities - NWM",
+          "date_awst": "11 August 2026",
+          "price_sensitive": false
+        }
+      ]
+    }
+  ],
+  "all_tickers": [
+    "AQI",
+    "ARV",
+    "AS1",
+    "BM1",
+    "BNZ",
+    "GBR",
+    "GBM",
+    "GG8",
+    "GHM",
+    "GML",
+    "GSN",
+    "JAV",
+    "KAL",
+    "LCL",
+    "LEX",
+    "OZM",
+    "PGO",
+    "SLS",
+    "STK",
+    "TOK",
+    "TOR",
+    "TTM",
+    "YRL",
+    "MPK",
+    "NVO",
+    "AAM",
+    "GA8",
+    "MBK",
+    "NWM",
+    "SMS",
+    "SKM",
+    "CZN",
+    "ARI",
+    "VAL",
+    "PC2",
+    "AAR",
+    "LAC",
+    "AUC",
+    "AUE",
+    "AZY",
+    "BGD",
+    "WAU",
+    "CAV",
+    "GPR",
+    "HRN",
+    "MRT",
+    "KZR",
+    "LGM",
+    "MAT",
+    "MI6",
+    "MM8",
+    "NXM",
+    "ODY",
+    "PDI",
+    "PTN",
+    "RXL",
+    "SMI",
+    "STM",
+    "STN",
+    "TAM",
+    "TCG",
+    "TRE",
+    "TSO",
+    "WGR",
+    "WIA",
+    "MEK",
+    "PRX",
+    "PGL",
+    "EVN",
+    "NST",
+    "BGL",
+    "BC8",
+    "BTR",
+    "CMM",
+    "CYL",
+    "EMR",
+    "GGP",
+    "GMD",
+    "KCN",
+    "NMG",
+    "OBM",
+    "PNR",
+    "PRU",
+    "RMS",
+    "RRL",
+    "RSG",
+    "SBM",
+    "VAU",
+    "WAF",
+    "WGX",
+    "ORE",
+    "BCN",
+    "DTM"
+  ]
+}
