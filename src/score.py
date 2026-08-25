@@ -51,16 +51,65 @@ SIGNALS = [
     (7, "offtake / funding", re.compile(r"\boff-?take\b|\bdebt facility\b|\bstreaming agreement\b|\bstrategic investment\b", re.I)),
 ]
 
-# Quarterly reporting. Not "material" in the sense a halt is, but never noise:
-# a quarterly carries production, AISC, cash and guidance commentary, and it is
-# the one routine document that is always worth reading. These get their own
-# section rather than being listed with the Appendix filings.
+# Recurring calendar filings. Not "material" in the sense a halt is, but never
+# noise either: a quarterly carries production, AISC, cash and guidance
+# commentary, and a half-year or annual report carries the audited numbers.
+# They arrive on a schedule, every company files them, and they mostly restate.
+# So they get their own section rather than competing with the day's news.
 QUARTERLY = re.compile(
     r"quarterly (?:activities|cash\s?flow|cashflow|report)|"
     r"activities report for the quarter|"
     r"appendix\s*5b|"
     r"(?:december|march|june|september)\s+quarter(?:ly)?\b|"
     r"\bq[1-4]\s*(?:fy)?\s*\d{2,4}\s+(?:report|activities|update)",
+    re.I,
+)
+
+# The rest of the reporting calendar: half years, full years, and the statutory
+# wrappers around them.
+PERIODIC = re.compile(
+    r"appendix\s*4[cde]\b|"
+    r"\b(?:annual|half[- ]?year(?:ly)?|interim|full[- ]?year|preliminary final)\b"
+    r"[^.]{0,40}?\b(?:report|accounts|statements?|financials?)\b|"
+    r"\bcorporate governance statement\b|"
+    r"\bannual report\b|\bpreliminary final report\b",
+    re.I,
+)
+
+# A results release is the news; the statutory report lodged beside it is the
+# filing. On 19 August 2026 Evolution lodged both and each got its own full
+# summary of the same result. The words below mark the release. The words in
+# STATUTORY mark the filing and win, because "Appendix 4E and FY26 Financial
+# Report" is the wrapper even though it covers the same numbers.
+PERIODIC_NEWS = re.compile(
+    r"\bresults?\b|\bdividend\b|\bguidance\b|\bprofit\b|\bearnings\b|"
+    r"\brecord\b|\boutlook\b",
+    re.I,
+)
+STATUTORY = re.compile(
+    r"appendix\s*4[cde]\b|\baccounts\b|\bfinancial report\b|"
+    r"\bannual report\b|\bcorporate governance\b|\bfinancial statements?\b",
+    re.I,
+)
+
+# A disclosure that happens to be annual is still a disclosure. Ramelius and
+# Matador both lodge "Annual Mineral Resources and Ore Reserves Statement", and
+# an earlier draft of PERIODIC swallowed it on the word "Annual ... Statement",
+# which is the exact failure this whole round exists to fix. Anything naming a
+# resource, a reserve or exploration results stays in the main section however
+# regularly it arrives.
+NEVER_PERIODIC = re.compile(
+    r"\b(?:mineral )?resources?\b|\b(?:ore )?reserves?\b|\bmaiden\b|"
+    r"\bexploration (?:results|update|target)\b|\bdrill\w*\b|\bassay\w*\b|"
+    r"\bintercept\w*\b|\bfeasibility\b|\bscoping\b|\bJORC\b",
+    re.I,
+)
+
+# Diary notes about a result, not the result. These carry nothing at all.
+ADMIN_NOTICE = re.compile(
+    r"conference call|investor (?:call|webinar|briefing) (?:details|invit)|"
+    r"\bwebinar\b|notification of (?:results|reporting date)|"
+    r"\bcall (?:details|notification)\b|date of (?:results|release)",
     re.I,
 )
 
@@ -82,10 +131,20 @@ PRESENTATION = re.compile(
     re.I,
 )
 
-# A deck is kept when its own headline says it carries news, which is the only
-# reliable tell. The body cannot be used: a restatement deck quotes NPV, IRR
-# and every drill intercept the company has ever reported, so it reads as
-# material no matter how the text is scored.
+# A deck is also kept when its TITLE BLOCK names a primary disclosure. On
+# 25 August 2026 Ramelius lodged its annual resource and reserve update as a
+# deck headlined "Value and Growth from the Drill Bit Investor Presentation".
+# Nothing in that headline says news, so it was suppressed, and the update
+# never reached the briefing. The document's own cover said what it was:
+# "Value And Growth From The Drill Bit / Resource & Reserve Update / FY26
+# Financial Results".
+#
+# Only the title block is read, not the body. The body is useless for this,
+# because a restatement deck quotes NPV, IRR and every intercept the company
+# has ever reported and so reads as material however it is scored: on the
+# archive to date the highest-scoring deck of all, at 76, was a Diggers and
+# Dealers pitch, one point above the Ramelius update at 75. The cover page is
+# where a deck says what it is, and it is read up to the first disclaimer.
 PRESENTATION_KEEP = re.compile(
     r"\bmaiden\b|\bore reserve\b|\bresource (?:upgrade|estimate|update)\b|"
     r"\b(?:scoping|feasibility|pre-?feasibility|definitive feasibility)\b|\bPFS\b|\bDFS\b|"
@@ -119,12 +178,43 @@ FULL_SUMMARY_AT = 8      # score at or above this gets the full text sent
 MIN_TEXT = 400           # below this many characters, treat as a stub
 
 
-def is_presentation(headline):
-    """True when this is a marketing deck with nothing new on the cover."""
+# Where a slide deck stops introducing itself and starts reciting boilerplate.
+TITLE_END = re.compile(
+    r"important notice|disclaimer|forward[- ]?looking|competent person|"
+    r"qualifications|non-?ifrs",
+    re.I,
+)
+TITLE_CHARS = 400
+
+# Phrases that name a disclosure in their own right rather than describing a
+# company. Deliberately narrow: "Resource & Reserve Update" qualifies, "2.1Moz
+# and Growing: Building a Major ASX-Listed Gold Company" does not.
+PRIMARY_DISCLOSURE = re.compile(
+    r"\b(?:mineral )?resources?\s*(?:&|and|/|,)\s*(?:ore )?reserves?\b|"
+    r"\b(?:ore )?reserve (?:update|statement|estimate)\b|"
+    r"\b(?:mineral )?resource (?:update|statement|estimate|upgrade)\b|"
+    r"\bmaiden (?:resource|reserve)\b|"
+    r"\b(?:definitive |pre-?)?feasibility study\b|\bscoping study\b|"
+    r"\bPFS\b|\bDFS\b|\bfinal investment decision\b",
+    re.I,
+)
+
+
+def title_block(text):
+    """The cover of a deck: everything before the first disclaimer."""
+    head = (text or "")[:TITLE_CHARS]
+    end = TITLE_END.search(head)
+    return head[:end.start()] if end else head
+
+
+def is_presentation(headline, text=None):
+    """True when this is a marketing deck and not a disclosure in deck form."""
     headline = headline or ""
     if not PRESENTATION.search(headline):
         return False
-    return not PRESENTATION_KEEP.search(headline)
+    if PRESENTATION_KEEP.search(headline):
+        return False
+    return not PRIMARY_DISCLOSURE.search(title_block(text))
 
 
 def score(record):
@@ -145,7 +235,7 @@ def score(record):
 
     # Checked before the quarterly test, so a "Quarterly Results Presentation"
     # is treated as the deck it is rather than duplicating the quarterly.
-    record["is_presentation"] = is_presentation(headline)
+    record["is_presentation"] = is_presentation(headline, text)
     if record["is_presentation"]:
         hits.append("presentation, suppressed")
 
@@ -156,6 +246,26 @@ def score(record):
     record["is_quarterly"] = bool(QUARTERLY.search(headline))
     if record["is_quarterly"]:
         hits.append("quarterly")
+
+    # A half year or full year filing joins them unless the headline is the
+    # results release itself rather than the statutory report beside it.
+    record["is_periodic"] = record["is_quarterly"] or bool(
+        PERIODIC.search(headline)
+        and not NEVER_PERIODIC.search(headline)
+        and (STATUTORY.search(headline) or not PERIODIC_NEWS.search(headline))
+    )
+    if record["is_periodic"] and not record["is_quarterly"]:
+        hits.append("periodic filing")
+
+    # A notice about when results will be released is not an announcement.
+    # Capped the same way a routine filing is, and with the same escape: if the
+    # body scores heavily the cap does not apply, because a headline is only
+    # ever evidence about a document, never the last word on it. Without this
+    # the diary-note rule was the one demotion in this module that no amount of
+    # content could overturn.
+    if ADMIN_NOTICE.search(headline) and total < 14:
+        total = min(total, 4)
+        hits.append("diary note")
 
     # A routine filing headline caps the score unless the body says otherwise.
     routine = bool(ROUTINE.match(headline.strip()))
@@ -190,8 +300,8 @@ def _tier(record, total, text):
     """
     if record.get("is_presentation"):
         return "presentation"
-    if record.get("is_quarterly"):
-        return "quarterly"
+    if record.get("is_periodic"):
+        return "periodic"
     if record.get("text_status", "") != "ok" and not text:
         return "unreadable"
     if total >= FULL_SUMMARY_AT:
@@ -217,7 +327,7 @@ def rank(records):
             print(f"    {r['ticker']}  {r.get('headline','')[:60]}")
     return {
         "full": [r for r in ordered if r["tier"] in ("full", "unreadable")],
-        "quarterly": [r for r in ordered if r["tier"] == "quarterly"],
+        "periodic": [r for r in ordered if r["tier"] == "periodic"],
         "digest": [r for r in ordered if r["tier"] == "digest"],
         "presentation": suppressed,
         "all": ordered,
