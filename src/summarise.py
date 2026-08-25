@@ -196,8 +196,14 @@ BRIEF_SCHEMA = {
         "type": "object",
         "properties": {
             "lead": {"type": "string",
-                     "description": ("Lead paragraph. Use the counts given verbatim and "
-                                     "lead with the most material item.")},
+                     "description": (
+                         "Lead paragraph. Open on the most material item of the "
+                         "day and what it means. Do NOT open on how many "
+                         "announcements or how many names reported, and do not "
+                         "state those counts anywhere: the reader can see the "
+                         "table. 'Twelve watchlist names produced 17 confirmed "
+                         "announcements in the 27-hour window, dominated by...' "
+                         "wastes the first line. Start at 'dominated by'.")},
             "subtitle": {"type": "string", "description": "One line, the day's conclusion."},
             "subject": {
                 "type": "string",
@@ -207,6 +213,12 @@ BRIEF_SCHEMA = {
                     "to open, so write it as a wire headline, not as a label. "
                     "Name the single most material item of the day, led by its "
                     "ticker, with the figure that makes it material if one fits. "
+                    "If, and only if, a second item is genuinely as important as "
+                    "the first, name both, compressed hard, separated by a comma: "
+                    "'RMS lifts Ore Reserves 79% to 4.3Moz, WGX plant to 2.9Mtpa'. "
+                    "One strong item beats two crammed ones, so do this only when "
+                    "a reader would be misled by seeing just one of them. Never "
+                    "three. "
                     "Under 72 characters. No full stop, no date, no count of "
                     "announcements, no standing prefix and no mention of the "
                     "watchlist or the briefing: nothing is added around it. "
@@ -218,8 +230,21 @@ BRIEF_SCHEMA = {
             },
             "watch_items": {"type": "array", "items": {"type": "string"},
                             "description": "Live situations with stated reason and timing."},
-            "day_in_brief": {"type": "string",
-                             "description": "Closing summary, most material first."},
+            "day_in_brief": {
+                "type": "string",
+                "description": (
+                    "The closing summary. Write it as THREE TO FIVE SHORT "
+                    "PARAGRAPHS separated by a blank line, most material first, "
+                    "never as one block: a single unbroken 3,000-character "
+                    "paragraph is what this replaces and nobody reads it. "
+                    "Group by theme, one theme per paragraph, for example "
+                    "resources and reserves, drilling, corporate and funding, "
+                    "studies and development. Open each paragraph with its "
+                    "theme as a short phrase followed by a colon, then the "
+                    "sentences, like 'Resources and reserves: Ramelius lifted "
+                    "...'. Keep each paragraph to two or three sentences."
+                ),
+            },
         },
         "required": ["lead", "subtitle", "subject", "watch_items", "day_in_brief"],
     },
@@ -472,10 +497,9 @@ def synthesise(materials, quarterlies, pack, client=None, model=None):
     parts = [
         f"Window: {_window_hours(pack)} hours to {pack['window_end_awst']} (AWST).",
         "",
-        "COUNTS, use these exact numbers and do not recount:",
-        f"  distinct watchlist names in this briefing: {len(names)}",
-        f"  confirmed announcements: {len(materials)}",
-        f"  watchlist size: {pack['tickers_checked']} ticker codes",
+        "Do not state how many announcements there were, how many names "
+        "reported, or how large the watchlist is. Those counts are not part of "
+        "the writing.",
     ]
     # The quarterly count is only stated when there is one. Given
     # "quarterlies: 0" the model reports it, which is why all six briefings
