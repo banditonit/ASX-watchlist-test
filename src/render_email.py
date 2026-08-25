@@ -118,6 +118,33 @@ def _group_by_ticker(entries):
     return [(t, groups[t]) for t in order]
 
 
+def _short_date(text):
+    """'25 August 2026' -> '25 Aug'. The year is on the header already."""
+    parts = _text(text).split()
+    return f"{parts[0]} {parts[1][:3]}" if len(parts) >= 2 else _text(text)
+
+
+def _when(entries, times):
+    """'25 Aug 07:36', or a time range, or a date range across days.
+
+    The time matters: a 06:15 lodgement is pre-open and a 14:30 one landed
+    mid-session, and the reader can tell whether the market has had all day to
+    absorb it. It is joined on from the evidence pack by document key rather
+    than carried through the model, so it cannot be paraphrased.
+    """
+    dates = list(dict.fromkeys(
+        d for d in (_short_date(e.get("date")) for e in entries) if d))
+    stamps = sorted({t for t in (times.get(e.get("document_key")) for e in entries) if t})
+    if len(dates) > 1:
+        return _date_span(entries)
+    day = dates[0] if dates else ""
+    if not stamps:
+        return day
+    if len(stamps) == 1:
+        return f"{day} {stamps[0]}"
+    return f"{day} {stamps[0]} to {stamps[-1]}"
+
+
 def _date_span(entries):
     """One date, or a range when a group straddles days.
 
@@ -160,26 +187,68 @@ def _frame_cap():
 # before one, is rendered exactly as written.
 THEME = re.compile(r"^([A-Z][^:.]{2,34}):\s+(.*)$", re.S)
 
+# Asking for blank lines between themes is not enough. On 26 August 2026 the
+# model wrote every theme correctly and then ran them together in one block,
+# so only the first was set as a heading and the rest sat mid-paragraph. A
+# theme label after a finished sentence is a paragraph break whether or not a
+# blank line was typed, so the break is made here rather than requested.
+THEME_SPLIT = re.compile(
+    r"(?<=[.)\]])\s+(?=[A-Z][A-Za-z][A-Za-z ,&/-]{1,32}:\s+[A-Z0-9])"
+)
+
+
+def _paragraphs(text):
+    """Split the closing summary into paragraphs, on blank lines or on themes."""
+    out = []
+    for block in (b.strip() for b in _text(text).split("\n\n")):
+        if not block:
+            continue
+        out.extend(p.strip() for p in THEME_SPLIT.split(block) if p.strip())
+    return out
+
+
+def _themed_para(block, size=15, colour=NAVY, bottom=14):
+    m = THEME.match(block)
+    if m:
+        body = (f'<span style="font-weight:bold;">{escape(m.group(1))}:</span> '
+                f'{escape(m.group(2))}')
+    else:
+        body = escape(block)
+    return (f'<p style="margin:0 0 {bottom}px 0;font-family:{FONT};'
+            f'font-size:{size}px;line-height:1.55;color:{colour};">{body}</p>')
+
 
 def _themed(text, size=15, colour=NAVY, bottom=14):
-    """Render the closing summary, bolding each paragraph's opening theme."""
-    blocks = [b.strip() for b in _text(text).split("\n\n") if b.strip()]
+    """The closing summary in columns, each theme its own paragraph.
+
+    Two columns rather than one long measure. A paragraph set across a full
+    desktop window runs to about 190 characters and the eye loses its place
+    coming back; in a column it is nearer 90, which reads, and the section
+    finishes in half the vertical space. Newspapers reached the same answer.
+    """
+    blocks = _paragraphs(text)
     if not blocks:
         return ""
-    out = []
-    for block in blocks:
-        m = THEME.match(block)
-        if m:
-            body = (f'<span style="font-weight:bold;">{escape(m.group(1))}:</span> '
-                    f'{escape(m.group(2))}')
-        else:
-            body = escape(block)
-        out.append(
-            f'<p style="margin:0 0 {bottom}px 0;font-family:{FONT};'
-            f'font-size:{size}px;line-height:1.55;color:{colour};'
-            f'max-width:{PROSE}px;">{body}</p>'
-        )
-    return "".join(out)
+    paras = [_themed_para(b, size=size, colour=colour, bottom=bottom) for b in blocks]
+
+    if len(blocks) < 2:
+        return f'<div style="max-width:{PROSE}px;">{paras[0]}</div>'
+
+    # Balance the columns by length of text, not by number of paragraphs.
+    lengths = [len(b) for b in blocks]
+    total, running, cut = sum(lengths), 0, len(blocks) - 1
+    for i, n in enumerate(lengths[:-1]):
+        running += n
+        if running >= total / 2:
+            cut = i + 1
+            break
+    left, right = paras[:cut], paras[cut:]
+    return f"""
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+      <td class="dcp-brief" width="50%" valign="top" style="padding-right:26px;">
+        {''.join(left)}</td>
+      <td class="dcp-brief" width="50%" valign="top">{''.join(right)}</td>
+    </tr></table>"""
 
 
 def _band(title, subtitle=None):
@@ -198,9 +267,10 @@ def _band(title, subtitle=None):
     """
 
 
-def _table(rows):
+def _table(rows, times=None):
     if not rows:
         return ""
+    times = times or {}
     head = "".join(
         f'<th align="left" style="font-family:{FONT};font-size:12px;'
         f'font-weight:bold;color:{WHITE};background-color:{NAVY};'
@@ -231,7 +301,7 @@ def _table(rows):
             _plain_label(ticker),
             escape(_text(items[0].get("company"))),
             _join_parts(parts),
-            escape(_date_span(items)),
+            escape(_when(items, times)),
         ]
         tds = "".join(
             f'<td width="{w}" style="font-family:{FONT};font-size:12px;'
@@ -519,7 +589,9 @@ def render(briefing, pack):
     body.append(_band("Confirmed Announcements",
                       f"{_window_label(pack)}, {date}"))
     body.append(f'<tr><td>{_p(briefing.get("lead",""))}</td></tr>')
-    body.append(_table(rows))
+    lodged_at = {a.get("document_key"): _text(a.get("time_awst"))
+                 for a in (pack.get("announcements") or [])}
+    body.append(_table(rows, lodged_at))
 
     body += _summary_cards(briefing.get("summaries") or [])
 
@@ -574,6 +646,10 @@ def render(briefing, pack):
   @media only screen and (max-width:620px) {{
     td.dcp-lodged {{ display:block !important; width:100% !important; }}
   }}
+  @media only screen and (max-width:760px) {{
+    td.dcp-brief {{ display:block !important; width:100% !important;
+                    padding-right:0 !important; }}
+  }}
 </style>
 <title>ASX Watchlist Catch Up, {escape(date)}</title></head>
 <body style="margin:0;padding:0;background-color:#F4F5F6;">
@@ -615,8 +691,10 @@ def _plain(briefing, pack):
         _text(briefing.get("lead")),
         "",
     ]
+    lodged_at = {a.get("document_key"): _text(a.get("time_awst"))
+                 for a in (pack.get("announcements") or [])}
     for ticker, items in _group_by_ticker(briefing.get("rows") or []):
-        company, when = _text(items[0].get("company")), _date_span(items)
+        company, when = _text(items[0].get("company")), _when(items, lodged_at)
         if len(items) == 1:
             out.append(f"  {ticker}  {company}  "
                        f"{_text(items[0].get('announcement'))}  ({when})")
