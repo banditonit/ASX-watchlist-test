@@ -1,0 +1,72 @@
+{
+  "lead": "Three watchlist names reported today across the 93-stock coverage list: Horizon Gold at Gum Creek, Westgold's Meekatharra expansion study, and Dart Mining's Walwa tin targets.",
+  "subtitle": "Gold expansion economics and high-grade drill hits dominate a three-name day.",
+  "watch_items": [
+    "Horizon: follow-up RC and diamond drilling planned at Howards, Heron South and Melbourne Bitter ahead of updated resource estimates later in 2026.",
+    "Westgold: feasibility-level work underway at Meekatharra with a potential investment decision targeted for late FY27.",
+    "Dart Mining: diamond drilling of the two priority Walwa targets expected to start in October 2026."
+  ],
+  "day_in_brief": "Dart Mining's review of 150 historic drill holes (7,672m) at Walwa has defined two priority tin targets, a deep high-grade greisen zone 400m to 600m below surface and repeating mineralised dykes flagged by seismic survey, against historic pre-JORC estimates of 8.64Mt @ 0.163% Sn and a higher-grade zone of 993,000t @ 0.38% Sn, with diamond drilling due to start in October 2026. Westgold's Scoping Study for Meekatharra proposes lifting processing capacity from 1.8Mtpa to 2.9Mtpa, adding about 47kozpa for total production of 1.6Moz over 10 years, with indicative capital of A$65 million to A$100 million, a 9-month payback and an NPV of approximately A$1.9 billion at A$5,500/oz gold. Horizon Gold's RC drilling at Gum Creek returned 6m @ 12.67g/t Au from 114m (HERC035) at Heron South, an 800m southern extension at Howards, and an along-strike extension to the south at Melbourne Bitter.",
+  "rows": [
+    {
+      "ticker": "HRN",
+      "company": "HORIZON GOLD LIMITED",
+      "announcement": "6m @ 12.67g/t Au from 114m (HERC035, Heron South)",
+      "type": null,
+      "date": "25 August 2026",
+      "document_key": "2924-03125499-6A1340072",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03125499-6A1340072"
+    },
+    {
+      "ticker": "WGX",
+      "company": "WESTGOLD RESOURCES LIMITED.",
+      "announcement": "Scoping study: Meekatharra expansion to 2.9Mtpa, A$100M capex, 9-month payback",
+      "type": null,
+      "date": "25 August 2026",
+      "document_key": "2924-03125343-6A1340033",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03125343-6A1340033"
+    },
+    {
+      "ticker": "DTM",
+      "company": "DART MINING NL",
+      "announcement": "18m @ 0.18% SnO2 from 42m (WRC0013, historical)",
+      "type": null,
+      "date": "25 August 2026",
+      "document_key": "2924-03125356-3A699668",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03125356-3A699668"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "HRN",
+      "heading": "Horizon extends mineralisation at Howards, Heron South and Melbourne Bitter",
+      "body": "RC drilling across three Gum Creek prospects has returned high-grade intercepts, headlined by 6m @ 12.67g/t Au from 114m (HERC035) at Heron South, an 800m southern extension confirmed at Howards, and along-strike extension to the south at Melbourne Bitter. Follow-up RC and diamond drilling is planned at all three prospects ahead of updated resource estimates later in 2026.",
+      "document_key": "2924-03125499-6A1340072",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03125499-6A1340072"
+    },
+    {
+      "ticker": "WGX",
+      "heading": "Westgold outlines A$100M Meekatharra brownfields expansion",
+      "body": "Westgold's Scoping Study proposes lifting Meekatharra hub processing capacity from 1.8Mtpa to 2.9Mtpa, targeting commissioning in FY28 and adding about 47kozpa for total production of 1.6Moz over 10 years. Indicative capital is A$65 million to A$100 million with a 9-month payback and project NPV of approximately A$1.9 billion at A$5,500/oz gold. Feasibility-level work is now underway ahead of a potential investment decision in late FY27.",
+      "document_key": "2924-03125343-6A1340033",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03125343-6A1340033"
+    },
+    {
+      "ticker": "DTM",
+      "heading": "Dart Mining targets deep tin at Walwa after historic drill review",
+      "body": "Dart Mining has compiled and verified 150 historic drill holes (7,672m) at its Walwa Tin-Tantalum Project in Victoria, generating two priority targets: a larger high-grade greisen zone 400m to 600m below surface and repeating mineralised dykes indicated by seismic survey. Historic pre-JORC estimates include 8.64Mt @ 0.163% Sn and a higher-grade zone of 993,000t @ 0.38% Sn. Diamond drilling of the two targets is expected to start in October 2026.",
+      "document_key": "2924-03125356-3A699668",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03125356-3A699668"
+    }
+  ],
+  "quarterlies": [],
+  "_unverified": [
+    {
+      "ticker": "WGX",
+      "headline": "2.9Mtpa Meekatharra Expansion Plan",
+      "figures": [
+        "1.9 billion"
+      ]
+    }
+  ]
+}
