@@ -19,7 +19,19 @@ MUTED = "#585858"
 WHITE = "#FFFFFF"
 
 FONT = "'Open Sans','Segoe UI',Helvetica,Arial,sans-serif"
-WIDTH = 680
+
+# WIDTH is the widest the email will ever draw. Set it to 0 for full bleed, so
+# the briefing fills whatever window it is opened in.
+#
+# PROSE is a second, tighter cap that applies only to running text. The table
+# genuinely wants the room: company names and drill intercepts were wrapping
+# inside a 350px column at the old 680. Paragraphs do not. A line of body text
+# stretched across a 1400px monitor runs to about 190 characters, and the eye
+# loses its place returning to the left margin. Newspapers set columns, and for
+# the same reason. So the frame goes as wide as the window and the prose stays
+# at a length that can be read.
+WIDTH = 0
+PROSE = 900
 
 DISCLAIMER_HEADING = "General Advice Only"
 
@@ -71,9 +83,10 @@ def _p(text, size=15, colour=NAVY, weight="normal", top=0, bottom=14):
     blocks = [b.strip() for b in _text(text).split("\n\n") if b.strip()]
     if not blocks:
         return ""
+    cap = f"max-width:{PROSE}px;" if PROSE else ""
     return "".join(
         f'<p style="margin:{top if i == 0 else 0}px 0 {bottom}px 0;font-family:{FONT};'
-        f'font-size:{size}px;line-height:1.55;color:{colour};'
+        f'font-size:{size}px;line-height:1.55;color:{colour};{cap}'
         f'font-weight:{weight};">{escape(b)}</p>'
         for i, b in enumerate(blocks)
     )
@@ -127,6 +140,15 @@ def _date_span(entries):
                 f"{last.day} {last.strftime('%B %Y')}")
     return (f"{first.day} {first.strftime('%B %Y')} to "
             f"{last.day} {last.strftime('%B %Y')}")
+
+
+def _frame_attr():
+    """Outlook reads the width attribute, so give it one only when capped."""
+    return f'width="{WIDTH}"' if WIDTH else 'width="100%"'
+
+
+def _frame_cap():
+    return f"max-width:{WIDTH}px;" if WIDTH else ""
 
 
 def _band(title, subtitle=None):
@@ -389,9 +411,46 @@ def _quarterly(ticker, items):
     """
 
 
+def _also_lodged(entries):
+    """Every announcement collected but not written up, named in one line each.
+
+    Marketing decks and routine filings both land here: Appendix 3B notices,
+    director's interest changes, cleansing notices, option exercises. Across the
+    archive to date 82 such items were collected, scored, and then rendered
+    nowhere at all, alongside 38 suppressed decks. None of it deserves a
+    summary and all of it deserves to be visible, so that every announcement the
+    collector saw appears somewhere in this email and a filter that throws away
+    the wrong thing can be caught by eye the next morning.
+    """
+    if not entries:
+        return ""
+    lines = "".join(
+        f'<div style="font-family:{FONT};font-size:12px;line-height:1.5;'
+        f'color:{MUTED};padding-bottom:5px;">'
+        f'{_plain_label(_text(e.get("ticker")), size=12)}'
+        f'<span style="color:{MUTED};">&nbsp;&nbsp;</span>'
+        f'{_link(_text(e.get("headline")), e.get("url"), colour=MUTED, weight="normal", size=12)}'
+        f"</div>"
+        for e in entries
+    )
+    return f"""
+    {_subheading("Also Lodged")}
+    <tr><td style="padding-bottom:6px;">
+      <div style="font-family:{FONT};font-size:12px;line-height:1.5;
+                  color:{MUTED};padding-bottom:9px;">Everything else the
+        watchlist lodged in the window: presentations and routine filings,
+        listed but not written up. Open one if the headline suggests
+        otherwise.</div>
+      {lines}
+    </td></tr>
+    <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
+    """
+
+
 def _contacts():
     cells = "".join(
-        f'<td width="33%" valign="top" style="padding-right:12px;">'
+        f'<td class="dcp-contact" width="33%" valign="top" '
+        f'style="padding-right:12px;word-break:break-word;overflow-wrap:anywhere;">'
         f'<div style="font-family:{FONT};font-size:14px;font-weight:bold;'
         f'color:{NAVY};">{escape(n)}</div>'
         f'<div style="font-family:{FONT};font-size:12px;font-weight:bold;'
@@ -423,10 +482,12 @@ def render(briefing, pack):
 
     body += _summary_cards(briefing.get("summaries") or [])
 
-    quarterlies = briefing.get("quarterlies") or []
-    if quarterlies:
-        body.append(_subheading("Quarterlies"))
-        for ticker, items in _group_by_ticker(quarterlies):
+    # "other" is the current key; "quarterlies" is read too so an archived
+    # briefing from before the rename still renders.
+    other = briefing.get("other") or briefing.get("quarterlies") or []
+    if other:
+        body.append(_subheading("Other"))
+        for ticker, items in _group_by_ticker(other):
             body.append(_quarterly(ticker, items))
 
     if briefing.get("watch_items"):
@@ -434,6 +495,8 @@ def render(briefing, pack):
     body.append(_band("Day in Brief"))
     body.append(f'<tr><td>{_p(briefing.get("day_in_brief",""))}</td></tr>')
 
+    body.append(_also_lodged(briefing.get("also_lodged")
+                             or briefing.get("not_summarised") or []))
     body.append(_contacts())
     paras = "".join(
         f'<div style="font-family:{FONT};font-size:10px;line-height:1.5;'
@@ -450,13 +513,23 @@ def render(briefing, pack):
     html = f"""<!DOCTYPE html>
 <html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  /* Phones only. Outlook on the desktop ignores embedded styles and is never
+     narrow enough to need this. Three contacts side by side cannot fit on a
+     390px screen without their email addresses setting a floor under the whole
+     layout, which is what pushed the briefing off the right edge on mobile. */
+  @media only screen and (max-width:600px) {{
+    td.dcp-contact {{ display:block !important; width:100% !important;
+                      padding:0 0 12px 0 !important; }}
+  }}
+</style>
 <title>ASX Watchlist Catch Up, {escape(date)}</title></head>
 <body style="margin:0;padding:0;background-color:#F4F5F6;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
        style="background-color:#F4F5F6;">
  <tr><td align="center" style="padding:22px 10px;">
-  <table role="presentation" width="{WIDTH}" cellpadding="0" cellspacing="0" border="0"
-         style="width:100%;max-width:{WIDTH}px;background-color:{WHITE};">
+  <table role="presentation" {_frame_attr()} cellpadding="0" cellspacing="0" border="0"
+         style="width:100%;{_frame_cap()}background-color:{WHITE};">
 
    <tr><td style="background-color:{NAVY};padding:22px 18px 20px 18px;">
      <img src="cid:dcpmark" width="150" alt="Discovery Capital Partners"
@@ -507,14 +580,21 @@ def _plain(briefing, pack):
             out.append(ticker)
             for s in items:
                 out += [f"  {_text(s.get('heading'))}", _text(s.get("body")), ""]
-    if briefing.get("quarterlies"):
-        out.append("QUARTERLIES")
-        for ticker, items in _group_by_ticker(briefing["quarterlies"]):
+    other_txt = briefing.get("other") or briefing.get("quarterlies") or []
+    if other_txt:
+        out.append("OTHER")
+        for ticker, items in _group_by_ticker(other_txt):
             out.append(f"  {ticker}  {_text(items[0].get('company'))}")
             out += [f"    {_text(q.get('summary'))}" for q in items] + [""]
     watch = _bullets(briefing.get("watch_items"))
     if watch:
         out += ["WATCH ITEMS"] + [f"  - {w}" for w in watch] + [""]
-    out += ["DAY IN BRIEF", _text(briefing.get("day_in_brief")), "",
+    out += ["DAY IN BRIEF", _text(briefing.get("day_in_brief")), ""]
+    lodged = briefing.get("also_lodged") or briefing.get("not_summarised") or []
+    if lodged:
+        out += ["ALSO LODGED"]
+        out += [f"  {_text(e.get('ticker'))}  {_text(e.get('headline'))}"
+                for e in lodged] + [""]
+    out += [
             DISCLAIMER_HEADING.upper(), DISCLAIMER]
     return "\n".join(out)
