@@ -97,6 +97,9 @@ def _p(text, size=15, colour=NAVY, weight="normal", top=0, bottom=14):
 # a rule. Flip this one word to change it.
 MULTI_SEPARATOR = "line"
 
+# How many columns Also Lodged uses at full desktop width.
+LODGED_COLUMNS = 3
+
 
 def _group_by_ticker(entries):
     """[(ticker, [entry, ...]), ...] in first-appearance order.
@@ -149,6 +152,34 @@ def _frame_attr():
 
 def _frame_cap():
     return f"max-width:{WIDTH}px;" if WIDTH else ""
+
+
+# A paragraph of the closing summary is written as "Theme: sentences." The
+# theme is set in bold so the section can be scanned rather than read whole.
+# Nothing is required: a paragraph with no colon, or with a long run of text
+# before one, is rendered exactly as written.
+THEME = re.compile(r"^([A-Z][^:.]{2,34}):\s+(.*)$", re.S)
+
+
+def _themed(text, size=15, colour=NAVY, bottom=14):
+    """Render the closing summary, bolding each paragraph's opening theme."""
+    blocks = [b.strip() for b in _text(text).split("\n\n") if b.strip()]
+    if not blocks:
+        return ""
+    out = []
+    for block in blocks:
+        m = THEME.match(block)
+        if m:
+            body = (f'<span style="font-weight:bold;">{escape(m.group(1))}:</span> '
+                    f'{escape(m.group(2))}')
+        else:
+            body = escape(block)
+        out.append(
+            f'<p style="margin:0 0 {bottom}px 0;font-family:{FONT};'
+            f'font-size:{size}px;line-height:1.55;color:{colour};'
+            f'max-width:{PROSE}px;">{body}</p>'
+        )
+    return "".join(out)
 
 
 def _band(title, subtitle=None):
@@ -424,24 +455,34 @@ def _also_lodged(entries):
     """
     if not entries:
         return ""
-    lines = "".join(
-        f'<div style="font-family:{FONT};font-size:12px;line-height:1.5;'
-        f'color:{MUTED};padding-bottom:5px;">'
-        f'{_plain_label(_text(e.get("ticker")), size=12)}'
-        f'<span style="color:{MUTED};">&nbsp;&nbsp;</span>'
-        f'{_link(_text(e.get("headline")), e.get("url"), colour=MUTED, weight="normal", size=12)}'
-        f"</div>"
-        for e in entries
+
+    def line(entry):
+        return (f'<div style="font-family:{FONT};font-size:12px;line-height:1.5;'
+                f'color:{MUTED};padding-bottom:5px;">'
+                f'{_plain_label(_text(entry.get("ticker")), size=12)}'
+                f'<span style="color:{MUTED};">&nbsp;&nbsp;</span>'
+                f'{_link(_text(entry.get("headline")), entry.get("url"), colour=MUTED, weight="normal", size=12)}'
+                f"</div>")
+
+    # Sorted by ticker so a name's filings sit together, then split down each
+    # column in turn rather than across, which is how a list is read.
+    entries = sorted(entries, key=lambda x: (_text(x.get("ticker")), _text(x.get("headline"))))
+    # At least three lines to a column, so a short list stays a single list
+    # rather than three lonely entries strung across the page.
+    n = max(1, min(LODGED_COLUMNS, len(entries) // 3))
+    per = -(-len(entries) // n)
+    chunks = [entries[i:i + per] for i in range(0, len(entries), per)] or [[]]
+    width = f"{100 // len(chunks)}%"
+    cells = "".join(
+        f'<td class="dcp-lodged" width="{width}" valign="top" '
+        f'style="padding-right:18px;">{"".join(line(x) for x in chunk)}</td>'
+        for chunk in chunks
     )
     return f"""
     {_subheading("Also Lodged")}
     <tr><td style="padding-bottom:6px;">
-      <div style="font-family:{FONT};font-size:12px;line-height:1.5;
-                  color:{MUTED};padding-bottom:9px;">Everything else the
-        watchlist lodged in the window: presentations and routine filings,
-        listed but not written up. Open one if the headline suggests
-        otherwise.</div>
-      {lines}
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+             border="0"><tr>{cells}</tr></table>
     </td></tr>
     <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
     """
@@ -493,7 +534,7 @@ def render(briefing, pack):
     if briefing.get("watch_items"):
         body.append(_card("Watch items", bullets=briefing["watch_items"]))
     body.append(_band("Day in Brief"))
-    body.append(f'<tr><td>{_p(briefing.get("day_in_brief",""))}</td></tr>')
+    body.append(f'<tr><td>{_themed(briefing.get("day_in_brief", ""))}</td></tr>')
 
     body.append(_also_lodged(briefing.get("also_lodged")
                              or briefing.get("not_summarised") or []))
@@ -521,6 +562,17 @@ def render(briefing, pack):
   @media only screen and (max-width:600px) {{
     td.dcp-contact {{ display:block !important; width:100% !important;
                       padding:0 0 12px 0 !important; }}
+  }}
+  /* Also Lodged runs in three columns so a 20-item list is seven lines deep
+     rather than twenty. Two columns on a laptop, one on a phone. Outlook on
+     the desktop ignores all of this and keeps three, which is what a window
+     that wide should show. */
+  @media only screen and (max-width:1000px) {{
+    td.dcp-lodged {{ display:inline-block !important; width:47% !important;
+                     vertical-align:top !important; }}
+  }}
+  @media only screen and (max-width:620px) {{
+    td.dcp-lodged {{ display:block !important; width:100% !important; }}
   }}
 </style>
 <title>ASX Watchlist Catch Up, {escape(date)}</title></head>
