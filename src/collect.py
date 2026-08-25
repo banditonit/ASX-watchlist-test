@@ -369,6 +369,24 @@ def collect(codes, hours=24, now=None, since=None):
     for record in records:
         record.update(quotes.get(record["ticker"]) or {})
 
+    # A company's own announcements feed does not carry the companyInfo block
+    # that the market-wide feed does, so a record found by the reconciliation
+    # pass falls back to its ticker for a name and the Company column reads
+    # "WGX" instead of "WESTGOLD RESOURCES LIMITED". The name is already in
+    # hand twice over: on any sweep record for the same code, and on the
+    # company header fetched just above for its market cap. Use it.
+    names = {}
+    for record in records:
+        company = record.get("company")
+        if company and company != record["ticker"]:
+            names.setdefault(record["ticker"], company)
+    for ticker, quote in quotes.items():
+        if quote and quote.get("long_name"):
+            names.setdefault(ticker, quote["long_name"])
+    for record in records:
+        if record.get("company") == record["ticker"]:
+            record["company"] = names.get(record["ticker"], record["ticker"])
+
     # Prior announcements, so a restatement can be told from a first release.
     # Read out of the feeds already fetched above rather than re-requesting.
     for record in records:
