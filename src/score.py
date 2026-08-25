@@ -105,6 +105,27 @@ NEVER_PERIODIC = re.compile(
     re.I,
 )
 
+# Substantial holder notices: Forms 603, 604 and 605. A prescribed form whose
+# contents are set by regulation, so unlike an ordinary routine filing there is
+# no version of it that carries news its headline does not. They are capped
+# unconditionally, with no content escape, because the escape is exactly what
+# let eight of them into the main section on 25 August 2026: "Becoming a
+# substantial holder" does match the routine rule, but the Form 603 body scores
+# on acquisition and placement language and reached 15, above the threshold at
+# which that rule stops applying.
+#
+# Nothing is lost. The headline carries the holder and the percentage, and it
+# is printed in full under Also Lodged, so a stake worth noticing is still one
+# click away.
+SUBSTANTIAL = re.compile(
+    r"\b(?:becoming|ceasing to be) a substantial (?:holder|shareholder)\b|"
+    r"\bchange (?:in|of|to) substantial (?:holding|shareholding|interest)\b|"
+    r"\bsubstantial (?:holder|shareholder|holding) notice\b|"
+    r"\bform 60[3-5]\b|"
+    r"\bnotice of (?:initial )?substantial (?:holder|holding)\b",
+    re.I,
+)
+
 # Diary notes about a result, not the result. These carry nothing at all.
 ADMIN_NOTICE = re.compile(
     r"conference call|investor (?:call|webinar|briefing) (?:details|invit)|"
@@ -266,6 +287,10 @@ def score(record):
     if ADMIN_NOTICE.search(headline) and total < 14:
         total = min(total, 4)
         hits.append("diary note")
+
+    if SUBSTANTIAL.search(headline):
+        total = min(total, 4)
+        hits.append("substantial holder notice")
 
     # A routine filing headline caps the score unless the body says otherwise.
     routine = bool(ROUTINE.match(headline.strip()))
