@@ -68,6 +68,35 @@ def previous_run(archive=None):
     return latest, seen
 
 
+SUBJECT_MAX = 72
+SUBJECT_SUFFIX = " | DCP ASX Watchlist"
+
+
+def build_subject(briefing, pack):
+    """The subject is the day's headline. Nothing else.
+
+    It used to read "ASX Watchlist, 25 August 2026: 3 items", which is identical
+    on the morning a name is taken over and on a day of routine drilling. There
+    is no standing prefix now: the line is the news, the way a wire headline is.
+    The model writes it as part of the framing; if it does not, the most
+    material announcement is used, which is the first row, because rows are
+    ranked by materiality.
+    """
+    lead = (briefing.get("subject") or "").strip()
+    rows = briefing.get("rows") or []
+    if not lead and rows:
+        top = rows[0]
+        lead = f"{top.get('ticker', '')} {top.get('announcement', '')}".strip()
+
+    if not lead:
+        date = (pack.get("date_awst") or "").split()
+        when = f"{date[0]} {date[1][:3]}" if len(date) == 3 else ""
+        lead = f"No confirmed announcements{', ' + when if when else ''}"
+    elif len(lead) > SUBJECT_MAX:
+        lead = lead[:SUBJECT_MAX].rsplit(" ", 1)[0].rstrip(" ,;:") + "..."
+    return f"{lead}{SUBJECT_SUFFIX}"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true", help="build but do not send")
@@ -138,12 +167,12 @@ def main():
 
     for r in ranked["full"]:
         r["tier"] = "full"
-    for r in ranked.get("quarterly") or []:
-        r["tier"] = "quarterly"
+    for r in ranked.get("periodic") or []:
+        r["tier"] = "quarterly"          # the one-line desk-note writing style
 
     materials = summarise_items(ranked["full"])
-    quarterlies = summarise_items(ranked.get("quarterly") or [])
-    print(f"summarised: {len(materials)} confirmed, {len(quarterlies)} quarterlies")
+    quarterlies = summarise_items(ranked.get("periodic") or [])
+    print(f"summarised: {len(materials)} confirmed, {len(quarterlies)} periodic")
 
     # Every figure must trace back to the announcement it came from.
     problems = audit(materials) + audit(quarterlies)
@@ -167,14 +196,30 @@ def main():
     briefing["summaries"] = [{k: m.get(k) for k in
                               ("ticker", "heading", "body", "document_key")}
                              for m in materials]
-    briefing["quarterlies"] = [{k: q.get(k) for k in
-                                ("ticker", "company", "headline", "summary",
-                                 "document_key")} for q in quarterlies]
+    briefing["other"] = [{k: q.get(k) for k in
+                          ("ticker", "company", "headline", "summary",
+                           "document_key")} for q in quarterlies]
     briefing["_unverified"] = problems
 
-    briefing["quarterlies"] = enrich(briefing["quarterlies"], pack["announcements"])
+    # Marketing decks are not summarised, but they are named. A filter that
+    # drops things silently is indistinguishable from a filter that is broken,
+    # which is how the Ramelius resource and reserve update went missing on
+    # 25 August 2026 without anyone being able to see that it had. The reader
+    # gets one line per suppressed deck at the foot of the email.
+    # Everything collected but not written up: marketing decks and routine
+    # filings alike. 82 routine items across the archive to date were collected,
+    # scored, and then rendered nowhere at all. Listing them by headline costs
+    # four lines and means every announcement the collector saw appears
+    # somewhere in the email.
+    briefing["also_lodged"] = [
+        {k: r.get(k) for k in ("ticker", "company", "headline", "document_key")}
+        for r in ((ranked.get("presentation") or []) + (ranked.get("digest") or []))
+    ]
+
+    briefing["other"] = enrich(briefing["other"], pack["announcements"])
     add_links(briefing["rows"], pack["announcements"])
     add_links(briefing["summaries"], pack["announcements"])
+    add_links(briefing["also_lodged"], pack["announcements"])
 
     with open(os.path.join(ARCHIVE, f"{stamp}-briefing.json"), "w", encoding="utf-8") as fh:
         json.dump(briefing, fh, indent=2, ensure_ascii=False)
@@ -187,9 +232,7 @@ def main():
         fh.write(html)
 
     # ------------------------------------------------------------------- send
-    n = len(briefing.get("rows") or [])
-    subject = (f"ASX Watchlist, {pack['date_awst']}: "
-               + (f"{n} item{'s' if n != 1 else ''}" if n else "nothing confirmed"))
+    subject = build_subject(briefing, pack)
 
     if args.dry_run:
         print(f"dry run, would send to {len(load_recipients())} recipients: {subject}")
