@@ -7,8 +7,23 @@ Three endpoints on the ASX's own backing data service do all the work:
   file/{documentKey}             the announcement document itself
 
 The market-wide sweep is one request rather than one per ticker, so adding
-names to the watchlist costs nothing. Per-company calls are only used as a
-fallback if the market-wide feed looks incomplete.
+names to the watchlist costs nothing. It is also a single point of failure:
+anything the market-wide feed omits, or that sits beyond the pages this fetches,
+is simply never seen, and nothing downstream can tell the difference between
+"nothing was announced" and "we did not look far enough".
+
+That is not theoretical. On 25 August 2026 Ramelius lodged its 2026 Resources
+and Reserves Statement and only the accompanying investor presentation reached
+the pack. The statement was never collected, so no filter, score or summary
+could have saved it.
+
+So every watchlist code is now also asked directly, through its own
+announcements feed, and the two results are reconciled. The per-company pass is
+authoritative: it is the company's own list. Anything it finds that the sweep
+missed is added and recorded in `sweep_missed`, so a feed that starts dropping
+announcements shows up in the evidence pack instead of looking like a quiet day.
+That costs one request per code, about a minute for 93 names, and it is the only
+way to know the day is complete.
 
 Nothing here decides what is interesting. This module's only job is to come
 back with a complete, dated, full-text record of what was published. Judgement
@@ -87,7 +102,7 @@ def sweep(codes, start, end, session=None):
     """
     session = session or _session()
     wanted = {c.upper() for c in codes}
-    found, oldest_seen = {}, None
+    found, oldest_seen, covered = {}, None, False
 
     for page in range(MAX_PAGES):
         url = f"{API}/markets/announcements"
@@ -122,10 +137,49 @@ def sweep(codes, start, end, session=None):
             found[key] = _record(item, symbol, when, key)
 
         if oldest_seen is not None and oldest_seen < start:
+            covered = True
             break
         time.sleep(PAUSE)
 
+    # Reaching the page limit without reaching the start of the window means
+    # the sweep stopped early. It used to return its partial result silently,
+    # which is indistinguishable from a complete one.
+    if not covered:
+        print(f"  ! market-wide sweep stopped after {MAX_PAGES} pages without "
+              f"reaching the start of the window. Results may be incomplete; "
+              f"the per-company pass is the backstop.")
+
     return sorted(found.values(), key=lambda r: r["lodged_utc"], reverse=True)
+
+
+def company_feed(ticker, session=None, count=60):
+    """Raw recent announcement items for one company, newest first.
+
+    Fetched once per code and used twice: for the reconciliation below, and for
+    the prior-announcement history that tells a first release from a
+    restatement. One request, not two.
+    """
+    session = session or _session()
+    try:
+        resp = session.get(f"{API}/companies/{ticker}/announcements",
+                           params={"count": count, "page": 0}, timeout=TIMEOUT)
+        resp.raise_for_status()
+        return (resp.json().get("data") or {}).get("items") or []
+    except Exception as exc:                                   # noqa: BLE001
+        return {"_error": f"{type(exc).__name__}: {exc}"}
+
+
+def in_window(items, code, start, end):
+    """The records from one company's own feed that fall inside the window."""
+    out = []
+    for item in items or []:
+        when = _parse_dt(item.get("date"))
+        if when is None or when < start or when > end:
+            continue
+        key = item.get("documentKey")
+        if key:
+            out.append(_record(item, code.upper(), when, key))
+    return out
 
 
 def _record(item, symbol, when, key):
@@ -219,6 +273,22 @@ def fetch_quote(ticker, session=None):
     }
 
 
+def history_from(items, before, days=120):
+    """Headlines this company published before the window, from a fetched feed."""
+    cutoff = before - timedelta(days=days)
+    out = []
+    for item in items or []:
+        when = _parse_dt(item.get("date"))
+        if when is None or when >= before or when < cutoff:
+            continue
+        out.append({
+            "headline": (item.get("headline") or "").strip(),
+            "date_awst": to_awst(when).strftime("%-d %B %Y"),
+            "price_sensitive": bool(item.get("isPriceSensitive")),
+        })
+    return out
+
+
 def fetch_history(ticker, before, days=120, session=None, limit=40):
     """Headlines this company published in the months before the window.
 
@@ -251,10 +321,43 @@ def fetch_history(ticker, before, days=120, session=None, limit=40):
 
 
 def collect(codes, hours=24, now=None, since=None):
-    """Full pass: sweep the feed, read every document, then price the names."""
+    """Full pass: sweep, reconcile against every company, read, then price."""
     start, end = window(hours=hours, now=now, since=since)
     session = _session()
     records = sweep(codes, start, end, session=session)
+
+    # Ask every watchlist company directly and reconcile. The market-wide feed
+    # is fast but it is one source; a company's own feed is the record of what
+    # that company lodged. Anything only the company knows about is added here
+    # and reported, so a gap in the sweep is visible rather than silent.
+    feeds, feed_errors, missed = {}, {}, []
+    seen = {r["document_key"] for r in records}
+    for code in codes:
+        items = company_feed(code, session=session)
+        if isinstance(items, dict):
+            feed_errors[code] = items["_error"]
+            items = []
+        feeds[code] = items
+        for record in in_window(items, code, start, end):
+            if record["document_key"] in seen:
+                continue
+            seen.add(record["document_key"])
+            missed.append(record)
+            records.append(record)
+        time.sleep(PAUSE)
+
+    if missed:
+        print(f"  ! the market-wide sweep missed {len(missed)} announcement(s) "
+              f"that the companies' own feeds reported:")
+        for r in missed:
+            print(f"      {r['ticker']}  {r['date_awst']} {r['time_awst']}  "
+                  f"{r['headline'][:56]}")
+    if feed_errors:
+        print(f"  ! could not reach the company feed for {len(feed_errors)} "
+              f"code(s): {', '.join(sorted(feed_errors))}. Those names rely on "
+              f"the market-wide sweep alone today.")
+
+    records.sort(key=lambda r: r["lodged_utc"], reverse=True)
     for record in records:
         fetch_text(record, session=session)
         time.sleep(PAUSE)
@@ -267,12 +370,16 @@ def collect(codes, hours=24, now=None, since=None):
         record.update(quotes.get(record["ticker"]) or {})
 
     # Prior announcements, so a restatement can be told from a first release.
-    history = {}
-    for ticker in sorted({r["ticker"] for r in records}):
-        history[ticker] = fetch_history(ticker, start, session=session)
-        time.sleep(PAUSE)
+    # Read out of the feeds already fetched above rather than re-requesting.
     for record in records:
-        record["prior_announcements"] = history.get(record["ticker"], [])
+        items = feeds.get(record["ticker"])
+        if items is None:
+            items = company_feed(record["ticker"], session=session)
+            if isinstance(items, dict):
+                items = []
+            feeds[record["ticker"]] = items
+            time.sleep(PAUSE)
+        record["prior_announcements"] = history_from(items, start)
     return {
         "window_start_awst": to_awst(start).isoformat(),
         "window_end_awst": to_awst(end).isoformat(),
@@ -281,5 +388,9 @@ def collect(codes, hours=24, now=None, since=None):
         "date_awst": to_awst(end).strftime("%-d %B %Y"),
         "tickers_checked": len(codes),
         "window_hours": round((end - start).total_seconds() / 3600, 2),
+        "sweep_missed": [{"ticker": r["ticker"], "headline": r["headline"],
+                          "lodged_awst": r["lodged_awst"],
+                          "document_key": r["document_key"]} for r in missed],
+        "feed_errors": feed_errors,
         "announcements": records,
     }
