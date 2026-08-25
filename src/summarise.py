@@ -84,9 +84,16 @@ BANNED = """Never write that something was reiterated, restated, previously
 announced, confirmed, or refer the reader to an earlier announcement. Quarterlies
 restate by definition. Saying so is noise, and it wastes the line."""
 
-QUARTERLY_GUIDE = f"""This is a quarterly. Write the quarter's own numbers and
-nothing else: production, unit costs or AISC, cash and its quarter-on-quarter
-movement, progress against guidance, and any stated catalyst for next quarter.
+QUARTERLY_GUIDE = f"""This is a recurring calendar filing: a quarterly, a half
+year, a full year report or the statutory accounts. Write the period's own
+numbers and nothing else: production, unit costs or AISC, cash and its movement
+on the prior period, revenue, profit and dividend where the document reports
+them, and any stated catalyst for the period ahead.
+
+If guidance was set, changed, reaffirmed with a different number, or missed,
+that goes FIRST, before the production and cash figures. A guidance change is
+the one thing in a routine filing that moves a share price, and it is the
+reason this section is read at all.
 
 You are given this company's earlier announcement headlines. Use them only to
 recognise what NOT to write about. A quarterly typically recaps a feasibility
@@ -161,9 +168,11 @@ QUARTERLY_SCHEMA = {
             "summary": {
                 "type": "string",
                 "description": (
-                    "ONE dense line. Open with the company name and a verb, then "
-                    "production, unit costs, cash and its quarter-on-quarter "
-                    "movement, and progress against guidance. Do not open with the "
+                    "ONE dense line. Open with the company name and a verb. Lead "
+                    "with any change to guidance if there was one, then "
+                    "production, unit costs, cash and its movement on the prior "
+                    "period, and revenue, profit or dividend if the document "
+                    "reports them. Do not open with the "
                     "ticker or the market cap, those are added automatically. Style "
                     "to match: 'Ramelius closed the June quarter with $650m cash and "
                     "gold (+$43.1m QoQ) after producing 53.5koz gold at AISC of "
@@ -190,12 +199,29 @@ BRIEF_SCHEMA = {
                      "description": ("Lead paragraph. Use the counts given verbatim and "
                                      "lead with the most material item.")},
             "subtitle": {"type": "string", "description": "One line, the day's conclusion."},
+            "subject": {
+                "type": "string",
+                "description": (
+                    "The email subject line, used verbatim and by itself. It is "
+                    "the whole of what most readers see before deciding whether "
+                    "to open, so write it as a wire headline, not as a label. "
+                    "Name the single most material item of the day, led by its "
+                    "ticker, with the figure that makes it material if one fits. "
+                    "Under 72 characters. No full stop, no date, no count of "
+                    "announcements, no standing prefix and no mention of the "
+                    "watchlist or the briefing: nothing is added around it. "
+                    "'WGX scoping study lifts Meekatharra to 2.9Mtpa, A$100M "
+                    "capex' or 'RMS lifts group reserves 12% to 4.1Moz'. If the "
+                    "day has no standout, say what dominated it: 'Gold drilling "
+                    "across five names, no single standout'."
+                ),
+            },
             "watch_items": {"type": "array", "items": {"type": "string"},
                             "description": "Live situations with stated reason and timing."},
             "day_in_brief": {"type": "string",
                              "description": "Closing summary, most material first."},
         },
-        "required": ["lead", "subtitle", "watch_items", "day_in_brief"],
+        "required": ["lead", "subtitle", "subject", "watch_items", "day_in_brief"],
     },
 }
 
@@ -225,7 +251,7 @@ CUT_AT = re.compile(
     re.I,
 )
 
-TEXT_FIELDS = ("lead", "subtitle", "day_in_brief")
+TEXT_FIELDS = ("lead", "subtitle", "subject", "day_in_brief")
 ITEM_TEXT_FIELDS = ("announcement", "heading", "body", "summary", "restated_from")
 
 
@@ -466,8 +492,12 @@ def synthesise(materials, quarterlies, pack, client=None, model=None):
     for m in materials:
         parts.append(f"  {m['ticker']}: {m.get('heading','')}\n    {m.get('body','')}")
     if quarterlies:
-        parts.append("\nQUARTERLIES, secondary. Refer to them as a group rather than "
-                     "individually, and never present restated material as news:")
+        parts.append("\nRECURRING FILINGS (quarterlies, half years, full year "
+                     "reports), secondary. Refer to them as a group rather than "
+                     "individually, and never present restated material as news. "
+                     "The exception is a change to guidance: if one of these "
+                     "changed guidance, that belongs in the lead alongside the "
+                     "day's news, because it moves a price:")
         for q in quarterlies:
             parts.append(f"  {q['ticker']}: {q.get('summary','')}")
     parts.append("\nWrite the framing. Quote only figures that appear above. If "
@@ -477,7 +507,8 @@ def synthesise(materials, quarterlies, pack, client=None, model=None):
                  "name's news, not as several companies.")
 
     quarterly_rule = (
-        "Quarterlies are secondary. Never lead on a quarterly."
+        "Recurring calendar filings are secondary. Never lead on one, unless "
+        "it changed guidance."
         if quarterlies else
         "There are no quarterlies today. Do not mention quarterlies at all: not "
         "in the lead, not in the closing, not in a subordinate clause. Their "
@@ -495,7 +526,7 @@ def synthesise(materials, quarterlies, pack, client=None, model=None):
     framing = _normalise_framing(
         _call(client, system, prompt, BRIEF_SCHEMA, model=model, max_tokens=4000))
 
-    missing = [k for k in ("lead", "day_in_brief") if not framing.get(k)] \
+    missing = [k for k in ("lead", "subject", "day_in_brief") if not framing.get(k)] \
         or ([] if framing["watch_items"] else ["watch_items"])
     if missing:
         print(f"  ! framing came back without {', '.join(missing)}, retrying once")
