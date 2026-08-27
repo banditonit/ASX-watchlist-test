@@ -288,7 +288,7 @@ def _band(title, subtitle=None):
     """
 
 
-def _table(rows, times=None):
+def _table(rows, times=None, label=None, widths=None):
     if not rows:
         return ""
     times = times or {}
@@ -303,7 +303,7 @@ def _table(rows, times=None):
     # often enough to be misleading: an escrow release and a conference deck
     # both came back as "Capital Raising" on 4 August. The space it freed goes
     # to Announcement, which now carries the best drill intercept in full.
-    widths = ["10%", "22%", "52%", "16%"]
+    widths = widths or ["10%", "22%", "52%", "16%"]
     # One row per name, not per announcement. A company that lodges three
     # documents before the open is one line of the day's story, not three: on
     # 10 August 2026 Wia Gold filed a DFS, a resource upgrade and a trading
@@ -319,7 +319,7 @@ def _table(rows, times=None):
         parts = [_link(_text(it.get("announcement")), it.get("url"),
                        weight="normal") for it in items]
         cells = [
-            _plain_label(ticker),
+            _plain_label(label(ticker, items) if label else ticker),
             escape(_text(items[0].get("company"))),
             _join_parts(parts),
             escape(_when(items, times)),
@@ -505,6 +505,31 @@ def _subheading(text):
     """
 
 
+def _cap_label(ticker, items):
+    """'GGP ($9.1B)' for the ticker cell, so size is visible without a column."""
+    cap = _text(items[0].get("cap_label"))
+    return f"{ticker} ({cap})" if cap else ticker
+
+
+def _other_rows(entries, pack):
+    """Turn the recurring filings into table rows.
+
+    The date is joined on from the evidence pack by document key, the same way
+    the lodgement times are, because these entries were never given one.
+    """
+    dates = {a.get("document_key"): _text(a.get("date_awst"))
+             for a in (pack.get("announcements") or [])}
+    return [{
+        "ticker": e.get("ticker"),
+        "company": e.get("company"),
+        "announcement": e.get("summary"),
+        "date": dates.get(e.get("document_key"), ""),
+        "document_key": e.get("document_key"),
+        "cap_label": e.get("cap_label"),
+        "url": e.get("url"),
+    } for e in entries]
+
+
 def _quarterly(ticker, items):
     """One name as a dense desk line, or several lines if it filed more than once.
 
@@ -618,11 +643,23 @@ def render(briefing, pack):
 
     # "other" is the current key; "quarterlies" is read too so an archived
     # briefing from before the rename still renders.
+    #
+    # Rendered as the same table as the confirmed announcements above, one row
+    # per name and one line per filing. It used to be dense prose: on 27 August
+    # 2026 a single Ora Banda entry ran to 714 characters and the section was
+    # longer than the announcements it was secondary to. These are recurring
+    # filings. The row says whether to open the document, and the document says
+    # the rest.
     other = briefing.get("other") or briefing.get("quarterlies") or []
     if other:
         body.append(_subheading("Other"))
-        for ticker, items in _group_by_ticker(other):
-            body.append(_quarterly(ticker, items))
+        # A wider ticker column, because these rows carry the market cap next
+        # to the code and "OBM ($3.2B)" does not fit the 10% the main table
+        # uses. Without this the cell wraps to two lines and the row stops
+        # being one line, which was the whole point.
+        body.append(_table(_other_rows(other, pack), lodged_at,
+                           label=_cap_label,
+                           widths=["14%", "20%", "50%", "16%"]))
 
     if briefing.get("watch_items"):
         body.append(_card("Watch items", bullets=briefing["watch_items"]))
@@ -734,9 +771,16 @@ def _plain(briefing, pack):
     other_txt = briefing.get("other") or briefing.get("quarterlies") or []
     if other_txt:
         out.append("OTHER")
-        for ticker, items in _group_by_ticker(other_txt):
-            out.append(f"  {ticker}  {_text(items[0].get('company'))}")
-            out += [f"    {_text(q.get('summary'))}" for q in items] + [""]
+        for ticker, items in _group_by_ticker(_other_rows(other_txt, pack)):
+            company, when = _text(items[0].get("company")), _when(items, lodged_at)
+            head = _cap_label(ticker, items)
+            if len(items) == 1:
+                out.append(f"  {head}  {company}  "
+                           f"{_text(items[0].get('announcement'))}  ({when})")
+            else:
+                out.append(f"  {head}  {company}  ({when})")
+                out += [f"       {_text(i.get('announcement'))}" for i in items]
+        out.append("")
     watch = _bullets(briefing.get("watch_items"))
     if watch:
         out += ["WATCH ITEMS"] + [f"  - {w}" for w in watch] + [""]
