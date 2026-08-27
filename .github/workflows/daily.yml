@@ -25,12 +25,38 @@ on:
     # Wakes before 16:00 UTC belong to the same AWST day (1-5 = Mon-Fri).
     # Wakes at or after 16:00 UTC belong to the NEXT AWST day, so they run
     # Sun-Thu (0-4) to produce a Mon-Fri briefing.
-    - cron: "52 22 * * 0-4"     # 06:52 AWST, insurance
-    - cron: "34 23 * * 0-4"     # 07:34 AWST, sleeps 36 min, sends at 08:10
-    - cron: "04 0 * * 1-5"      # 08:04 AWST, sleeps 6 min, sends at 08:10
-    - cron: "26 0 * * 1-5"      # 08:26 AWST, catches a late start
-    - cron: "08 1 * * 1-5"      # 09:08 AWST, catches a later one
-    - cron: "14 2 * * 1-5"      # 10:14 AWST, last resort
+    #
+    # Every wake now sits BEFORE midnight UTC, and that is the whole point.
+    # Measured against runs 88 to 108 over three consecutive days, the two
+    # wakes booked before midnight started 9 to 18 minutes late, while the four
+    # booked after it started 55 to 108 minutes late, every single day:
+    #
+    #     22:52 UTC ->  9 to  18 min late
+    #     23:34 UTC -> 13 to  15 min late
+    #     00:04 UTC -> 102 to 108 min late
+    #     00:26 UTC ->  92 to 101 min late
+    #     01:08 UTC ->  74 to  89 min late
+    #     02:14 UTC ->  55 to  61 min late
+    #
+    # So four of the six wakes were arriving long after the 08:10 send and were
+    # insurance in name only. One wake, 23:34, was doing all the work, and on
+    # 27 August 2026 it was dropped during a GitHub Actions incident and the
+    # briefing simply did not go out. Six wakes, one point of failure.
+    #
+    # The three at 23:17, 23:34 and 23:51 are the working set: at the observed
+    # 15 minutes late they start at 07:32, 07:49 and 08:06 AWST, all inside the
+    # 45 minute window where the gate waits for 08:10. The two earlier ones
+    # cover a morning where the queue is deeper than usual. The two after
+    # midnight are kept only as a floor, on the understanding that they will be
+    # an hour late; late is better than never.
+    - cron: "47 21 * * 0-4"     # 05:47 AWST, deep insurance
+    - cron: "19 22 * * 0-4"     # 06:19 AWST, deep insurance
+    - cron: "52 22 * * 0-4"     # 06:52 AWST
+    - cron: "17 23 * * 0-4"     # 07:17 AWST, working set
+    - cron: "34 23 * * 0-4"     # 07:34 AWST, working set
+    - cron: "51 23 * * 0-4"     # 07:51 AWST, working set
+    - cron: "26 0 * * 1-5"      # 08:26 AWST, floor, expect it an hour late
+    - cron: "08 1 * * 1-5"      # 09:08 AWST, floor
 
   workflow_dispatch:        # lets anyone re-run it by hand from the Actions tab
     inputs:
