@@ -41,14 +41,61 @@ AWST = ZoneInfo("Australia/Perth")
 API = "https://asx.api.markitdigital.com/asx-research/1.0"
 UA = "DiscoveryCapital-WatchlistBriefing/1.0 (internal monitoring)"
 
-PAGE_SIZE = 500
-MAX_PAGES = 12
+# The feed caps how many items it will return per page, whatever is asked for,
+# and it does not say so. Paging stops when the window is covered, so the page
+# budget only has to be large enough to get there: on 26 August 2026 twelve
+# pages reached back 88 minutes against a 24 hour window, and the sweep found
+# 12 of the day's 32 announcements. The 20 it missed were not missing from the
+# feed, they were on page 13 and beyond.
+PAGE_SIZE = 500          # asked for; the feed returns what it wants to
+MAX_PAGES = 80           # a budget, not a target: paging stops at the window
+MAX_ITEMS = 40_000       # runaway guard, roughly a fortnight of ASX filings
 TIMEOUT = 45
 PAUSE = 0.4          # be a polite client, this is someone else's server
 
 
+# Statuses worth trying again. 429 is the feed asking us to slow down, and the
+# 5xx range is it having a bad moment; neither is a reason to lose the day.
+# A 400 is not here: it is the feed saying the request itself is wrong, and
+# repeating it verbatim would just be rude. AQI, PGO and PDI have returned 400
+# on every run since 25 August 2026 while the other 90 codes were fine, which
+# is a per-code problem rather than a volume one.
+RETRY_STATUS = {429, 500, 502, 503, 504}
+MAX_RETRIES = 3
+BACKOFF = 2.0            # seconds, doubling, and Retry-After wins if it is set
+BACKOFF_CAP = 60.0
+
+
 class FeedError(Exception):
     """The upstream feed did not look the way we expect. Never worked around."""
+
+
+def _get(session, url, params=None, timeout=TIMEOUT, label=""):
+    """One request, with backoff on the statuses that mean 'try again'.
+
+    The page budget went from 12 to 80 to cover the whole window, so a run now
+    makes roughly 225 requests where it made 150. That is still gentle, but it
+    is enough that being told to slow down is a question of when rather than
+    whether, and being told to slow down should cost a pause, not a briefing.
+    """
+    delay = BACKOFF
+    for attempt in range(MAX_RETRIES + 1):
+        resp = session.get(url, params=params, timeout=timeout)
+        if resp.status_code not in RETRY_STATUS or attempt == MAX_RETRIES:
+            resp.raise_for_status()
+            return resp
+        after = (resp.headers or {}).get("Retry-After")
+        try:
+            wait = float(after) if after else delay
+        except (TypeError, ValueError):
+            wait = delay
+        wait = min(wait, BACKOFF_CAP)
+        print(f"  feed returned {resp.status_code}{' on ' + label if label else ''}, "
+              f"waiting {wait:.0f}s and trying again "
+              f"({attempt + 1} of {MAX_RETRIES})")
+        time.sleep(wait)
+        delay *= 2
+    raise FeedError("unreachable")
 
 
 def _session():
@@ -102,23 +149,49 @@ def sweep(codes, start, end, session=None):
     """
     session = session or _session()
     wanted = {c.upper() for c in codes}
-    found, oldest_seen, covered = {}, None, False
+    found, oldest_seen, covered, broke = {}, None, False, False
 
+    # The market-wide feed used to be the only source, so a change in its shape
+    # had to stop the run rather than report an empty day. It is not the only
+    # source any more, and on 25 and 26 August 2026 it found 7 and 8 of the 32
+    # announcements collected: the per-company pass supplied the other three
+    # quarters. A feed in that state must not be able to take the briefing down
+    # with it, so failures here are reported and stepped over, and the caller
+    # decides whether what remains is enough.
+
+    scanned, per_page = 0, None
     for page in range(MAX_PAGES):
         url = f"{API}/markets/announcements"
-        resp = session.get(url, params={"count": PAGE_SIZE, "page": page},
-                           timeout=TIMEOUT)
-        resp.raise_for_status()
-        payload = resp.json()
+        try:
+            resp = _get(session, url, params={"count": PAGE_SIZE, "page": page},
+                        label=f"market page {page}")
+            payload = resp.json()
+        except Exception as exc:                               # noqa: BLE001
+            print(f"  ! market-wide feed failed on page {page}: "
+                  f"{type(exc).__name__}: {exc}")
+            print("    Falling back to the per-company pass for the whole day.")
+            broke = True
+            break
 
         items = (payload.get("data") or {}).get("items")
         if items is None:
-            raise FeedError(
-                "The market-wide announcements feed did not contain data.items. "
-                "The API shape may have changed; stopping rather than reporting "
-                "an empty day."
-            )
+            print("  ! the market-wide feed returned no data.items. Its shape may "
+                  "have changed. Falling back to the per-company pass.")
+            broke = True
+            break
         if not items:
+            break
+
+        if per_page is None:
+            per_page = len(items)
+            if per_page < PAGE_SIZE:
+                print(f"  the feed returned {per_page} items per page, not the "
+                      f"{PAGE_SIZE} requested. Paging until the window is covered.")
+        scanned += len(items)
+        if scanned > MAX_ITEMS:
+            print(f"  ! scanned {scanned} market announcements without reaching "
+                  f"the start of the window. Stopping.")
+            broke = True
             break
 
         for item in items:
@@ -144,15 +217,22 @@ def sweep(codes, start, end, session=None):
     # Reaching the page limit without reaching the start of the window means
     # the sweep stopped early. It used to return its partial result silently,
     # which is indistinguishable from a complete one.
-    if not covered:
-        print(f"  ! market-wide sweep stopped after {MAX_PAGES} pages without "
-              f"reaching the start of the window. Results may be incomplete; "
-              f"the per-company pass is the backstop.")
+    if not covered and not broke:
+        reached = to_awst(oldest_seen).strftime("%d %b %H:%M") if oldest_seen else "nothing"
+        print(f"  ! market-wide sweep exhausted {MAX_PAGES} pages and only "
+              f"reached back to {reached} AWST, short of the window start. "
+              f"Raise MAX_PAGES. The per-company pass covers the gap meanwhile.")
+    elif covered and per_page:
+        print(f"  market-wide sweep covered the window in "
+              f"{scanned} announcements.")
 
     return sorted(found.values(), key=lambda r: r["lodged_utc"], reverse=True)
 
 
-def company_feed(ticker, session=None, count=60):
+COMPANY_FEED_COUNTS = (60, 25)
+
+
+def company_feed(ticker, session=None, count=None):
     """Raw recent announcement items for one company, newest first.
 
     Fetched once per code and used twice: for the reconciliation below, and for
@@ -160,13 +240,21 @@ def company_feed(ticker, session=None, count=60):
     restatement. One request, not two.
     """
     session = session or _session()
-    try:
-        resp = session.get(f"{API}/companies/{ticker}/announcements",
-                           params={"count": count, "page": 0}, timeout=TIMEOUT)
-        resp.raise_for_status()
-        return (resp.json().get("data") or {}).get("items") or []
-    except Exception as exc:                                   # noqa: BLE001
-        return {"_error": f"{type(exc).__name__}: {exc}"}
+    # AQI, PGO and PDI returned 400 Bad Request on count=60 on both 25 and 26
+    # August 2026 while every other code was fine, so a smaller page is tried
+    # before the code is written off. A name that errors is a name collected
+    # from the market-wide sweep alone that day, which is now the weaker source.
+    sizes = (count,) if count else COMPANY_FEED_COUNTS
+    last = ""
+    for size in sizes:
+        try:
+            resp = _get(session, f"{API}/companies/{ticker}/announcements",
+                        params={"count": size, "page": 0}, label=ticker)
+            return (resp.json().get("data") or {}).get("items") or []
+        except Exception as exc:                               # noqa: BLE001
+            last = f"{type(exc).__name__}: {exc}"
+            time.sleep(PAUSE)
+    return {"_error": last}
 
 
 def in_window(items, code, start, end):
@@ -214,8 +302,7 @@ def fetch_text(record, session=None, max_chars=180_000):
     session = session or _session()
     key = record["document_key"]
     try:
-        resp = session.get(f"{API}/file/{key}", timeout=TIMEOUT)
-        resp.raise_for_status()
+        resp = _get(session, f"{API}/file/{key}", label=record.get("ticker", ""))
         raw = resp.content
     except Exception as exc:                                  # noqa: BLE001
         record["text_status"] = f"download failed: {type(exc).__name__}"
@@ -258,8 +345,7 @@ def fetch_quote(ticker, session=None):
     """
     session = session or _session()
     try:
-        resp = session.get(f"{API}/companies/{ticker}/header", timeout=TIMEOUT)
-        resp.raise_for_status()
+        resp = _get(session, f"{API}/companies/{ticker}/header", label=ticker)
         data = (resp.json() or {}).get("data") or {}
     except Exception:                                          # noqa: BLE001
         return {}
@@ -300,9 +386,8 @@ def fetch_history(ticker, before, days=120, session=None, limit=40):
     session = session or _session()
     cutoff = before - timedelta(days=days)
     try:
-        resp = session.get(f"{API}/companies/{ticker}/announcements",
-                           params={"count": limit, "page": 0}, timeout=TIMEOUT)
-        resp.raise_for_status()
+        resp = _get(session, f"{API}/companies/{ticker}/announcements",
+                    params={"count": limit, "page": 0}, label=ticker)
         items = (resp.json().get("data") or {}).get("items") or []
     except Exception:                                          # noqa: BLE001
         return []
@@ -356,6 +441,15 @@ def collect(codes, hours=24, now=None, since=None):
         print(f"  ! could not reach the company feed for {len(feed_errors)} "
               f"code(s): {', '.join(sorted(feed_errors))}. Those names rely on "
               f"the market-wide sweep alone today.")
+
+    # Nothing found by either source is not the same as a quiet day. It is what
+    # a broken feed also looks like, and the two must not be confused.
+    if not records and feed_errors:
+        raise FeedError(
+            f"No announcements found, and {len(feed_errors)} company feed(s) "
+            f"could not be read. Refusing to report an empty day when the "
+            f"sources themselves were failing: {', '.join(sorted(feed_errors))}"
+        )
 
     records.sort(key=lambda r: r["lodged_utc"], reverse=True)
     for record in records:
