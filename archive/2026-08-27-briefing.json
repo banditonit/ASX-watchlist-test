@@ -1,0 +1,569 @@
+{
+  "lead": "Dominated by Greatland Resources' first full year owning Telfer, which produced NPAT of A$862 million and EBITDA of A$1,332 million on revenue of A$2,259 million, with FY27 guidance of 260,000 to 300,000oz gold at AISC of A$2,900 to A$3,330/oz as Havieron construction begins following its June 2026 FID. Capricorn Metals also delivered a record FY26 profit and lifted its dividend while completing the Big Springs divestment, and PC Gold locked in a A$75 million placement to accelerate Spring Hill.",
+  "subtitle": "Greatland's maiden Telfer profit and Capricorn's record FY26 headline a day thick with high-grade drill results and fresh funding.",
+  "subject": "GGP posts A$862M NPAT on maiden Telfer year, CMM record FY26 profit",
+  "watch_items": [
+    "MRT: remaining Phase 2 assays and an updated Mineral Resource Estimate due September Quarter 2026 for Burbanks Underground",
+    "BTR: updated Mineral Resource Estimate and pre-feasibility study for Two Mile Hill-Shillington due November 2026",
+    "TSO: maiden Ore Reserve for Ternera expected September 2026, ahead of a DFS by year end",
+    "WAU: Abercromby infill assay results expected from mid-September 2026, with FID targeted during 2027",
+    "GA8: first assays from the 6,600m Leonora North discovery program due from October 2026",
+    "PC2: new shares from the A$75 million placement settle 2 September 2026 and begin trading 3 September 2026"
+  ],
+  "day_in_brief": "Corporate and funding: Greatland Resources delivered its first full financial year owning Telfer, with NPAT of A$862 million, EBITDA of A$1,332 million and free cash flow of A$737 million lifting closing cash to A$1,289 million; FY27 guidance is 260,000 to 300,000oz gold at AISC of A$2,900 to A$3,330/oz. Capricorn Metals posted record FY26 underlying profit of A$327.2 million, up 59% on FY25, declared a 5 cent final dividend taking full-year dividends to 10 cents per share, and completed the sale of Big Springs to Sentinel Metals for A$13.7 million upfront plus up to A$12.5 million contingent consideration. PC Gold raised A$75 million via placement at A$1.05 per share to fund roughly 125,000m of drilling and underground works at Spring Hill, alongside a smaller A$2.0 million related-party issue under Listing Rule 10.11.\n\nDrilling and resources: Brightstar's infill drilling at Two Mile Hill-Shillington returned 225.7m @ 3.11g/t Au from 284m including 1m @ 449g/t Au from 322m, feeding into a November 2026 MRE and PFS update. Maritana extended high-grade Burbanks mineralisation with intercepts up to 3.89m @ 2.25g/t Au from 299.11m, while Tesoro's updated Ternera resource lifted Measured and Indicated ounces by 348koz to 1.47Moz (78% of the total). WA Gold, Valiant and GoldArc all commenced new drilling programs at Abercromby, Boomerang and Leonora North respectively, targeting resource conversion, open-pit upside and greenfields discovery.\n\nStudies and guidance: Capricorn's FY27 guidance of 137,000 to 147,000oz at AISC of A$1,900 to A$2,100/oz reflects commissioning of the Karlawinda Expansion Project, while Greatland's Havieron construction start follows its June 2026 FID. Emerald's voluntary sustainability report flagged a Letter of Award to MACA Mining for Dingo Range worth approximately A$562.5 million, with mobilisation from December 2026.",
+  "rows": [
+    {
+      "ticker": "MRT",
+      "company": "MARITANA MINERALS LIMITED",
+      "announcement": "0.48m @ 25.19g/t Au from 224.63m (26HBBD062)",
+      "type": null,
+      "date": "27 August 2026",
+      "document_key": "2924-03126797-6A1340495",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126797-6A1340495"
+    },
+    {
+      "ticker": "GGP",
+      "company": "GREATLAND RESOURCES LIMITED",
+      "announcement": "FY26 NPAT A$862 million, EBITDA A$1,332 million",
+      "type": null,
+      "date": "27 August 2026",
+      "document_key": "2924-03126931-6A1340584",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126931-6A1340584"
+    },
+    {
+      "ticker": "BTR",
+      "company": "BRIGHTSTAR RESOURCES LIMITED",
+      "announcement": "225.7m @ 3.11g/t Au from 284m (TMHRCD26006A)",
+      "type": null,
+      "date": "27 August 2026",
+      "document_key": "2924-03126809-6A1340544",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126809-6A1340544"
+    },
+    {
+      "ticker": "PC2",
+      "company": "PC GOLD LTD",
+      "announcement": "A$75M placement at A$1.05/share to fund Spring Hill",
+      "type": null,
+      "date": "27 August 2026",
+      "document_key": "2924-03127187-6A1340517",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127187-6A1340517"
+    },
+    {
+      "ticker": "CMM",
+      "company": "CAPRICORN METALS LTD",
+      "announcement": "Sale of Big Springs Gold Project to Sentinel Metals completed",
+      "type": null,
+      "date": "26 August 2026",
+      "document_key": "2924-03126470_NPS-6A1340395",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126470_NPS-6A1340395"
+    },
+    {
+      "ticker": "EMR",
+      "company": "EMERALD RESOURCES NL",
+      "announcement": "FY26 TRIFR 1.25, Dingo Range mining contract ~A$562.5M",
+      "type": null,
+      "date": "27 August 2026",
+      "document_key": "2924-03126989-6A1340585",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126989-6A1340585"
+    },
+    {
+      "ticker": "TSO",
+      "company": "TESORO GOLD LTD",
+      "announcement": "1.82Moz Ternera MRE, 1.47Moz now Measured and Indicated",
+      "type": null,
+      "date": "27 August 2026",
+      "document_key": "2924-03126901-6A1340574",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126901-6A1340574"
+    },
+    {
+      "ticker": "GA8",
+      "company": "GOLDARC RESOURCES LIMITED",
+      "announcement": "6,600m RC drilling begins at eight Leonora North targets",
+      "type": null,
+      "date": "27 August 2026",
+      "document_key": "2924-03126799-6A1340499",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126799-6A1340499"
+    },
+    {
+      "ticker": "WAU",
+      "company": "WA GOLD LIMITED",
+      "announcement": "54-hole, ~7,200m RC program starts at Abercromby open pit",
+      "type": null,
+      "date": "27 August 2026",
+      "document_key": "2924-03127137-6A1340629",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127137-6A1340629"
+    },
+    {
+      "ticker": "CMM",
+      "company": "CAPRICORN METALS LTD",
+      "announcement": "Record NPAT A$327.2M, 5cps fully franked final dividend",
+      "type": null,
+      "date": "27 August 2026",
+      "document_key": "2924-03126769-6A1340547",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126769-6A1340547"
+    },
+    {
+      "ticker": "CMM",
+      "company": "CAPRICORN METALS LTD",
+      "announcement": "Completes Big Springs sale to Sentinel for A$13.7M upfront",
+      "type": null,
+      "date": "26 August 2026",
+      "document_key": "2924-03126489_PS-6A1340397",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126489_PS-6A1340397"
+    },
+    {
+      "ticker": "VAL",
+      "company": "VALIANT GOLD LIMITED",
+      "announcement": "Resource definition drilling starts at Boomerang, 8,000m Phase A",
+      "type": null,
+      "date": "27 August 2026",
+      "document_key": "2924-03126890-6A1340572",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126890-6A1340572"
+    },
+    {
+      "ticker": "PC2",
+      "company": "PC GOLD LTD",
+      "announcement": "Placement of 1,904,762 shares at A$1.05 to raise A$2.0 million",
+      "type": null,
+      "date": "27 August 2026",
+      "document_key": "2924-03127190-6A1340644",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127190-6A1340644"
+    },
+    {
+      "ticker": "PC2",
+      "company": "PC GOLD LTD",
+      "announcement": "Placement of 71.4M shares at A$1.05 to raise A$75.0 million",
+      "type": null,
+      "date": "27 August 2026",
+      "document_key": "2924-03127188-6A1340632",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127188-6A1340632"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "MRT",
+      "heading": "Phase 2 drilling extends high-grade Burbanks mineralisation",
+      "body": "Maritana Minerals has received assays from the first 11 of 20 Phase 2 holes at its 100%-owned Burbanks Gold Project near Coolgardie, extending high-grade mineralisation below the Main Lode. Best intercepts include 0.48m @ 25.19g/t Au from 224.63m and 3.89m @ 2.25g/t Au from 299.11m (26HBBD056). Burbanks Underground, currently outside the Black Swan Processing Hub life-of-mine plan, is firming as potential future feed. Remaining Phase 2 assays and an updated Mineral Resource Estimate are expected in the September Quarter 2026.",
+      "document_key": "2924-03126797-6A1340495",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126797-6A1340495"
+    },
+    {
+      "ticker": "GGP",
+      "heading": "Greatland delivers first full-year profit from Telfer",
+      "body": "Greatland's first full financial year owning Telfer produced NPAT of A$862 million and EBITDA of A$1,332 million on revenue of A$2,259 million from 326,859oz gold and 14,730t copper sold. Free cash flow was A$737 million, lifting closing cash to A$1,289 million with total liquidity of A$1,764 million. FY27 guidance is 260,000 to 300,000oz gold at AISC of A$2,900 to A$3,330/oz, with construction starting at Havieron following its June 2026 FID.",
+      "document_key": "2924-03126931-6A1340584",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126931-6A1340584"
+    },
+    {
+      "ticker": "BTR",
+      "heading": "Wide, high-grade infill hit at Two Mile Hill, Sandstone",
+      "body": "Brightstar has returned 225.7m @ 3.11g/t Au from 284m in TMHRCD26006A, including 19m @ 24.3g/t Au from 306m and 1m @ 449g/t Au from 322m, from infill drilling at the Two Mile Hill-Shillington deposit. A second hole, TMHRCD26004, returned 194m @ 2.10g/t Au from 286m. The deposit hosts 14.6Mt @ 1.6g/t Au for 731koz Au, and results will feed into an updated Mineral Resource Estimate and pre-feasibility study, both due in November 2026.",
+      "document_key": "2924-03126809-6A1340544",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126809-6A1340544"
+    },
+    {
+      "ticker": "PC2",
+      "heading": "PC Gold raises A$75 million to accelerate Spring Hill",
+      "body": "PC Gold has secured firm commitments for a A$75 million single tranche institutional placement at A$1.05 per share, a 7.9% discount to the last close. The raise lifts pro-forma cash to approximately A$96.7 million, funding about 125,000m of drilling, underground infrastructure refurbishment and PFS/DFS work toward FID at Spring Hill. New shares settle 2 September 2026 and begin trading 3 September 2026.",
+      "document_key": "2924-03127187-6A1340517",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127187-6A1340517"
+    },
+    {
+      "ticker": "CMM",
+      "heading": "Capricorn completes Big Springs divestment to Sentinel Metals",
+      "body": "Capricorn and subsidiary Warriedar Resources have completed the sale of the 1.01Moz Big Springs Gold Project in Nevada to Sentinel Metals, receiving A$8.5 million cash and A$5.0 million in Sentinel shares (8,620,690 shares at A$0.58, escrowed 12 months). A further up to A$12.5 million in contingent consideration remains payable on resource, share price or transaction milestones.",
+      "document_key": "2924-03126470_NPS-6A1340395",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126470_NPS-6A1340395"
+    },
+    {
+      "ticker": "EMR",
+      "heading": "Emerald voluntary sustainability report details safety, Dingo Range progress",
+      "body": "Emerald's FY26 Sustainability Supplementary Report is a voluntary, unaudited disclosure alongside its statutory AASB S2 report. It notes a Group TRIFR 12-month moving average of 1.25 at 30 June 2026, Okvau's pour past 520koz of gold, and a Letter of Award to MACA Mining for Dingo Range with an estimated contract value of approximately A$562.5 million and mobilisation in December 2026.",
+      "document_key": "2924-03126989-6A1340585",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126989-6A1340585"
+    },
+    {
+      "ticker": "TSO",
+      "heading": "Ternera resource classification upgraded, 78% now M&I",
+      "body": "Tesoro's updated Ternera MRE stands at 51.6Mt at 1.10g/t Au for 1.82Moz, with 1.47Moz (78%) now classified Measured and Indicated, up 348koz on the August 2025 estimate. The unconstrained resource is 1.93Moz at 1.07g/t Au. The upgrade underpins a maiden Ore Reserve expected in September 2026, ahead of a DFS by year end.",
+      "document_key": "2924-03126901-6A1340574",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126901-6A1340574"
+    },
+    {
+      "ticker": "GA8",
+      "heading": "GoldArc kicks off 6,600m discovery drilling at Leonora North",
+      "body": "GoldArc has commenced an 84-hole, 6,600m RC program testing eight prospects near the 137,000oz Mt Stirling Deposit, six of which have never been drill tested. Rock chips up to 13.8g/t Au have been returned from historic workings near the targets, and six of the eight prospects sit within 1.5km of planned mining operations, allowing any discovery to be added to the mine plan. Drilling is expected to take four to six weeks, with first assays due from October 2026.",
+      "document_key": "2924-03126799-6A1340499",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126799-6A1340499"
+    },
+    {
+      "ticker": "WAU",
+      "heading": "WA Gold begins resource infill drilling at Abercromby",
+      "body": "WA Gold has commenced a 54-hole, ~7,200m RC drilling program targeting the open-pit component of Abercromby's Stage 1 Mine scenario, which carries a ~114,000oz production target and forecast pre-tax cashflow of A$270 million. The infill drilling aims to lift confidence in the existing 11.12Mt @ 1.45g/t Au for 518,000oz resource and support an updated MRE and maiden Ore Reserve. Assay results are expected from mid-September, with a Final Investment Decision targeted during 2027.",
+      "document_key": "2924-03127137-6A1340629",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127137-6A1340629"
+    },
+    {
+      "ticker": "CMM",
+      "heading": "Capricorn posts record FY26 profit, declares final dividend",
+      "body": "Capricorn Metals delivered record FY26 underlying profit after tax of A$327.2 million, up 59% on FY25, on sales revenue of A$769.3 million from 123,096 ounces sold at an average A$6,241 per ounce. Karlawinda produced 123,589 ounces at AISC of A$1,629 per ounce, and net cash rose A$149.1 million to A$504.8 million. A 5 cent fully franked final dividend was declared, taking FY26 dividends to 10 cents per share, with FY27 guidance of 137,000 to 147,000 ounces at AISC of A$1,900 to A$2,100 per ounce as the Karlawinda Expansion Project completes commissioning.",
+      "document_key": "2924-03126769-6A1340547",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126769-6A1340547"
+    },
+    {
+      "ticker": "CMM",
+      "heading": "Capricorn completes Big Springs divestment to Sentinel Metals",
+      "body": "Capricorn has completed the sale of its non-core Big Springs gold project to Sentinel Metals, receiving A$13.7 million upfront (A$8.5 million cash plus a 6.2% Sentinel shareholding valued at ~A$5.2 million). A further A$12.5 million in deferred payments is contingent on resource milestones of 1.5Moz and 2.0Moz gold or related share price and divestment triggers. The sale sharpens focus on Karlawinda and Mt Gibson in WA.",
+      "document_key": "2924-03126489_PS-6A1340397",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126489_PS-6A1340397"
+    },
+    {
+      "ticker": "VAL",
+      "heading": "Drilling begins to firm up Boomerang resource confidence",
+      "body": "Valiant has started an 8,000m Phase A diamond drilling program at its Boomerang gold deposit, part of the 100%-owned Reedy Gold Project, using two rigs on site. Boomerang hosts an existing open pit and underground resource of 5.26Mt @ 2.17g/t Au for 367koz, the largest single deposit at Reedy, and sits 45km by road from Westgold's Bluebird Mill under an Ore Purchase Agreement. The program aims to convert inferred resource to indicated and support evaluation of an accelerated open-pit opportunity, with assay results expected from the second quarter of FY27.",
+      "document_key": "2924-03126890-6A1340572",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126890-6A1340572"
+    },
+    {
+      "ticker": "PC2",
+      "heading": "PC Gold to issue shares to related party under LR10.11",
+      "body": "PC Gold proposes to issue 1,904,762 shares at A$1.05 each, raising approximately A$2.0 million, to a party covered by Listing Rule 10.11. Shareholder approval is required and is estimated for 27 November 2026, with issue expected on 2 December 2026. Funds are earmarked for exploration, a PFS and DFS, developing the newly acquired camp, and working capital.",
+      "document_key": "2924-03127190-6A1340644",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127190-6A1340644"
+    },
+    {
+      "ticker": "PC2",
+      "heading": "PC Gold prices placement following trading halt",
+      "body": "PC Gold will issue 71,428,571 new shares at A$1.05 each, raising approximately A$75.0 million from institutional investors under its 15% and 10% placement capacities. Proceeds fund exploration and resource development, a PFS and DFS, development of a newly acquired camp, and working capital. Shares are due for issue on 3 September 2026.",
+      "document_key": "2924-03127188-6A1340632",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127188-6A1340632"
+    }
+  ],
+  "other": [
+    {
+      "ticker": "GGP",
+      "company": "GREATLAND RESOURCES LIMITED",
+      "headline": "Greatland 2026 Annual Report",
+      "summary": "Greatland Resources guided FY27 production of 260koz to 300koz gold at AISC of $2,900 to $3,330/oz after closing FY26 with $1.29bn cash and no debt (+$714m FY26 cash build after $355m growth capital), having produced 328,987oz gold in FY26 at AISC of $2,179/oz, generating $1.2bn operating cash flow, EBITDA of $1.33bn and net profit after tax of $862.3m",
+      "document_key": "2924-03126888-6A1340573",
+      "market_cap": 9128249394,
+      "cap_label": "$9.1B",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126888-6A1340573"
+    },
+    {
+      "ticker": "GGP",
+      "company": "GREATLAND RESOURCES LIMITED",
+      "headline": "Greatland 2026 Corporate Governance Statement & Appendix 4G",
+      "summary": "Greatland Resources released its 2026 Corporate Governance Statement and Appendix 4G for FY26, reporting 100% of ASX Recommendations followed, an independent board of 5 of 7 directors (71%), female board representation of 2 of 7 (28.5%), average director tenure of 5.1 years, and 100% attendance at eligible Board and Committee meetings",
+      "document_key": "2924-03126879-6A1340571",
+      "market_cap": 9128249394,
+      "cap_label": "$9.1B",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126879-6A1340571"
+    },
+    {
+      "ticker": "GGP",
+      "company": "GREATLAND RESOURCES LIMITED",
+      "headline": "Greatland 2026 Appendix 4E",
+      "summary": "Greatland Resources reported FY2026 revenue of A$2,259.4 million, up 136% on FY2025's A$957.4 million, with net profit after tax attributable to members of A$862.3 million, up 156% on the prior year's A$337.3 million, net tangible assets per security rising to A$3.26 from A$1.95, and no dividend declared for the year",
+      "document_key": "2924-03126876-6A1340570",
+      "market_cap": 9128249394,
+      "cap_label": "$9.1B",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126876-6A1340570"
+    },
+    {
+      "ticker": "CMM",
+      "company": "CAPRICORN METALS LTD",
+      "headline": "Annual Report to shareholders",
+      "summary": "Capricorn Metals reported FY26 guidance for the year ahead of 137,000 to 147,000oz gold production at AISC of A$1,900 to A$2,100/oz with growth capital of A$70 million to A$85 million, after KGP produced a record 123,589oz gold in FY26 (top end of guidance) at AISC of A$1,629/oz. Net cash rose A$149.1 million over the year to A$504.8 million, with operating cash flow of A$470.2 million, A$95.0 million spent on exploration and feasibility at MGGP and KGP and A$133.4 million spent on KEP and MGGP early works. Gold sales reached a record A$769.3 million from 123,096oz sold at an average realised price of A$6,241/oz, statutory profit after tax was A$282.2 million and underlying net profit after tax was A$327.2 million. The company declared a maiden fully franked dividend of 10 cents per share totalling A$45.7 million and remains debt free and unhedged.",
+      "document_key": "2924-03126766-6A1340545",
+      "market_cap": 8123503507,
+      "cap_label": "$8.1B",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126766-6A1340545"
+    },
+    {
+      "ticker": "CMM",
+      "company": "CAPRICORN METALS LTD",
+      "headline": "Corporate Governance Statement",
+      "summary": "Capricorn Metals lodged its FY2026 Corporate Governance Statement, reporting board and workforce diversity as at 30 June 2026 of 80% male/20% female on the Board, 100% male senior executives, and 70% male/30% female across the whole organisation, with the Board comprising five directors (four independent) and Executive Chairman Mark Clark not classed as independent chair.",
+      "document_key": "2924-03126770-6A1340548",
+      "market_cap": 8123503507,
+      "cap_label": "$8.1B",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126770-6A1340548"
+    },
+    {
+      "ticker": "EMR",
+      "company": "EMERALD RESOURCES NL",
+      "headline": "Annual Report and Appendix 4E",
+      "summary": "Emerald Resources reported record FY26 results with profit after tax of A$259.6 million (up 196% on FY25's A$87.6 million) and profit before tax of A$365.8 million, as the Okvau Gold Mine produced 100,405oz gold at AISC of US$972/oz on gold revenue of A$601.8 million (up 40%) from sales of 95,928oz at an average price of US$4,273/oz; cash, bullion and listed investments totalled A$491.1 million as at 30 June 2026, including cash of A$433.6 million, with the company remaining debt-free and unhedged.",
+      "document_key": "2924-03127010-6A1340595",
+      "market_cap": 4784100675,
+      "cap_label": "$4.8B",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127010-6A1340595"
+    }
+  ],
+  "_unverified": [
+    {
+      "ticker": "PC2",
+      "headline": "Proposed issue of securities - PC2",
+      "figures": [
+        "2.0 m",
+        "2.0 m"
+      ]
+    },
+    {
+      "ticker": "PC2",
+      "headline": "Proposed issue of securities - PC2",
+      "figures": [
+        "75.0 m",
+        "75.0 m"
+      ]
+    }
+  ],
+  "also_lodged": [
+    {
+      "ticker": "CMM",
+      "company": "CAPRICORN METALS LTD",
+      "headline": "Dividend/Distribution - CMM",
+      "document_key": "2924-03126767-6A1340546",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126767-6A1340546"
+    },
+    {
+      "ticker": "AAR",
+      "company": "ASTRAL RESOURCES NL",
+      "headline": "Application for quotation of securities - AAR",
+      "document_key": "2924-03126646-6A1340456",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126646-6A1340456"
+    },
+    {
+      "ticker": "AAR",
+      "company": "ASTRAL RESOURCES NL",
+      "headline": "Cleansing Notice",
+      "document_key": "2924-03126645-6A1340453",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126645-6A1340453"
+    },
+    {
+      "ticker": "AAR",
+      "company": "ASTRAL RESOURCES NL",
+      "headline": "Proposed issue of securities - AAR",
+      "document_key": "2924-03126625-6A1340447",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126625-6A1340447"
+    },
+    {
+      "ticker": "DTM",
+      "company": "DART MINING NL",
+      "headline": "Cleansing Notice",
+      "document_key": "2924-03127383-3A700094",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127383-3A700094"
+    },
+    {
+      "ticker": "DTM",
+      "company": "DART MINING NL",
+      "headline": "Application for quotation of securities - DTM",
+      "document_key": "2924-03127261-3A700057",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127261-3A700057"
+    },
+    {
+      "ticker": "MM8",
+      "company": "MEDALLION METALS LIMITED.",
+      "headline": "Application for quotation of securities - MM8",
+      "document_key": "2924-03127172-6A1340639",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127172-6A1340639"
+    },
+    {
+      "ticker": "PNR",
+      "company": "PANTORO GOLD LIMITED",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03126583-6A1340430",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126583-6A1340430"
+    },
+    {
+      "ticker": "RMS",
+      "company": "RAMELIUS RESOURCES LIMITED",
+      "headline": "Ceasing to be a substantial holder from MUFG",
+      "document_key": "2924-03126674-6A1340468",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126674-6A1340468"
+    },
+    {
+      "ticker": "RMS",
+      "company": "RAMELIUS RESOURCES LIMITED",
+      "headline": "Becoming a substantial holder",
+      "document_key": "2924-03126621-6A1340442",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126621-6A1340442"
+    },
+    {
+      "ticker": "WAF",
+      "company": "WEST AFRICAN RESOURCES LIMITED",
+      "headline": "Ceasing to be a substantial holder from MUFG",
+      "document_key": "2924-03126681-6A1340471",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126681-6A1340471"
+    },
+    {
+      "ticker": "AAR",
+      "company": "ASTRAL RESOURCES NL",
+      "headline": "Application for quotation of securities - AAR",
+      "document_key": "2924-03126636-6A1340450",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126636-6A1340450"
+    },
+    {
+      "ticker": "AAR",
+      "company": "ASTRAL RESOURCES NL",
+      "headline": "Notification of cessation of securities - AAR",
+      "document_key": "2924-03126620-6A1340443",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126620-6A1340443"
+    },
+    {
+      "ticker": "AAR",
+      "company": "ASTRAL RESOURCES NL",
+      "headline": "Notification of cessation of securities - AAR",
+      "document_key": "2924-03126617-6A1340441",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126617-6A1340441"
+    },
+    {
+      "ticker": "AUC",
+      "company": "AUSGOLD LIMITED",
+      "headline": "Change of Director's Interest Notice - Weedon",
+      "document_key": "2924-03127337-6A1340664",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127337-6A1340664"
+    },
+    {
+      "ticker": "AUC",
+      "company": "AUSGOLD LIMITED",
+      "headline": "Application for quotation of securities - AUC",
+      "document_key": "2924-03127331-6A1340662",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127331-6A1340662"
+    },
+    {
+      "ticker": "AUC",
+      "company": "AUSGOLD LIMITED",
+      "headline": "Cleansing Notice",
+      "document_key": "2924-03127330-6A1340660",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127330-6A1340660"
+    },
+    {
+      "ticker": "CMM",
+      "company": "CAPRICORN METALS LTD",
+      "headline": "Appendix 4G",
+      "document_key": "2924-03126773-6A1340550",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126773-6A1340550"
+    },
+    {
+      "ticker": "CZN",
+      "company": "CORAZON MINING LIMITED",
+      "headline": "Change of Director's Interest Notice",
+      "document_key": "2924-03126800-6A1340506",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126800-6A1340506"
+    },
+    {
+      "ticker": "CZN",
+      "company": "CORAZON MINING LIMITED",
+      "headline": "Change of Director's Interest Notice",
+      "document_key": "2924-03126430-6A1340374",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126430-6A1340374"
+    },
+    {
+      "ticker": "EMR",
+      "company": "EMERALD RESOURCES NL",
+      "headline": "Appendix 4G",
+      "document_key": "2924-03127012-6A1340596",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127012-6A1340596"
+    },
+    {
+      "ticker": "GML",
+      "company": "GATEWAY MINING LIMITED",
+      "headline": "Notification regarding unquoted securities - GML",
+      "document_key": "2924-03126587-2A1692341",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126587-2A1692341"
+    },
+    {
+      "ticker": "MM8",
+      "company": "MEDALLION METALS LIMITED.",
+      "headline": "s708A Notice",
+      "document_key": "2924-03127178-6A1340642",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127178-6A1340642"
+    },
+    {
+      "ticker": "MRT",
+      "company": "MARITANA MINERALS LIMITED",
+      "headline": "Application for quotation of securities - MRT",
+      "document_key": "2924-03126640-6A1340452",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126640-6A1340452"
+    },
+    {
+      "ticker": "ORE",
+      "company": "OREZONE GOLD CORPORATION",
+      "headline": "Notification regarding unquoted securities - ORE",
+      "document_key": "2924-03126458-6A1340388",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126458-6A1340388"
+    },
+    {
+      "ticker": "ORE",
+      "company": "OREZONE GOLD CORPORATION",
+      "headline": "Notification regarding unquoted securities - ORE",
+      "document_key": "2924-03126457-6A1340386",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126457-6A1340386"
+    },
+    {
+      "ticker": "RRL",
+      "company": "REGIS RESOURCES LIMITED",
+      "headline": "Notification of cessation of securities - RRL",
+      "document_key": "2924-03127275-6A1340655",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127275-6A1340655"
+    },
+    {
+      "ticker": "RRL",
+      "company": "REGIS RESOURCES LIMITED",
+      "headline": "Change of Director's Interest Notice",
+      "document_key": "2924-03127273-6A1340653",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127273-6A1340653"
+    },
+    {
+      "ticker": "RRL",
+      "company": "REGIS RESOURCES LIMITED",
+      "headline": "Application for quotation of securities - RRL",
+      "document_key": "2924-03126497-6A1340400",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126497-6A1340400"
+    },
+    {
+      "ticker": "SMS",
+      "company": "STAR MINERALS LIMITED",
+      "headline": "Section 708A Notice",
+      "document_key": "2924-03127393-6A1340670",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127393-6A1340670"
+    },
+    {
+      "ticker": "SMS",
+      "company": "STAR MINERALS LIMITED",
+      "headline": "Application for quotation of securities - SMS",
+      "document_key": "2924-03127391-6A1340668",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127391-6A1340668"
+    },
+    {
+      "ticker": "TOK",
+      "company": "TOLU MINERALS LIMITED.",
+      "headline": "Final Director's Interest Notice",
+      "document_key": "2924-03126666-6A1340466",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126666-6A1340466"
+    },
+    {
+      "ticker": "TOK",
+      "company": "TOLU MINERALS LIMITED.",
+      "headline": "Director Resignation and Interim Chair Appointment",
+      "document_key": "2924-03126638-6A1340451",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126638-6A1340451"
+    },
+    {
+      "ticker": "WGR",
+      "company": "WESTERN GOLD RESOURCES LIMITED.",
+      "headline": "Notification of cessation of securities - WGR",
+      "document_key": "2924-03126437-6A1340379",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126437-6A1340379"
+    },
+    {
+      "ticker": "WGR",
+      "company": "WESTERN GOLD RESOURCES LIMITED.",
+      "headline": "Final Director's Interest Notice",
+      "document_key": "2924-03126436-6A1340378",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03126436-6A1340378"
+    }
+  ]
+}
