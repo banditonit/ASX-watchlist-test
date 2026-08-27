@@ -85,15 +85,16 @@ announced, confirmed, or refer the reader to an earlier announcement. Quarterlie
 restate by definition. Saying so is noise, and it wastes the line."""
 
 QUARTERLY_GUIDE = f"""This is a recurring calendar filing: a quarterly, a half
-year, a full year report or the statutory accounts. Write the period's own
-numbers and nothing else: production, unit costs or AISC, cash and its movement
-on the prior period, revenue, profit and dividend where the document reports
-them, and any stated catalyst for the period ahead.
+year, a full year report or the statutory accounts. It is going into a table as
+a single short row, beside the ticker and the date, exactly like the confirmed
+announcements above it. The reader who wants the detail opens the document; the
+row exists so they can decide whether to.
 
-If guidance was set, changed, reaffirmed with a different number, or missed,
-that goes FIRST, before the production and cash figures. A guidance change is
-the one thing in a routine filing that moves a share price, and it is the
-reason this section is read at all.
+So: the period's headline numbers, nothing else, and only the two or three that
+matter most. If guidance was set, changed, reaffirmed at a different number or
+missed, that goes FIRST, ahead of production and cash. A guidance change is the
+one thing in a routine filing that moves a share price and it is the reason
+this section is read at all.
 
 You are given this company's earlier announcement headlines. Use them only to
 recognise what NOT to write about. A quarterly typically recaps a feasibility
@@ -168,18 +169,28 @@ QUARTERLY_SCHEMA = {
             "summary": {
                 "type": "string",
                 "description": (
-                    "ONE dense line. Open with the company name and a verb. Lead "
-                    "with any change to guidance if there was one, then "
-                    "production, unit costs, cash and its movement on the prior "
-                    "period, and revenue, profit or dividend if the document "
-                    "reports them. Do not open with the "
-                    "ticker or the market cap, those are added automatically. Style "
-                    "to match: 'Ramelius closed the June quarter with $650m cash and "
-                    "gold (+$43.1m QoQ) after producing 53.5koz gold at AISC of "
-                    "$2k/oz'. Use koz, Moz, kt, Mt and thousands as k. Operating "
-                    "numbers only. Do not summarise a study or resource upgrade "
-                    "that was announced separately, and never say anything was "
-                    "reiterated, restated or previously announced."
+                    "ONE TABLE CELL, UNDER 90 CHARACTERS. This is a row in a "
+                    "table beside a ticker and a date, not a paragraph. It must "
+                    "read like a headline: figures separated by semicolons, no "
+                    "company name, no ticker, no market cap, no verb phrases like "
+                    "'the company reported', no full stop.\n\n"
+                    "Put the single most material number first, and if guidance "
+                    "was set or changed that is always the most material number. "
+                    "Then at most two more: production, AISC, cash, revenue, "
+                    "profit or dividend, whichever the document leads on.\n\n"
+                    "Right: 'FY27 guidance 125-140koz at AISC A$3,400-3,600/oz; "
+                    "FY26 cash A$267.7m'\n"
+                    "Right: '53.5koz at AISC A$2,000/oz; cash A$650m, +A$43.1m QoQ'\n"
+                    "Right: 'Corporate governance statement, no change to board'\n"
+                    "Wrong: 'Ora Banda Mining set FY27 guidance of 125-140koz gold "
+                    "production at AISC of A$3,400/oz to A$3,600/oz and growth "
+                    "capex of A$425 million, building on FY26 closing cash of "
+                    "A$267.7 million and total liquidity above A$468 million after "
+                    "upsizing its revolving credit facility.'\n\n"
+                    "Use koz, Moz, kt, Mt, k and m. If the filing carries nothing "
+                    "but compliance content, say so in four or five words rather "
+                    "than summarising it. Never say anything was reiterated, "
+                    "restated or previously announced."
                 ),
             },
             "is_restatement": {"type": "boolean"},
