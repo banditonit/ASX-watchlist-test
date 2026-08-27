@@ -21,7 +21,11 @@ WHITE = "#FFFFFF"
 FONT = "'Open Sans','Segoe UI',Helvetica,Arial,sans-serif"
 
 # WIDTH is the widest the email will ever draw. Set it to 0 for full bleed, so
-# the briefing fills whatever window it is opened in.
+# the briefing fills whatever window it is opened in. 900 was chosen over both
+# the original 680 and full bleed: at 680 company names and announcements wrap
+# onto second lines and the same briefing runs 4,587px instead of 3,795px, and
+# full bleed pulls the table columns so far apart that the eye has to travel to
+# connect a ticker to its date.
 #
 # PROSE is a second, tighter cap that applies only to running text. The table
 # genuinely wants the room: company names and drill intercepts were wrapping
@@ -30,7 +34,7 @@ FONT = "'Open Sans','Segoe UI',Helvetica,Arial,sans-serif"
 # loses its place returning to the left margin. Newspapers set columns, and for
 # the same reason. So the frame goes as wide as the window and the prose stays
 # at a length that can be read.
-WIDTH = 0
+WIDTH = 900
 PROSE = 900
 
 DISCLAIMER_HEADING = "General Advice Only"
@@ -97,8 +101,25 @@ def _p(text, size=15, colour=NAVY, weight="normal", top=0, bottom=14):
 # a rule. Flip this one word to change it.
 MULTI_SEPARATOR = "line"
 
-# How many columns Also Lodged uses at full desktop width.
-LODGED_COLUMNS = 3
+# How many columns Also Lodged uses, derived from the frame rather than fixed.
+# At full bleed three columns are comfortable; at WIDTH 900 they are about
+# 285px each and headlines like "Notification regarding unquoted securities -
+# BGL" wrap onto a second line, which leaves the block ragged and the last
+# column half empty. Two columns at 900 are about 430px and nothing wraps at
+# all, for 51px more page. Tying this to WIDTH means it follows automatically
+# if the frame is ever changed again.
+LODGED_COLUMNS = None            # None derives it; set a number to override
+
+
+def _lodged_columns():
+    if LODGED_COLUMNS:
+        return LODGED_COLUMNS
+    frame = WIDTH or 1400        # full bleed: assume a normal desktop window
+    if frame >= 1200:
+        return 3
+    if frame >= 760:
+        return 2
+    return 1
 
 
 def _group_by_ticker(entries):
@@ -539,7 +560,7 @@ def _also_lodged(entries):
     entries = sorted(entries, key=lambda x: (_text(x.get("ticker")), _text(x.get("headline"))))
     # At least three lines to a column, so a short list stays a single list
     # rather than three lonely entries strung across the page.
-    n = max(1, min(LODGED_COLUMNS, len(entries) // 3))
+    n = max(1, min(_lodged_columns(), len(entries) // 3))
     per = -(-len(entries) // n)
     chunks = [entries[i:i + per] for i in range(0, len(entries), per)] or [[]]
     width = f"{100 // len(chunks)}%"
