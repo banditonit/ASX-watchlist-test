@@ -1,0 +1,511 @@
+{
+  "lead": "Dominated by full-year results from two producers: Westgold posted record FY26 earnings with revenue up 79% to A$2,441 million and underlying NPAT up 452% to A$480 million, closing treasury at A$939 million debt-free, while St Barbara reported a A$490 million statutory profit driven by a A$500 million gain on deconsolidating New Simberi under the Lingbao transaction, alongside a A$0.05 fully franked dividend and a flagged buy-back of up to 100 million shares.",
+  "subtitle": "Producer earnings and capital returns overshadow a steady run of exploration and corporate updates.",
+  "subject": "WGX FY26 NPAT up 452% to A$480M, SBM posts A$490M profit on Simberi gain",
+  "watch_items": [
+    "SBM: 15-Mile Processing Hub PFS update due late September 2026 will decide on the flagged buy-back of up to 100 million shares",
+    "WGX: FY27 production and cost guidance plus strategic outlook due 9 September 2026",
+    "SLS: assays pending from 14 further diamond tails and over 20 RC holes at Nanadie, with a second RC rig arriving shortly",
+    "GML: initial Cowza drilling results due imminently, follow-up RC planned along the 13km Celia South to Ward corridor",
+    "MEK: assays from Turnberry visible gold intercept expected in September 2026",
+    "VAU: scheme booklet for the Genesis merger expected early October 2026, shareholder meeting to follow late October 2026",
+    "EVN: Carnaby scheme implementation targeted for November 2026",
+    "SKM: shareholder vote on management incentive securities and executive LTI targeted for 16 November 2026"
+  ],
+  "day_in_brief": "Producer results: Westgold's FY26 revenue rose 79% to A$2,441 million on record production of 387,354oz, with underlying EBITDA of A$1,104 million and underlying NPAT up 452% to A$480 million; free cash flow of A$602 million lifted treasury to A$939 million, debt-free and unhedged, backing a 10cps fully franked dividend, a A$50 million FY27 buy-back and total FY26 shareholder returns of approximately $122 million, up 329% on FY25. St Barbara's FY26 statutory profit of A$490 million was driven by the A$500 million Simberi deconsolidation gain, with net assets up 148% to A$928 million, cash of A$475 million and no debt, and a A$0.05 fully franked dividend; a further buy-back of up to 100 million shares awaits the updated 15-Mile Processing Hub PFS due late September 2026.\n\nDrilling: Sunshine Metals extended Nanadie Well copper-gold mineralisation beyond 700m depth with 722.3m @ 0.44% Cu, 0.13g/t Au in NANRCD005, including higher-grade zones of 28m @ 1.31% Cu, 0.30g/t Au from 630m and 43.3m @ 0.91% Cu, 0.35g/t Au from 761.7m, with further assays pending. Gateway Mining's aircore drilling defined a 7km gold anomaly at the Ward Prospect within the Yandal Project, near Cowza, with best results of 4m @ 4.0g/t Au from 88m and 4m @ 3.7g/t Au from 96m, extending the Celia South to Ward corridor to over 13km. Meeka Metals reissued its Turnberry visible gold release with added ASX cautionary wording after a compliance request, with the underlying intercept and pending assays unchanged.\n\nCorporate and M&A: Evolution Mining became Carnaby Resources' largest shareholder, acquiring a 13.7% stake from QIC's Queensland Critical Minerals Fund by issuing about 2.6 million new shares, ahead of its proposed 100% scheme acquisition targeted for November 2026 implementation. Vault Minerals cleared an ACCC hurdle in its Genesis Minerals merger, with a scheme booklet due early October 2026 and a shareholder vote to follow. Minerals 260 had its expanded Bullabulling mining lease granted and signed a A$1.25 million deal for 367km2 of adjoining tenure, lifting total project area to 1,527km2 ahead of a Q1 CY2027 final investment decision.\n\nFunding and remuneration: Saturn Metals' Share Purchase Plan was oversubscribed more than fourfold to $21.28 million, taking total recent raisings to $121.28 million to advance Apollo Hill. Skylark Minerals proposed new incentive securities and revised executive pay for its Executive Chairman and Managing Director, with long-term incentives tied to delivery of a 2Moz gold resource at Zaranou, subject to shareholder approval in November 2026. Smaller share issues were completed by Many Peaks Minerals, Lefroy Exploration and Minerals 260 to settle placements and acquisition consideration.",
+  "rows": [
+    {
+      "ticker": "SBM",
+      "company": "ST BARBARA LIMITED",
+      "announcement": "FY26 statutory profit A$490 million, A$0.05/share fully franked dividend",
+      "type": null,
+      "date": "28 August 2026",
+      "document_key": "2924-03127743-3A700164",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127743-3A700164"
+    },
+    {
+      "ticker": "MI6",
+      "company": "MINERALS 260 LIMITED",
+      "announcement": "Project area expands to 1,527km2 after ML grant and tenement buy",
+      "type": null,
+      "date": "28 August 2026",
+      "document_key": "2924-03128234-6A1340914",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128234-6A1340914"
+    },
+    {
+      "ticker": "SLS",
+      "company": "SOLSTICE MINERALS LIMITED",
+      "announcement": "79.9m @ 0.47% Cu, 0.19g/t Au from 362.8m (NANRCD005)",
+      "type": null,
+      "date": "28 August 2026",
+      "document_key": "2924-03127940-6A1340836",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127940-6A1340836"
+    },
+    {
+      "ticker": "GML",
+      "company": "GATEWAY MINING LIMITED",
+      "announcement": "4m @ 4.0g/t Au from 88m (WAAC0205)",
+      "type": null,
+      "date": "28 August 2026",
+      "document_key": "2924-03127897-2A1693034",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127897-2A1693034"
+    },
+    {
+      "ticker": "MEK",
+      "company": "MEEKA METALS LIMITED",
+      "announcement": "Re-released with ASX-mandated visual estimate caution (MEK)",
+      "type": null,
+      "date": "27 August 2026",
+      "document_key": "2924-03127554-6A1340706",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127554-6A1340706"
+    },
+    {
+      "ticker": "EVN",
+      "company": "EVOLUTION MINING LIMITED",
+      "announcement": "Evolution acquires QCMF's 13.7% stake in Carnaby Resources",
+      "type": null,
+      "date": "28 August 2026",
+      "document_key": "2924-03127854-2A1693014",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127854-2A1693014"
+    },
+    {
+      "ticker": "WGX",
+      "company": "WESTGOLD RESOURCES LIMITED.",
+      "announcement": "FY26 NPAT up 452% to A$480M, 10cps fully franked dividend",
+      "type": null,
+      "date": "28 August 2026",
+      "document_key": "2924-03127896-6A1340819",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127896-6A1340819"
+    },
+    {
+      "ticker": "STN",
+      "company": "SATURN METALS LIMITED",
+      "announcement": "SPP raises $21.28M, upsized from $5M target",
+      "type": null,
+      "date": "28 August 2026",
+      "document_key": "2924-03128070-6A1340869",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128070-6A1340869"
+    },
+    {
+      "ticker": "WGX",
+      "company": "WESTGOLD RESOURCES LIMITED.",
+      "announcement": "10cps fully franked dividend, $122M FY26 capital returns",
+      "type": null,
+      "date": "28 August 2026",
+      "document_key": "2924-03127904-6A1340822",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127904-6A1340822"
+    },
+    {
+      "ticker": "VAU",
+      "company": "VAULT MINERALS LIMITED",
+      "announcement": "ACCC approval condition satisfied for Genesis merger",
+      "type": null,
+      "date": "27 August 2026",
+      "document_key": "2924-03127646-6A1340736",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127646-6A1340736"
+    },
+    {
+      "ticker": "SKM",
+      "company": "SKYLARK MINERALS LIMITED",
+      "announcement": "14.0M options, 2.1M performance rights, 2.1M service rights to be issued",
+      "type": null,
+      "date": "28 August 2026",
+      "document_key": "2924-03128195-6A1340903",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128195-6A1340903"
+    },
+    {
+      "ticker": "SKM",
+      "company": "SKYLARK MINERALS LIMITED",
+      "announcement": "Board approves revised remuneration for Chairman and MD, effective 1 September 2026",
+      "type": null,
+      "date": "28 August 2026",
+      "document_key": "2924-03128178-6A1340888",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128178-6A1340888"
+    },
+    {
+      "ticker": "EVN",
+      "company": "EVOLUTION MINING LIMITED",
+      "announcement": "2,583,333 EVN shares issued for Carnaby Resources stake",
+      "type": null,
+      "date": "28 August 2026",
+      "document_key": "2924-03127855-2A1693017",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127855-2A1693017"
+    },
+    {
+      "ticker": "MI6",
+      "company": "MINERALS 260 LIMITED",
+      "announcement": "1,321,003 shares issued for Bullabulling tenement acquisition",
+      "type": null,
+      "date": "28 August 2026",
+      "document_key": "2924-03128238-6A1340916",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128238-6A1340916"
+    },
+    {
+      "ticker": "MPK",
+      "company": "MANY PEAKS MINERALS LTD",
+      "announcement": "1,500,000 shares issued at A$0.90 for Baga Gold Project",
+      "type": null,
+      "date": "27 August 2026",
+      "document_key": "2924-03127439-6A1340677",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127439-6A1340677"
+    },
+    {
+      "ticker": "LEX",
+      "company": "LEFROY EXPLORATION LIMITED",
+      "announcement": "Issues 2,540,560 shares at $0.125 to directors, raising $317,570",
+      "type": null,
+      "date": "27 August 2026",
+      "document_key": "2924-03127667-6A1340748",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127667-6A1340748"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "SBM",
+      "heading": "St Barbara posts A$490 million profit on Simberi deconsolidation gain",
+      "body": "St Barbara reported FY26 statutory profit after tax of A$490 million, including a A$500 million gain on the deconsolidation of New Simberi Gold following the Lingbao transaction. Net assets rose 148% to A$928 million, with cash of A$475 million and no debt. The Board declared a fully franked dividend of A$0.05 per share and is weighing an on-market buy-back of up to 100 million shares, a decision deferred until the updated 15-Mile Processing Hub Project Pre-Feasibility Study, expected late September 2026.",
+      "document_key": "2924-03127743-3A700164",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127743-3A700164"
+    },
+    {
+      "ticker": "MI6",
+      "heading": "Expanded mining lease granted at Bullabulling, regional tenure acquired",
+      "body": "Minerals 260's expanded Mining Lease for Bullabulling has been granted, covering the full mining and processing area from the Pre-Feasibility Study. The company also signed a binding deal with Kalgoorlie Mining Associates for 367km2 of largely contiguous tenure, for A$250,000 cash plus A$1,000,000 in shares at 75.7 cents each. Total project area now stands at 1,527km2, up from 130km2 at acquisition in April 2025. Final Investment Decision remains targeted for Q1 CY2027.",
+      "document_key": "2924-03128234-6A1340914",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128234-6A1340914"
+    },
+    {
+      "ticker": "SLS",
+      "heading": "Deep diamond tail extends Nanadie copper-gold to 700m plus",
+      "body": "NANRCD005 returned a combined RC and diamond intercept of 722.3m @ 0.44% Cu, 0.13g/t Au, extending mineralisation more than 500m below the current 40.4Mt Inferred Resource at Nanadie. Within it, higher-grade zones included 28m @ 1.31% Cu, 0.30g/t Au from 630m and 43.3m @ 0.91% Cu, 0.35g/t Au from 761.7m. Assays are pending from a further 14 diamond tails and over 20 RC holes, with a second RC rig due on site shortly.",
+      "document_key": "2924-03127940-6A1340836",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127940-6A1340836"
+    },
+    {
+      "ticker": "GML",
+      "heading": "Aircore drilling defines 7km gold system at Ward, Yandal Project",
+      "body": "Aircore drilling at the historic Ward Prospect has delineated a gold anomaly extending over 7km along the key structural contact, located just 6km along strike from Gateway's Cowza discovery within the Yandal Gold Project. Best new results include 4m @ 4.0g/t Au from 88m (WAAC0205), 4m @ 3.7g/t Au from 96m (WAAC0066) and 4m @ 3.2g/t Au from 60m (WAAC0074), alongside historic intercepts of 34m @ 1.7g/t Au from 41m (RCMR005). The combined Celia South to Ward corridor now spans over 13 kilometres of strike, with follow-up RC drilling planned and initial Cowza results due imminently. Gateway held $15.7 million in cash and liquid securities at the end of the June 2026 quarter.",
+      "document_key": "2924-03127897-2A1693034",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127897-2A1693034"
+    },
+    {
+      "ticker": "MEK",
+      "heading": "Turnberry visible gold release reissued with ASX cautionary wording",
+      "body": "Meeka Metals has re-released its 21 August 2026 Turnberry announcement after ASX requested additional cautionary language on visual gold estimates under Listed@ASX Compliance Update 04/23. The substance is unchanged: visible gold was logged at 632.8m downhole in 26TBRD010, within a quartz vein alongside pyrite, with assays still pending and expected in September 2026.",
+      "document_key": "2924-03127554-6A1340706",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127554-6A1340706"
+    },
+    {
+      "ticker": "EVN",
+      "heading": "Evolution becomes largest Carnaby shareholder via QCMF stake buy",
+      "body": "Evolution has acquired QIC Queensland Critical Minerals Fund's 37.9 million Carnaby Resources shares (13.7%) by issuing about 2.6 million new Evolution shares, at the scheme ratio of 0.0682 Evolution shares per Carnaby share. Evolution is now Carnaby's largest shareholder ahead of its proposed 100% acquisition by Scheme of Arrangement, with implementation targeted for November 2026.",
+      "document_key": "2924-03127854-2A1693014",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127854-2A1693014"
+    },
+    {
+      "ticker": "WGX",
+      "heading": "Westgold posts record FY26 earnings, treasury builds to A$939 million",
+      "body": "Westgold's FY26 revenue rose 79% to A$2,441 million on record gold production of 387,354oz, lifting underlying EBITDA to A$1,104 million and underlying NPAT 452% to A$480 million. Free cash flow of A$602 million took the closing treasury balance to A$939 million, debt free and unhedged, underwriting a 10cps fully franked dividend and a new A$50 million FY27 buy-back. FY27 production and cost guidance and a strategic outlook update are due on 9 September 2026.",
+      "document_key": "2924-03127896-6A1340819",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127896-6A1340819"
+    },
+    {
+      "ticker": "STN",
+      "heading": "Saturn's SPP oversubscribed, upsized to $21.28 million",
+      "body": "Saturn Metals' Share Purchase Plan closed with $21.28 million in valid applications from 1,272 shareholders, well above the $5.00 million target, and the Company has accepted all applications rather than scale them back. Combined with the recent $100 million placement, total funds raised reach $121.28 million, strengthening the balance sheet to advance the Apollo Hill Gold Project. Proceeds will fund front-end engineering and design, long-lead procurement, construction readiness and exploration drilling.",
+      "document_key": "2924-03128070-6A1340869",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128070-6A1340869"
+    },
+    {
+      "ticker": "WGX",
+      "heading": "Westgold returns $122M to shareholders in FY26",
+      "body": "Westgold declared a 10cps fully franked FY26 dividend totalling approximately $95 million, plus $27 million in on-market buy-backs, for total FY26 shareholder returns of approximately $122 million, up 329% on FY25. The dividend equals 16% of FY26 free cash flow of $602 million. A new FY27 policy sets a minimum 3cps annual return and the board approved a $50 million buy-back program for FY27, with the dividend paid on 8 October 2026.",
+      "document_key": "2924-03127904-6A1340822",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127904-6A1340822"
+    },
+    {
+      "ticker": "VAU",
+      "heading": "Vault clears ACCC hurdle for Genesis merger",
+      "body": "Vault Minerals confirms the ACCC has determined the proposed scheme of arrangement with Genesis Minerals does not require notification, satisfying that condition. The merger remains subject to an independent expert's opinion, shareholder and Court approval. A scheme booklet is expected to be dispatched to shareholders in early October 2026, with a shareholder meeting to follow in late October 2026.",
+      "document_key": "2924-03127646-6A1340736",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127646-6A1340736"
+    },
+    {
+      "ticker": "SKM",
+      "heading": "Skylark proposes management incentive securities issue",
+      "body": "Skylark Minerals plans to issue 14,000,000 unlisted options exercisable at $0.40 on or before 31 December 2029, along with 2,100,000 Performance Rights Class C and 2,100,000 Service Rights, under its remuneration framework. The performance rights vest on declaration of a JORC resource of at least 2Moz gold at a minimum 0.3g/t Au cut-off at the Zaranou Project. Issue to related parties Nikolai Zelenski and Michael Jardine requires shareholder approval, targeted for 16 November 2026, with securities proposed to issue on 18 November 2026.",
+      "document_key": "2924-03128195-6A1340903",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128195-6A1340903"
+    },
+    {
+      "ticker": "SKM",
+      "heading": "Skylark revises executive pay, ties LTI to Zaranou resource growth",
+      "body": "Skylark's Board has approved new remuneration terms for Executive Chairman Nikolai Zelenski and Managing Director Michael Jardine, both on A$350,000 base salaries from 1 September 2026, with STI opportunities of up to 50% and 45% respectively. Proposed LTI awards include options exercisable at A$0.40 and performance rights vesting only if Zaranou delivers a JORC resource of at least 2Moz gold at a 0.3g/t Au cut off. The LTI package requires shareholder approval, expected by the 2026 AGM.",
+      "document_key": "2924-03128178-6A1340888",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128178-6A1340888"
+    },
+    {
+      "ticker": "EVN",
+      "heading": "Evolution issues shares to fund Carnaby Resources share acquisition",
+      "body": "Evolution Mining issued 2,583,333 new fully paid ordinary shares, valued at approximately A$40.5 million, as consideration for acquiring 37,878,788 fully paid ordinary shares in Carnaby Resources Limited. The new shares rank equally with existing EVN shares and take total quoted securities on issue to 2,044,406,773.",
+      "document_key": "2924-03127855-2A1693017",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127855-2A1693017"
+    },
+    {
+      "ticker": "MI6",
+      "heading": "Minerals 260 issues shares as tenement acquisition consideration",
+      "body": "Minerals 260 will issue 1,321,003 fully paid ordinary shares as partial consideration for tenements located adjacent to and within the broader Bullabulling Gold Project area, valued at approximately A$1,000,000. The issue price of A$0.757 per share was set by reference to the 20-day VWAP to 26 August 2026, and the shares will be issued under the company's 15% placement capacity without shareholder approval.",
+      "document_key": "2924-03128238-6A1340916",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128238-6A1340916"
+    },
+    {
+      "ticker": "MPK",
+      "heading": "Many Peaks quotes shares issued for Baga Gold Project acquisition",
+      "body": "Many Peaks Minerals has applied for quotation of 1,500,000 fully paid ordinary shares issued as part consideration for the acquisition of the Baga Gold Project, valued at A$0.90 per share. No cash was involved in the issue. Following quotation, total quoted MPK shares on issue will be 168,194,672.",
+      "document_key": "2924-03127439-6A1340677",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127439-6A1340677"
+    },
+    {
+      "ticker": "LEX",
+      "heading": "Lefroy issues director placement shares under 708A notice",
+      "body": "Lefroy Exploration has issued 2,540,560 new shares at $0.125 each to certain directors, raising $317,570 before costs, as part of a placement approved by shareholders on 31 July 2026 and originally announced on 22 May 2026. The section 708A(5)(e) notice allows the new shares to trade immediately.",
+      "document_key": "2924-03127667-6A1340748",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127667-6A1340748"
+    }
+  ],
+  "other": [
+    {
+      "ticker": "WGX",
+      "company": "WESTGOLD RESOURCES LIMITED.",
+      "headline": "Appendix 4E & 30 June 2026 Annual Financial & Climate Report",
+      "summary": "FY26 production 387,354oz at AISC A$2,841/oz; profit A$443.1m, revenue A$2,440.9m; cash/bullion/liquids A$939m; final div 10cps",
+      "document_key": "2924-03127859-6A1340807",
+      "market_cap": 6227118665,
+      "cap_label": "$6.2B",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127859-6A1340807"
+    },
+    {
+      "ticker": "AAM",
+      "company": "AUMEGA METALS LTD",
+      "headline": "Half Yearly Report and Accounts",
+      "summary": "H1 loss $3.76m (H1 FY25: $5.98m); cash ~$26.7m (Dec 2025: $4.0m) after $30.1m financing",
+      "document_key": "2924-03128293-6A1340923",
+      "market_cap": 53853770,
+      "cap_label": "$54m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128293-6A1340923"
+    }
+  ],
+  "_unverified": [],
+  "also_lodged": [
+    {
+      "ticker": "WGX",
+      "company": "WESTGOLD RESOURCES LIMITED.",
+      "headline": "Corporate Update Presentation",
+      "document_key": "2924-03127913-6A1340825",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127913-6A1340825"
+    },
+    {
+      "ticker": "CMM",
+      "company": "CAPRICORN METALS LTD",
+      "headline": "Becoming a substantial holder from CMM",
+      "document_key": "2924-03127906-6A1340818",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127906-6A1340818"
+    },
+    {
+      "ticker": "EVN",
+      "company": "EVOLUTION MINING LIMITED",
+      "headline": "Initial Substantial Holder Notice from EVN",
+      "document_key": "2924-03127872-6A1340812",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127872-6A1340812"
+    },
+    {
+      "ticker": "LEX",
+      "company": "LEFROY EXPLORATION LIMITED",
+      "headline": "Application for quotation of securities - LEX",
+      "document_key": "2924-03127665-6A1340747",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127665-6A1340747"
+    },
+    {
+      "ticker": "MPK",
+      "company": "MANY PEAKS MINERALS LTD",
+      "headline": "Change of Director's Interest Notice x 5",
+      "document_key": "2924-03127443-6A1340680",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127443-6A1340680"
+    },
+    {
+      "ticker": "MPK",
+      "company": "MANY PEAKS MINERALS LTD",
+      "headline": "Application for quotation of securities - MPK",
+      "document_key": "2924-03127438-6A1340676",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127438-6A1340676"
+    },
+    {
+      "ticker": "MPK",
+      "company": "MANY PEAKS MINERALS LTD",
+      "headline": "Application for quotation of securities - MPK",
+      "document_key": "2924-03127435-6A1340674",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127435-6A1340674"
+    },
+    {
+      "ticker": "RMS",
+      "company": "RAMELIUS RESOURCES LIMITED",
+      "headline": "Becoming a substantial holder from MUFG",
+      "document_key": "2924-03127521-6A1340700",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127521-6A1340700"
+    },
+    {
+      "ticker": "STN",
+      "company": "SATURN METALS LIMITED",
+      "headline": "Change of Director's Interest Notice (x5)",
+      "document_key": "2924-03128086-6A1340874",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128086-6A1340874"
+    },
+    {
+      "ticker": "BCN",
+      "company": "BEACON MINERALS LIMITED",
+      "headline": "Completion of FRS Share Sale Facility",
+      "document_key": "2924-03127517-6A1340699",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127517-6A1340699"
+    },
+    {
+      "ticker": "BGD",
+      "company": "BARTON GOLD HOLDINGS LIMITED",
+      "headline": "Change of Director's Interest Notice",
+      "document_key": "2924-03127964-6A1340847",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127964-6A1340847"
+    },
+    {
+      "ticker": "EVN",
+      "company": "EVOLUTION MINING LIMITED",
+      "headline": "Section 708A Cleansing Notice",
+      "document_key": "2924-03127857-2A1693020",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127857-2A1693020"
+    },
+    {
+      "ticker": "GMD",
+      "company": "GENESIS MINERALS LIMITED",
+      "headline": "Notification regarding unquoted securities - GMD",
+      "document_key": "2924-03128296-6A1340924",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128296-6A1340924"
+    },
+    {
+      "ticker": "MPK",
+      "company": "MANY PEAKS MINERALS LTD",
+      "headline": "Section 708(A) Cleansing Notice - Share Issue",
+      "document_key": "2924-03127442-6A1340679",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127442-6A1340679"
+    },
+    {
+      "ticker": "MPK",
+      "company": "MANY PEAKS MINERALS LTD",
+      "headline": "Application for quotation of securities - MPK",
+      "document_key": "2924-03127440-6A1340678",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127440-6A1340678"
+    },
+    {
+      "ticker": "MPK",
+      "company": "MANY PEAKS MINERALS LTD",
+      "headline": "Notification regarding unquoted securities - MPK",
+      "document_key": "2924-03127437-6A1340675",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127437-6A1340675"
+    },
+    {
+      "ticker": "PC2",
+      "company": "PC GOLD LTD",
+      "headline": "Initial Director's Interest Notice",
+      "document_key": "2924-03127681-6A1340758",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127681-6A1340758"
+    },
+    {
+      "ticker": "PC2",
+      "company": "PC GOLD LTD",
+      "headline": "Final Director's Interest Notice JL JM",
+      "document_key": "2924-03127680-6A1340757",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127680-6A1340757"
+    },
+    {
+      "ticker": "RMS",
+      "company": "RAMELIUS RESOURCES LIMITED",
+      "headline": "Update - Notification of buy-back - RMS",
+      "document_key": "2924-03127777-6A1340784",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127777-6A1340784"
+    },
+    {
+      "ticker": "RXL",
+      "company": "ROX RESOURCES LIMITED",
+      "headline": "Application for quotation of securities - RXL",
+      "document_key": "2924-03127774-6A1340776",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127774-6A1340776"
+    },
+    {
+      "ticker": "SBM",
+      "company": "ST BARBARA LIMITED",
+      "headline": "Appendix 3Y - Andrew Strelein",
+      "document_key": "2924-03128291-3A700318",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128291-3A700318"
+    },
+    {
+      "ticker": "SBM",
+      "company": "ST BARBARA LIMITED",
+      "headline": "Notification of cessation of securities - SBM",
+      "document_key": "2924-03128273-3A700315",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128273-3A700315"
+    },
+    {
+      "ticker": "SBM",
+      "company": "ST BARBARA LIMITED",
+      "headline": "Application for quotation of securities - SBM",
+      "document_key": "2924-03128269-3A700314",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128269-3A700314"
+    },
+    {
+      "ticker": "SBM",
+      "company": "ST BARBARA LIMITED",
+      "headline": "Dividend/Distribution - SBM",
+      "document_key": "2924-03127744-3A700165",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127744-3A700165"
+    },
+    {
+      "ticker": "STN",
+      "company": "SATURN METALS LIMITED",
+      "headline": "Application for quotation of securities - STN",
+      "document_key": "2924-03128073-6A1340872",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128073-6A1340872"
+    },
+    {
+      "ticker": "WGX",
+      "company": "WESTGOLD RESOURCES LIMITED.",
+      "headline": "Update - Notification of buy-back - WGX",
+      "document_key": "2924-03127887-6A1340815",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127887-6A1340815"
+    },
+    {
+      "ticker": "WGX",
+      "company": "WESTGOLD RESOURCES LIMITED.",
+      "headline": "Dividend/Distribution - WGX",
+      "document_key": "2924-03127869-6A1340811",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127869-6A1340811"
+    },
+    {
+      "ticker": "WGX",
+      "company": "WESTGOLD RESOURCES LIMITED.",
+      "headline": "Notification of cessation of securities - WGX",
+      "document_key": "2924-03127846-6A1340803",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127846-6A1340803"
+    },
+    {
+      "ticker": "WGX",
+      "company": "WESTGOLD RESOURCES LIMITED.",
+      "headline": "Updated Managing Director and CEO's Remuneration",
+      "document_key": "2924-03127836-6A1340802",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127836-6A1340802"
+    },
+    {
+      "ticker": "WGX",
+      "company": "WESTGOLD RESOURCES LIMITED.",
+      "headline": "2026 Annual General Meeting - Key Dates",
+      "document_key": "2924-03127825-6A1340798",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03127825-6A1340798"
+    }
+  ]
+}
