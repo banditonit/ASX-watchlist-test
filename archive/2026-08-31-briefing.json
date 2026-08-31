@@ -1,0 +1,502 @@
+{
+  "subject": "BC8 swings to A$86.5M FY26 profit as gold drilling floods the tape",
+  "subtitle": "Black Cat's turnaround headlines a day dominated by high-grade gold assays and resource growth across the watchlist",
+  "lead": "Black Cat Syndicate's FY26 result dominated the corporate news, with revenue up 903% to A$374.3 million and net profit after tax of A$86.5 million versus a prior-year loss, alongside a 132% lift in gold production to 90,833oz and cash, bullion and investments up 87% to A$105.3 million; FY27 guidance is due by the end of September 2026. Kingsgate Consolidated's FY26 numbers were also strong, with revenue up 77% to $596 million and NPAT up 843% to $278 million, backed by a 10cps unfranked final dividend. Elsewhere, Asara's Kada Gold Project resource more than doubled to 2.08Moz, and Maritana declared a maiden underground Ore Reserve at Rose Hill, lifting group reserves to 235,600oz.",
+  "day_in_brief": "Resources and reserves: Asara lifted its interim Kada Gold Project resource 125% to 92.9Mt at 0.70g/t Au for 2.08Moz, with Indicated ounces up sixfold to 1.27Moz ahead of a DFS targeted for Q2 2027. Maritana declared a maiden Rose Hill Underground Ore Reserve of 420kt at 2.34g/t Au for 31,600oz, lifting group reserves to 235,600oz, while updating the underlying resource to 524kt at 4.49g/t Au for 76,000oz. Metal Bank is fast-tracking Homestead ahead of Seven Leaders on the back of Livingstone's larger resource base and stronger gold prices than the A$4,500/oz used in its MRE.\n\nDrilling: High-grade infill and extension results were widespread, led by Barton's 24m @ 4.51g/t Au from 47m at Tunkillia and Kalamazoo's 20m @ 19g/t Au from 2m at Mt Olympus. Valiant extended South Emu-Triton at depth with 2.0m @ 11.49g/t Au from 872.0m, and Lac Gold reported 2.0m @ 17.08g/t Au at Astoria, Rouyn, both feeding upcoming resource updates. Southern Cross's Nanadie drilling opened new high-grade copper-gold zones with NANRC057 returning 5m @ 6.88% Cu, 3.60g/t Au, extending strike to at least 1.3km, while Antipa and GoldArc reported early-stage extensional and blind-vein hits at Tim's Dome and Whistler respectively, and Great Southern Mining extended Blanc Plat north of Mon Ami.\n\nCorporate and funding: Tanami Gold's Central Tanami Project JV signed a A$38 million contract with Macmahon Underground for the 3.5km Groundrush decline, supporting 33,000m of infill drilling to convert over 400,000oz of Inferred Resources. Javelin secured final mining approval for Eureka, with MEGA Resources committing A$25 million in project financing, while Asara agreed to acquire two exploration permits near Kada for SGD100 plus 5,000,000 escrowed shares. Ballard reported A$62 million cash and continued Mt Ida de-risking, including 91% average metallurgical recovery at Baldock and a granted Mining Lease for West Knell.\n\nHalts and suspensions: Gateway Mining entered a trading halt pending material Yandal exploration results, expected to lift by 2 September 2026, and Matsa Resources extended its voluntary suspension to finalise a Devon Pit operations and funding update, also due by 2 September 2026.",
+  "watch_items": [
+    "GML: trading halt pending Yandal exploration results, expected to lift by 2 September 2026",
+    "MAT: voluntary suspension pending Devon Pit operations and funding announcement, due by 2 September 2026",
+    "BC8: FY27 production guidance due by end of September 2026",
+    "AZY: diamond core tails now testing the Tim's Dome AEM conductor directly, results expected in coming weeks",
+    "KZR: Mt Olympus updated Mineral Resource Estimate targeted for Q4 2026 ahead of PFS in Q1 2027"
+  ],
+  "rows": [
+    {
+      "ticker": "BGD",
+      "company": "BARTON GOLD HOLDINGS LIMITED",
+      "announcement": "6m @ 6.61g/t Au from 70m (TKB0639)",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03128974-6A1341201",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128974-6A1341201"
+    },
+    {
+      "ticker": "MRT",
+      "company": "MARITANA MINERALS LIMITED",
+      "announcement": "Maiden Rose Hill UG Ore Reserve 420kt @ 2.34g/t Au for 31,600oz",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03128768-6A1341110",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128768-6A1341110"
+    },
+    {
+      "ticker": "KZR",
+      "company": "KALAMAZOO RESOURCES LIMITED",
+      "announcement": "20m @ 19g/t Au from 2m (KARC0206)",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03128779-6A1341125",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128779-6A1341125"
+    },
+    {
+      "ticker": "AZY",
+      "company": "ANTIPA MINERALS LIMITED",
+      "announcement": "10m @ 1.5g/t Au from 242m (26XTDC0060)",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03128758-6A1341093",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128758-6A1341093"
+    },
+    {
+      "ticker": "SLS",
+      "company": "SOLSTICE MINERALS LIMITED",
+      "announcement": "83m @ 0.96% Cu, 0.44g/t Au from 143m (NANRC058)",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03128778-6A1341124",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128778-6A1341124"
+    },
+    {
+      "ticker": "AS1",
+      "company": "ASARA RESOURCES LIMITED",
+      "announcement": "Kada MRE up 125% to 92.9Mt @ 0.70g/t Au for 2.08Moz",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03129047-3A700461",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129047-3A700461"
+    },
+    {
+      "ticker": "GSN",
+      "company": "GREAT SOUTHERN MINING LIMITED",
+      "announcement": "14m @ 1.05g/t Au from 36m (26MARC012)",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03128876-6A1341177",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128876-6A1341177"
+    },
+    {
+      "ticker": "MBK",
+      "company": "METAL BANK LIMITED",
+      "announcement": "Homestead/Winja drilling Sept, resources 1.129Mt @ 1.36g/t Au (49.6koz)",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03129114-3A700478",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129114-3A700478"
+    },
+    {
+      "ticker": "BM1",
+      "company": "BALLARD MINING LIMITED",
+      "announcement": "Mining Lease granted for West Knell; camp expanded to 30 rooms",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03128797-6A1341156",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128797-6A1341156"
+    },
+    {
+      "ticker": "GA8",
+      "company": "GOLDARC RESOURCES LIMITED",
+      "announcement": "2m @ 4.12g/t Au from 70m (NIC121)",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03128759-6A1341094",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128759-6A1341094"
+    },
+    {
+      "ticker": "VAL",
+      "company": "VALIANT GOLD LIMITED",
+      "announcement": "7.0m @ 4.57g/t Au from 861.0m (26REDD003)",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03128841-6A1341163",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128841-6A1341163"
+    },
+    {
+      "ticker": "AS1",
+      "company": "ASARA RESOURCES LIMITED",
+      "announcement": "Acquires Damissa Koura permits, landholding grows to ~301km2",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03129022-3A700456",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129022-3A700456"
+    },
+    {
+      "ticker": "JAV",
+      "company": "JAVELIN MINERALS LIMITED",
+      "announcement": "Final mining approval received for Eureka Gold Project (MDCP)",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03129103-6A1341238",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129103-6A1341238"
+    },
+    {
+      "ticker": "LAC",
+      "company": "LAC GOLD LIMITED",
+      "announcement": "2.0m @ 17.08g/t Au from 245.7m (AS-26-804)",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03128756-6A1341088",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128756-6A1341088"
+    },
+    {
+      "ticker": "TAM",
+      "company": "TANAMI GOLD NL",
+      "announcement": "A$38M Macmahon contract for Groundrush decline construction",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03128847-6A1341160",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128847-6A1341160"
+    },
+    {
+      "ticker": "TAM",
+      "company": "TANAMI GOLD NL",
+      "announcement": "A$38M Macmahon decline contract signed at Groundrush",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03128785-6A1341114",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128785-6A1341114"
+    },
+    {
+      "ticker": "BC8",
+      "company": "BLACK CAT SYNDICATE LIMITED",
+      "announcement": "FY26 net profit A$86.5M, revenue up 903% to A$374.3M",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03128878-6A1341172",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128878-6A1341172"
+    },
+    {
+      "ticker": "MI6",
+      "company": "MINERALS 260 LIMITED",
+      "announcement": "1,321,003 shares quoted as tenement acquisition consideration",
+      "type": null,
+      "date": "28 August 2026",
+      "document_key": "2924-03128493-6A1340977",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128493-6A1340977"
+    },
+    {
+      "ticker": "GML",
+      "company": "GATEWAY MINING LIMITED",
+      "announcement": "Halted pending exploration results, resuming 2 September 2026",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03128983-2A1693617",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128983-2A1693617"
+    },
+    {
+      "ticker": "MAT",
+      "company": "MATSA RESOURCES LIMITED",
+      "announcement": "Voluntary suspension extended to 2 September 2026",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03129137-6A1341241",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129137-6A1341241"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "BGD",
+      "heading": "Barton hits high-grade infill gold at Tunkillia Starter Pits",
+      "body": "Barton Gold's latest Phase 2 RC assays from Tunkillia's shallow Starter Pit zones include 6m @ 6.61g/t Au from 70m (TKB0639) and 24m @ 4.51g/t Au from 47m (TKB0703), well above the 1.05g/t Au average grade underpinning current Starter Pit economics. A final batch of Phase 2 assays is due shortly, ahead of gold and silver Resource updates and a PFS targeted for Q1 CY27.",
+      "document_key": "2924-03128974-6A1341201",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128974-6A1341201"
+    },
+    {
+      "ticker": "MRT",
+      "heading": "Maritana declares maiden Rose Hill underground Ore Reserve",
+      "body": "Maritana Minerals has declared a maiden Ore Reserve for the Rose Hill Underground of 420kt at 2.34g/t Au for 31,600oz gold, lifting Group Ore Reserves by 31,600oz to 235,600oz. The underground Mineral Resource was also updated at a lower 1.0g/t Au cut-off to 524kt at 4.49g/t Au for 76,000oz, with an Inferred component of 194kt at 4.53g/t Au for 28,000oz excluded from the reserve. Rose Hill ore is planned to be hauled to the Black Swan Processing Hub, with first gold production targeted for H2 CY27.",
+      "document_key": "2924-03128768-6A1341110",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128768-6A1341110"
+    },
+    {
+      "ticker": "KZR",
+      "heading": "Kalamazoo hits exceptional near-surface gold grades at Mt Olympus",
+      "body": "Kalamazoo has reported further assays from its completed 72-hole, 13,726m Resource Definition Drilling Program at the Ashburton Gold Project, including 20m @19g/t Au from 2m in KARC0206 and 43m @3.8g/t Au from surface in KARC0194. Drilling has intersected mineralisation both within and beyond the current Mineral Resource model, with results from 62 of 72 holes now received. These results will feed into an updated Mt Olympus Mineral Resource Estimate targeted for Q4 2026 and the Ashburton Pre-Feasibility Study targeted for Q1 2027.",
+      "document_key": "2924-03128779-6A1341125",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128779-6A1341125"
+    },
+    {
+      "ticker": "AZY",
+      "heading": "Antipa extends gold-copper mineralisation at Tim's Dome",
+      "body": "Batch 3 assays from Antipa's Minyari Project show gold-copper-lead-silver mineralisation across five RC holes over roughly 1km of strike above the untested 1.2km Tim's Dome AEM conductor. Best result was 10m @ 1.5g/t Au from 242m, including 1m @ 10.1g/t Au, in 26XTDC0060, which sat within 60m of the conductor's western edge. Diamond core tails are now underway to directly test the conductor, with results expected in coming weeks.",
+      "document_key": "2924-03128758-6A1341093",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128758-6A1341093"
+    },
+    {
+      "ticker": "SLS",
+      "heading": "New high-grade zones found within and beside Nanadie resource",
+      "body": "RC drilling at Nanadie has identified previously unrecognised high-grade copper-gold zones within and adjacent to the 40.4Mt Mineral Resource. NANRC058 returned 83m @ 0.96% Cu, 0.44g/t Au from 143m within a broader 172m @ 0.69% Cu, 0.30g/t Au intercept from 54m, while NANRC057 returned 5m @ 6.88% Cu, 3.60g/t Au. Step-out drilling has extended the system to at least 1.3km strike, remaining open in all directions, with assays pending from 13 diamond and over 20 RC holes.",
+      "document_key": "2924-03128778-6A1341124",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128778-6A1341124"
+    },
+    {
+      "ticker": "AS1",
+      "heading": "Kada gold resource more than doubles to 2.08Moz",
+      "body": "Asara's updated interim Mineral Resource for the Kada Gold Project in Guinea has grown 125% to 92.9Mt at 0.70g/t Au for 2.08Moz, up from 30.3Mt at 0.95g/t Au for 0.92Moz in 2023. The increase follows 72,648m of a planned 81,361m drilling campaign at Massan, with Indicated Resources up sixfold to 1.27Moz, now 61% of contained gold. A Definitive Feasibility Study is targeted for completion by the end of Q2 2027.",
+      "document_key": "2924-03129047-3A700461",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129047-3A700461"
+    },
+    {
+      "ticker": "GSN",
+      "heading": "New Blanc Plat RC results extend Mon Ami mineralisation north",
+      "body": "Great Southern Mining has received assays from 10 RC holes (1,392m) at the Blanc Plat target, 200m north of its 100%-owned Mon Ami Gold Project near Laverton. Best results include 14m @ 1.05g/t Au from 36m (26MARC012) and 7m @ 0.7g/t Au from 70m (26MARC013), pointing to Blanc Plat as a potential northern extension of the Barnicoat Shear Zone mineralisation along strike from the existing 1.56Mt @ 1.11g/t Au resource. About 65% of gold intercepted sits in oxide material, and the 200m gap between Blanc Plat and Mon Ami remains largely untested.",
+      "document_key": "2924-03128876-6A1341177",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128876-6A1341177"
+    },
+    {
+      "ticker": "MBK",
+      "heading": "MBK fast-tracks Homestead into production ahead of Seven Leaders",
+      "body": "Metal Bank is prioritising first production at its Homestead deposit within the Livingstone Gold Project, ahead of the earlier planned Seven Leaders starter pit, citing Livingstone's larger resource base and higher gold prices than the A$4,500/oz used in the MRE. Homestead and Winja hold combined JORC resources of 1.129Mt @ 1.36g/t Au for 49.6koz Au, with Kingsley (1.68Mt @ 1.35g/t Au for 73koz Au) to follow into production. A geotechnical and metallurgical diamond drilling program at Homestead begins in September, supporting mine planning targeted at 2027 production.",
+      "document_key": "2924-03129114-3A700478",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129114-3A700478"
+    },
+    {
+      "ticker": "BM1",
+      "heading": "Ballard advances Mt Ida de-risking works, $62M cash",
+      "body": "Ballard has completed feasibility-level metallurgical and geotechnical work at Mt Ida, with metallurgical recovery averaging 91% for the +1.0Moz at 3.5g/t Au Baldock deposit. A Mining Lease has been granted for West Knell, exploration camp capacity expanded to 30 rooms, and a contract awarded for the 4km public road diversion. An updated Global MRE is underway after 150km of drilling since February 2026, with cash of $62M at 30 June 2026.",
+      "document_key": "2924-03128797-6A1341156",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128797-6A1341156"
+    },
+    {
+      "ticker": "GA8",
+      "heading": "Second round RC confirms blind vein system at Whistler",
+      "body": "GoldArc's follow-up RC drilling at the Whistler prospect within the Leonora South Gold Project has intersected blind, previously untested gold mineralisation beneath a first round aircore anomaly. Best results include 2m @ 4.12g/t Au from 70m (NIC121) and 2m @ 2.66g/t Au from 63m (NIC120), both associated with vein-hosted mineralisation and pathfinder enrichment. GoldArc will now drill Zone 2 on a tighter spacing to define its extent.",
+      "document_key": "2924-03128759-6A1341094",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128759-6A1341094"
+    },
+    {
+      "ticker": "VAL",
+      "heading": "Further high-grade depth extensions hit at South Emu-Triton",
+      "body": "Valiant's maiden drill program at South Emu-Triton, part of the 100%-owned Reedy Gold Project, has returned further assays including 7.0m @ 4.57g/t Au from 861.0m (incl. 0.3m @ 68.80g/t Au) and 2.0m @ 11.49g/t Au from 872.0m, both in hole 26REDD003. Results sit outside the existing 1.7Mt @ 4.00g/t Au (224koz) resource, with mineralisation traced over 350m of strike and up to 400m below the current estimate. The rig has now moved to Boomerang, with final South Emu-Triton assays (26REDD004) due in September 2026.",
+      "document_key": "2924-03128841-6A1341163",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128841-6A1341163"
+    },
+    {
+      "ticker": "AS1",
+      "heading": "Asara to acquire Damissa Koura and Kankan West permits near Kada",
+      "body": "Asara Resources has agreed to acquire Arafura Ouest PTE Ltd, holder of the Damissa Koura and Kankan West exploration permits in Guinea's Siguiri Basin, expanding its landholding to approximately 301km2 alongside the Kada Gold Project. Consideration is SGD100 plus 5,000,000 escrowed shares to vendors for a three-month consulting arrangement. Settlement is expected on or around 7 September 2026, with exploration to feed resource growth ahead of a Definitive Feasibility Study at Kada.",
+      "document_key": "2924-03129022-3A700456",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129022-3A700456"
+    },
+    {
+      "ticker": "JAV",
+      "heading": "Javelin secures final mining approval for Eureka Gold Project",
+      "body": "The WA Department of Mines, Petroleum and Exploration has approved the Mining Development and Closure Proposal, leaving Eureka shovel-ready with a JORC Mineral Resource of 2.04Mt @ 1.69g/t Au for 110,687oz and an approved mine plan. MEGA Resources has committed A$25 million in project financing to fund Eureka into production, subject to an ore purchase agreement, with discussions ongoing with nearby mill operators to begin processing.",
+      "document_key": "2924-03129103-6A1341238",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129103-6A1341238"
+    },
+    {
+      "ticker": "LAC",
+      "heading": "Lac Gold reports more high-grade hits at Astoria, Rouyn",
+      "body": "Lac Gold has returned assays from a further 20 diamond holes at the Astoria deposit, part of its 100%-owned Rouyn Gold Project in Quebec, including 2.0m @ 17.08g/t Au in AS-26-804, 7.5m @ 11.17g/t Au in AS-26-808 and 2.9m @ 10.78g/t Au in AS-26-802, alongside broad intervals up to 86.6m @ 0.59g/t Au. Results will feed into an updated Mineral Resource Estimate, building on the existing 1.66Moz at 3.28g/t Au. Drilling continues at Astoria and the company has begun reviewing targets elsewhere across the broader Rouyn project.",
+      "document_key": "2924-03128756-6A1341088",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128756-6A1341088"
+    },
+    {
+      "ticker": "TAM",
+      "heading": "Tanami signs A$38 million decline deal with Macmahon",
+      "body": "The Central Tanami Project JV has executed a A$38 million agreement with Macmahon Underground for construction of the Groundrush decline, extending 3.5km to a depth of 350 metres over 14 months. Portal construction starts in September, ahead of about 33,000 metres of infill drilling targeting conversion of over 400,000oz of Inferred Resources to Indicated. Tanami holds a 50% interest in the CTPJV alongside MGX Resources.",
+      "document_key": "2924-03128847-6A1341160",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128847-6A1341160"
+    },
+    {
+      "ticker": "TAM",
+      "heading": "CTPJV signs A$38 million decline agreement with Macmahon",
+      "body": "The Central Tanami Project JV (50% Tanami Gold) has signed a A$38 million contract with Macmahon Underground for a 3.5km decline to 350m depth at the Groundrush Gold Deposit, over a 14-month construction period. Portal construction starts in September, with underground platforms enabling 33,000m of infill drilling to convert over 400,000oz of Inferred Resources to Indicated. The CTPJV resource totals 31.0Mt at 2.8g/t Au for 2.8Moz, including 11.0Mt at 3.3g/t Au for 1.2Moz at Groundrush.",
+      "document_key": "2924-03128785-6A1341114",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128785-6A1341114"
+    },
+    {
+      "ticker": "BC8",
+      "heading": "Black Cat swings to A$86.5 million profit in FY26",
+      "body": "Black Cat Syndicate posted FY26 revenue of A$374.3 million, up 903% on FY25's A$37.3 million, with net profit after tax of A$86.5 million versus a A$25.9 million loss the prior year. Operating cash flow reached A$225.4 million and total gold production rose 132% to 90,833oz. Cash, bullion and investments grew 87% to A$105.3 million, with FY27 guidance due by the end of September 2026.",
+      "document_key": "2924-03128878-6A1341172",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128878-6A1341172"
+    },
+    {
+      "ticker": "MI6",
+      "heading": "Minerals 260 quotes shares issued for Bullabulling tenement buy",
+      "body": "Minerals 260 has quoted 1,321,003 new fully paid ordinary shares, issued as partial consideration for tenements adjacent to and within the broader Bullabulling Gold Project area. The consideration was valued at A$1,000,000. Following quotation, total quoted MI6 shares on issue reach 2,271,924,590.",
+      "document_key": "2924-03128493-6A1340977",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128493-6A1340977"
+    },
+    {
+      "ticker": "GML",
+      "heading": "Gateway Mining halted ahead of Yandal exploration results",
+      "body": "Gateway Mining requested a trading halt pending material exploration results at its Yandal Gold Project. The halt will lift on the earlier of the announcement's release or the start of trading on 2 September 2026.",
+      "document_key": "2924-03128983-2A1693617",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128983-2A1693617"
+    },
+    {
+      "ticker": "MAT",
+      "heading": "Matsa extends trading suspension pending Devon Pit update",
+      "body": "Matsa Resources has requested an extension of its voluntary suspension under Listing Rule 17.2 to finalise an announcement on the Devon Pit Gold Project's operations and a funding proposal. Suspension remains until the earlier of normal trading resuming on 2 September 2026 or release of that announcement.",
+      "document_key": "2924-03129137-6A1341241",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129137-6A1341241"
+    }
+  ],
+  "other": [
+    {
+      "ticker": "KCN",
+      "company": "KINGSGATE CONSOLIDATED LIMITED.",
+      "headline": "Appendix 4E and Audited Financial Report",
+      "summary": "FY26 revenue $596m (+77%); NPAT $278m (+843%); AISC US$2,123/oz on 86,078oz gold; final unfranked dividend 10cps",
+      "document_key": "2924-03128938-2A1693598",
+      "market_cap": 1412715735,
+      "cap_label": "$1.4B",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128938-2A1693598"
+    },
+    {
+      "ticker": "BC8",
+      "company": "BLACK CAT SYNDICATE LIMITED",
+      "headline": "Appendix 4E and Annual Financial Statements",
+      "summary": "FY26 revenue A$374.3m, +903%; NPAT A$86.5m vs FY25 loss A$25.9m; EPS 12.0c; NTA A$0.50/share",
+      "document_key": "2924-03128877-6A1341176",
+      "market_cap": 823688611,
+      "cap_label": "$824m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128877-6A1341176"
+    }
+  ],
+  "_unverified": [],
+  "also_lodged": [
+    {
+      "ticker": "AS1",
+      "company": "ASARA RESOURCES LIMITED",
+      "headline": "Corporate Presentation - The Rapidly Growing Kada Project",
+      "document_key": "2924-03129110-3A700472",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129110-3A700472"
+    },
+    {
+      "ticker": "KCN",
+      "company": "KINGSGATE CONSOLIDATED LIMITED.",
+      "headline": "10 Cent Dividend Declared",
+      "document_key": "2924-03128990-2A1693619",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128990-2A1693619"
+    },
+    {
+      "ticker": "AS1",
+      "company": "ASARA RESOURCES LIMITED",
+      "headline": "Proposed issue of securities - AS1",
+      "document_key": "2924-03129029-3A700458",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129029-3A700458"
+    },
+    {
+      "ticker": "KCN",
+      "company": "KINGSGATE CONSOLIDATED LIMITED.",
+      "headline": "Proposed issue of securities - KCN",
+      "document_key": "2924-03128981-2A1693613",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128981-2A1693613"
+    },
+    {
+      "ticker": "MI6",
+      "company": "MINERALS 260 LIMITED",
+      "headline": "Becoming a substantial holder",
+      "document_key": "2924-03128549-6A1341003",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128549-6A1341003"
+    },
+    {
+      "ticker": "RMS",
+      "company": "RAMELIUS RESOURCES LIMITED",
+      "headline": "Ceasing to be a substantial holder",
+      "document_key": "2924-03128485-6A1340975",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128485-6A1340975"
+    },
+    {
+      "ticker": "WAF",
+      "company": "WEST AFRICAN RESOURCES LIMITED",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03128486-6A1340976",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128486-6A1340976"
+    },
+    {
+      "ticker": "WAF",
+      "company": "WEST AFRICAN RESOURCES LIMITED",
+      "headline": "Becoming a substantial holder",
+      "document_key": "2924-03128482-6A1340973",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128482-6A1340973"
+    },
+    {
+      "ticker": "AAR",
+      "company": "ASTRAL RESOURCES NL",
+      "headline": "Change of Director's Interest Notice",
+      "document_key": "2924-03128403-6A1340947",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128403-6A1340947"
+    },
+    {
+      "ticker": "AUE",
+      "company": "AURUM RESOURCES LIMITED",
+      "headline": "Cleansing Notice",
+      "document_key": "2924-03128443-6A1340958",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128443-6A1340958"
+    },
+    {
+      "ticker": "AUE",
+      "company": "AURUM RESOURCES LIMITED",
+      "headline": "Application for quotation of securities - AUE",
+      "document_key": "2924-03128432-6A1340955",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128432-6A1340955"
+    },
+    {
+      "ticker": "BTR",
+      "company": "BRIGHTSTAR RESOURCES LIMITED",
+      "headline": "Cleansing notice under s708A",
+      "document_key": "2924-03128585-6A1341020",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128585-6A1341020"
+    },
+    {
+      "ticker": "BTR",
+      "company": "BRIGHTSTAR RESOURCES LIMITED",
+      "headline": "Application for quotation of securities - BTR",
+      "document_key": "2924-03128579-6A1341016",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128579-6A1341016"
+    },
+    {
+      "ticker": "BTR",
+      "company": "BRIGHTSTAR RESOURCES LIMITED",
+      "headline": "Application for quotation of securities - BTR",
+      "document_key": "2924-03128576-6A1341011",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128576-6A1341011"
+    },
+    {
+      "ticker": "KCN",
+      "company": "KINGSGATE CONSOLIDATED LIMITED.",
+      "headline": "Dividend/Distribution - KCN",
+      "document_key": "2924-03129013-2A1693631",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129013-2A1693631"
+    },
+    {
+      "ticker": "MI6",
+      "company": "MINERALS 260 LIMITED",
+      "headline": "Section 708A Notice - Issue of Shares",
+      "document_key": "2924-03128495-6A1340978",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128495-6A1340978"
+    },
+    {
+      "ticker": "NST",
+      "company": "NORTHERN STAR RESOURCES LTD",
+      "headline": "Executive Leadership Changes",
+      "document_key": "2924-03128808-6A1341153",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128808-6A1341153"
+    },
+    {
+      "ticker": "RMS",
+      "company": "RAMELIUS RESOURCES LIMITED",
+      "headline": "Update - Notification of buy-back - RMS",
+      "document_key": "2924-03128754-6A1341083",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03128754-6A1341083"
+    },
+    {
+      "ticker": "TCG",
+      "company": "TURACO GOLD LIMITED",
+      "headline": "s708A Notice - Issue of Shares",
+      "document_key": "2924-03129098-6A1341237",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129098-6A1341237"
+    },
+    {
+      "ticker": "TCG",
+      "company": "TURACO GOLD LIMITED",
+      "headline": "Application for quotation of securities - TCG",
+      "document_key": "2924-03129090-6A1341236",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129090-6A1341236"
+    }
+  ]
+}
