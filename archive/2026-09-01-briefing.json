@@ -1,0 +1,340 @@
+{
+  "lead": "Medallion Metals has locked in the build-out of its Kundip project, signing a A$50 million lump sum EPC contract with GR Engineering to convert the Cosmic Boy Concentrator into a standalone 650ktpa copper concentrate and gold doré plant, with concrete pouring due in the first week of September 2026 and first production targeted for the second quarter of 2027. That sits alongside a batch of quarterly and annual filings, including BNZ's maiden Glenburgh exploration target of 485 to 540Mt at 0.6 to 0.7g/t Au for 10.1 to 12.0Moz, and stands out as the only item to move a development timeline rather than simply update an existing record.",
+  "subtitle": "Medallion locks in the Cosmic Boy build while metallurgy and drilling refine two gold-copper stories.",
+  "subject": "MM8 signs A$50M EPC deal for Cosmic Boy, first Kundip ore Q2 2027",
+  "watch_items": [
+    "NXM: updated multi-prospect Wallbrook mineral resource estimate due by end of September quarter, following the Crusader-Clement link-up",
+    "MM8: concrete pouring at Cosmic Boy due first week of September 2026, ahead of October 2026 third-party ore processing start",
+    "STM: Bramaderos studies continuing to incorporate lifted metallurgical recovery assumptions into project economics",
+    "YRL: board changes effective 1 September 2026, with CEO Chris Oorschot remaining until 30 November 2026 transition"
+  ],
+  "day_in_brief": "Corporate and funding: Medallion Metals has executed a A$50 million lump sum EPC contract with GR Engineering to convert the Cosmic Boy Concentrator into a standalone 650ktpa copper concentrate and gold doré plant, replacing the earlier A$7.6 million Early Works Agreement and aligning with the A$49 million Feasibility Study estimate. Site earthworks are complete, concrete pouring is due in the first week of September 2026, third-party ore processing is targeted to start in October 2026, and first Kundip production is targeted for the second quarter of 2027.\n\nDrilling and resources: Nexus Minerals has closed out assays from its 21,985m Wallbrook RC program, with final results identifying a new high-grade structure east of Crusader headlined by 3m @18.75g/t Au within 13m @4.52g/t Au from 124m (NMWBRC26-1007) that links the Crusader-Templar Deposit to the Clement Prospect. The two will now be reported in an expanded resource, due by the end of the September quarter. Sunstone Metals reported locked-cycle metallurgical testwork at Bramaderos lifting average recovery assumptions to 80% copper and 93% gold, up from the April 2026 Scoping Study's 75% and 85%, with flotation recoveries up to 83% into concentrates grading approximately 18% copper.\n\nGovernance: Yandal Resources has overhauled its board effective 1 September 2026, appointing Eduard Eshuys as Non-Executive Chair and Dr Andrew Jackson as a Non-Executive Director. Outgoing Chair Greg Evans remains a director, Katina Law and Chris Newman retire immediately, and Managing Director Chris Oorschot steps off the board but stays as CEO until 30 November 2026. Benz Mining separately lodged a cleansing notice covering 40,431,267 CDIs from its 24 August 2026 placement.\n\nQuarterlies: Five names filed recurring reports without guidance changes, including Auctus Investment Group's FY26 annual report reiterating DFS reserves of 1.33Moz and 1.22Moz life-of-mine production over 10.3 years with FID targeted for the end of CY2026, Catalyst Metals' FY26 production of 103.8koz and revenue of A$631.9 million, Benz Mining's maiden Glenburgh exploration target of 485 to 540Mt at 0.6 to 0.7g/t Au for 10.1 to 12.0Moz following roughly 200,000m of FY26 drilling, and Bardoc Gold's FY26 pre-tax profit of A$62.42 million on 24,854oz produced.",
+  "rows": [
+    {
+      "ticker": "STM",
+      "company": "SUNSTONE METALS LTD",
+      "announcement": "Revised recoveries: 80% copper, 93% gold, up from 75%/85%",
+      "type": null,
+      "date": "1 September 2026",
+      "document_key": "2924-03129898-2A1694038",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129898-2A1694038"
+    },
+    {
+      "ticker": "NXM",
+      "company": "NEXUS MINERALS LIMITED",
+      "announcement": "3m @18.75g/t Au from 124m (NMWBRC26-1007)",
+      "type": null,
+      "date": "1 September 2026",
+      "document_key": "2924-03129843-6A1341539",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129843-6A1341539"
+    },
+    {
+      "ticker": "YRL",
+      "company": "YANDAL RESOURCES LIMITED",
+      "announcement": "Eduard Eshuys named Non-Executive Chair, CEO Oorschot exits board",
+      "type": null,
+      "date": "1 September 2026",
+      "document_key": "2924-03130004-6A1341582",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130004-6A1341582"
+    },
+    {
+      "ticker": "BNZ",
+      "company": "BENZ MINING CORP.",
+      "announcement": "Cleansing notice for 40,431,267 CDIs from placement",
+      "type": null,
+      "date": "31 August 2026",
+      "document_key": "2924-03129177-6A1341258",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129177-6A1341258"
+    },
+    {
+      "ticker": "MM8",
+      "company": "MEDALLION METALS LIMITED.",
+      "announcement": "A$50 million EPC contract awarded to GR Engineering for Cosmic Boy",
+      "type": null,
+      "date": "1 September 2026",
+      "document_key": "2924-03129881-6A1341551",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129881-6A1341551"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "STM",
+      "heading": "Bramaderos metallurgy lifts recovery assumptions",
+      "body": "Locked-cycle flotation and cyanidation testwork at Bramaderos has lifted average metallurgical recovery assumptions to 80% for copper and 93% for gold, up from the April 2026 Scoping Study's 75% and 85%. Locked-cycle flotation achieved copper recoveries up to 83% into concentrates grading approximately 18% copper, with combined flotation and cyanidation achieving gold recoveries up to 94%. Sunstone says the results will materially improve project NPV, production and AISC, feeding into ongoing Bramaderos studies.",
+      "document_key": "2924-03129898-2A1694038",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129898-2A1694038"
+    },
+    {
+      "ticker": "NXM",
+      "heading": "New high-grade Crusader lode links to Clement Prospect",
+      "body": "Final assays from Nexus Minerals' Wallbrook RC program identified a new high-grade structure east of the main Crusader domain, headlined by 3m @18.75g/t Au within 13m @4.52g/t Au from 124m (NMWBRC26-1007). The structure closes the gap between the Crusader-Templar Deposit and Clement Prospect, which will now be reported together in an expanded resource. All 196 holes (21,985m) have been assayed, with an updated multi-prospect Wallbrook mineral resource estimate due by the end of the September quarter.",
+      "document_key": "2924-03129843-6A1341539",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129843-6A1341539"
+    },
+    {
+      "ticker": "YRL",
+      "heading": "Yandal overhauls board as Eshuys takes over as Chair",
+      "body": "Yandal Resources has appointed veteran geologist Eduard Eshuys as Non-Executive Chair and Dr Andrew Jackson as a Non-Executive Director, both effective 1 September 2026. Outgoing Chair Greg Evans stays on as a director, while Ms Katina Law and Mr Chris Newman retire from the board immediately. Managing Director and CEO Chris Oorschot has also retired from the board but remains as CEO until 30 November 2026.",
+      "document_key": "2924-03130004-6A1341582",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130004-6A1341582"
+    },
+    {
+      "ticker": "BNZ",
+      "heading": "Benz issues cleansing notice for placement CDIs",
+      "body": "Benz Mining Corp. has lodged a cleansing notice under section 708A(5)(e) covering 40,431,267 CDIs issued in relation to the placement announced on 24 August 2026. The notice confirms the Company's compliance with continuous disclosure obligations and that no excluded information exists. Assay results from the ongoing Glenburgh Gold Project drill program continue to be released in the ordinary course.",
+      "document_key": "2924-03129177-6A1341258",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129177-6A1341258"
+    },
+    {
+      "ticker": "MM8",
+      "heading": "Medallion signs A$50 million EPC contract for Cosmic Boy plant",
+      "body": "Medallion Metals has executed a A$50 million lump sum EPC contract with GR Engineering to convert the Cosmic Boy Concentrator into a standalone copper concentrate and gold doré plant at 650ktpa, replacing the A$7.6 million Early Works Agreement. The value aligns with the A$49 million Feasibility Study estimate, and site earthworks are complete with concrete pouring due in the first week of September 2026. Processing on third-party ore is targeted to start in October 2026, with first Kundip production targeted for the second quarter of 2027.",
+      "document_key": "2924-03129881-6A1341551",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129881-6A1341551"
+    }
+  ],
+  "other": [
+    {
+      "ticker": "CYL",
+      "company": "CATALYST METALS LIMITED",
+      "headline": "Appendix 4E and Annual Financial Statements",
+      "summary": "FY26 production 103.8koz; revenue A$631.9m (+39%); NPAT A$171.1m (+43%); cash and bullion A$331.3m, debt free",
+      "document_key": "2924-03129728-6A1341485",
+      "market_cap": 1719121991,
+      "cap_label": "$1.7B",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129728-6A1341485"
+    },
+    {
+      "ticker": "BNZ",
+      "company": "BENZ MINING CORP.",
+      "headline": "Annual Report",
+      "summary": "Maiden Exploration Target 485-540Mt at 0.6-0.7g/t Au for 10.1-12.0Moz at Glenburgh; ~200,000m drilled FY26",
+      "document_key": "2924-03129646-6A1341437",
+      "market_cap": 1452819844,
+      "cap_label": "$1.5B",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129646-6A1341437"
+    },
+    {
+      "ticker": "AUC",
+      "company": "AUSGOLD LIMITED",
+      "headline": "2026 Annual Report",
+      "summary": "FY26 annual report; DFS Update reserves 1.33Moz, LOM production 1.22Moz over 10.3yr; FID targeted end CY2026",
+      "document_key": "2924-03129887-6A1341555",
+      "market_cap": 794516583,
+      "cap_label": "$795m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129887-6A1341555"
+    },
+    {
+      "ticker": "AUC",
+      "company": "AUSGOLD LIMITED",
+      "headline": "Appendix 4G and Corporate Governance Statement",
+      "summary": "Corporate governance statement for FY26, no change to board",
+      "document_key": "2924-03129888-6A1341558",
+      "market_cap": 794516583,
+      "cap_label": "$795m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129888-6A1341558"
+    },
+    {
+      "ticker": "BCN",
+      "company": "BEACON MINERALS LIMITED",
+      "headline": "Appendix 4E - Preliminary Final Report",
+      "summary": "FY26 profit A$62.42m pre-tax (FY25: -A$17.12m); 24,854oz produced, 22,201oz sold @ A$6,202/oz; cash A$9.88m, +A$14.12m term deposits",
+      "document_key": "2924-03129428-6A1341337",
+      "market_cap": 418845924,
+      "cap_label": "$419m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129428-6A1341337"
+    }
+  ],
+  "_unverified": [],
+  "also_lodged": [
+    {
+      "ticker": "SBM",
+      "company": "ST BARBARA LIMITED",
+      "headline": "September Investor Presentation",
+      "document_key": "2924-03129804-3A700611",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129804-3A700611"
+    },
+    {
+      "ticker": "MM8",
+      "company": "MEDALLION METALS LIMITED.",
+      "headline": "EPC Contract - Cosmic Boy Concentrator Conversion Project",
+      "document_key": "2924-03129849-6A1341537",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129849-6A1341537"
+    },
+    {
+      "ticker": "BNZ",
+      "company": "BENZ MINING CORP.",
+      "headline": "Change in substantial holding from RMS",
+      "document_key": "2924-03129341-6A1341305",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129341-6A1341305"
+    },
+    {
+      "ticker": "BNZ",
+      "company": "BENZ MINING CORP.",
+      "headline": "Application for quotation of securities - BNZ",
+      "document_key": "2924-03129175-6A1341257",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129175-6A1341257"
+    },
+    {
+      "ticker": "DTM",
+      "company": "DART MINING NL",
+      "headline": "Becoming a substantial holder",
+      "document_key": "2924-03129867-3A700639",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129867-3A700639"
+    },
+    {
+      "ticker": "GMD",
+      "company": "GENESIS MINERALS LIMITED",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03129481-6A1341361",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129481-6A1341361"
+    },
+    {
+      "ticker": "LEX",
+      "company": "LEFROY EXPLORATION LIMITED",
+      "headline": "Change of Director's Interest Notice x 4",
+      "document_key": "2924-03129398-6A1341325",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129398-6A1341325"
+    },
+    {
+      "ticker": "MM8",
+      "company": "MEDALLION METALS LIMITED.",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03129820-6A1341523",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129820-6A1341523"
+    },
+    {
+      "ticker": "PNR",
+      "company": "PANTORO GOLD LIMITED",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03129773-6A1341503",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129773-6A1341503"
+    },
+    {
+      "ticker": "RMS",
+      "company": "RAMELIUS RESOURCES LIMITED",
+      "headline": "Ceasing to be a substantial holder from MUFG",
+      "document_key": "2924-03129615-6A1341430",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129615-6A1341430"
+    },
+    {
+      "ticker": "STM",
+      "company": "SUNSTONE METALS LTD",
+      "headline": "Application for quotation of securities - STM",
+      "document_key": "2924-03129326-2A1693802",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129326-2A1693802"
+    },
+    {
+      "ticker": "WAF",
+      "company": "WEST AFRICAN RESOURCES LIMITED",
+      "headline": "Becoming a substantial holder from MUFG",
+      "document_key": "2924-03129541-6A1341397",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129541-6A1341397"
+    },
+    {
+      "ticker": "BNZ",
+      "company": "BENZ MINING CORP.",
+      "headline": "Appendix 4G - Key to Corporate Governance Disclosures",
+      "document_key": "2924-03129647-6A1341440",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129647-6A1341440"
+    },
+    {
+      "ticker": "EMR",
+      "company": "EMERALD RESOURCES NL",
+      "headline": "Application for quotation of securities - EMR",
+      "document_key": "2924-03129708-6A1341472",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129708-6A1341472"
+    },
+    {
+      "ticker": "EMR",
+      "company": "EMERALD RESOURCES NL",
+      "headline": "Option Exercise",
+      "document_key": "2924-03129707-6A1341471",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129707-6A1341471"
+    },
+    {
+      "ticker": "GMD",
+      "company": "GENESIS MINERALS LIMITED",
+      "headline": "Change of Directors Interest Notice",
+      "document_key": "2924-03129450-6A1341343",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129450-6A1341343"
+    },
+    {
+      "ticker": "GMD",
+      "company": "GENESIS MINERALS LIMITED",
+      "headline": "Application for quotation of securities - GMD",
+      "document_key": "2924-03129442-6A1341341",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129442-6A1341341"
+    },
+    {
+      "ticker": "NST",
+      "company": "NORTHERN STAR RESOURCES LTD",
+      "headline": "Notification regarding unquoted securities - NST",
+      "document_key": "2924-03129599-6A1341424",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129599-6A1341424"
+    },
+    {
+      "ticker": "NST",
+      "company": "NORTHERN STAR RESOURCES LTD",
+      "headline": "Notification of cessation of securities - NST",
+      "document_key": "2924-03129594-6A1341421",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129594-6A1341421"
+    },
+    {
+      "ticker": "NST",
+      "company": "NORTHERN STAR RESOURCES LTD",
+      "headline": "Final Director's Interest Notice",
+      "document_key": "2924-03129434-6A1341340",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129434-6A1341340"
+    },
+    {
+      "ticker": "NST",
+      "company": "NORTHERN STAR RESOURCES LTD",
+      "headline": "Change of Director's Interest Notice",
+      "document_key": "2924-03129424-6A1341336",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129424-6A1341336"
+    },
+    {
+      "ticker": "RMS",
+      "company": "RAMELIUS RESOURCES LIMITED",
+      "headline": "Update - Notification of buy-back - RMS",
+      "document_key": "2924-03129777-6A1341505",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03129777-6A1341505"
+    },
+    {
+      "ticker": "YRL",
+      "company": "YANDAL RESOURCES LIMITED",
+      "headline": "Final Director's Interest Notice - Oorschot",
+      "document_key": "2924-03130024-6A1341593",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130024-6A1341593"
+    },
+    {
+      "ticker": "YRL",
+      "company": "YANDAL RESOURCES LIMITED",
+      "headline": "Final Director's Interest Notice - Newman",
+      "document_key": "2924-03130021-6A1341591",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130021-6A1341591"
+    },
+    {
+      "ticker": "YRL",
+      "company": "YANDAL RESOURCES LIMITED",
+      "headline": "Final Director's Interest Notice - Law",
+      "document_key": "2924-03130017-6A1341590",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130017-6A1341590"
+    },
+    {
+      "ticker": "YRL",
+      "company": "YANDAL RESOURCES LIMITED",
+      "headline": "Initial Director's Interest Notice - Jackson",
+      "document_key": "2924-03130016-6A1341588",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130016-6A1341588"
+    },
+    {
+      "ticker": "YRL",
+      "company": "YANDAL RESOURCES LIMITED",
+      "headline": "Initial Director's Interest Notice - Eshuys",
+      "document_key": "2924-03130014-6A1341587",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130014-6A1341587"
+    }
+  ]
+}
