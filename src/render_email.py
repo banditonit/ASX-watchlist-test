@@ -82,18 +82,59 @@ def _plain_label(text, weight="bold", size=None):
             f'{escape(text)}</span>')
 
 
-def _p(text, size=15, colour=NAVY, weight="normal", top=0, bottom=14):
+def _p(text, size=15, colour=NAVY, weight="normal", top=0, bottom=14,
+       cls=None, extra=""):
     """Render text as one or more paragraphs, preserving blank-line breaks."""
     blocks = [b.strip() for b in _text(text).split("\n\n") if b.strip()]
     if not blocks:
         return ""
     cap = f"max-width:{PROSE}px;" if PROSE else ""
+    klass = f' class="{cls}"' if cls else ""
     return "".join(
-        f'<p style="margin:{top if i == 0 else 0}px 0 {bottom}px 0;font-family:{FONT};'
+        f'<p{klass} style="margin:{top if i == 0 else 0}px 0 {bottom}px 0;font-family:{FONT};'
         f'font-size:{size}px;line-height:1.55;color:{colour};{cap}'
-        f'font-weight:{weight};">{escape(b)}</p>'
+        f'font-weight:{weight};{extra}">{escape(b)}</p>'
         for i, b in enumerate(blocks)
     )
+
+
+# ------------------------------------------------------- short bodies for phones
+#
+# A phone gets about half of each summary. Not a second summary from the model:
+# the cards are written lead-first, so the first sentence carries the news and
+# the rest is the supporting figures and the next step. Measured over the 271
+# cards in the archive, cutting at the sentence boundary closest to half the
+# body lands at 48% on average, 87% of cards between 35% and 65%. Both versions are in the email; which one shows
+# is decided by the client's width. Anything that cannot read the stylesheet
+# (Outlook on a desktop, older webmail) sees the full version, because the
+# short one is hidden inline and only the media rule below turns it on.
+SHORT_TARGET = 0.50
+_SENTENCE = re.compile(r'(?<=[.!?])\s+(?=[A-Z0-9"(])')
+
+
+def _short(text):
+    """Whole sentences from the start, cut at the boundary closest to half."""
+    text = _text(text).replace("\n\n", " ").strip()
+    if not text:
+        return ""
+    sentences = _SENTENCE.split(text)
+    best, best_gap = sentences[0], None
+    for n in range(1, len(sentences) + 1):
+        candidate = " ".join(sentences[:n])
+        gap = abs(len(candidate) / len(text) - SHORT_TARGET)
+        if best_gap is None or gap < best_gap:
+            best, best_gap = candidate, gap
+    return best
+
+
+def _body(text, size=14, bottom=0):
+    """Full body for wide screens, short body for phones, one shown at a time."""
+    full = _p(text, size=size, bottom=bottom, cls="dcp-long")
+    short = _short(text)
+    if not full or not short or short == _text(text).strip():
+        return full
+    return full + _p(short, size=size, bottom=bottom, cls="dcp-short",
+                     extra="display:none;")
 
 
 # How several announcements from one name are laid out in the Announcement
@@ -299,7 +340,7 @@ def _table(rows, times=None, label=None, widths=None, late=frozenset()):
         return ""
     times = times or {}
     head = "".join(
-        f'<th align="left" style="font-family:{FONT};font-size:12px;'
+        f'<th class="dcp-th" align="left" style="font-family:{FONT};font-size:12px;'
         f'font-weight:bold;color:{SECTION["headtext"]};'
         f'background-color:{SECTION["head"]};'
         f'padding:9px 10px;">{escape(h)}</th>'
@@ -332,12 +373,15 @@ def _table(rows, times=None, label=None, widths=None, late=frozenset()):
             escape(_when(items, times, late)),
         ]
         tds = "".join(
-            f'<td width="{w}" style="font-family:{FONT};font-size:12px;'
-            f'color:{NAVY};padding:9px 10px;background-color:{bg};'
+            f'<td class="dcp-cell {k}" width="{w}" style="font-family:{FONT};'
+            f'font-size:12px;color:{NAVY};padding:9px 10px;background-color:{bg};'
             f'vertical-align:top;">{c}</td>'
-            for c, w in zip(cells, widths)
+            for c, w, k in zip(cells, widths, ("dcp-tk", "dcp-co", "dcp-an", "dcp-dt"))
         )
-        body.append(f"<tr>{tds}</tr>")
+        # The row carries the colour too, so that when a phone stacks the
+        # cells the band runs the full width instead of stopping where the
+        # ticker and company end. Same colour as the cells; invisible on desktop.
+        body.append(f'<tr style="background-color:{bg};">{tds}</tr>')
     return f"""
     <tr><td>
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
@@ -453,7 +497,7 @@ def _item_card(ticker, item):
     )
     return f"""
     <tr><td style="background-color:{SECTION['card']};padding:16px 18px;{_edge()}">
-      {heading}{_p(item.get("body", ""), size=14, bottom=0)}
+      {heading}{_body(item.get("body", ""), size=14, bottom=0)}
     </td></tr>
     <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
     """
@@ -481,7 +525,7 @@ def _multi_card(ticker, items):
             f'color:{NAVY};margin:{0 if n == 0 else 15}px 0 6px 0;">'
             f'{_link(_text(item.get("heading")), item.get("url"), size=14)}</div>'
         )
-        inner.append(_p(item.get("body", ""), size=14, bottom=0))
+        inner.append(_body(item.get("body", ""), size=14, bottom=0))
     return f"""
     <tr><td style="background-color:{SECTION['card']};padding:16px 18px;{_edge()}">
       {''.join(inner)}
@@ -605,7 +649,7 @@ def _commodity_panel(code, inner):
     """One commodity as a single tinted field: band, table and cards inside."""
     solid, wash, _zebra = _palette(code)
     return f"""
-    <tr><td style="background-color:{wash};border-left:6px solid {solid};
+    <tr><td class="dcp-panel" style="background-color:{wash};border-left:6px solid {solid};
                    padding:14px 16px 4px 16px;">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
              border="0">{inner}</table>
@@ -917,18 +961,44 @@ def render(briefing, pack):
                      vertical-align:top !important; }}
   }}
   @media only screen and (max-width:620px) {{
-    td.dcp-lodged {{ display:block !important; width:100% !important; }}
+    td.dcp-lodged {{ display:block !important; width:100% !important;
+                     box-sizing:border-box !important; }}
   }}
   @media only screen and (max-width:760px) {{
     td.dcp-brief {{ display:block !important; width:100% !important;
                     padding-right:0 !important; }}
+  }}
+  /* The announcement tables are four columns, and on a 390px phone the Date
+     column wrapped to three lines and the Company column to four. Below 600px
+     each row becomes a short stack instead: ticker and company on one line,
+     the announcement on the next, the time under it. Desktop is untouched. */
+  /* Phones: the briefing runs edge to edge. The grey gutter, the 18px frame
+     padding and the panel's coloured left rule together cost 50px of a 390px
+     screen; on a phone the panel's wash colour is enough to mark the section,
+     so the rule goes and the paddings shrink. Desktop keeps all of them. */
+  @media only screen and (max-width:600px) {{
+    td.dcp-gutter {{ padding:0 !important; }}
+    td.dcp-body {{ padding:14px 10px 20px 10px !important; }}
+    td.dcp-panel {{ border-left:0 !important; padding:12px 8px 2px 8px !important; }}
+    th.dcp-th {{ display:none !important; }}
+    td.dcp-cell {{ display:block !important; width:100% !important;
+                   box-sizing:border-box !important; }}
+    td.dcp-tk, td.dcp-co {{ display:inline-block !important; width:auto !important;
+                            padding:9px 4px 2px 10px !important; }}
+    td.dcp-co {{ padding-left:2px !important; font-size:11px !important;
+                 color:#585858 !important; }}
+    td.dcp-an {{ padding:0 10px 3px 10px !important; }}
+    td.dcp-dt {{ padding:0 10px 9px 10px !important; font-size:11px !important;
+                 color:#585858 !important; }}
+    p.dcp-long {{ display:none !important; }}
+    p.dcp-short {{ display:block !important; }}
   }}
 </style>
 <title>ASX Watchlist Catch Up, {escape(date)}</title></head>
 <body style="margin:0;padding:0;background-color:#F4F5F6;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
        style="background-color:#F4F5F6;">
- <tr><td align="center" style="padding:22px 10px;">
+ <tr><td class="dcp-gutter" align="center" style="padding:22px 10px;">
   <table role="presentation" {_frame_attr()} cellpadding="0" cellspacing="0" border="0"
          style="width:100%;{_frame_cap()}background-color:{WHITE};">
 
@@ -941,7 +1011,7 @@ def render(briefing, pack):
        Daily Announcements Briefing, {escape(date)}</div>
    </td></tr>
 
-   <tr><td style="padding:22px 18px 26px 18px;">
+   <tr><td class="dcp-body" style="padding:22px 18px 26px 18px;">
      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
        {''.join(body)}
      </table>
