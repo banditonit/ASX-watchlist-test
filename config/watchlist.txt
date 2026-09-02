@@ -24,7 +24,8 @@
 # ============================================================
 
 # ---- Explorers / developers --------------------------------
-AQI    Au
+# AQI   Au    # Sinclair Gold, re-coded to SGC
+SGC    Au    # Sinclair Gold, formerly AQI
 ARV    Au
 AS1    Au
 BM1    Au
@@ -32,7 +33,6 @@ BNZ    Au
 GBR    Au
 GBM    Au
 GG8    Au
-GHM    Au
 GML    Au
 GSN    Au
 JAV    Au
@@ -55,10 +55,7 @@ MBK    Au
 NWM    Au
 SMS    Au
 SKM    Au
-CZN    Au
 ARI    Au
-VAL    Au
-PC2    Au
 AAR    Au
 LAC    Au
 AUC    Au
@@ -85,13 +82,20 @@ STM    Au
 STN    Au
 TAM    Au
 TCG    Au
-TRE    Au
 TSO    Au
 WGR    Au
 WIA    Au
 MEK    Au
 PRX    Au
 PGL    Au            # Pilbara Gold, formerly KAI
+CRS    Au    # Caprice Resources
+IDA    Au    # Indiana Resources
+MAU    Au    # Magnetic Resources
+RDN    Au    # Raiden Resources
+TMB    Au    # Tambourah Metals
+WSR    Au    # Westar Resources
+ADD    Au    # Adavale Resources
+M3M    Au    # M3 Mining
 
 # ---- Producers / larger caps -------------------------------
 EVN    Au
@@ -129,7 +133,6 @@ AUQ    Cu    # Alara Resources Limited
 KAN    Cu    # Kantra Copper Limited, formerly HGO
 
 # ---- Copper: developers / explorers ------------------------
-ALV    Cu    # Alvo Minerals Limited
 ANX    Cu    # Anax Metals Limited
 CVV    Cu    # Caravel Minerals Limited
 NFM    Cu    # New Frontier Minerals Limited
@@ -151,7 +154,10 @@ CLA    Cu    # Celsius Resources Ltd
 CST    Cu    # Castile Resources Ltd
 PSC    Cu    # Prospect Resources Ltd
 PXX    Cu    # PolarX Ltd
-BSX    Cu    # Blackstone Minerals Ltd
+ALY    Cu    # Alchemy Resources
+HMX    Cu    # Hammer Metals
+HOR    Cu    # Horseshoe Metals
+AM5    Cu    # Antares Metals, copper and uranium; tagged copper, flip to U if preferred
 
 # ---- Uranium: producers -------------------------------------
 PDN    U     # Paladin Energy Ltd
@@ -175,11 +181,9 @@ OSM    U     # Osmond Resources Limited
 
 # ---- Uranium: explorers -------------------------------------
 USC    U     # US1 Critical Minerals Moved to 
-CXU    U     # Cauldron Energy Limited
 HAR    U     # Haranga Resources Limited
 AMU    U     # American Uranium Limited
 MHC    U     # Manhattan Gold Corp 
-EL8    U     # Elevate Uranium Ltd
 EME    U     # Energy Metals Ltd
 BRY    U     # Barys Resources Limited
 AS2    U     # Askari Metals Limited
@@ -203,3 +207,25 @@ SBR    U     # Sabre Resources Ltd
 T92    U     # Terra Critical Minerals (name truncated in source)
 THR    U     # Thor Energy Plc (CDIs)
 WCN    U     # White Cliff Minerals Limited
+C29    U     # C29 Metals
+
+# ---- DCP Watches --------------------------------------------
+# Names DCP follows, whatever the metal. Their announcements appear in
+# their own navy section after the commodities, not in Gold/Copper/Uranium.
+ALV    DCP   # Alvo Minerals Limited
+CZN    DCP   # Corazon Mining
+EL8    DCP   # Elevate Uranium Ltd
+ENT    DCP   # Enterprise Metals
+GHM    DCP   # Golden Horse Minerals
+T88    DCP   # Taiton Resources
+TAR    DCP   # Taruga Minerals
+SNM    DCP   # Sentinel Metals
+DYM    DCP   # Dynamic Metals
+TRE    DCP   # Toubani Resources
+PGD    DCP   # Peregrine Gold
+ALR    DCP   # Altair Minerals
+BSX    DCP   # Blackstone Minerals Ltd
+PC2    DCP   # PC Gold
+CXU    DCP   # Cauldron Energy Limited
+VAL    DCP   # Valiant Gold
+CMO    DCP   # Cosmo Metals
