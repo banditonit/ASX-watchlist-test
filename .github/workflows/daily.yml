@@ -9,9 +9,14 @@ name: Daily ASX watchlist briefing
 # Two changes fix it. First, nothing is scheduled at midnight UTC or on the
 # hour any more. Second, the workflow no longer trusts its own start time: it
 # is woken several times across the morning and the gate step below decides
-# which of those wakes actually sends. A wake that is early sleeps until 08:10
-# exactly; a wake that is late sends immediately; every wake after the day's
-# briefing has gone out exits in about ten seconds.
+# which of those wakes actually sends. A wake inside the window builds at
+# once, sweeps again TOPUP_LEAD_MIN minutes before SEND_AT for anything lodged
+# since, and sends on the minute; a wake that is late sends immediately; every
+# wake after the day's briefing has gone out exits in about ten seconds.
+#
+# To test after changing files: Actions tab, "Run workflow", tick dry_run.
+# It builds the whole briefing and sends nothing, claims nothing, archives
+# nothing. Read the log; if it is clean, the next scheduled morning is live.
 #
 # The gate reads the lock from the remote branch and then claims the day with
 # a tag before anything is sent. It cannot read it from its own checkout: a run
@@ -64,6 +69,11 @@ on:
         description: "How many hours back to look"
         required: false
         default: "24"
+      dry_run:
+        description: "Build everything but send nothing (safe test after changing files)"
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: write           # so the run can commit the day's archive and tag
@@ -78,6 +88,7 @@ env:
   TZ: Australia/Perth
   SEND_AT: "08:10"          # the minute the briefing should leave, AWST
   PIN_WINDOW_MIN: "45"      # wake this close to SEND_AT and it waits for it
+  TOPUP_LEAD_MIN: "6"       # sweep again this many minutes before SEND_AT
 
 jobs:
   briefing:
@@ -109,6 +120,12 @@ jobs:
           }
 
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+              echo "Manual DRY RUN. Building everything, sending nothing, claiming nothing."
+              echo "send=yes" >> "$GITHUB_OUTPUT"
+              echo "dry=yes" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
             echo "Manual run. Sending now."
             echo "send=yes" >> "$GITHUB_OUTPUT"
             exit 0
@@ -120,6 +137,12 @@ jobs:
             exit 0
           fi
 
+          # No sleeping here any more. A wake that is too early stands down and
+          # leaves it to a later one; a wake inside the window starts building
+          # straight away and run.py holds the finished email until SEND_AT.
+          # The gate used to sleep until 08:10 and only then start collecting,
+          # which put the whole build after the deadline and sent the email at
+          # 08:10, 08:11 and 08:14 on three consecutive days.
           if [ "$NOW" -lt "$TARGET" ]; then
             WAIT=$(( TARGET - NOW ))
             if [ "$WAIT" -gt $(( PIN_WINDOW_MIN * 60 )) ]; then
@@ -127,18 +150,9 @@ jobs:
               echo "send=no" >> "$GITHUB_OUTPUT"
               exit 0
             fi
-            echo "Woke at $(date +%H:%M) AWST. Waiting ${WAIT}s to send at $SEND_AT."
-            sleep "$WAIT"
+            echo "Woke at $(date +%H:%M) AWST. Building now, sending at $SEND_AT."
           else
-            echo "It is $(date +%H:%M) AWST, past $SEND_AT."
-          fi
-
-          # A sleeping run knows nothing about what happened while it slept, so
-          # the question is asked again on waking.
-          if already_sent; then
-            echo "Another run sent the briefing while this one waited."
-            echo "send=no" >> "$GITHUB_OUTPUT"
-            exit 0
+            echo "It is $(date +%H:%M) AWST, past $SEND_AT. Building and sending now."
           fi
 
           # Claim the day before sending, not after. Creating a git ref through
@@ -194,17 +208,42 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SMTP_FROM: ${{ secrets.SMTP_FROM }}
-        run: python run.py --hours ${{ steps.window.outputs.hours }}
+        run: |
+          if [ "${{ steps.gate.outputs.dry }}" = "yes" ]; then
+            python run.py --hours ${{ steps.window.outputs.hours }} --dry-run
+          else
+            python run.py --hours ${{ steps.window.outputs.hours }} --send-at "$SEND_AT"
+          fi
 
+      # The archive is the program's only memory: tomorrow reads it to know
+      # where today stopped and what was already reported. A push that fails
+      # here means tomorrow repeats today's items (a visible fault, and the
+      # right direction to fail in), so it is tried three times and shouted
+      # about if it still does not land. A dry run writes nothing back: it
+      # produced files for today that were never sent, and previous_run()
+      # only trusts a pack with an email beside it, so keeping them would be
+      # harmless but pointless.
       - name: Keep the day's evidence
-        if: always() && steps.gate.outputs.send == 'yes'
+        if: always() && steps.gate.outputs.send == 'yes' && steps.gate.outputs.dry != 'yes'
         run: |
           git config user.name "watchlist-bot"
           git config user.email "actions@github.com"
           git add archive/*.json archive/*.html 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "archive: $(date +%Y-%m-%d)"
-          git pull --rebase --autostash || true
-          git push || true
+          if git diff --staged --quiet; then
+            echo "Nothing new to archive."
+            exit 0
+          fi
+          git commit -m "archive: $(date +%Y-%m-%d)"
+          for attempt in 1 2 3; do
+            git pull --rebase --autostash && git push && { echo "Archive pushed."; exit 0; }
+            echo "Push attempt $attempt failed, retrying in 20s..."
+            sleep 20
+          done
+          echo "::error::ARCHIVE PUSH FAILED after 3 attempts. Today's pack is not on"
+          echo "::error::the branch, so tomorrow's run will not know these items were"
+          echo "::error::sent and will report them again. Re-run this workflow by hand"
+          echo "::error::later, or push the archive directory manually."
+          exit 0
 
       # If the send failed, the day was claimed but nothing was delivered, and
       # a claim nobody honoured would silence every later wake. Hand it back so
@@ -212,7 +251,7 @@ jobs:
       # rather a failed morning stay silent than risk a second copy of a
       # briefing that failed after the mail server had already accepted it.
       - name: Release the claim if the send failed
-        if: failure() && steps.gate.outputs.send == 'yes'
+        if: failure() && steps.gate.outputs.send == 'yes' && steps.gate.outputs.dry != 'yes'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
