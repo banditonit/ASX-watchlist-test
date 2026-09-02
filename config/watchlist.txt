@@ -91,8 +91,6 @@ WGR    Au
 WIA    Au
 MEK    Au
 PRX    Au
-
-# KAI                # Kairos Minerals, re-coded to PGL in April 2026
 PGL    Au            # Pilbara Gold, formerly KAI
 
 # ---- Producers / larger caps -------------------------------
@@ -121,3 +119,87 @@ WGX    Au
 ORE    Au
 BCN    Au
 DTM    Au
+
+# ---- Copper: producers / larger caps -----------------------
+29M    Cu    # 29Metals Limited
+SFR    Cu    # Sandfire Resources Ltd
+AIS    Cu    # Aeris Resources Limited
+CSC    Cu    # Capstone Copper Corp. CDIs
+AUQ    Cu    # Alara Resources Limited
+KAN    Cu    # Kantra Copper Limited, formerly HGO
+
+# ---- Copper: developers / explorers ------------------------
+ALV    Cu    # Alvo Minerals Limited
+ANX    Cu    # Anax Metals Limited
+CVV    Cu    # Caravel Minerals Limited
+NFM    Cu    # New Frontier Minerals Limited
+COD    Cu    # Coda Minerals Ltd
+CYM    Cu    # Cyprium Metals Limited
+EM2    Cu    # Eagle Mountain Mining Ltd
+FFM    Cu    # FireFly Metals Ltd
+GRE    Cu    # Greentech Metals Ltd
+HAV    Cu    # Havilah Resources Limited
+HCH    Cu    # Hot Chili Limited
+KGL    Cu    # KGL Resources Limited
+NRX    Cu    # Noronex Ltd
+ORN    Cu    # Orion Minerals Limited
+PEX    Cu    # Peel Mining Limited
+QML    Cu    # QMines Ltd
+RRR    Cu    # Revolver Resources Holdings Ltd
+SVY    Cu    # Stavely Minerals Ltd
+CLA    Cu    # Celsius Resources Ltd
+CST    Cu    # Castile Resources Ltd
+PSC    Cu    # Prospect Resources Ltd
+PXX    Cu    # PolarX Ltd
+BSX    Cu    # Blackstone Minerals Ltd
+
+# ---- Uranium: producers -------------------------------------
+PDN    U     # Paladin Energy Ltd
+BOE    U     # Boss Energy Limited
+PEN    U     # Peninsula Energy Limited
+LOT    U     # Lotus Resources Limited
+
+# ---- Uranium: developers ------------------------------------
+NXG    U     # NexGen Energy Ltd (CDIs)
+AGE    U     # Alligator Energy Limited
+BMN    U     # Bannerman Energy Limited
+DYL    U     # Deep Yellow Limited
+AEU    U     # Atomic Eagle Ltd
+BKY    U     # Berkeley Energia Limited
+LAM    U     # Laramide Resources Ltd
+AEE    U     # Aura Energy Ltd
+ETM    U     # Energy Transition Minerals Ltd
+1AE    U     # Aurora Energy Metals Limited
+AKN    U     # AuKing Mining Ltd
+OSM    U     # Osmond Resources Limited
+
+# ---- Uranium: explorers -------------------------------------
+USC    U     # US1 Critical Minerals Moved to 
+CXU    U     # Cauldron Energy Limited
+HAR    U     # Haranga Resources Limited
+AMU    U     # American Uranium Limited
+MHC    U     # Manhattan Gold Corp 
+EL8    U     # Elevate Uranium Ltd
+EME    U     # Energy Metals Ltd
+BRY    U     # Barys Resources Limited
+AS2    U     # Askari Metals Limited
+ASN    U     # Anson Resources Limited
+BSN    U     # Basin Energy Limited
+CML    U     # Connected Minerals Limited
+CR3    U     # Core Energy Minerals Ltd
+DEV    U     # DevEx Resources Ltd
+EPM    U     # Eclipse Metals Limited
+FSY    U     # Asarian Energy Limited
+HRE    U     # Heavy Rare Earths Limited
+I88    U     # Infini Resources Limited
+KOB    U     # Koba Resources Limited
+MEX    U     # Minerals Exploration Ltd (name truncated in source)
+MOM    U     # Moab Minerals Limited
+# NRX  U     # Noronex Ltd -- already on the list as Cu above; one commodity per name
+ORP    U     # Orpheus Uranium Limited
+PR2    U     # Piche Resources Limited
+REC    U     # Recharge Metals Limited
+SBR    U     # Sabre Resources Ltd
+T92    U     # Terra Critical Minerals (name truncated in source)
+THR    U     # Thor Energy Plc (CDIs)
+WCN    U     # White Cliff Minerals Limited
