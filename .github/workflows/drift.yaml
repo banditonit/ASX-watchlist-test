@@ -1,0 +1,32 @@
+name: Weekly watchlist drift check
+
+# Reads the archive already in the repo and prints two lists: names whose
+# recent announcements no longer read like their commodity tag, and names that
+# have lodged nothing in 90 days. No requests, no API calls, no secrets, and it
+# never touches the morning briefing: it is a separate workflow so nothing it
+# does can be the reason an email does not go out.
+#
+# Open the run in the Actions tab to read the report. It changes nothing;
+# if it flags a tag you agree with, edit config/watchlist.txt.
+
+on:
+  schedule:
+    - cron: "30 21 * * 0"     # Sunday 21:30 UTC = Monday 05:30 AWST
+  workflow_dispatch:          # or run it by hand any time
+
+permissions:
+  contents: read
+
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Report
+        env:
+          TZ: Australia/Perth
+        run: python src/drift.py
