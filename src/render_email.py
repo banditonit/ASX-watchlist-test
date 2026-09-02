@@ -458,6 +458,10 @@ def _window_label(pack):
                        - datetime.fromisoformat(start)).total_seconds() / 3600)
     except (TypeError, ValueError):
         pass
+    # An update run's window is a few hours, and "0 hours to 13:15" is not a
+    # label. Under a day it reads as the span it is.
+    if hours < 20 and start and end:
+        return f"{start[11:16]} to {end[11:16]} AWST"
     return f"{hours} hours to {end[11:16]} AWST"
 
 
