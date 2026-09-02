@@ -1,6 +1,6 @@
-"""Reads the two plain-text config files in config/.
+"""Reads the plain-text config files in config/.
 
-Both files use the same forgiving format so a non-technical person can edit
+All of them use the same forgiving format so a non-technical person can edit
 them in the GitHub web editor without breaking anything:
 
     - one entry per line
@@ -8,8 +8,23 @@ them in the GitHub web editor without breaking anything:
     - blank lines are ignored
     - a fully commented-out line is simply skipped ("paused")
 
-recipients.txt additionally accepts "Name <email@domain>" as well as a bare
-email address.
+watchlist.txt       one ASX code per line, with an optional commodity tag:
+                        PRU            # no tag: goes to the default commodity
+                        BOE    U       # tagged uranium
+commodities.txt     the commodities the briefing is split into, in the order
+                    they appear in the email. The first one is the default.
+recipients.txt      "Name <email@domain>" or a bare email address.
+
+Two different rules apply to mistakes, on purpose.
+
+A line in watchlist.txt that is not an ASX code stops the run, as it always
+has: a company that is silently not watched is worse than no email.
+
+A commodity tag that is unknown, or missing, or a commodities.txt that cannot
+be read, never stops the run and never drops a name. The name goes to the
+default commodity and the problem is printed. A heading in the wrong colour is
+a small thing; a company that vanishes from the briefing because of a typo in a
+tag is exactly the kind of silent failure this program exists to avoid.
 """
 
 import os
@@ -20,6 +35,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG_DIR = os.path.join(ROOT, "config")
 
 TICKER_RE = re.compile(r"^[A-Z0-9]{2,5}$")
+COMMODITY_CODE_RE = re.compile(r"^[A-Za-z][A-Za-z0-9]{0,3}$")
 
 
 def _strip_comments(path):
@@ -35,15 +51,20 @@ class ConfigError(Exception):
     """Raised when a config file cannot be understood. Never guessed around."""
 
 
-def load_watchlist(path=None):
-    """Return an ordered, de-duplicated list of ASX codes."""
-    path = path or os.path.join(CONFIG_DIR, "watchlist.txt")
-    if not os.path.exists(path):
-        raise ConfigError("watchlist.txt is missing from config/")
+# --------------------------------------------------------------------- watchlist
 
-    codes, seen, problems = [], set(), []
+def _parse_watchlist(path):
+    """Read watchlist.txt once and return everything the two loaders need.
+
+    Returns (codes, tags, problems):
+        codes     ordered, de-duplicated ASX codes
+        tags      {code: raw tag text or None}, first occurrence wins
+        problems  human-readable lines for anything that is not an ASX code
+    """
+    codes, tags, seen, problems = [], {}, set(), []
     for n, text in _strip_comments(path):
-        code = text.upper()
+        parts = text.split()
+        code = parts[0].upper()
         if not TICKER_RE.match(code):
             problems.append(f"  line {n}: '{text}' does not look like an ASX code")
             continue
@@ -51,6 +72,20 @@ def load_watchlist(path=None):
             continue
         seen.add(code)
         codes.append(code)
+        # Everything after the code is the tag. Two words there is almost
+        # certainly a comment that lost its '#'; it will not match any
+        # commodity and is reported as such rather than silently read as one.
+        tags[code] = " ".join(parts[1:]) if len(parts) > 1 else None
+    return codes, tags, problems
+
+
+def load_watchlist(path=None):
+    """Return an ordered, de-duplicated list of ASX codes."""
+    path = path or os.path.join(CONFIG_DIR, "watchlist.txt")
+    if not os.path.exists(path):
+        raise ConfigError("watchlist.txt is missing from config/")
+
+    codes, _tags, problems = _parse_watchlist(path)
 
     if problems:
         raise ConfigError(
@@ -62,6 +97,90 @@ def load_watchlist(path=None):
         raise ConfigError("watchlist.txt has no tickers in it.")
     return codes
 
+
+# ------------------------------------------------------------------ commodities
+
+def load_commodities(path=None):
+    """Return ([(code, label), ...] in file order, warnings).
+
+    The first entry is the default for any name without a tag. An empty list
+    means the briefing is not split by commodity at all, which is what every
+    run before this feature existed did, so a missing or unreadable file falls
+    back to that rather than stopping anything.
+    """
+    path = path or os.path.join(CONFIG_DIR, "commodities.txt")
+    warnings = []
+    if not os.path.exists(path):
+        warnings.append("config/commodities.txt is missing, so the briefing is "
+                        "not split by commodity today.")
+        return [], warnings
+
+    entries, seen = [], set()
+    for n, text in _strip_comments(path):
+        parts = text.split(None, 1)
+        code = parts[0]
+        if not COMMODITY_CODE_RE.match(code):
+            warnings.append(f"commodities.txt line {n}: '{code}' is not a short "
+                            f"code like Au or Cu, line ignored.")
+            continue
+        label = parts[1].strip() if len(parts) > 1 else code
+        key = code.lower()
+        if key in seen:
+            warnings.append(f"commodities.txt line {n}: '{code}' listed twice, "
+                            f"second one ignored.")
+            continue
+        seen.add(key)
+        entries.append((code, label))
+
+    if not entries:
+        warnings.append("config/commodities.txt has no commodities in it, so the "
+                        "briefing is not split by commodity today.")
+    return entries, warnings
+
+
+def load_watchlist_tags(path=None, commodities=None):
+    """Return ({code: commodity_code}, warnings) for every name on the watchlist.
+
+    Every code on the watchlist gets exactly one commodity. A missing tag takes
+    the default (the first commodity listed). An unknown tag also takes the
+    default and is reported. Nothing here raises: see the module docstring.
+    """
+    path = path or os.path.join(CONFIG_DIR, "watchlist.txt")
+    if commodities is None:
+        commodities, _ = load_commodities()
+    warnings = []
+    if not commodities:
+        return {}, warnings
+
+    default = commodities[0][0]
+    by_key = {code.lower(): code for code, _label in commodities}
+    codes, raw_tags, _problems = _parse_watchlist(path)
+
+    assigned, untagged, unknown = {}, [], []
+    for code in codes:
+        raw = raw_tags.get(code)
+        if not raw:
+            assigned[code] = default
+            untagged.append(code)
+            continue
+        hit = by_key.get(raw.lower())
+        if hit is None:
+            assigned[code] = default
+            unknown.append((code, raw))
+            continue
+        assigned[code] = hit
+
+    if unknown:
+        listed = ", ".join(f"{c} '{t}'" for c, t in unknown)
+        warnings.append(f"{len(unknown)} watchlist tag(s) do not match anything "
+                        f"in commodities.txt and were placed in {default}: {listed}")
+    if untagged:
+        warnings.append(f"{len(untagged)} name(s) carry no commodity tag and "
+                        f"default to {default}: {', '.join(untagged)}")
+    return assigned, warnings
+
+
+# ------------------------------------------------------------------- recipients
 
 def load_recipients(path=None):
     """Return a list of RFC-compliant recipient strings for the To: header."""
