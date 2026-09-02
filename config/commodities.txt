@@ -22,10 +22,11 @@
 #                       of a tag.
 #
 #  Colours: Au, Cu, U, Ag, Ni and Li have their own. Anything
-#  else is shown in the house navy.
+#  else, including DCP Watches, is shown in the house navy.
 #
 # ============================================================
 
 Au    Gold
 Cu    Copper
 U     Uranium
+DCP   DCP Watches
