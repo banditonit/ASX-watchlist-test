@@ -24,10 +24,10 @@ Chris <christo.karag@gmail.com>
 # Adam Miethke <am@discoverycapital.com.au>
 # Kale Pervan <kp@discoverycapital.com.au>
 # Darcy Frazer <df@discoverycapital.com.au>
-intern@discoverycapital.com.au
-df@discoverycapital.com.au
-mp@discoverycapital.com.au
-kw@discoverycapital.com.au
-am@discoverycapital.com.au
-kp@discoverycapital.com.au
+#intern@discoverycapital.com.au
+#df@discoverycapital.com.au
+#mp@discoverycapital.com.au
+#kw@discoverycapital.com.au
+#am@discoverycapital.com.au
+#kp@discoverycapital.com.au
 ck@discoverycapital.com.au
