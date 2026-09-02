@@ -51,8 +51,7 @@ DISCLAIMER = (
     "we have not taken into account any particular person's objectives, financial "
     "situation or needs. Furthermore, you may not rely on this message as advice "
     "unless subsequently confirmed by letter signed by an authorised representative "
-    "of Discovery Capital Partners Pty Ltd. This email and its contents are intended for wholesale "
-    "investors only."
+    "of Discovery Capital Partners Pty Ltd."
 )
 
 CONTACTS = [
