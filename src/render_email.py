@@ -145,25 +145,31 @@ def _short_date(text):
     return f"{parts[0]} {parts[1][:3]}" if len(parts) >= 2 else _text(text)
 
 
-def _when(entries, times):
+def _when(entries, times, late=frozenset()):
     """'25 Aug 07:36', or a time range, or a date range across days.
+
+    A group made entirely of items recovered by the seven-day lookback is
+    prefixed "Late:". A late catch is the program working; a silent late catch
+    is what makes a reader stop trusting the dates.
 
     The time matters: a 06:15 lodgement is pre-open and a 14:30 one landed
     mid-session, and the reader can tell whether the market has had all day to
     absorb it. It is joined on from the evidence pack by document key rather
     than carried through the model, so it cannot be paraphrased.
     """
+    prefix = "Late: " if entries and all(
+        e.get("document_key") in late for e in entries) else ""
     dates = list(dict.fromkeys(
         d for d in (_short_date(e.get("date")) for e in entries) if d))
     stamps = sorted({t for t in (times.get(e.get("document_key")) for e in entries) if t})
     if len(dates) > 1:
-        return _date_span(entries)
+        return prefix + _date_span(entries)
     day = dates[0] if dates else ""
     if not stamps:
-        return day
+        return prefix + day
     if len(stamps) == 1:
-        return f"{day} {stamps[0]}"
-    return f"{day} {stamps[0]} to {stamps[-1]}"
+        return f"{prefix}{day} {stamps[0]}"
+    return f"{prefix}{day} {stamps[0]} to {stamps[-1]}"
 
 
 def _date_span(entries):
@@ -288,13 +294,14 @@ def _band(title, subtitle=None):
     """
 
 
-def _table(rows, times=None, label=None, widths=None):
+def _table(rows, times=None, label=None, widths=None, late=frozenset()):
     if not rows:
         return ""
     times = times or {}
     head = "".join(
         f'<th align="left" style="font-family:{FONT};font-size:12px;'
-        f'font-weight:bold;color:{WHITE};background-color:{NAVY};'
+        f'font-weight:bold;color:{SECTION["headtext"]};'
+        f'background-color:{SECTION["head"]};'
         f'padding:9px 10px;">{escape(h)}</th>'
         for h in ("Ticker", "Company", "Announcement", "Date")
     )
@@ -310,7 +317,7 @@ def _table(rows, times=None, label=None, widths=None):
     # halt, and the table read as three unrelated companies. Every announcement
     # keeps its own link inside the cell, so merging the row loses nothing.
     for i, (ticker, items) in enumerate(_group_by_ticker(rows)):
-        bg = GREY if i % 2 == 0 else WHITE
+        bg = SECTION["alt"] if i % 2 == 0 else SECTION["base"]
         # The link goes on the announcement, never on the ticker. Underlining
         # both put two rules on every row and four on a name that filed three
         # times, which read as clutter. The ticker is a label; the announcement
@@ -322,7 +329,7 @@ def _table(rows, times=None, label=None, widths=None):
             _plain_label(label(ticker, items) if label else ticker),
             escape(_text(items[0].get("company"))),
             _join_parts(parts),
-            escape(_when(items, times)),
+            escape(_when(items, times, late)),
         ]
         tds = "".join(
             f'<td width="{w}" style="font-family:{FONT};font-size:12px;'
@@ -430,7 +437,7 @@ def _card(heading, paragraphs=None, bullets=None, url=None, link_text=None):
         )
         inner.append(f'<ul style="margin:0;padding-left:20px;">{items}</ul>')
     return f"""
-    <tr><td style="background-color:{GREY};padding:16px 18px;">
+    <tr><td style="background-color:{SECTION['card']};padding:16px 18px;{_edge()}">
       {''.join(inner)}
     </td></tr>
     <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
@@ -445,7 +452,7 @@ def _item_card(ticker, item):
         f'{_link(_text(item.get("heading")), item.get("url"), size=15)}</div>'
     )
     return f"""
-    <tr><td style="background-color:{GREY};padding:16px 18px;">
+    <tr><td style="background-color:{SECTION['card']};padding:16px 18px;{_edge()}">
       {heading}{_p(item.get("body", ""), size=14, bottom=0)}
     </td></tr>
     <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
@@ -476,7 +483,7 @@ def _multi_card(ticker, items):
         )
         inner.append(_p(item.get("body", ""), size=14, bottom=0))
     return f"""
-    <tr><td style="background-color:{GREY};padding:16px 18px;">
+    <tr><td style="background-color:{SECTION['card']};padding:16px 18px;{_edge()}">
       {''.join(inner)}
     </td></tr>
     <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
@@ -503,6 +510,198 @@ def _subheading(text):
                   color:{MUTED};padding-top:12px;">{escape(text)}</div>
     </td></tr>
     """
+
+
+# ---------------------------------------------------------------- commodities
+#
+# The briefing can be split into one panel per commodity. Which panel a name
+# belongs to is decided in config/watchlist.txt, never here and never by the
+# model: this file only draws what it is told. If the briefing carries no
+# commodity information at all (every archived day before the feature, or a
+# morning where commodities.txt could not be read) the layout is exactly what
+# it was before, so the feature can never be the reason an email looks wrong.
+#
+# Colours are keyed by the short code used in the config files. The chemical
+# symbol is the badge: unambiguous, what the desk already says, and plain text
+# so every mail client shows it. Pastel by request: the header row, badge and
+# rule are the "solid"; the panel sits on the "wash"; alternate table rows use
+# the "zebra". Text on the solid is chosen by luminance so it stays readable
+# if a darker colour is ever added.
+#                 solid      wash       zebra
+COMMODITY = {
+    "au": ("#EFDCA6", "#FDFBF3", "#FAF3E2"),     # gold
+    "cu": ("#F1C8AE", "#FEF9F5", "#FBF0E8"),     # copper
+    "u":  ("#BCDDC6", "#F6FBF8", "#EAF5EE"),     # uranium
+    "ag": ("#D5DBE1", "#F9FAFC", "#F0F3F6"),     # silver
+    "ni": ("#C8D4DB", "#F8FAFB", "#EDF2F5"),     # nickel
+    "li": ("#D3C6E8", "#FBF8FD", "#F3EDFA"),     # lithium
+}
+DEFAULT_COMMODITY = (NAVY, "#EDEFF2", "#E0E4E9")
+
+# The section being drawn right now. _table and the cards read their colours
+# from here so a commodity block is one continuous field of its own hue. It is
+# reset in a finally: block by render(), so an exception mid-panel cannot leave
+# the house palette themed for whatever is drawn next.
+_HOUSE = {"head": NAVY, "headtext": WHITE, "base": WHITE,
+          "alt": GREY, "card": GREY, "rule": None}
+SECTION = dict(_HOUSE)
+
+
+def _edge():
+    return f'border-left:3px solid {SECTION["rule"]};' if SECTION["rule"] else ""
+
+
+def _readable_on(hex_colour):
+    """Navy on a light fill, white on a dark one."""
+    try:
+        r, g, b = (int(hex_colour[i:i + 2], 16) for i in (1, 3, 5))
+    except (ValueError, TypeError, IndexError):
+        return WHITE
+    return NAVY if (0.299 * r + 0.587 * g + 0.114 * b) / 255 > 0.6 else WHITE
+
+
+def _palette(code):
+    return COMMODITY.get((code or "").lower(), DEFAULT_COMMODITY)
+
+
+def _theme(code=None):
+    """Point SECTION at one commodity's colours, or back at the house palette."""
+    if code is None:
+        SECTION.update(_HOUSE)
+        return
+    solid, wash, zebra = _palette(code)
+    SECTION.update(head=solid, headtext=_readable_on(solid), base=WHITE,
+                   alt=zebra, card=WHITE, rule=solid)
+
+
+def _commodity_band(code, label, count):
+    """The header inside a panel: badge, name, and how many announcements."""
+    solid, _wash, _zebra = _palette(code)
+    badge = (
+        f'<td width="38" valign="middle" style="padding-right:10px;">'
+        f'<div style="width:30px;height:30px;background:{solid};'
+        f'color:{_readable_on(solid)};border-radius:5px;font-family:{FONT};'
+        f'font-size:13px;font-weight:bold;text-align:center;line-height:30px;">'
+        f'{escape(code)}</div></td>'
+    )
+    word = "announcement" if count == 1 else "announcements"
+    tally = (f'<td align="right" valign="middle" style="font-family:{FONT};'
+             f'font-size:12px;color:{MUTED};white-space:nowrap;">'
+             f'{count} {word}</td>')
+    return f"""
+    <tr><td style="padding:0 0 14px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>{badge}
+          <td valign="middle" style="font-family:{FONT};font-size:20px;
+              font-weight:bold;color:{NAVY};letter-spacing:.3px;">{escape(label)}</td>
+          {tally}
+        </tr>
+      </table>
+    </td></tr>
+    """
+
+
+def _commodity_panel(code, inner):
+    """One commodity as a single tinted field: band, table and cards inside."""
+    solid, wash, _zebra = _palette(code)
+    return f"""
+    <tr><td style="background-color:{wash};border-left:6px solid {solid};
+                   padding:14px 16px 4px 16px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+             border="0">{inner}</table>
+    </td></tr>
+    <tr><td style="height:18px;line-height:18px;font-size:0;">&nbsp;</td></tr>
+    """
+
+
+def _quiet_line(labels):
+    """'No Copper or Uranium announcements in the window.' One line, never a
+    panel: an empty panel is space spent saying nothing, and total silence is
+    indistinguishable from a broken feed."""
+    if not labels:
+        return ""
+    if len(labels) == 1:
+        names = labels[0]
+    else:
+        names = ", ".join(labels[:-1]) + " or " + labels[-1]
+    return f"""
+    <tr><td style="font-family:{FONT};font-size:13px;color:{MUTED};
+                   padding:0 0 18px 0;">No {escape(names)} announcements in the window.</td></tr>
+    """
+
+
+def _grouping(briefing, pack):
+    """Work out the commodity split, or None to render the classic layout.
+
+    Returns (order, code_of, label_of):
+        order     commodity codes in display order, from commodities.txt
+        code_of   {ticker: code} for every name on the watchlist
+        label_of  {code: label}
+    A ticker whose code is not in the declared order goes to the first one, so
+    a stale tag can move a row but can never lose it.
+    """
+    declared = briefing.get("commodities") or pack.get("commodities") or []
+    code_of = briefing.get("commodity_of") or pack.get("commodity_of") or {}
+    order, label_of = [], {}
+    for entry in declared:
+        try:
+            code, label = entry[0], entry[1]
+        except (TypeError, IndexError, KeyError):
+            continue
+        if code and code not in label_of:
+            order.append(code)
+            label_of[code] = label or code
+    if not order or not code_of:
+        return None
+    default = order[0]
+    code_of = {t: (c if c in label_of else default) for t, c in code_of.items()}
+    return order, code_of, label_of
+
+
+def _grouped_body(rows, summaries, lodged_at, late, grouping):
+    """The commodity panels, or None if the split would lose anything.
+
+    The check is the point. Every row and every card handed in must come out
+    in exactly one panel. If the counts disagree the caller draws the classic
+    layout instead, and prints why, because a shorter email is the one failure
+    this program must never produce quietly.
+    """
+    order, code_of, label_of = grouping
+    default = order[0]
+
+    def bucket(entry):
+        return code_of.get(entry.get("ticker"), default)
+
+    placed_rows = placed_cards = 0
+    body = []
+    for code in order:
+        grows = [r for r in rows if bucket(r) == code]
+        gcards = [c for c in summaries if bucket(c) == code]
+        if not grows and not gcards:
+            continue
+        placed_rows += len(grows)
+        placed_cards += len(gcards)
+        _theme(code)
+        inner = [_commodity_band(code, label_of[code], len(grows))]
+        if grows:
+            inner.append(_table(grows, lodged_at, late=late))
+        inner += _summary_cards(gcards)
+        body.append(_commodity_panel(code, "".join(inner)))
+    _theme(None)
+
+    if placed_rows != len(rows) or placed_cards != len(summaries):
+        print(f"  ! commodity split placed {placed_rows}/{len(rows)} rows and "
+              f"{placed_cards}/{len(summaries)} cards. Rendering ungrouped.")
+        return None
+
+    # Declared commodities that have names on the watchlist but nothing today.
+    # A commodity with no names at all is not mentioned: "No Uranium
+    # announcements" every morning before a single uranium name exists is noise.
+    on_list = set(code_of.values())
+    busy = {bucket(r) for r in rows} | {bucket(c) for c in summaries}
+    quiet = [label_of[c] for c in order if c in on_list and c not in busy]
+    body.append(_quiet_line(quiet))
+    return body
 
 
 def _cap_label(ticker, items):
@@ -637,9 +836,25 @@ def render(briefing, pack):
     body.append(f'<tr><td>{_p(briefing.get("lead",""))}</td></tr>')
     lodged_at = {a.get("document_key"): _text(a.get("time_awst"))
                  for a in (pack.get("announcements") or [])}
-    body.append(_table(rows, lodged_at))
+    late = frozenset(a.get("document_key") for a in (pack.get("announcements") or [])
+                     if a.get("recovered"))
+    summaries = briefing.get("summaries") or []
 
-    body += _summary_cards(briefing.get("summaries") or [])
+    grouped = None
+    grouping = _grouping(briefing, pack)
+    if grouping:
+        try:
+            grouped = _grouped_body(rows, summaries, lodged_at, late, grouping)
+        except Exception as exc:                                  # noqa: BLE001
+            print(f"  ! commodity split failed ({exc!r}). Rendering ungrouped.")
+            grouped = None
+        finally:
+            _theme(None)
+    if grouped is not None:
+        body += grouped
+    else:
+        body.append(_table(rows, lodged_at, late=late))
+        body += _summary_cards(summaries)
 
     # "other" is the current key; "quarterlies" is read too so an archived
     # briefing from before the rename still renders.
@@ -659,7 +874,7 @@ def render(briefing, pack):
         # being one line, which was the whole point.
         body.append(_table(_other_rows(other, pack), lodged_at,
                            label=_cap_label,
-                           widths=["14%", "20%", "50%", "16%"]))
+                           widths=["14%", "20%", "50%", "16%"], late=late))
 
     if briefing.get("watch_items"):
         body.append(_card("Watch items", bullets=briefing["watch_items"]))
@@ -751,28 +966,52 @@ def _plain(briefing, pack):
     ]
     lodged_at = {a.get("document_key"): _text(a.get("time_awst"))
                  for a in (pack.get("announcements") or [])}
-    for ticker, items in _group_by_ticker(briefing.get("rows") or []):
-        company, when = _text(items[0].get("company")), _when(items, lodged_at)
-        if len(items) == 1:
-            out.append(f"  {ticker}  {company}  "
-                       f"{_text(items[0].get('announcement'))}  ({when})")
-        else:
-            out.append(f"  {ticker}  {company}  ({when})")
-            out += [f"       {_text(i.get('announcement'))}" for i in items]
-    out.append("")
-    for ticker, items in _group_by_ticker(briefing.get("summaries") or []):
-        if len(items) == 1:
-            out += [f"{ticker}: {_text(items[0].get('heading'))}",
-                    _text(items[0].get("body")), ""]
-        else:
-            out.append(ticker)
-            for s in items:
-                out += [f"  {_text(s.get('heading'))}", _text(s.get("body")), ""]
+    late = frozenset(a.get("document_key") for a in (pack.get("announcements") or [])
+                     if a.get("recovered"))
+
+    def rows_and_cards(rows, summaries):
+        for ticker, items in _group_by_ticker(rows):
+            company, when = _text(items[0].get("company")), _when(items, lodged_at, late)
+            if len(items) == 1:
+                out.append(f"  {ticker}  {company}  "
+                           f"{_text(items[0].get('announcement'))}  ({when})")
+            else:
+                out.append(f"  {ticker}  {company}  ({when})")
+                out.extend([f"       {_text(i.get('announcement'))}" for i in items])
+        out.append("")
+        for ticker, items in _group_by_ticker(summaries):
+            if len(items) == 1:
+                out.extend([f"{ticker}: {_text(items[0].get('heading'))}",
+                        _text(items[0].get("body")), ""])
+            else:
+                out.append(ticker)
+                for s in items:
+                    out.extend([f"  {_text(s.get('heading'))}", _text(s.get("body")), ""])
+
+    all_rows = briefing.get("rows") or []
+    all_cards = briefing.get("summaries") or []
+    grouping = _grouping(briefing, pack)
+    if grouping:
+        order, code_of, label_of = grouping
+        default = order[0]
+        placed = 0
+        for code in order:
+            g_rows = [r for r in all_rows if code_of.get(r.get("ticker"), default) == code]
+            g_cards = [c for c in all_cards if code_of.get(c.get("ticker"), default) == code]
+            if not g_rows and not g_cards:
+                continue
+            placed += len(g_rows)
+            out += [f"--- {label_of[code].upper()} ({len(g_rows)}) ---", ""]
+            rows_and_cards(g_rows, g_cards)
+        if placed != len(all_rows):
+            rows_and_cards(all_rows, all_cards)        # never shorter than the classic
+    else:
+        rows_and_cards(all_rows, all_cards)
     other_txt = briefing.get("other") or briefing.get("quarterlies") or []
     if other_txt:
         out.append("OTHER")
         for ticker, items in _group_by_ticker(_other_rows(other_txt, pack)):
-            company, when = _text(items[0].get("company")), _when(items, lodged_at)
+            company, when = _text(items[0].get("company")), _when(items, lodged_at, late)
             head = _cap_label(ticker, items)
             if len(items) == 1:
                 out.append(f"  {head}  {company}  "
