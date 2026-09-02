@@ -126,6 +126,21 @@ SUBSTANTIAL = re.compile(
     re.I,
 )
 
+# An ASX-requested addendum to an announcement already made. It restates: the
+# standard form attaches the original release in full and adds the JORC Table 1
+# or the competent person detail the exchange asked for, so its body scores
+# exactly like the original did. AuKing's Tundulu supplementary on 2 September
+# 2026 scored 22 on drill language that was all in the 1 September release.
+# Like a quarterly, it is demoted on structure, with no content escape: the
+# news was reported when it was news, and the addendum is listed under Also
+# Lodged with its headline for anyone who wants the tables.
+SUPPLEMENTARY = re.compile(
+    r"^(?:cancel(?:led|lation)?\s*[-:]\s*)?"
+    r"supplementary (?:announcement|information|disclosure|statement|release)\b|"
+    r"^addendum to\b",
+    re.I,
+)
+
 # Diary notes about a result, not the result. These carry nothing at all.
 ADMIN_NOTICE = re.compile(
     r"conference call|investor (?:call|webinar|briefing) (?:details|invit)|"
@@ -181,10 +196,21 @@ PRESENTATION_KEEP = re.compile(
 )
 
 # Routine filings. Present so they can be listed, never summarised at length.
+# Extended 2 September 2026 after the afternoon update promoted two filings
+# that carried nothing: NexGen's monthly "Statement of CDIs on issue" and
+# AuKing's "Supplementary Announcement", an ASX-requested compliance addendum
+# with no assays in it. Same escape as every routine cap: a body that scores
+# 14 or more on its own content stays in the main section, so a supplementary
+# that actually restates results with new numbers is not demoted on its title.
 ROUTINE = re.compile(
-    r"^(?:appendix\s*(?:2a|3b|3g|3h|3x|3y|3z|4g)|"
+    r"^(?:cancel(?:led|lation)?\s*[-:]\s*)?"          # "Cancel - Notification of ..."
+    r"(?:appendix\s*(?:2a|3b|3g|3h|3x|3y|3z|4g)|"
     r"change (?:in|of) director'?s? interest|"
+    r"(?:initial|final) director'?s? interest notice|"
     r"notification (?:regarding|of) unquoted|"
+    r"notification of cessation of securities|"
+    r"statement of cdis? on issue|"
+    r"expiry of (?:unlisted |listed )?(?:options|performance rights|warrants)|"
     r"application for (?:quotation|admission)|"
     r"cleansing (?:notice|statement)|"
     r"proposed issue of securities|"
@@ -291,6 +317,10 @@ def score(record):
     if SUBSTANTIAL.search(headline):
         total = min(total, 4)
         hits.append("substantial holder notice")
+
+    if SUPPLEMENTARY.match(headline.strip()):
+        total = min(total, 4)
+        hits.append("supplementary to an earlier announcement")
 
     # A routine filing headline caps the score unless the body says otherwise.
     routine = bool(ROUTINE.match(headline.strip()))
