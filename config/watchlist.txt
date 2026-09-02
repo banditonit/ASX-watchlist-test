@@ -2,14 +2,19 @@
 #  TICKERS THE BRIEFING COVERS
 # ============================================================
 #
-#  To ADD a ticker:     put the ASX code on its own line.
+#  To ADD a ticker:     put the ASX code on its own line,
+#                       followed by its commodity code.
 #  To REMOVE a ticker:  delete its line.
 #  To PAUSE a ticker:   put a # at the start of its line.
 #
-#  One code per line. Case does not matter. A comment after
-#  the code is fine and is useful for noting why it is here:
+#  One code per line. Case does not matter. The word after the
+#  code is the commodity, from config/commodities.txt (Au, Cu,
+#  U ...). Leave it off and the name goes to the default, which
+#  is the first commodity listed there. A comment after that is
+#  fine and is useful for noting why the name is here:
 #
-#      PGO    # Pacgold, White Dam
+#      PGO    Au    # Pacgold, White Dam
+#      BOE    U     # Boss Energy, Honeymoon
 #
 #  If a company changes its ASX code, add the new code and
 #  comment out the old one with a note, so the history stays
@@ -19,100 +24,100 @@
 # ============================================================
 
 # ---- Explorers / developers --------------------------------
-AQI
-ARV
-AS1
-BM1
-BNZ
-GBR
-GBM
-GG8
-GHM
-GML
-GSN
-JAV
-KAL
-LCL
-LEX
-OZM
-PGO
-SLS
-STK
-TOK
-TOR
-TTM
-YRL
-MPK
-NVO
-AAM
-GA8
-MBK
-NWM
-SMS
-SKM
-CZN
-ARI
-VAL
-PC2
-AAR
-LAC
-AUC
-AUE
-AZY
-BGD
-WAU
-CAV
-GPR
-HRN
-MRT
-KZR
-LGM
-MAT
-MI6
-MM8
-NXM
-ODY
-PDI
-PTN
-RXL
-SMI
-STM
-STN
-TAM
-TCG
-TRE
-TSO
-WGR
-WIA
-MEK
-PRX
+AQI    Au
+ARV    Au
+AS1    Au
+BM1    Au
+BNZ    Au
+GBR    Au
+GBM    Au
+GG8    Au
+GHM    Au
+GML    Au
+GSN    Au
+JAV    Au
+KAL    Au
+LCL    Au
+LEX    Au
+OZM    Au
+PGO    Au
+SLS    Au
+STK    Au
+TOK    Au
+TOR    Au
+TTM    Au
+YRL    Au
+MPK    Au
+NVO    Au
+AAM    Au
+GA8    Au
+MBK    Au
+NWM    Au
+SMS    Au
+SKM    Au
+CZN    Au
+ARI    Au
+VAL    Au
+PC2    Au
+AAR    Au
+LAC    Au
+AUC    Au
+AUE    Au
+AZY    Au
+BGD    Au
+WAU    Au
+CAV    Au
+GPR    Au
+HRN    Au
+MRT    Au
+KZR    Au
+LGM    Au
+MAT    Au
+MI6    Au
+MM8    Au
+NXM    Au
+ODY    Au
+PDI    Au
+PTN    Au
+RXL    Au
+SMI    Au
+STM    Au
+STN    Au
+TAM    Au
+TCG    Au
+TRE    Au
+TSO    Au
+WGR    Au
+WIA    Au
+MEK    Au
+PRX    Au
 
 # KAI                # Kairos Minerals, re-coded to PGL in April 2026
-PGL                  # Pilbara Gold, formerly KAI
+PGL    Au            # Pilbara Gold, formerly KAI
 
 # ---- Producers / larger caps -------------------------------
-EVN
-NST
-BGL
-BC8
-BTR
-CMM
-CYL
-EMR
-GGP
-GMD
-KCN
-NMG
-OBM
-PNR
-PRU
-RMS
-RRL
-RSG
-SBM
-VAU
-WAF
-WGX
-ORE
-BCN
-DTM
+EVN    Au
+NST    Au
+BGL    Au
+BC8    Au
+BTR    Au
+CMM    Au
+CYL    Au
+EMR    Au
+GGP    Au
+GMD    Au
+KCN    Au
+NMG    Au
+OBM    Au
+PNR    Au
+PRU    Au
+RMS    Au
+RRL    Au
+RSG    Au
+SBM    Au
+VAU    Au
+WAF    Au
+WGX    Au
+ORE    Au
+BCN    Au
+DTM    Au
