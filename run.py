@@ -8,6 +8,22 @@
 
 Exits non-zero if anything failed, so the scheduler reports it rather than a
 clean-looking empty briefing going out unnoticed.
+
+The shape of a morning:
+
+  wake      collect the window, plus anything from the last seven days that no
+            previous run reported; summarise; build the whole email
+  hold      until a few minutes before the send time
+  top-up    sweep the minutes since the first collection, re-check any company
+            feed that errored earlier, summarise only what is new, redo the
+            lead and subject, rebuild
+  hold      until the send time
+  send
+
+The top-up exists because building early and holding moved the collection
+cutoff from 08:10 to about 07:32, and 2.3 announcements a day were being lodged
+in that gap. Sweeping again just before sending brings the cutoff back to within
+a few minutes of the send time without moving the send time itself.
 """
 
 import argparse
@@ -15,12 +31,15 @@ import glob
 import json
 import os
 import sys
+import time
 import traceback
-from datetime import datetime
+from contextlib import contextmanager
+from datetime import datetime, timedelta
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
 
-from config import load_recipients, load_watchlist, ConfigError, env  # noqa: E402
+from config import (load_recipients, load_watchlist, load_commodities,  # noqa: E402
+                    load_watchlist_tags, ConfigError, env)
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 ARCHIVE = os.path.join(ROOT, "archive")
@@ -28,17 +47,23 @@ ARCHIVE = os.path.join(ROOT, "archive")
 
 # How many archived days to read back when working out what has already been
 # reported. Comfortably more than any window, cheap to scan, and short enough
-# that it can never suppress something from a previous month.
+# that it can never suppress something from a previous month. It must also
+# cover the seven-day lookback in collect.py, which it does twice over.
 HISTORY_DAYS = 10
 
 
 def previous_run(archive=None):
-    """Where the last briefing stopped, and every document it already covered.
+    """Where the last briefing stopped, what it covered, and who was on the list.
 
     Only packs that produced an email count. A pack is written before the
     summaries are built, so a run that collected announcements and then died
     would otherwise mark them as reported and they would never be seen. The
     rendered email beside it is the proof the day actually went out.
+
+    Returns (latest_window_end, seen_document_keys, tickers_on_last_list).
+    The last of those drives the lookback: a name added to the watchlist today
+    has no previous run to have been missed by, so it is read for today's
+    window only rather than arriving with a week of history to summarise.
     """
     archive = archive or ARCHIVE
     paths = sorted(glob.glob(os.path.join(archive, "*-pack.json")))[-HISTORY_DAYS:]
@@ -46,7 +71,7 @@ def previous_run(archive=None):
     # already gone out rebuilds that day in full rather than reporting an empty
     # window because everything in it was already sent.
     today = os.path.join(archive, f"{datetime.now().strftime('%Y-%m-%d')}-pack.json")
-    latest, seen = None, set()
+    latest, seen, last_tickers = None, set(), None
     for path in paths:
         if os.path.abspath(path) == os.path.abspath(today):
             continue
@@ -64,8 +89,10 @@ def previous_run(archive=None):
             end = datetime.fromisoformat(pack["window_end_utc"])
         except (KeyError, TypeError, ValueError):
             continue
-        latest = end if latest is None else max(latest, end)
-    return latest, seen
+        if latest is None or end > latest:
+            latest = end
+            last_tickers = pack.get("all_tickers")
+    return latest, seen, last_tickers
 
 
 SUBJECT_MAX = 72
@@ -97,81 +124,148 @@ def build_subject(briefing, pack):
     return f"{lead}{SUBJECT_SUFFIX}"
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--dry-run", action="store_true", help="build but do not send")
-    ap.add_argument("--no-llm", action="store_true", help="collect only")
-    ap.add_argument("--pack", help="rebuild from a saved evidence pack")
-    ap.add_argument("--hours", type=int, default=24)
-    args = ap.parse_args()
+# ------------------------------------------------------------------- timing
 
-    tickers = load_watchlist()
-    recipients = [] if (args.dry_run or args.no_llm) else load_recipients()
-    print(f"watchlist: {len(tickers)} codes")
+class Phases:
+    """Wall-clock per phase, printed as it goes and summed at the end.
 
-    # ---------------------------------------------------------------- collect
-    if args.pack:
-        with open(args.pack, encoding="utf-8") as fh:
-            pack = json.load(fh)
-        print(f"loaded pack: {args.pack}")
-    else:
-        from collect import collect
-        since, already_seen = previous_run()
-        if since:
-            print(f"last briefing covered up to {since.isoformat()}")
-        pack = collect(tickers, hours=args.hours, since=since)
-        print(f"window: {pack['window_start_awst'][:16]} to "
-              f"{pack['window_end_awst'][:16]} AWST "
-              f"({pack.get('window_hours', args.hours)}h)")
+    The question "is the run getting slower as names are added" should be
+    answered by the log, not by a feeling. Every phase prints its own line and
+    the summary at the end is one line to compare across days.
+    """
 
-        # The window deliberately overlaps the previous one so nothing can fall
-        # between two runs. Anything already reported is dropped here, by
-        # document key, so the overlap never shows up as a repeat.
-        repeats = [a for a in pack["announcements"]
-                   if a.get("document_key") in already_seen]
-        if repeats:
-            keys = {a["document_key"] for a in repeats}
-            pack["announcements"] = [a for a in pack["announcements"]
-                                     if a.get("document_key") not in keys]
-            print(f"skipped {len(repeats)} already reported in an earlier "
-                  f"briefing: {', '.join(sorted({a['ticker'] for a in repeats}))}")
-        print(f"found {len(pack['announcements'])} new announcements in window")
+    def __init__(self):
+        self.times = []
 
-    pack["all_tickers"] = tickers
-    stamp = datetime.now().strftime("%Y-%m-%d")
-    os.makedirs(ARCHIVE, exist_ok=True)
-    pack_path = os.path.join(ARCHIVE, f"{stamp}-pack.json")
-    with open(pack_path, "w", encoding="utf-8") as fh:
-        json.dump(pack, fh, indent=2, ensure_ascii=False)
-    print(f"evidence pack: {pack_path}")
+    @contextmanager
+    def __call__(self, name):
+        t0 = time.monotonic()
+        try:
+            yield
+        finally:
+            dt = time.monotonic() - t0
+            self.times.append((name, dt))
+            print(f"  [{name}: {dt:.0f}s]")
 
-    unread = [a for a in pack["announcements"] if a.get("text_status") != "ok"]
-    for a in unread:
-        print(f"  ! could not read {a['ticker']} {a['headline'][:48]!r}: {a['text_status']}")
+    def summary(self):
+        total = sum(t for _, t in self.times)
+        parts = ", ".join(f"{n} {t:.0f}s" for n, t in self.times)
+        return f"timings: {total / 60:.1f} min working ({parts})"
 
-    # ------------------------------------------------------------------ score
+
+# --------------------------------------------------------------------- hold
+
+# Never hold longer than this. The gate only starts a run within 45 minutes of
+# the send time, so a longer wait means something is wrong with the clock or
+# the argument, and a briefing sent late beats a job that sits for hours.
+MAX_HOLD_MIN = 75
+
+
+def _target(hhmm, minus_minutes=0):
+    hour, minute = (int(x) for x in hhmm.split(":"))
+    now = datetime.now()
+    target = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+    if minus_minutes:
+        target -= timedelta(minutes=minus_minutes)
+    return now, target
+
+
+def hold_until(hhmm, minus_minutes=0, what="send"):
+    """Wait until a wall-clock time, if it is still ahead. True if it was.
+
+    The finished email is built as soon as the run starts and held until the
+    minute. The top-up between the two holds is what stops the early build
+    from costing anything: see the module docstring.
+    """
+    if not hhmm:
+        return False
+    try:
+        now, target = _target(hhmm, minus_minutes)
+    except ValueError:
+        print(f"  ! --send-at {hhmm!r} is not HH:MM, not holding")
+        return False
+    wait = (target - now).total_seconds()
+    if wait <= 0:
+        print(f"  it is {now.strftime('%H:%M:%S')}, past the {what} time "
+              f"{target.strftime('%H:%M')}. Not holding.")
+        return False
+    if wait > MAX_HOLD_MIN * 60:
+        print(f"  ! {target.strftime('%H:%M')} is {wait / 60:.0f} min away, more "
+              f"than the {MAX_HOLD_MIN} minute limit. Not holding.")
+        return False
+    print(f"  {now.strftime('%H:%M:%S')}, holding {wait / 60:.1f} min for the "
+          f"{what} time {target.strftime('%H:%M')}.")
+    time.sleep(wait)
+    return True
+
+
+def before(hhmm):
+    """True if the wall clock has not yet reached HH:MM today."""
+    if not hhmm:
+        return False
+    try:
+        now, target = _target(hhmm)
+    except ValueError:
+        return False
+    return now < target
+
+
+# -------------------------------------------------------------------- build
+
+def _write_json(path, data):
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as fh:
+        json.dump(data, fh, indent=2, ensure_ascii=False)
+    os.replace(tmp, path)
+
+
+def _write_text(path, text):
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as fh:
+        fh.write(text)
+    os.replace(tmp, path)
+
+
+def _summarise_cached(records, cache, summarise_items):
+    """summarise_items(), but never twice for the same document.
+
+    The top-up rebuilds the whole briefing from the union of both collections.
+    Every summary from the first build is reused by document key, so the
+    second build pays only for what the top-up found. Order follows `records`,
+    which rank() has already sorted by materiality.
+    """
+    todo = [r for r in records if r["document_key"] not in cache]
+    for s in summarise_items(todo):
+        cache[s["document_key"]] = s
+    return [cache[r["document_key"]] for r in records if r["document_key"] in cache]
+
+
+def build(pack, cache):
+    """Score, summarise, synthesise and render one pack. Returns (briefing, html, plain).
+
+    Pure in the sense that matters: the same pack and the same cache give the
+    same briefing. That is what lets the top-up run it a second time on a
+    bigger pack and get a consistent email rather than a patched one.
+    """
     from score import rank
-    ranked = rank(pack["announcements"])
-    print(f"material: {len(ranked['full'])}, routine: {len(ranked['digest'])}")
-
-    if args.no_llm:
-        return 0
-
-    # -------------------------------------------------------------- summarise
-    # One API call per announcement, so no announcement can see another's
-    # figures. Only the closing synthesis sees the whole day, and it works from
-    # summaries that have already been checked.
     from summarise import summarise_items, synthesise
     from fmt import enrich, add_links
     from verify import audit
+    from render_email import render
 
+    ranked = rank(pack["announcements"])
+    print(f"material: {len(ranked['full'])}, routine: {len(ranked['digest'])}")
+
+    # One API call per announcement, so no announcement can see another's
+    # figures. Only the closing synthesis sees the whole day, and it works from
+    # summaries that have already been checked.
     for r in ranked["full"]:
         r["tier"] = "full"
     for r in ranked.get("periodic") or []:
         r["tier"] = "quarterly"          # the one-line desk-note writing style
 
-    materials = summarise_items(ranked["full"])
-    quarterlies = summarise_items(ranked.get("periodic") or [])
+    materials = _summarise_cached(ranked["full"], cache, summarise_items)
+    quarterlies = _summarise_cached(ranked.get("periodic") or [], cache, summarise_items)
     print(f"summarised: {len(materials)} confirmed, {len(quarterlies)} periodic")
 
     # Every figure must trace back to the announcement it came from.
@@ -201,11 +295,6 @@ def main():
                            "document_key")} for q in quarterlies]
     briefing["_unverified"] = problems
 
-    # Marketing decks are not summarised, but they are named. A filter that
-    # drops things silently is indistinguishable from a filter that is broken,
-    # which is how the Ramelius resource and reserve update went missing on
-    # 25 August 2026 without anyone being able to see that it had. The reader
-    # gets one line per suppressed deck at the foot of the email.
     # Everything collected but not written up: marketing decks and routine
     # filings alike. 82 routine items across the archive to date were collected,
     # scored, and then rendered nowhere at all. Listing them by headline costs
@@ -216,32 +305,207 @@ def main():
         for r in ((ranked.get("presentation") or []) + (ranked.get("digest") or []))
     ]
 
+    # The commodity split is decided in config and carried on the pack so a
+    # rebuild from the archive draws the same panels. The renderer falls back
+    # to the classic layout if either key is missing or does not add up.
+    briefing["commodities"] = pack.get("commodities") or []
+    briefing["commodity_of"] = pack.get("commodity_of") or {}
+
     briefing["other"] = enrich(briefing["other"], pack["announcements"])
     add_links(briefing["rows"], pack["announcements"])
     add_links(briefing["summaries"], pack["announcements"])
     add_links(briefing["also_lodged"], pack["announcements"])
 
-    with open(os.path.join(ARCHIVE, f"{stamp}-briefing.json"), "w", encoding="utf-8") as fh:
-        json.dump(briefing, fh, indent=2, ensure_ascii=False)
+    html, plain = render(briefing, pack)
+    return briefing, html, plain
+
+
+def merge_topup(pack, delta):
+    """Fold a top-up collection into the day's pack, in place.
+
+    The announcements are appended (they are new by construction: the top-up
+    was given every key already in the pack), the window end moves to the
+    top-up's end so tomorrow starts there, and the top-up's own diagnostics are
+    kept under their own key so the log of what happened when survives.
+    """
+    pack["announcements"].extend(delta["announcements"])
+    # Same order collect() produces, newest first, so a rebuild from this pack
+    # is indistinguishable from one collected in a single pass.
+    pack["announcements"].sort(key=lambda r: r.get("lodged_utc") or "", reverse=True)
+    for key in ("window_end_awst", "window_end_utc", "date_awst"):
+        pack[key] = delta[key]
+    try:
+        start = datetime.fromisoformat(pack["window_start_utc"])
+        end = datetime.fromisoformat(pack["window_end_utc"])
+        pack["window_hours"] = round((end - start).total_seconds() / 3600, 2)
+    except (KeyError, TypeError, ValueError):
+        pass
+    pack["sweep_missed"] = (pack.get("sweep_missed") or []) + (delta.get("sweep_missed") or [])
+    pack["recovered"] = (pack.get("recovered") or []) + (delta.get("recovered") or [])
+    pack["topup"] = {
+        "from_utc": delta["window_start_utc"],
+        "to_utc": delta["window_end_utc"],
+        "found": len(delta["announcements"]),
+        "feeds_rechecked": delta.get("tickers_checked", 0),
+        "feed_errors": delta.get("feed_errors") or {},
+    }
+
+
+# --------------------------------------------------------------------- main
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--dry-run", action="store_true", help="build but do not send")
+    ap.add_argument("--no-llm", action="store_true", help="collect only")
+    ap.add_argument("--pack", help="rebuild from a saved evidence pack")
+    ap.add_argument("--hours", type=int, default=24)
+    ap.add_argument("--send-at", metavar="HH:MM",
+                    help="hold the finished email until this local time")
+    ap.add_argument("--topup-lead", type=int, metavar="MIN",
+                    default=int(env("TOPUP_LEAD_MIN", "6") or 6),
+                    help="minutes before --send-at to sweep again (0 disables)")
+    args = ap.parse_args()
+    phases = Phases()
+
+    tickers = load_watchlist()
+    commodities, notes = load_commodities()
+    commodity_of, tag_notes = load_watchlist_tags(commodities=commodities)
+    for note in notes + tag_notes:
+        print(f"  ! {note}")
+    recipients = [] if (args.dry_run or args.no_llm) else load_recipients()
+    print(f"watchlist: {len(tickers)} codes"
+          + (f", split into {', '.join(label for _, label in commodities)}"
+             if commodities else ""))
+
+    # ---------------------------------------------------------------- collect
+    since = already_seen = None
+    if args.pack:
+        with open(args.pack, encoding="utf-8") as fh:
+            pack = json.load(fh)
+        print(f"loaded pack: {args.pack}")
+    else:
+        from collect import collect
+        since, already_seen, last_tickers = previous_run()
+        if since:
+            print(f"last briefing covered up to {since.isoformat()}")
+        # The seven-day lookback applies to names that were on the list last
+        # time. A name added today is read for today's window only.
+        lookback_codes = ([t for t in tickers if t in set(last_tickers)]
+                          if last_tickers else [])
+        if len(lookback_codes) < len(tickers):
+            print(f"  {len(tickers) - len(lookback_codes)} name(s) are new to the "
+                  f"list today and are read for the window only, not the lookback.")
+        with phases("collect"):
+            pack = collect(tickers, hours=args.hours, since=since,
+                           already_seen=already_seen, lookback_codes=lookback_codes)
+        print(f"window: {pack['window_start_awst'][:16]} to "
+              f"{pack['window_end_awst'][:16]} AWST "
+              f"({pack.get('window_hours', args.hours)}h)")
+
+        # collect() already excludes anything reported by an earlier briefing.
+        # This is the belt to that pair of braces: if a key slips through, drop
+        # it here and say so, because a repeat is a visible fault and a missing
+        # item is not, and the check is free.
+        repeats = [a for a in pack["announcements"]
+                   if a.get("document_key") in already_seen]
+        if repeats:
+            keys = {a["document_key"] for a in repeats}
+            pack["announcements"] = [a for a in pack["announcements"]
+                                     if a.get("document_key") not in keys]
+            print(f"  ! skipped {len(repeats)} already reported in an earlier "
+                  f"briefing: {', '.join(sorted({a['ticker'] for a in repeats}))}")
+        print(f"found {len(pack['announcements'])} new announcements in window"
+              + (f" ({len(pack.get('recovered') or [])} recovered from earlier days)"
+                 if pack.get("recovered") else ""))
+
+    pack["all_tickers"] = tickers
+    pack["commodities"] = [list(c) for c in commodities]
+    pack["commodity_of"] = commodity_of
+    stamp = datetime.now().strftime("%Y-%m-%d")
+    os.makedirs(ARCHIVE, exist_ok=True)
+    pack_path = os.path.join(ARCHIVE, f"{stamp}-pack.json")
+    briefing_path = os.path.join(ARCHIVE, f"{stamp}-briefing.json")
+    email_path = os.path.join(ARCHIVE, f"{stamp}-email.html")
+    _write_json(pack_path, pack)
+    print(f"evidence pack: {pack_path}")
+
+    unread = [a for a in pack["announcements"] if a.get("text_status") != "ok"]
+    for a in unread:
+        print(f"  ! could not read {a['ticker']} {a['headline'][:48]!r}: {a['text_status']}")
+
+    if args.no_llm:
+        from score import rank
+        ranked = rank(pack["announcements"])
+        print(f"material: {len(ranked['full'])}, routine: {len(ranked['digest'])}")
+        print(phases.summary())
+        return 0
 
     # ------------------------------------------------------------------ build
-    from render_email import render
-
-    html, plain = render(briefing, pack)
-    with open(os.path.join(ARCHIVE, f"{stamp}-email.html"), "w", encoding="utf-8") as fh:
-        fh.write(html)
-
-    # ------------------------------------------------------------------- send
+    cache = {}
+    with phases("build"):
+        briefing, html, plain = build(pack, cache)
+    _write_json(briefing_path, briefing)
+    _write_text(email_path, html)
     subject = build_subject(briefing, pack)
 
     if args.dry_run:
         print(f"dry run, would send to {len(load_recipients())} recipients: {subject}")
+        print(phases.summary())
         return 0
 
+    # ----------------------------------------------------------------- top-up
+    # Only on a scheduled morning run: a rebuild from a pack has no live window
+    # to extend, and a run that is already past the send time has a cutoff
+    # later than the send time anyway.
+    if args.send_at and not args.pack and args.topup_lead > 0:
+        hold_until(args.send_at, minus_minutes=args.topup_lead, what="top-up")
+        if before(args.send_at):
+            with phases("top-up"):
+                try:
+                    from collect import collect, retryable_feed_errors
+                    seen_now = set(already_seen or ()) | {
+                        a["document_key"] for a in pack["announcements"]}
+                    recheck = retryable_feed_errors(pack.get("feed_errors"))
+                    if recheck:
+                        print(f"  re-checking {len(recheck)} feed(s) that errored "
+                              f"earlier: {', '.join(recheck)}")
+                    delta = collect(tickers, hours=0,
+                                    since=datetime.fromisoformat(pack["window_end_utc"]),
+                                    already_seen=seen_now, company_codes=recheck,
+                                    strict=False)
+                    found = delta["announcements"]
+                    print(f"  top-up {delta['window_start_awst'][11:16]} to "
+                          f"{delta['window_end_awst'][11:16]} AWST found "
+                          f"{len(found)} new announcement(s)"
+                          + (": " + ", ".join(sorted({a['ticker'] for a in found}))
+                             if found else ""))
+                    merge_topup(pack, delta)
+                    if found:
+                        briefing, html, plain = build(pack, cache)
+                        subject = build_subject(briefing, pack)
+                    # The window end moved either way, so tomorrow starts here.
+                    _write_json(pack_path, pack)
+                    _write_json(briefing_path, briefing)
+                    _write_text(email_path, html)
+                except Exception as exc:                          # noqa: BLE001
+                    # The first build is complete and correct up to its own
+                    # cutoff. Send it. Whatever the top-up would have found is
+                    # inside tomorrow's window and lookback.
+                    print(f"  ! top-up failed, sending the briefing built earlier: "
+                          f"{type(exc).__name__}: {exc}")
+        else:
+            print("  past the send time, so no top-up: the collection cutoff is "
+                  "already later than the send time.")
+
+    # ------------------------------------------------------------------- send
     from send import send
-    send(html, plain, subject, recipients,
-         logo=os.path.join(ROOT, "dcp", "assets", "logo-dcp-white.png"))
-    print(f"sent to {len(recipients)} recipients: {subject}")
+    hold_until(args.send_at, what="send")
+    with phases("send"):
+        send(html, plain, subject, recipients,
+             logo=os.path.join(ROOT, "dcp", "assets", "logo-dcp-white.png"))
+    print(f"sent {datetime.now().strftime('%H:%M:%S')} to {len(recipients)} "
+          f"recipients: {subject}")
+    print(phases.summary())
     return 0
 
 
