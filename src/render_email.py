@@ -625,9 +625,12 @@ def _theme(code=None):
 def _commodity_band(code, label, count):
     """The header inside a panel: badge, name, and how many announcements."""
     solid, _wash, _zebra = _palette(code)
+    # A chemical symbol is one or two letters; a house code like "DCP" is three
+    # and needs a wider badge or it clips.
+    wide = 30 if len(code) <= 2 else 30 + 10 * (len(code) - 2)
     badge = (
-        f'<td width="38" valign="middle" style="padding-right:10px;">'
-        f'<div style="width:30px;height:30px;background:{solid};'
+        f'<td width="{wide + 8}" valign="middle" style="padding-right:10px;">'
+        f'<div style="width:{wide}px;height:30px;background:{solid};'
         f'color:{_readable_on(solid)};border-radius:5px;font-family:{FONT};'
         f'font-size:13px;font-weight:bold;text-align:center;line-height:30px;">'
         f'{escape(code)}</div></td>'
