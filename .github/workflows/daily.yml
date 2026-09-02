@@ -74,6 +74,11 @@ on:
         type: boolean
         required: false
         default: false
+      since_last_run:
+        description: "Update: only what has been lodged since the last briefing (including this morning's). Sends immediately."
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: write           # so the run can commit the day's archive and tag
@@ -120,6 +125,10 @@ jobs:
           }
 
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ "${{ github.event.inputs.since_last_run }}" = "true" ]; then
+              echo "update=yes" >> "$GITHUB_OUTPUT"
+              echo "Manual UPDATE: only what has been lodged since the last briefing."
+            fi
             if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
               echo "Manual DRY RUN. Building everything, sending nothing, claiming nothing."
               echo "send=yes" >> "$GITHUB_OUTPUT"
@@ -209,11 +218,52 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SMTP_FROM: ${{ secrets.SMTP_FROM }}
         run: |
+          FLAGS=""
+          [ "${{ steps.gate.outputs.update }}" = "yes" ] && FLAGS="$FLAGS --since-last-run"
           if [ "${{ steps.gate.outputs.dry }}" = "yes" ]; then
-            python run.py --hours ${{ steps.window.outputs.hours }} --dry-run
+            python run.py --hours ${{ steps.window.outputs.hours }} --dry-run $FLAGS
           else
-            python run.py --hours ${{ steps.window.outputs.hours }} --send-at "$SEND_AT"
+            python run.py --hours ${{ steps.window.outputs.hours }} --send-at "$SEND_AT" $FLAGS
           fi
+
+      # Make the built email downloadable from this run's page, sent or not. For
+      # a dry run it is the only way to see what would have gone out: open the
+      # run, scroll to Artifacts, download, open the -preview.html in a browser.
+      # The logo is normally embedded by the mailer at send time, so the preview
+      # copy has it inlined; the archive files themselves are untouched.
+      - name: Attach the built email to this run
+        if: always() && steps.gate.outputs.send == 'yes'
+        run: |
+          mkdir -p preview
+          python - <<'PY'
+          import base64, glob, os, shutil
+          from datetime import datetime
+          day = datetime.now().strftime("%Y-%m-%d")
+          # The newest email built today: the morning's, or an update's
+          # timestamped copy beside it.
+          todays = sorted(glob.glob(f"archive/{day}*-email.html"), key=os.path.getmtime)
+          src = todays[-1] if todays else None
+          if src:
+              logo = base64.b64encode(open("dcp/assets/logo-dcp-white.png", "rb").read()).decode()
+              html = open(src, encoding="utf-8").read().replace(
+                  'src="cid:dcpmark"', f'src="data:image/png;base64,{logo}"')
+              stem = os.path.basename(src)[:-len("-email.html")]
+              with open(f"preview/{stem}-email-preview.html", "w", encoding="utf-8") as fh:
+                  fh.write(html)
+              for f in glob.glob(f"archive/{stem}-*.json"):
+                  shutil.copy(f, "preview/")
+              print("preview written:", os.listdir("preview"))
+          else:
+              print("no email was built, nothing to attach")
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.gate.outputs.send == 'yes'
+        with:
+          name: briefing-${{ steps.gate.outputs.dry == 'yes' && 'DRY-RUN-' || '' }}${{ github.run_number }}
+          path: preview/
+          if-no-files-found: ignore
+          retention-days: 30
 
       # The archive is the program's only memory: tomorrow reads it to know
       # where today stopped and what was already reported. A push that fails
