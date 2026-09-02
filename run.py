@@ -52,7 +52,7 @@ ARCHIVE = os.path.join(ROOT, "archive")
 HISTORY_DAYS = 10
 
 
-def previous_run(archive=None):
+def previous_run(archive=None, include_today=False):
     """Where the last briefing stopped, what it covered, and who was on the list.
 
     Only packs that produced an email count. A pack is written before the
@@ -64,16 +64,19 @@ def previous_run(archive=None):
     The last of those drives the lookback: a name added to the watchlist today
     has no previous run to have been missed by, so it is read for today's
     window only rather than arriving with a week of history to summarise.
+
+    Today's own morning archive is ignored by default, so re-running by hand on
+    a day that has already gone out rebuilds that day in full rather than
+    reporting an empty window because everything in it was already sent. An
+    update run (--since-last-run) passes include_today=True and gets the
+    opposite: it continues from wherever the morning stopped.
     """
     archive = archive or ARCHIVE
     paths = sorted(glob.glob(os.path.join(archive, "*-pack.json")))[-HISTORY_DAYS:]
-    # Today's own archive is ignored, so re-running by hand on a day that has
-    # already gone out rebuilds that day in full rather than reporting an empty
-    # window because everything in it was already sent.
     today = os.path.join(archive, f"{datetime.now().strftime('%Y-%m-%d')}-pack.json")
     latest, seen, last_tickers = None, set(), None
     for path in paths:
-        if os.path.abspath(path) == os.path.abspath(today):
+        if not include_today and os.path.abspath(path) == os.path.abspath(today):
             continue
         if not os.path.exists(path.replace("-pack.json", "-email.html")):
             continue
@@ -364,7 +367,14 @@ def main():
     ap.add_argument("--topup-lead", type=int, metavar="MIN",
                     default=int(env("TOPUP_LEAD_MIN", "6") or 6),
                     help="minutes before --send-at to sweep again (0 disables)")
+    ap.add_argument("--since-last-run", action="store_true",
+                    help="update run: only what has been lodged since the last "
+                         "briefing, including this morning's; sends immediately")
     args = ap.parse_args()
+    if args.since_last_run and args.send_at:
+        print("  update run: sending as soon as it is built, not holding for "
+              f"{args.send_at}")
+        args.send_at = None
     phases = Phases()
 
     tickers = load_watchlist()
@@ -385,9 +395,16 @@ def main():
         print(f"loaded pack: {args.pack}")
     else:
         from collect import collect
-        since, already_seen, last_tickers = previous_run()
+        since, already_seen, last_tickers = previous_run(
+            include_today=args.since_last_run)
         if since:
             print(f"last briefing covered up to {since.isoformat()}")
+        hours = args.hours
+        if args.since_last_run and since:
+            # An update is "since the last one", so the window starts exactly
+            # there rather than reaching back a full day. The lookback still
+            # runs behind it, so nothing the morning missed is lost.
+            hours = 0
         # The seven-day lookback applies to names that were on the list last
         # time. A name added today is read for today's window only.
         lookback_codes = ([t for t in tickers if t in set(last_tickers)]
@@ -396,7 +413,7 @@ def main():
             print(f"  {len(tickers) - len(lookback_codes)} name(s) are new to the "
                   f"list today and are read for the window only, not the lookback.")
         with phases("collect"):
-            pack = collect(tickers, hours=args.hours, since=since,
+            pack = collect(tickers, hours=hours, since=since,
                            already_seen=already_seen, lookback_codes=lookback_codes)
         print(f"window: {pack['window_start_awst'][:16]} to "
               f"{pack['window_end_awst'][:16]} AWST "
@@ -421,7 +438,11 @@ def main():
     pack["all_tickers"] = tickers
     pack["commodities"] = [list(c) for c in commodities]
     pack["commodity_of"] = commodity_of
-    stamp = datetime.now().strftime("%Y-%m-%d")
+    # An update run gets its own files beside the morning's rather than over
+    # them: the morning's pack is the record of what was sent at 08:10, and
+    # tomorrow reads every pack, so both are remembered.
+    stamp = datetime.now().strftime("%Y-%m-%d-%H%M" if args.since_last_run
+                                    else "%Y-%m-%d")
     os.makedirs(ARCHIVE, exist_ok=True)
     pack_path = os.path.join(ARCHIVE, f"{stamp}-pack.json")
     briefing_path = os.path.join(ARCHIVE, f"{stamp}-briefing.json")
