@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  /* Phones only. Outlook on the desktop ignores embedded styles and is never
+     narrow enough to need this. Three contacts side by side cannot fit on a
+     390px screen without their email addresses setting a floor under the whole
+     layout, which is what pushed the briefing off the right edge on mobile. */
+  @media only screen and (max-width:600px) {
+    td.dcp-contact { display:block !important; width:100% !important;
+                      padding:0 0 12px 0 !important; }
+  }
+  /* Also Lodged runs in three columns so a 20-item list is seven lines deep
+     rather than twenty. Two columns on a laptop, one on a phone. Outlook on
+     the desktop ignores all of this and keeps three, which is what a window
+     that wide should show. */
+  @media only screen and (max-width:1000px) {
+    td.dcp-lodged { display:inline-block !important; width:47% !important;
+                     vertical-align:top !important; }
+  }
+  @media only screen and (max-width:620px) {
+    td.dcp-lodged { display:block !important; width:100% !important;
+                     box-sizing:border-box !important; }
+  }
+  @media only screen and (max-width:760px) {
+    td.dcp-brief { display:block !important; width:100% !important;
+                    padding-right:0 !important; }
+  }
+  /* The announcement tables are four columns, and on a 390px phone the Date
+     column wrapped to three lines and the Company column to four. Below 600px
+     each row becomes a short stack instead: ticker and company on one line,
+     the announcement on the next, the time under it. Desktop is untouched. */
+  /* Phones: the briefing runs edge to edge. The grey gutter, the 18px frame
+     padding and the panel's coloured left rule together cost 50px of a 390px
+     screen; on a phone the panel's wash colour is enough to mark the section,
+     so the rule goes and the paddings shrink. Desktop keeps all of them. */
+  @media only screen and (max-width:600px) {
+    td.dcp-gutter { padding:0 !important; }
+    td.dcp-body { padding:14px 10px 20px 10px !important; }
+    td.dcp-panel { border-left:0 !important; padding:12px 8px 2px 8px !important; }
+    th.dcp-th { display:none !important; }
+    td.dcp-cell { display:block !important; width:100% !important;
+                   box-sizing:border-box !important; }
+    td.dcp-tk, td.dcp-co { display:inline-block !important; width:auto !important;
+                            padding:9px 4px 2px 10px !important; }
+    td.dcp-co { padding-left:2px !important; font-size:11px !important;
+                 color:#585858 !important; }
+    td.dcp-an { padding:0 10px 3px 10px !important; }
+    td.dcp-dt { padding:0 10px 9px 10px !important; font-size:11px !important;
+                 color:#585858 !important; }
+    p.dcp-long { display:none !important; }
+    p.dcp-short { display:block !important; }
+  }
+</style>
+<title>ASX Watchlist Catch Up, 2 September 2026</title></head>
+<body style="margin:0;padding:0;background-color:#F4F5F6;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+       style="background-color:#F4F5F6;">
+ <tr><td class="dcp-gutter" align="center" style="padding:22px 10px;">
+  <table role="presentation" width="900" cellpadding="0" cellspacing="0" border="0"
+         style="width:100%;max-width:900px;background-color:#FFFFFF;">
+
+   <tr><td style="background-color:#002B56;padding:22px 18px 20px 18px;">
+     <img src="cid:dcpmark" width="150" alt="Discovery Capital Partners"
+          style="display:block;border:0;margin-bottom:14px;">
+     <div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:25px;font-weight:bold;color:#FFFFFF;">
+       ASX Watchlist Catch Up</div>
+     <div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:14px;color:#FFFFFF;padding-top:5px;">
+       Daily Announcements Briefing, 2 September 2026</div>
+   </td></tr>
+
+   <tr><td class="dcp-body" style="padding:22px 18px 26px 18px;">
+     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+       
+    <tr><td style="background-color:#002B56;padding:14px 18px;">
+      <div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:18px;font-weight:bold;
+                  color:#FFFFFF;letter-spacing:.2px;">Confirmed Announcements</div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:13px;color:#C9E4FF;padding:4px 0 0 0;">08:10 to 15:44 AWST, 2 September 2026</div>
+    </td></tr>
+    <tr><td style="height:16px;line-height:16px;font-size:0;">&nbsp;</td></tr>
+    <tr><td><p style="margin:0px 0 14px 0;font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.55;color:#002B56;max-width:900px;font-weight:normal;">Dominated by routine administrative filings rather than material news: AuKing lodged a compliance supplement on its Tundulu diamond hole logging, while NexGen filed its monthly CDI reconciliation, neither containing new mineralisation or financial results.</p></td></tr>
+    <tr><td class="dcp-panel" style="background-color:#F6FBF8;border-left:6px solid #BCDDC6;
+                   padding:14px 16px 4px 16px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+             border="0">
+    <tr><td style="padding:0 0 14px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr><td width="38" valign="middle" style="padding-right:10px;"><div style="width:30px;height:30px;background:#BCDDC6;color:#002B56;border-radius:5px;font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:13px;font-weight:bold;text-align:center;line-height:30px;">U</div></td>
+          <td valign="middle" style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:20px;
+              font-weight:bold;color:#002B56;letter-spacing:.3px;">Uranium</td>
+          <td align="right" valign="middle" style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;color:#585858;white-space:nowrap;">2 announcements</td>
+        </tr>
+      </table>
+    </td></tr>
+    
+    <tr><td>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+             border="0" style="border-collapse:collapse;">
+        <tr><th class="dcp-th" align="left" style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;font-weight:bold;color:#002B56;background-color:#BCDDC6;padding:9px 10px;">Ticker</th><th class="dcp-th" align="left" style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;font-weight:bold;color:#002B56;background-color:#BCDDC6;padding:9px 10px;">Company</th><th class="dcp-th" align="left" style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;font-weight:bold;color:#002B56;background-color:#BCDDC6;padding:9px 10px;">Announcement</th><th class="dcp-th" align="left" style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;font-weight:bold;color:#002B56;background-color:#BCDDC6;padding:9px 10px;">Date</th></tr>
+        <tr style="background-color:#EAF5EE;"><td class="dcp-cell dcp-tk" width="10%" style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;color:#002B56;padding:9px 10px;background-color:#EAF5EE;vertical-align:top;"><span style="font-weight:bold;color:#002B56;">AKN</span></td><td class="dcp-cell dcp-co" width="22%" style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;color:#002B56;padding:9px 10px;background-color:#EAF5EE;vertical-align:top;">AUKING MINING LIMITED</td><td class="dcp-cell dcp-an" width="52%" style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;color:#002B56;padding:9px 10px;background-color:#EAF5EE;vertical-align:top;"><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130761-2A1694526" style="color:#002B56;font-weight:normal;text-decoration:underline;">Supplementary: adds mineral abundance table for hole 26NH023</a></td><td class="dcp-cell dcp-dt" width="16%" style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;color:#002B56;padding:9px 10px;background-color:#EAF5EE;vertical-align:top;">2 Sep 12:08</td></tr><tr style="background-color:#FFFFFF;"><td class="dcp-cell dcp-tk" width="10%" style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;color:#002B56;padding:9px 10px;background-color:#FFFFFF;vertical-align:top;"><span style="font-weight:bold;color:#002B56;">NXG</span></td><td class="dcp-cell dcp-co" width="22%" style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;color:#002B56;padding:9px 10px;background-color:#FFFFFF;vertical-align:top;">NEXGEN ENERGY (CANADA) LTD</td><td class="dcp-cell dcp-an" width="52%" style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;color:#002B56;padding:9px 10px;background-color:#FFFFFF;vertical-align:top;"><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130720-6A1341841" style="color:#002B56;font-weight:normal;text-decoration:underline;">CDIs on issue fell to 127,774,907 in August 2026</a></td><td class="dcp-cell dcp-dt" width="16%" style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;color:#002B56;padding:9px 10px;background-color:#FFFFFF;vertical-align:top;">2 Sep 09:53</td></tr>
+      </table>
+    </td></tr>
+    <tr><td style="height:20px;line-height:20px;font-size:0;">&nbsp;</td></tr>
+    
+    <tr><td style="background-color:#FFFFFF;padding:16px 18px;border-left:3px solid #BCDDC6;">
+      <div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:15px;font-weight:bold;color:#002B56;margin-bottom:8px;"><span style="font-weight:bold;font-size:15px;color:#002B56;">AKN:</span> <a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130761-2A1694526" style="color:#002B56;font-weight:bold;font-size:15px;text-decoration:underline;">AuKing supplements Tundulu diamond hole report with mineral estimates</a></div><p class="dcp-long" style="margin:0px 0 0px 0;font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.55;color:#002B56;max-width:900px;font-weight:normal;">AuKing has lodged a compliance supplement to its 1 September 2026 release on hole 26NH023 at Tundulu, adding visual mineral abundance estimates as required under ASX Compliance Update 04.23. Logged intervals at approximately 368 to 370.5m and 381m show apatite calcite carbonatite with calcite up to ~75%, apatite up to ~10% and pyrite up to ~5%. No mineralisation has been reported, pending assay results, which are expected within 5 to 6 weeks.</p><p class="dcp-short" style="margin:0px 0 0px 0;font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.55;color:#002B56;max-width:900px;font-weight:normal;display:none;">AuKing has lodged a compliance supplement to its 1 September 2026 release on hole 26NH023 at Tundulu, adding visual mineral abundance estimates as required under ASX Compliance Update 04.23.</p>
+    </td></tr>
+    <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
+    
+    <tr><td style="background-color:#FFFFFF;padding:16px 18px;border-left:3px solid #BCDDC6;">
+      <div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:15px;font-weight:bold;color:#002B56;margin-bottom:8px;"><span style="font-weight:bold;font-size:15px;color:#002B56;">NXG:</span> <a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130720-6A1341841" style="color:#002B56;font-weight:bold;font-size:15px;text-decoration:underline;">NexGen&#x27;s CDI count decreases in routine monthly statement</a></div><p class="dcp-long" style="margin:0px 0 0px 0;font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.55;color:#002B56;max-width:900px;font-weight:normal;">NexGen&#x27;s Appendix 4A shows CDIs on issue over quoted securities fell by 9,897,131 to 127,774,907 for August 2026, reflecting net transfers between CDIs and shares quoted on the TSX and NYSE. Common shares without CDIs rose by 10,328,797 to 543,162,860, while options on issue declined by 519,999 to 46,908,164. Convertible debentures were unchanged at 39,571,350.</p><p class="dcp-short" style="margin:0px 0 0px 0;font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.55;color:#002B56;max-width:900px;font-weight:normal;display:none;">NexGen&#x27;s Appendix 4A shows CDIs on issue over quoted securities fell by 9,897,131 to 127,774,907 for August 2026, reflecting net transfers between CDIs and shares quoted on the TSX and NYSE.</p>
+    </td></tr>
+    <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
+    </table>
+    </td></tr>
+    <tr><td style="height:18px;line-height:18px;font-size:0;">&nbsp;</td></tr>
+    
+    <tr><td style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:13px;color:#585858;
+                   padding:0 0 18px 0;">No Gold or Copper announcements in the window.</td></tr>
+    
+    <tr><td style="background-color:#E6E7E8;padding:16px 18px;">
+      <div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:15px;font-weight:bold;color:#002B56;margin-bottom:8px;">Watch items</div><ul style="margin:0;padding-left:20px;"><li style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.55;color:#002B56;margin-bottom:7px;">AKN: Assay results from hole 26NH023 at Tundulu expected within 5 to 6 weeks, to confirm whether logged carbonatite intervals carry mineralisation.</li></ul>
+    </td></tr>
+    <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
+    
+    <tr><td style="background-color:#002B56;padding:14px 18px;">
+      <div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:18px;font-weight:bold;
+                  color:#FFFFFF;letter-spacing:.2px;">Day in Brief</div>
+    </td></tr>
+    <tr><td style="height:16px;line-height:16px;font-size:0;">&nbsp;</td></tr>
+    <tr><td>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+      <td class="dcp-brief" width="50%" valign="top" style="padding-right:26px;">
+        <p style="margin:0 0 14px 0;font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.55;color:#002B56;"><span style="font-weight:bold;">Drilling and compliance:</span> AuKing lodged a supplement to its 1 September 2026 release on hole 26NH023 at Tundulu, adding visual mineral abundance estimates required under ASX Compliance Update 04.23. Logged intervals at approximately 368 to 370.5m and 381m show apatite calcite carbonatite, with calcite up to ~75%, apatite up to ~10% and pyrite up to ~5%. No mineralisation has yet been reported, with assay results expected within 5 to 6 weeks.</p></td>
+      <td class="dcp-brief" width="50%" valign="top"><p style="margin:0 0 14px 0;font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.55;color:#002B56;"><span style="font-weight:bold;">Corporate and securities:</span> NexGen&#x27;s Appendix 4A for August 2026 showed CDIs on issue over quoted securities fell by 9,897,131 to 127,774,907, reflecting net transfers between CDIs and shares quoted on the TSX and NYSE. Common shares without CDIs rose by 10,328,797 to 543,162,860, options on issue declined by 519,999 to 46,908,164, and convertible debentures were unchanged at 39,571,350. Overall, the window carried no drilling results, resource updates or funding news, with both filings administrative in nature.</p></td>
+    </tr></table></td></tr>
+    
+    <tr><td style="padding:6px 0 10px 0;border-top:1px solid #BA9C67;">
+      <div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:13px;font-weight:bold;
+                  letter-spacing:1.2px;text-transform:uppercase;
+                  color:#585858;padding-top:12px;">Also Lodged</div>
+    </td></tr>
+    
+    <tr><td style="padding-bottom:6px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+             border="0"><tr><td class="dcp-lodged" width="50%" valign="top" style="padding-right:18px;"><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#585858;padding-bottom:5px;"><span style="font-weight:bold;font-size:12px;color:#002B56;">DEV</span><span style="color:#585858;">&nbsp;&nbsp;</span><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130748-6A1341855" style="color:#585858;font-weight:normal;font-size:12px;text-decoration:underline;">Investor Presentation - Mining the Territory</a></div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#585858;padding-bottom:5px;"><span style="font-weight:bold;font-size:12px;color:#002B56;">EL8</span><span style="color:#585858;">&nbsp;&nbsp;</span><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130845-6A1341883" style="color:#585858;font-weight:normal;font-size:12px;text-decoration:underline;">Expiry of Options</a></div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#585858;padding-bottom:5px;"><span style="font-weight:bold;font-size:12px;color:#002B56;">EL8</span><span style="color:#585858;">&nbsp;&nbsp;</span><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130847-6A1341884" style="color:#585858;font-weight:normal;font-size:12px;text-decoration:underline;">Notification of cessation of securities - EL8</a></div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#585858;padding-bottom:5px;"><span style="font-weight:bold;font-size:12px;color:#002B56;">GGP</span><span style="color:#585858;">&nbsp;&nbsp;</span><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130890-6A1341898" style="color:#585858;font-weight:normal;font-size:12px;text-decoration:underline;">Change of Director&#x27;s Interest - E Gaines and A Borrelli</a></div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#585858;padding-bottom:5px;"><span style="font-weight:bold;font-size:12px;color:#002B56;">GMD</span><span style="color:#585858;">&nbsp;&nbsp;</span><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130765-6A1341857" style="color:#585858;font-weight:normal;font-size:12px;text-decoration:underline;">Notification of cessation of securities - GMD</a></div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#585858;padding-bottom:5px;"><span style="font-weight:bold;font-size:12px;color:#002B56;">KGL</span><span style="color:#585858;">&nbsp;&nbsp;</span><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130681-2A1694484" style="color:#585858;font-weight:normal;font-size:12px;text-decoration:underline;">Initial Director&#x27;s Interest Notice</a></div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#585858;padding-bottom:5px;"><span style="font-weight:bold;font-size:12px;color:#002B56;">LOT</span><span style="color:#585858;">&nbsp;&nbsp;</span><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130800-6A1341867" style="color:#585858;font-weight:normal;font-size:12px;text-decoration:underline;">Results of Meeting - EGM</a></div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#585858;padding-bottom:5px;"><span style="font-weight:bold;font-size:12px;color:#002B56;">ORN</span><span style="color:#585858;">&nbsp;&nbsp;</span><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130822-3A700844" style="color:#585858;font-weight:normal;font-size:12px;text-decoration:underline;">Investor Presentation</a></div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#585858;padding-bottom:5px;"><span style="font-weight:bold;font-size:12px;color:#002B56;">RMS</span><span style="color:#585858;">&nbsp;&nbsp;</span><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130908-6A1341903" style="color:#585858;font-weight:normal;font-size:12px;text-decoration:underline;">Becoming a substantial holder</a></div></td><td class="dcp-lodged" width="50%" valign="top" style="padding-right:18px;"><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#585858;padding-bottom:5px;"><span style="font-weight:bold;font-size:12px;color:#002B56;">RMS</span><span style="color:#585858;">&nbsp;&nbsp;</span><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130789-6A1341864" style="color:#585858;font-weight:normal;font-size:12px;text-decoration:underline;">Notification of cessation of securities - RMS</a></div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#585858;padding-bottom:5px;"><span style="font-weight:bold;font-size:12px;color:#002B56;">SFR</span><span style="color:#585858;">&nbsp;&nbsp;</span><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130652-6A1341814" style="color:#585858;font-weight:normal;font-size:12px;text-decoration:underline;">Appendix 3Y Change of Director&#x27;s Interest Notice - B Harris</a></div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#585858;padding-bottom:5px;"><span style="font-weight:bold;font-size:12px;color:#002B56;">SFR</span><span style="color:#585858;">&nbsp;&nbsp;</span><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130664-6A1341819" style="color:#585858;font-weight:normal;font-size:12px;text-decoration:underline;">Application for quotation of securities - SFR</a></div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#585858;padding-bottom:5px;"><span style="font-weight:bold;font-size:12px;color:#002B56;">SFR</span><span style="color:#585858;">&nbsp;&nbsp;</span><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130657-6A1341816" style="color:#585858;font-weight:normal;font-size:12px;text-decoration:underline;">Application for quotation of securities - SFR</a></div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#585858;padding-bottom:5px;"><span style="font-weight:bold;font-size:12px;color:#002B56;">SFR</span><span style="color:#585858;">&nbsp;&nbsp;</span><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130730-6A1341846" style="color:#585858;font-weight:normal;font-size:12px;text-decoration:underline;">Cancel - Notification of cessation of securities - SFR</a></div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#585858;padding-bottom:5px;"><span style="font-weight:bold;font-size:12px;color:#002B56;">SFR</span><span style="color:#585858;">&nbsp;&nbsp;</span><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130731-6A1341847" style="color:#585858;font-weight:normal;font-size:12px;text-decoration:underline;">Notification of cessation of securities - SFR</a></div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#585858;padding-bottom:5px;"><span style="font-weight:bold;font-size:12px;color:#002B56;">SFR</span><span style="color:#585858;">&nbsp;&nbsp;</span><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130653-6A1341815" style="color:#585858;font-weight:normal;font-size:12px;text-decoration:underline;">Notification of cessation of securities - SFR</a></div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#585858;padding-bottom:5px;"><span style="font-weight:bold;font-size:12px;color:#002B56;">VAU</span><span style="color:#585858;">&nbsp;&nbsp;</span><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130793-6A1341865" style="color:#585858;font-weight:normal;font-size:12px;text-decoration:underline;">Notification of cessation of securities - VAU</a></div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;line-height:1.5;color:#585858;padding-bottom:5px;"><span style="font-weight:bold;font-size:12px;color:#002B56;">WAF</span><span style="color:#585858;">&nbsp;&nbsp;</span><a href="https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03130910-6A1341904" style="color:#585858;font-weight:normal;font-size:12px;text-decoration:underline;">Ceasing to be a substantial holder</a></div></td></tr></table>
+    </td></tr>
+    <tr><td style="height:14px;line-height:14px;font-size:0;">&nbsp;</td></tr>
+    
+    <tr><td style="border-top:2px solid #BA9C67;padding-top:16px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr><td class="dcp-contact" width="33%" valign="top" style="padding-right:12px;word-break:break-word;overflow-wrap:anywhere;"><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:14px;font-weight:bold;color:#002B56;">Adam Miethke</div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;font-weight:bold;color:#002B56;padding:2px 0;">Managing Director</div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;color:#002B56;"><a href="mailto:am@discoverycapital.com.au" style="color:#002B56;text-decoration:none;">am@discoverycapital.com.au</a></div></td><td class="dcp-contact" width="33%" valign="top" style="padding-right:12px;word-break:break-word;overflow-wrap:anywhere;"><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:14px;font-weight:bold;color:#002B56;">Kale Pervan</div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;font-weight:bold;color:#002B56;padding:2px 0;">Director</div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;color:#002B56;"><a href="mailto:kp@discoverycapital.com.au" style="color:#002B56;text-decoration:none;">kp@discoverycapital.com.au</a></div></td><td class="dcp-contact" width="33%" valign="top" style="padding-right:12px;word-break:break-word;overflow-wrap:anywhere;"><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:14px;font-weight:bold;color:#002B56;">Darcy Frazer</div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;font-weight:bold;color:#002B56;padding:2px 0;">Associate</div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:12px;color:#002B56;"><a href="mailto:df@discoverycapital.com.au" style="color:#002B56;text-decoration:none;">df@discoverycapital.com.au</a></div></td></tr>
+      </table>
+    </td></tr>
+    <tr><td style="padding-top:16px;"><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:11px;font-weight:bold;color:#002B56;padding-bottom:6px;">General Advice Only</div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:10px;line-height:1.5;color:#585858;padding-bottom:7px;">This email is for informational purposes only. It does not constitute investment or financial advice nor an offer to acquire a financial product. Before acting on any information contained in this email, each person should obtain independent taxation, financial and legal advice relating to this information and consider it carefully before making any decision or recommendation.</div><div style="font-family:'Open Sans','Segoe UI',Helvetica,Arial,sans-serif;font-size:10px;line-height:1.5;color:#585858;padding-bottom:7px;">To the extent this email does contain advice, in preparing any such advice, we have not taken into account any particular person&#x27;s objectives, financial situation or needs. Furthermore, you may not rely on this message as advice unless subsequently confirmed by letter signed by an authorised representative of Discovery Capital Partners Pty Ltd. This email and its contents are intended for wholesale investors only.</div></td></tr>
+     </table>
+   </td></tr>
+
+  </table>
+ </td></tr>
+</table>
+</body></html>
