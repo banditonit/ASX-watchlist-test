@@ -1,0 +1,31 @@
+# ============================================================
+#  COMMODITIES THE BRIEFING IS SPLIT INTO
+# ============================================================
+#
+#  One per line: a short code, then the name shown in the email.
+#  They appear in the email in the order listed here.
+#
+#  The FIRST one is the default. A company in watchlist.txt with
+#  no tag goes there, so the existing gold names need no editing.
+#
+#  To tag a company, put the code after its ticker in
+#  watchlist.txt:
+#
+#      BOE    U        # Boss Energy
+#      SFR    Cu       # Sandfire
+#
+#  To ADD a commodity:  add a line here, then tag the companies.
+#  To REMOVE one:       delete its line. Any company still tagged
+#                       with it is reported in the run log and
+#                       shown under the default instead. Nothing
+#                       is ever dropped from the briefing because
+#                       of a tag.
+#
+#  Colours: Au, Cu, U, Ag, Ni and Li have their own. Anything
+#  else is shown in the house navy.
+#
+# ============================================================
+
+Au    Gold
+Cu    Copper
+U     Uranium
