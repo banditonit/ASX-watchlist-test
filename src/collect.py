@@ -25,6 +25,14 @@ announcements shows up in the evidence pack instead of looking like a quiet day.
 That costs one request per code, about a minute for 93 names, and it is the only
 way to know the day is complete.
 
+The same per-company response is read a second time, for anything lodged in the
+last seven days that no previous run reported. The feed returns a company's
+last 60 announcements whatever we asked about, and the busiest week any name on
+the list has had is 19, so the safety net is already in hand on every run and
+costs no extra request. A feed that errored yesterday, an item ASX published
+late, a sweep that dropped something: each becomes a catch marked "Late" in the
+next morning's briefing rather than a permanent gap.
+
 Nothing here decides what is interesting. This module's only job is to come
 back with a complete, dated, full-text record of what was published. Judgement
 happens later, on the text.
@@ -405,36 +413,100 @@ def fetch_history(ticker, before, days=120, session=None, limit=40):
     return out
 
 
-def collect(codes, hours=24, now=None, since=None):
-    """Full pass: sweep, reconcile against every company, read, then price."""
+RETRYABLE = ("429", "500", "502", "503", "504", "Timeout", "ConnectionError",
+             "ChunkedEncodingError", "ReadTimeout", "ConnectTimeout")
+
+
+def retryable_feed_errors(feed_errors):
+    """The codes whose feed failed for a reason that might not happen twice.
+
+    A 400 is the feed rejecting the code itself (AQI, PGO and PDI have done that
+    on every run since 25 August 2026) and asking again minutes later is not
+    going to change its mind. A 429, a 5xx or a timeout is a bad moment, and a
+    second look before sending is cheap.
+    """
+    return sorted(code for code, err in (feed_errors or {}).items()
+                  if any(tag in str(err) for tag in RETRYABLE))
+
+
+def collect(codes, hours=24, now=None, since=None, already_seen=frozenset(),
+            lookback_hours=MAX_LOOKBACK_HOURS, lookback_codes=None,
+            company_codes=None, strict=True):
+    """Full pass: sweep, reconcile against every company, read, then price.
+
+    Two sources with two different jobs. The market-wide sweep finds today: one
+    pass over [start, end]. The per-company feeds are the safety net: each one
+    returns that company's last 60 announcements whatever the window, so the
+    same response that reconciles today is also read for anything lodged in the
+    last `lookback_hours` that no previous run reported. That costs nothing
+    extra and it is what turns a feed error, a sweep miss or a late ASX
+    publication into a late catch rather than a permanent one.
+
+    already_seen     document keys reported by previous runs. Excluded here so
+                     the recovery and sweep_missed counts are true, not noisy.
+    lookback_codes   names allowed to contribute items older than the window.
+                     None means all of them. run.py passes the names that were
+                     on the list last run, so a name added today does not
+                     arrive with a week of history to summarise.
+    company_codes    which names get the per-company pass. None means all (a
+                     morning run). A list means only those: the top-up before
+                     sending re-checks the feeds that errored earlier. An empty
+                     list means sweep only.
+    strict           raise FeedError on an empty result with feed errors. The
+                     top-up passes False: a quiet half hour with one flaky feed
+                     is not an emergency.
+    """
     start, end = window(hours=hours, now=now, since=since)
     session = _session()
-    records = sweep(codes, start, end, session=session)
+    already_seen = set(already_seen or ())
+    lookback_from = end - timedelta(hours=lookback_hours)
+    eligible = set(c.upper() for c in (lookback_codes if lookback_codes is not None else codes))
+    to_check = list(codes) if company_codes is None else list(company_codes)
+
+    records = [r for r in sweep(codes, start, end, session=session)
+               if r["document_key"] not in already_seen]
 
     # Ask every watchlist company directly and reconcile. The market-wide feed
     # is fast but it is one source; a company's own feed is the record of what
     # that company lodged. Anything only the company knows about is added here
     # and reported, so a gap in the sweep is visible rather than silent.
-    feeds, feed_errors, missed = {}, {}, []
+    feeds, feed_errors, missed, recovered = {}, {}, [], []
     seen = {r["document_key"] for r in records}
-    for code in codes:
+    for code in to_check:
         items = company_feed(code, session=session)
         if isinstance(items, dict):
             feed_errors[code] = items["_error"]
             items = []
         feeds[code] = items
-        for record in in_window(items, code, start, end):
-            if record["document_key"] in seen:
+        for item in items:
+            when = _parse_dt(item.get("date"))
+            key = item.get("documentKey")
+            if when is None or not key or key in seen or key in already_seen:
                 continue
-            seen.add(record["document_key"])
-            missed.append(record)
-            records.append(record)
+            if start <= when <= end:
+                record = _record(item, code.upper(), when, key)
+                seen.add(key)
+                missed.append(record)
+                records.append(record)
+            elif (code.upper() in eligible and lookback_from <= when < start):
+                record = _record(item, code.upper(), when, key)
+                record["recovered"] = True
+                seen.add(key)
+                recovered.append(record)
+                records.append(record)
         time.sleep(PAUSE)
 
     if missed:
         print(f"  ! the market-wide sweep missed {len(missed)} announcement(s) "
               f"that the companies' own feeds reported:")
         for r in missed:
+            print(f"      {r['ticker']}  {r['date_awst']} {r['time_awst']}  "
+                  f"{r['headline'][:56]}")
+    if recovered:
+        print(f"  ! recovered {len(recovered)} announcement(s) lodged before this "
+              f"window that no previous run reported. They are in today's "
+              f"briefing marked Late:")
+        for r in recovered:
             print(f"      {r['ticker']}  {r['date_awst']} {r['time_awst']}  "
                   f"{r['headline'][:56]}")
     if feed_errors:
@@ -444,7 +516,7 @@ def collect(codes, hours=24, now=None, since=None):
 
     # Nothing found by either source is not the same as a quiet day. It is what
     # a broken feed also looks like, and the two must not be confused.
-    if not records and feed_errors:
+    if strict and not records and feed_errors:
         raise FeedError(
             f"No announcements found, and {len(feed_errors)} company feed(s) "
             f"could not be read. Refusing to report an empty day when the "
@@ -498,11 +570,15 @@ def collect(codes, hours=24, now=None, since=None):
         "window_start_utc": start.isoformat(),
         "window_end_utc": end.isoformat(),
         "date_awst": to_awst(end).strftime("%-d %B %Y"),
-        "tickers_checked": len(codes),
+        "tickers_checked": len(to_check),
         "window_hours": round((end - start).total_seconds() / 3600, 2),
-        "sweep_missed": [{"ticker": r["ticker"], "headline": r["headline"],
-                          "lodged_awst": r["lodged_awst"],
-                          "document_key": r["document_key"]} for r in missed],
+        "sweep_missed": [{k: r[k] for k in ("ticker", "document_key", "headline",
+                                            "lodged_awst", "date_awst", "time_awst")}
+                         for r in missed],
+        "recovered": [{k: r[k] for k in ("ticker", "document_key", "headline",
+                                         "lodged_awst", "date_awst", "time_awst")}
+                      for r in recovered],
         "feed_errors": feed_errors,
+        "lookback_hours": lookback_hours,
         "announcements": records,
     }
