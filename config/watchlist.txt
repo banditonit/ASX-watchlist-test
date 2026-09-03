@@ -160,6 +160,7 @@ HMX    Cu    # Hammer Metals
 HOR    Cu    # Horseshoe Metals
 AM5    Cu    # Antares Metals, copper and uranium; tagged copper, flip to U if preferred
 WCN    Cu     # White Cliff Minerals Limited
+KAO    Cu    #Kaoko
 
 # ---- Uranium: producers -------------------------------------
 PDN    U     # Paladin Energy Ltd
