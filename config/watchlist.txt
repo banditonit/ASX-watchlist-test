@@ -159,6 +159,7 @@ ALY    Cu    # Alchemy Resources
 HMX    Cu    # Hammer Metals
 HOR    Cu    # Horseshoe Metals
 AM5    Cu    # Antares Metals, copper and uranium; tagged copper, flip to U if preferred
+WCN    Cu     # White Cliff Minerals Limited
 
 # ---- Uranium: producers -------------------------------------
 PDN    U     # Paladin Energy Ltd
@@ -207,7 +208,6 @@ REC    U     # Recharge Metals Limited
 SBR    U     # Sabre Resources Ltd
 T92    U     # Terra Critical Minerals (name truncated in source)
 THR    U     # Thor Energy Plc (CDIs)
-WCN    U     # White Cliff Minerals Limited
 C29    U     # C29 Metals
 
 # ---- DCP Watches --------------------------------------------
