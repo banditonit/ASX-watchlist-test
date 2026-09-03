@@ -431,7 +431,7 @@ def retryable_feed_errors(feed_errors):
 
 def collect(codes, hours=24, now=None, since=None, already_seen=frozenset(),
             lookback_hours=MAX_LOOKBACK_HOURS, lookback_codes=None,
-            company_codes=None, strict=True):
+            company_codes=None, strict=True, watched_since=None):
     """Full pass: sweep, reconcile against every company, read, then price.
 
     Two sources with two different jobs. The market-wide sweep finds today: one
@@ -461,6 +461,9 @@ def collect(codes, hours=24, now=None, since=None, already_seen=frozenset(),
     already_seen = set(already_seen or ())
     lookback_from = end - timedelta(hours=lookback_hours)
     eligible = set(c.upper() for c in (lookback_codes if lookback_codes is not None else codes))
+    # A recovered item must have been lodged while the name was on the list.
+    # Before that it is history, not a miss.
+    watched_since = {k.upper(): v for k, v in (watched_since or {}).items()}
     to_check = list(codes) if company_codes is None else list(company_codes)
 
     records = [r for r in sweep(codes, start, end, session=session)
@@ -488,7 +491,8 @@ def collect(codes, hours=24, now=None, since=None, already_seen=frozenset(),
                 seen.add(key)
                 missed.append(record)
                 records.append(record)
-            elif (code.upper() in eligible and lookback_from <= when < start):
+            elif (code.upper() in eligible and lookback_from <= when < start
+                  and when >= watched_since.get(code.upper(), lookback_from)):
                 record = _record(item, code.upper(), when, key)
                 record["recovered"] = True
                 seen.add(key)
