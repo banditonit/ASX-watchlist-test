@@ -74,7 +74,7 @@ def previous_run(archive=None, include_today=False):
     archive = archive or ARCHIVE
     paths = sorted(glob.glob(os.path.join(archive, "*-pack.json")))[-HISTORY_DAYS:]
     today = os.path.join(archive, f"{datetime.now().strftime('%Y-%m-%d')}-pack.json")
-    latest, seen, last_tickers = None, set(), None
+    latest, seen, last_tickers, watched_since = None, set(), None, {}
     for path in paths:
         if not include_today and os.path.abspath(path) == os.path.abspath(today):
             continue
@@ -95,7 +95,19 @@ def previous_run(archive=None, include_today=False):
         if latest is None or end > latest:
             latest = end
             last_tickers = pack.get("all_tickers")
-    return latest, seen, last_tickers
+        # When each name joined the list: the start of the earliest window
+        # that was watching it. The lookback may only recover items lodged
+        # after that, otherwise a name added yesterday arrives with a week of
+        # history that was never missed, merely never watched. On 3 September
+        # 2026 that was 82 items in one morning.
+        try:
+            start = datetime.fromisoformat(pack["window_start_utc"])
+        except (KeyError, TypeError, ValueError):
+            start = end
+        for code in pack.get("all_tickers") or []:
+            if code not in watched_since or start < watched_since[code]:
+                watched_since[code] = start
+    return latest, seen, last_tickers, watched_since
 
 
 SUBJECT_MAX = 72
@@ -308,6 +320,23 @@ def build(pack, cache):
         for r in ((ranked.get("presentation") or []) + (ranked.get("digest") or []))
     ]
 
+    # An item whose summary call failed (rate limit, outage, a document the
+    # model choked on) used to vanish: it was in no tier's output and so in no
+    # section. It is listed here by headline instead, marked, so a failed call
+    # costs a summary and never an announcement.
+    unsummarised = [r for r in (ranked["full"] + (ranked.get("periodic") or []))
+                    if r["document_key"] not in cache]
+    if unsummarised:
+        print(f"  ! {len(unsummarised)} announcement(s) could not be summarised and "
+              f"are listed under Also Lodged by headline: "
+              f"{', '.join(r['ticker'] for r in unsummarised)}")
+        briefing["also_lodged"] = [
+            {"ticker": r.get("ticker"), "company": r.get("company"),
+             "headline": f"{r.get('headline')} (summary unavailable, see document)",
+             "document_key": r.get("document_key")}
+            for r in unsummarised
+        ] + briefing["also_lodged"]
+
     # The commodity split is decided in config and carried on the pack so a
     # rebuild from the archive draws the same panels. The renderer falls back
     # to the classic layout if either key is missing or does not add up.
@@ -395,7 +424,7 @@ def main():
         print(f"loaded pack: {args.pack}")
     else:
         from collect import collect
-        since, already_seen, last_tickers = previous_run(
+        since, already_seen, last_tickers, watched_since = previous_run(
             include_today=args.since_last_run)
         if since:
             print(f"last briefing covered up to {since.isoformat()}")
@@ -406,15 +435,16 @@ def main():
             # runs behind it, so nothing the morning missed is lost.
             hours = 0
         # The seven-day lookback applies to names that were on the list last
-        # time. A name added today is read for today's window only.
-        lookback_codes = ([t for t in tickers if t in set(last_tickers)]
-                          if last_tickers else [])
+        # time, and only from the day they joined it. A name added today is
+        # read for today's window only.
+        lookback_codes = [t for t in tickers if t in watched_since]
         if len(lookback_codes) < len(tickers):
             print(f"  {len(tickers) - len(lookback_codes)} name(s) are new to the "
                   f"list today and are read for the window only, not the lookback.")
         with phases("collect"):
             pack = collect(tickers, hours=hours, since=since,
-                           already_seen=already_seen, lookback_codes=lookback_codes)
+                           already_seen=already_seen, lookback_codes=lookback_codes,
+                           watched_since=watched_since)
         print(f"window: {pack['window_start_awst'][:16]} to "
               f"{pack['window_end_awst'][:16]} AWST "
               f"({pack.get('window_hours', args.hours)}h)")
@@ -470,6 +500,16 @@ def main():
     subject = build_subject(briefing, pack)
 
     if args.dry_run:
+        # A dry run never emails anyone, but if the Graph transport is set up
+        # it does fetch a token, so wrong tenant, client or secret values fail
+        # here rather than at 08:10 tomorrow. Older send.py has no Graph.
+        try:
+            from send import send as _send, graph_configured
+        except ImportError:
+            graph_configured = None
+        if graph_configured and graph_configured():
+            _send(html, plain, subject, load_recipients(), dry_run=True,
+                  logo=os.path.join(ROOT, "dcp", "assets", "logo-dcp-white.png"))
         print(f"dry run, would send to {len(load_recipients())} recipients: {subject}")
         print(phases.summary())
         return 0
