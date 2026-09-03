@@ -141,6 +141,41 @@ SUPPLEMENTARY = re.compile(
     re.I,
 )
 
+# Corporate process: the paperwork around an event rather than the event.
+# A notice of meeting, a proxy form, an offer booklet dispatched, an SPP
+# closing-date reminder, a consolidation or code change taking effect, shares
+# issued on vesting, a government delegation touring the site. Each restates
+# something already announced (the placement, the meeting, the name change) or
+# announces nothing. Their bodies score well, because a notice of meeting
+# describes the resolutions and an offer booklet describes the raise, so like
+# SUPPLEMENTARY this is a structural demotion with no content escape. On
+# 3 September 2026 five of these reached the main section, one with a score
+# of 55. The event itself (the $150M placement, the launch of the offer, the
+# results of the raise) does not match and is unaffected, and nor does a letter
+# to shareholders about anything other than a meeting or an offer: Northern
+# Star's letter on the Elliott engagement is news, not paperwork.
+CORPORATE_PROCESS = re.compile(
+    r"\bnotice of (?:the )?(?:annual |extraordinary |general )*meeting\b|"
+    r"\b(?:annual|extraordinary) general meeting\b|"
+    r"\b(?:egm|agm)\b.*\b(?:letter|proxy|notice|key dates|form|timetable)\b|"
+    r"\bproxy form\b|"
+    r"\bletter to (?:share|security|option)holders\b.*\b(?:meeting|egm|agm|proxy|offer|entitlement|spp)\b|"
+    r"\bresults? of (?:the )?(?:annual |extraordinary |general )*meeting\b|"
+    r"\b(?:dispatch|despatch)(?:ed)? of\b|"
+    r"\b(?:offer|entitlement|retail|rights issue) (?:document|booklet)s?\b|"
+    r"\bclosing date\b|\breminder\b|"
+    r"\b(?:share purchase plan|spp) (?:opens?|closing|closes?|closed|extension|extended|timetable|update)\b|"
+    r"\b(?:consolidation|name change|change of (?:company )?name|asx code)\b.*"
+    r"\b(?:complete|completed|approved|effective|update|change)\b|"
+    r"\b(?:name change|change of (?:company )?name) and consolidation\b|"
+    r"^issue of (?:shares|securities|options|performance rights)\b|"
+    r"\b(?:conversion|vesting|exercise) of (?:performance rights|options|convertible notes|rights)\b|"
+    r"\b(?:s|section )?708a\b|"
+    r"\b(?:government|ministerial|minister|stakeholders?|delegation|dignitar\w+) (?:visit|tour)s?\b|"
+    r"\bsite (?:visit|tour)\b",
+    re.I,
+)
+
 # Diary notes about a result, not the result. These carry nothing at all.
 ADMIN_NOTICE = re.compile(
     r"conference call|investor (?:call|webinar|briefing) (?:details|invit)|"
@@ -321,6 +356,10 @@ def score(record):
     if SUPPLEMENTARY.match(headline.strip()):
         total = min(total, 4)
         hits.append("supplementary to an earlier announcement")
+
+    if CORPORATE_PROCESS.search(headline):
+        total = min(total, 4)
+        hits.append("corporate process, not the event")
 
     # A routine filing headline caps the score unless the body says otherwise.
     routine = bool(ROUTINE.match(headline.strip()))
