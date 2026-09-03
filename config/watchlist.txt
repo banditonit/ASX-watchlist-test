@@ -26,68 +26,68 @@
 # ---- Explorers / developers --------------------------------
 # AQI   Au    # Sinclair Gold, re-coded to SGC
 SGC    Au    # Sinclair Gold, formerly AQI
-ARV    Au
-AS1    Au
-BM1    Au
-BNZ    Au
-GBR    Au
-GBM    Au
-GG8    Au
-GML    Au
-GSN    Au
-JAV    Au
-KAL    Au
-LCL    Au
-LEX    Au
-OZM    Au
-PGO    Au
-SLS    Au
-STK    Au
-TOK    Au
-TOR    Au
-TTM    Au
-YRL    Au
-MPK    Au
-NVO    Au
-AAM    Au
-GA8    Au
-MBK    Au
-NWM    Au
-SMS    Au
-SKM    Au
-ARI    Au
-AAR    Au
-LAC    Au
-AUC    Au
-AUE    Au
-AZY    Au
-BGD    Au
-WAU    Au
-CAV    Au
-GPR    Au
-HRN    Au
-MRT    Au
-KZR    Au
-LGM    Au
-MAT    Au
-MI6    Au
-MM8    Au
-NXM    Au
-ODY    Au
-PDI    Au
-PTN    Au
-RXL    Au
-SMI    Au
-STM    Au
-STN    Au
-TAM    Au
-TCG    Au
-TSO    Au
-WGR    Au
-WIA    Au
-MEK    Au
-PRX    Au
-PGL    Au            # Pilbara Gold, formerly KAI
+ARV    Au    # Artemis Resources Limited
+AS1    Au    # Asara Resources Limited
+BM1    Au    # Ballard Mining Limited
+BNZ    Au    # Benz Mining Corp.
+GBR    Au    # Great Boulder Resources Limited
+GBM    Au    # GBM Resources Limited
+GG8    Au    # Gorilla Gold Mines Ltd
+GML    Au    # Gateway Mining Limited
+GSN    Au    # Great Southern Mining Limited
+JAV    Au    # Javelin Minerals Limited   
+KAL    Au    # Kalgoorlie Gold Mining Limited
+LCL    Au    # LCL Resources Limited   
+LEX    Au    # Lefroy Exploration Limited
+OZM    Au    # Ozaurum Resources Limited
+BH6    Au    # Broken Hill Gold Ltd - used to be Pacgold
+SLS    Au    # Solstice Minerals Limited
+STK    Au    # Strickland Metals Limited
+TOK    Au    # Tolu Minerals Limited
+TOR    Au    # Torque Metals Limited
+TTM    Au    # Titan Minerals Limited
+YRL    Au    # Yandal Resources Limited
+MPK    Au    # Many Peaks Minerals Ltd
+NVO    Au    # Novo Resources Corp.
+AAM    Au    # AuMEGA Metals Ltd
+GA8    Au    # Goldarc Resources Limited
+MBK    Au    # Metal Bank Limited
+NWM    Au    # Norwest Minerals Limited
+SMS    Au    # Star Minerals Limited
+SKM    Au    # Skylark Minerals Limited
+ARI    Au    # Arika Resources Limited
+AAR    Au    # Astral Resources NL
+LAC    Au    # Lac Gold Limited
+AUC    Au    # Ausgold Limited
+AUE    Au    # Aurum Resources Limited
+AZY    Au    # Antipa Minerals Limited
+BGD    Au    # Barton Gold Holdings Limited
+WAU    Au    # WA Gold Limited
+CAV    Au    # Carnavale Resources Limited
+GPR    Au    # Geopacific Resources Ltd
+HRN    Au    # Horizon Gold Limited
+MRT    Au    # Maritana Minerals Limited
+KZR    Au    # Kalamazoo Resources Limited
+LGM    Au    # Legacy Minerals Holdings Limited
+MAT    Au    # Matsa Resources Limited
+MI6    Au    # Minerals 260 Limited
+MM8    Au    # Medallion Metals Limited
+NXM    Au    # Nexus Minerals Limited
+ODY    Au    # Odyssey Gold Ltd
+PDI    Au    # Predictive Discovery Limited
+PTN    Au    # Patronus Resources Limited
+RXL    Au    # Rox Resources Limited
+SMI    Au    # Santana Minerals Limited
+STM    Au    # Sunstone Metals Ltd
+STN    Au    # Saturn Metals Limited
+TAM    Au    # Tanami Gold NL
+TCG    Au    # Turaco Gold Limited
+TSO    Au    # Tesoro Gold Ltd
+WGR    Au    # Western Gold Resources Limited
+WIA    Au    # WIA Gold Limited
+MEK    Au    # Meeka Metals Limited
+PRX    Au    # Prodigy Gold NL
+PGL    Au    # Pilbara Gold, formerly KAI
 CRS    Au    # Caprice Resources
 IDA    Au    # Indiana Resources
 MAU    Au    # Magnetic Resources
@@ -96,33 +96,34 @@ TMB    Au    # Tambourah Metals
 WSR    Au    # Westar Resources
 ADD    Au    # Adavale Resources
 M3M    Au    # M3 Mining
+DTM    Au    # Dart Mining NL
 
 # ---- Producers / larger caps -------------------------------
-EVN    Au
-NST    Au
-BGL    Au
-BC8    Au
-BTR    Au
-CMM    Au
-CYL    Au
-EMR    Au
-GGP    Au
-GMD    Au
-KCN    Au
-NMG    Au
-OBM    Au
-PNR    Au
-PRU    Au
-RMS    Au
-RRL    Au
-RSG    Au
-SBM    Au
-VAU    Au
-WAF    Au
-WGX    Au
-ORE    Au
-BCN    Au
-DTM    Au
+EVN    Au    # Evolution Mining Limited
+NST    Au    # Northern Star Resources Ltd
+BGL    Au    # Bellevue Gold Limited
+BC8    Au    # Black Cat Syndicate Limited
+BTR    Au    # Brightstar Resources Limited
+CMM    Au    # Capricorn Metals Ltd
+CYL    Au    # Catalyst Metals Limited
+EMR    Au    # Emerald Resources NL
+GGP    Au    # Greatland Resources Limited
+GMD    Au    # Genesis Minerals Limited
+KCN    Au    # Kingsgate Consolidated Limited
+NMG    Au    # New Murchison Gold Limited
+OBM    Au    # Ora Banda Mining Ltd
+PNR    Au    # Pantoro Gold Limited
+PRU    Au    # Perseus Mining Limited
+RMS    Au    # Ramelius Resources Limited
+RRL    Au    # Regis Resources Limited
+RSG    Au    # Resolute Mining Limited
+SBM    Au    # St Barbara Limited
+VAU    Au    # Vault Minerals Limited
+WAF    Au    # West African Resources Limited
+WGX    Au    # Westgold Resources Limited
+ORE    Au    # Orezone Gold Corporation
+BCN    Au    # Beacon Minerals Limited
+
 
 # ---- Copper: producers / larger caps -----------------------
 29M    Cu    # 29Metals Limited
