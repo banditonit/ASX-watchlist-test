@@ -1,0 +1,692 @@
+{
+  "lead": "Corporate activity dominated the window: FireFly Metals completed its combined A$180 million ASX/TSX equity raising and opened a further A$10 million SPP at A$1.78 per share, while PC Gold cleansed a A$75 million institutional placement and Core Energy detailed a A$3.025 million Namibia uranium raise. Alongside the capital markets news, Anson Resources secured a $194 million Utah tax incentive for its Green River Lithium Project, and Aurum Resources extended high-grade gold hits at Boundiali's BST1 deposit.",
+  "subtitle": "Capital raisings across FireFly, PC Gold and Core Energy overshadow steady drilling news from Aurum and SMI.",
+  "subject": "FFM completes A$180M raise, ASN lands $194M Utah tax incentive",
+  "watch_items": [
+    "KAO: trading halt on proposed capital raising, due to resume by start of normal trading 8 September 2026 or on announcement release",
+    "FFM: SPP opens 4 September 2026, closes 23 September 2026, at A$1.78 per share",
+    "CR3: Tranche 1 shares of the A$3.025 million placement due to issue around 11 September 2026, Tranche 2 subject to EGM approval expected mid-October 2026",
+    "ASN: separate GOED tax reduction application for Green River goes before its board on 10 September 2026",
+    "IDA: ACICA arbitration final hearing over Ntaka Nickel settlement funds listed for 14 December 2026, decision not expected until Q2 2027",
+    "AUE: next Boundiali resource update targeted early Q4 CY2026, Definitive Feasibility Study due late CY2026"
+  ],
+  "day_in_brief": "Corporate and funding: FireFly Metals completed its combined A$180 million ASX and TSX raising and has now opened a further A$10 million SPP at A$1.78 per share, closing 23 September 2026. PC Gold cleansed a A$75 million institutional placement tied to its updated Spring Hill resource, Core Energy detailed the mechanics of its A$3.025 million placement backing a Nova Uranium earn-in, and Kaoko Metals remains halted pending its own capital raising announcement, due by 8 September 2026. Anson Resources secured a $194 million Utah tax incentive for Green River, calculated at roughly US$8 million a year over 25 years, with a further GOED tax application due before its board on 10 September 2026.\n\nDrilling and resources: Aurum Resources extended high-grade mineralisation down dip at BST1 outside the current 190koz Indicated Resource, with a best hit of 5.63m @ 31.79g/t Au from 32m including 2.63m @ 67.60g/t Au, and the system remains open ahead of a Q4 CY2026 resource update. St George/SMI (Rise and Shine South) reported further infill intercepts widening the HG1 high-grade domain, including 25.8m @ 1.1g/t Au from 152.5m and 11.3m @ 7.3g/t Au from 234.0m in an untested zone beneath the planned pit. Javelin Minerals began deep diamond drilling at Coogee's North and West intrusive targets beneath the existing 3.6Mt at 1.08g/t Au and 1.0Mt at 0.41% Cu resource.\n\nStudies and technical: Sunstone Metals re-lodged its Bramaderos metallurgical results with added JORC Table 1 data, unchanged in substance at 80% copper and 93% gold recoveries. European Metals Holdings reported mineralogy work at Grønnedal showing 87.5% to 94.3% of contained NdPr in identified REE-bearing minerals, with a density and magnetic separation upgrade to about 12,700ppm TREE, ahead of flotation testing.\n\nOther items: Capstone Copper's routine Appendix 4A showed CDIs on issue falling while underlying common shares rose on option exercises and a placement. Askari Metals released escrow shares tied to its Adola acquisition, and mediation between NUKL and LRI over Ntaka Nickel settlement funds failed, sending the dispute to an ACICA hearing in December 2026. Six quarterly and annual filings were otherwise recurring, with no guidance changes among them.",
+  "rows": [
+    {
+      "ticker": "AUE",
+      "company": "AURUM RESOURCES LIMITED",
+      "announcement": "5.63m @ 31.79g/t Au from 32m (BSDD0097)",
+      "type": null,
+      "date": "4 September 2026",
+      "document_key": "2924-03131662-6A1342170",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131662-6A1342170"
+    },
+    {
+      "ticker": "SMI",
+      "company": "SANTANA MINERALS LIMITED",
+      "announcement": "20.7m @ 4.8g/t Au from 168.8m (MDD529)",
+      "type": null,
+      "date": "3 September 2026",
+      "document_key": "2924-03131209-6A1342035",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131209-6A1342035"
+    },
+    {
+      "ticker": "STM",
+      "company": "SUNSTONE METALS LTD",
+      "announcement": "Reissued with JORC Table 1: 80% Cu, 93% Au recoveries at Bramaderos",
+      "type": null,
+      "date": "3 September 2026",
+      "document_key": "2924-03131416-2A1694875",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131416-2A1694875"
+    },
+    {
+      "ticker": "ASN",
+      "company": "ANSON RESOURCES LIMITED",
+      "announcement": "$193.995 million UIPA tax incentive over 25 years",
+      "type": null,
+      "date": "4 September 2026",
+      "document_key": "2924-03131729-6A1342182",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131729-6A1342182"
+    },
+    {
+      "ticker": "FFM",
+      "company": "FIREFLY METALS LTD",
+      "announcement": "A$180M equity raising completed at A$1.78/C$1.76 per share",
+      "type": null,
+      "date": "4 September 2026",
+      "document_key": "2924-03131559-6A1342143",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131559-6A1342143"
+    },
+    {
+      "ticker": "PC2",
+      "company": "PC GOLD LTD",
+      "announcement": "A$75M placement at A$1.05/share, cleansing notice",
+      "type": null,
+      "date": "3 September 2026",
+      "document_key": "2924-03131340-6A1342069",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131340-6A1342069"
+    },
+    {
+      "ticker": "EPM",
+      "company": "ECLIPSE METALS LIMITED.",
+      "announcement": "87.5% to 94.3% of NdPr hosted in identified REE minerals",
+      "type": null,
+      "date": "3 September 2026",
+      "document_key": "2924-03131194-6A1342027",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131194-6A1342027"
+    },
+    {
+      "ticker": "CR3",
+      "company": "CORE ENERGY MINERALS LTD",
+      "announcement": "A$3.025M placement at A$0.006/share to fund Nova uranium JV",
+      "type": null,
+      "date": "4 September 2026",
+      "document_key": "2924-03131716-2A1695018",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131716-2A1695018"
+    },
+    {
+      "ticker": "JAV",
+      "company": "JAVELIN MINERALS LIMITED",
+      "announcement": "Diamond drilling starts at Coogee North and West gold-copper targets",
+      "type": null,
+      "date": "3 September 2026",
+      "document_key": "2924-03131210-6A1342034",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131210-6A1342034"
+    },
+    {
+      "ticker": "CR3",
+      "company": "CORE ENERGY MINERALS LTD",
+      "announcement": "Placement of 504.2M shares at A$0.006 to fund Nova drilling",
+      "type": null,
+      "date": "4 September 2026",
+      "document_key": "2924-03131717-2A1695009",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131717-2A1695009"
+    },
+    {
+      "ticker": "KAO",
+      "company": "KAOKO METALS LIMITED",
+      "announcement": "Halted pending capital raising, resumes 8 September 2026",
+      "type": null,
+      "date": "4 September 2026",
+      "document_key": "2924-03131692-6A1342179",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131692-6A1342179"
+    },
+    {
+      "ticker": "CSC",
+      "company": "CAPSTONE COPPER CORP.",
+      "announcement": "CDIs on issue fell to 211,643,958 in August 2026",
+      "type": null,
+      "date": "3 September 2026",
+      "document_key": "2924-03131322-6A1342057",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131322-6A1342057"
+    },
+    {
+      "ticker": "AS2",
+      "company": "ASKARI METALS LIMITED",
+      "announcement": "24,999,999 shares released from voluntary escrow",
+      "type": null,
+      "date": "3 September 2026",
+      "document_key": "2924-03131371-6A1342078",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131371-6A1342078"
+    },
+    {
+      "ticker": "FFM",
+      "company": "FIREFLY METALS LTD",
+      "announcement": "SPP targets A$10.0 million at A$1.78/share, closes 23 September 2026",
+      "type": null,
+      "date": "4 September 2026",
+      "document_key": "2924-03131735-6A1342184",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131735-6A1342184"
+    },
+    {
+      "ticker": "IDA",
+      "company": "INDIANA RESOURCES LIMITED",
+      "announcement": "Mediation fails, arbitration hearing set for 14 December 2026",
+      "type": null,
+      "date": "4 September 2026",
+      "document_key": "2924-03131603-6A1342156",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131603-6A1342156"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "AUE",
+      "heading": "Aurum extends high-grade gold hits at Boundiali's BST1",
+      "body": "Aurum reports assays from 22 diamond holes (5,774.15m) at the BST1 deposit within its 3.22Moz Boundiali Gold Project in Côte d'Ivoire, best intercept 5.63m @ 31.79g/t Au from 32m including 2.63m @ 67.60g/t Au (BSDD0097). Results confirm mineralisation down dip outside the current 190koz Indicated Resource at BST1, with the system remaining open. A 130,000m CY2026 drilling program continues across Boundiali and Napié, with the next Boundiali resource update targeted for early Q4 CY2026 and a Definitive Feasibility Study due late CY2026. Aurum held A$54.6 million cash at 30 June 2026.",
+      "document_key": "2924-03131662-6A1342170",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131662-6A1342170"
+    },
+    {
+      "ticker": "SMI",
+      "heading": "More infill holes lift grade and width of RAS high-grade core",
+      "body": "Two further infill holes at Rise and Shine South, MDD529 and MDD530, extended the HG1 high-grade domain, including 20.7m @ 4.8g/t Au from 168.8m and 2.3m @ 19.7g/t Au from 198m in MDD529, and 25.8m @ 1.1g/t Au from 152.5m and 11.0m @ 8.5g/t Au from 182.0m in MDD530. MDD530 also hit 11.3m @ 7.3g/t Au from 234.0m in an untested stacked zone beneath the planned pit. Three holes remain in the infill programme.",
+      "document_key": "2924-03131209-6A1342035",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131209-6A1342035"
+    },
+    {
+      "ticker": "STM",
+      "heading": "Bramaderos metallurgy announcement reissued with JORC data",
+      "body": "Sunstone has re-lodged its 1 September 2026 Bramaderos metallurgical results at ASX's request, adding JORC Table 1 exploration results information. The substance is unchanged: average recoveries of 80% copper and 93% gold, up from the Scoping Study's 75% and 85%. No new figures accompany this reissue.",
+      "document_key": "2924-03131416-2A1694875",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131416-2A1694875"
+    },
+    {
+      "ticker": "ASN",
+      "heading": "Anson secures $194 million Utah tax incentive for Green River",
+      "body": "The Utah Inland Port Authority has approved a business incentive capped at $193,995,683 for Anson's Green River Lithium Project, calculated as 50% of projected property tax differential over 25 years (about US$8 million a year). The rebate begins once the project is operating and Anson is also exploring an alternative bond-financing structure with UIPA to fund utility and transport infrastructure. The Green River plant, targeting 10,000tpa lithium carbonate, was scoped in March 2026 at $569 million total capital cost; a separate GOED tax reduction application is due before its board on 10 September 2026.",
+      "document_key": "2924-03131729-6A1342182",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131729-6A1342182"
+    },
+    {
+      "ticker": "FFM",
+      "heading": "FireFly completes A$180 million equity raising",
+      "body": "FireFly Metals has completed its combined ASX and TSX equity raising, drawing gross proceeds of ~A$180 million before costs: A$150 million from the ASX placement at A$1.78 per share and ~A$30 million from the TSX bought deal at C$1.76 per share, issuing 16,820,454 shares. An SPP targeting a further A$10 million opens 4 September 2026 and closes 23 September 2026. Funds will advance Green Bay development, drilling and feasibility studies.",
+      "document_key": "2924-03131559-6A1342143",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131559-6A1342143"
+    },
+    {
+      "ticker": "PC2",
+      "heading": "PC Gold cleanses A$75 million institutional placement",
+      "body": "PC Gold issued 71,428,571 shares at A$1.05 each to Tier 1 institutional investors, raising approximately A$75 million before costs, plus 1,850,000 shares to employees on vested Performance Rights tied to the updated Spring Hill resource. The notice is a formal disclosure cleansing under section 708A(5)(e) rather than new capital-raising news.",
+      "document_key": "2924-03131340-6A1342069",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131340-6A1342069"
+    },
+    {
+      "ticker": "EPM",
+      "heading": "Mineralogy work backs NdPr flotation route at Grønnedal",
+      "body": "Quantitative mineralogy by ALS Metallurgy on four Ivigtût composites shows 87.5% to 94.3% of contained NdPr sits in identified REE-bearing minerals, mainly synchysite and calcioancylite-type carbonates and fluorocarbonates. Combined density and magnetic separation on one composite removed 39% of mass while retaining about 70% of TREEs, an upgrade factor of 1.3 to roughly 12,700ppm TREE. Next steps are rougher and cleaner flotation testing followed by hydrometallurgical trials on a rough concentrate.",
+      "document_key": "2924-03131194-6A1342027",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131194-6A1342027"
+    },
+    {
+      "ticker": "CR3",
+      "heading": "Core Energy raises A$3.025 million for Namibia uranium JV",
+      "body": "Core Energy has secured firm commitments for a two-tranche placement of up to 504 million shares at A$0.006 each, raising A$3.025 million before costs, a 25% discount to last close. Substantial shareholder Jose Luis Manzano will invest A$1 million, lifting his stake to 19.7%. Funds will drill the Barking Gecko Prospect and progress a maiden JORC resource at the Nova Uranium Project in Namibia's Erongo province. Tranche 1 shares issue around 11 September 2026, with Tranche 2 subject to shareholder approval at an EGM expected mid-October 2026.",
+      "document_key": "2924-03131716-2A1695018",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131716-2A1695018"
+    },
+    {
+      "ticker": "JAV",
+      "heading": "Javelin begins deep diamond drilling at Coogee gold-copper targets",
+      "body": "Javelin Minerals has commenced a two-hole diamond program at the Coogee Gold-Copper Project, testing the Coogee North and Coogee West intrusive targets, each hole planned to 800m to 1,000m over a 5 to 6 week program. The targets are untested deep magnetic anomalies sitting beneath the existing Coogee North resource of 3.6Mt at 1.08g/t Au and 1.0Mt at 0.41% Cu. Drilling is co-funded via the WA Government's Exploration Incentive Scheme.",
+      "document_key": "2924-03131210-6A1342034",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131210-6A1342034"
+    },
+    {
+      "ticker": "CR3",
+      "heading": "Core Energy details placement backing Nova Uranium earn-in",
+      "body": "Core Energy Minerals plans to issue 504,166,667 shares at A$0.006 each, alongside 168,055,556 placement options and 25,000,000 broker options exercisable at A$0.011 expiring 30 October 2029. Proceeds fund drilling at the Barking Gecko Prospect within the Nova Uranium Project, a maiden JORC resource at Nova, and working capital. Shares are due for issue 30 October 2026, with shareholder approval for the balance of the raise sought at a meeting.",
+      "document_key": "2924-03131717-2A1695009",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131717-2A1695009"
+    },
+    {
+      "ticker": "KAO",
+      "heading": "Kaoko Metals halted ahead of capital raising announcement",
+      "body": "Kaoko Metals requested a trading halt pending an announcement on a proposed capital raising. The halt remains in place until the earlier of the announcement's release or the start of normal trading on Tuesday, 8 September 2026. No raising size or price has been disclosed yet.",
+      "document_key": "2924-03131692-6A1342179",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131692-6A1342179"
+    },
+    {
+      "ticker": "CSC",
+      "heading": "Capstone Copper's CDI count declines as common shares rise",
+      "body": "Capstone Copper's routine Appendix 4A shows CDIs on issue fell by 1,654,738 to 211,643,958 at end August 2026, reflecting net transfers between CDIs and TSX-quoted stock. Underlying common shares rose by 2,092,860 to 766,042,477 on option exercises and a private placement, while stock options fell by 57,890 to 3,841,489.",
+      "document_key": "2924-03131322-6A1342057",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131322-6A1342057"
+    },
+    {
+      "ticker": "AS2",
+      "heading": "Askari releases 25M escrow shares from Adola acquisition",
+      "body": "Askari Metals confirms 24,999,999 fully paid ordinary shares issued as consideration for the Adola Greenstone Belt Gold acquisition have been released from voluntary escrow effective 3 September 2026. The shares are no longer subject to a holding lock and the release does not change the Company's issued capital.",
+      "document_key": "2924-03131371-6A1342078",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131371-6A1342078"
+    },
+    {
+      "ticker": "FFM",
+      "heading": "FireFly opens SPP at A$1.78 per share",
+      "body": "FireFly Metals has despatched its Share Purchase Plan offer document to eligible shareholders, letting them apply for A$2,500 to A$30,000 of new shares at A$1.78 each, matching the recent institutional placement price and a 6.3% discount to the last close of A$1.90. The Company is targeting up to A$10,000,000 (5,617,977 shares), with scale back possible. The offer closes 5.00pm AWST on 23 September 2026, with new shares expected to trade from 1 October 2026.",
+      "document_key": "2924-03131735-6A1342184",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131735-6A1342184"
+    },
+    {
+      "ticker": "IDA",
+      "heading": "Mediation over settlement fund split fails, ACICA hearing set",
+      "body": "Mediation between NUKL and LRI over the distribution of Ntaka Nickel arbitration settlement funds failed to resolve the dispute at a London conference on 2 September 2026. The ACICA arbitration final hearing is listed for 14 December 2026, provisionally running 6 days to 21 December 2026, with a Tribunal decision not expected until Q2 2027.",
+      "document_key": "2924-03131603-6A1342156",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131603-6A1342156"
+    }
+  ],
+  "other": [
+    {
+      "ticker": "BTR",
+      "company": "BRIGHTSTAR RESOURCES LIMITED",
+      "headline": "Annual Report to shareholders",
+      "summary": "FY26 annual report; Goldfields DFS pre-tax FCF A$1.0bn, NPV8 A$606m, FID taken, A$110m EPC awarded, first gold targeted mid-2027",
+      "document_key": "2924-03131584-6A1342157",
+      "market_cap": 645645311,
+      "cap_label": "$646m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131584-6A1342157"
+    },
+    {
+      "ticker": "BTR",
+      "company": "BRIGHTSTAR RESOURCES LIMITED",
+      "headline": "Appendix 4G and Corporate Governance Statement",
+      "summary": "Corporate governance statement, no change to board",
+      "document_key": "2924-03131585-6A1342158",
+      "market_cap": 645645311,
+      "cap_label": "$646m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131585-6A1342158"
+    },
+    {
+      "ticker": "STN",
+      "company": "SATURN METALS LIMITED",
+      "headline": "Annual Report to shareholders",
+      "summary": "FY26 annual report; DFS on Apollo Hill targeted for completion end CY2026; $100m raise plus $21m SPP completed post year end",
+      "document_key": "2924-03131395-6A1342082",
+      "market_cap": 365339143,
+      "cap_label": "$365m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131395-6A1342082"
+    },
+    {
+      "ticker": "STN",
+      "company": "SATURN METALS LIMITED",
+      "headline": "Corporate Governance Statement 2026",
+      "summary": "Corporate governance statement, no nomination committee, board composition unchanged",
+      "document_key": "2924-03131397-6A1342083",
+      "market_cap": 365339143,
+      "cap_label": "$365m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131397-6A1342083"
+    },
+    {
+      "ticker": "SMS",
+      "company": "STAR MINERALS LIMITED",
+      "headline": "Annual Report to shareholders",
+      "summary": "Annual Report FY26: mining underway at Tumblegum South, first gold revenue expected December quarter; West Bryah sale A$2.75m",
+      "document_key": "2924-03131750-6A1342189",
+      "market_cap": 11734407,
+      "cap_label": "$12m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131750-6A1342189"
+    },
+    {
+      "ticker": "SMS",
+      "company": "STAR MINERALS LIMITED",
+      "headline": "Appendix 4G & Corporate Governance Statement",
+      "summary": "FY26 corporate governance statement, no operating or financial figures disclosed",
+      "document_key": "2924-03131756-6A1342197",
+      "market_cap": 11734407,
+      "cap_label": "$12m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131756-6A1342197"
+    }
+  ],
+  "_unverified": [],
+  "also_lodged": [
+    {
+      "ticker": "WAF",
+      "company": "WEST AFRICAN RESOURCES LIMITED",
+      "headline": "WAF Africa Down Under Presentation 2026",
+      "document_key": "2924-03131426-6A1342091",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131426-6A1342091"
+    },
+    {
+      "ticker": "TAM",
+      "company": "TANAMI GOLD NL",
+      "headline": "Investor Presentation",
+      "document_key": "2924-03131312-6A1342054",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131312-6A1342054"
+    },
+    {
+      "ticker": "BC8",
+      "company": "BLACK CAT SYNDICATE LIMITED",
+      "headline": "Pause in Trading",
+      "document_key": "2924-03131763-6A1342202",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131763-6A1342202"
+    },
+    {
+      "ticker": "ALR",
+      "company": "ALTAIR MINERALS LIMITED",
+      "headline": "Results of General Meeting",
+      "document_key": "2924-03131302-3A700935",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131302-3A700935"
+    },
+    {
+      "ticker": "CSC",
+      "company": "CAPSTONE COPPER CORP.",
+      "headline": "Notice under section 708A(5)(e) of the Corporations Act 2001",
+      "document_key": "2924-03131494-6A1342109",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131494-6A1342109"
+    },
+    {
+      "ticker": "FFM",
+      "company": "FIREFLY METALS LTD",
+      "headline": "Application for quotation of securities - FFM",
+      "document_key": "2924-03131594-6A1342159",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131594-6A1342159"
+    },
+    {
+      "ticker": "GMD",
+      "company": "GENESIS MINERALS LIMITED",
+      "headline": "Change of Directors Interest Notice",
+      "document_key": "2924-03131368-6A1342077",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131368-6A1342077"
+    },
+    {
+      "ticker": "PC2",
+      "company": "PC GOLD LTD",
+      "headline": "Application for quotation of securities - PC2",
+      "document_key": "2924-03131292-6A1342049",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131292-6A1342049"
+    },
+    {
+      "ticker": "PNR",
+      "company": "PANTORO GOLD LIMITED",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03131532-6A1342131",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131532-6A1342131"
+    },
+    {
+      "ticker": "RMS",
+      "company": "RAMELIUS RESOURCES LIMITED",
+      "headline": "Becoming a substantial holder from MUFG",
+      "document_key": "2924-03131504-6A1342116",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131504-6A1342116"
+    },
+    {
+      "ticker": "RSG",
+      "company": "RESOLUTE MINING LIMITED",
+      "headline": "Ceasing to be a substantial holder",
+      "document_key": "2924-03131583-6A1342154",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131583-6A1342154"
+    },
+    {
+      "ticker": "RSG",
+      "company": "RESOLUTE MINING LIMITED",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03131453-6A1342097",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131453-6A1342097"
+    },
+    {
+      "ticker": "SNM",
+      "company": "SENTINEL METALS LIMITED",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03131563-6A1342144",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131563-6A1342144"
+    },
+    {
+      "ticker": "WAF",
+      "company": "WEST AFRICAN RESOURCES LIMITED",
+      "headline": "Ceasing to be a substantial holder from MUFG",
+      "document_key": "2924-03131444-6A1342095",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131444-6A1342095"
+    },
+    {
+      "ticker": "BOE",
+      "company": "BOSS ENERGY LTD",
+      "headline": "Change of Director's Interest Notices (x2)",
+      "document_key": "2924-03131637-6A1342164",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131637-6A1342164"
+    },
+    {
+      "ticker": "FFM",
+      "company": "FIREFLY METALS LTD",
+      "headline": "Cleansing Notice",
+      "document_key": "2924-03131624-6A1342160",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131624-6A1342160"
+    },
+    {
+      "ticker": "GMD",
+      "company": "GENESIS MINERALS LIMITED",
+      "headline": "Application for quotation of securities - GMD",
+      "document_key": "2924-03131546-6A1342140",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131546-6A1342140"
+    },
+    {
+      "ticker": "GML",
+      "company": "GATEWAY MINING LIMITED",
+      "headline": "Notification regarding unquoted securities - GML",
+      "document_key": "2924-03131472-2A1694900",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131472-2A1694900"
+    },
+    {
+      "ticker": "PC2",
+      "company": "PC GOLD LTD",
+      "headline": "Application for quotation of securities - PC2",
+      "document_key": "2924-03131311-6A1342056",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131311-6A1342056"
+    },
+    {
+      "ticker": "SFR",
+      "company": "SANDFIRE RESOURCES LIMITED",
+      "headline": "AGM Date and Closing Date for Director Nominations",
+      "document_key": "2924-03131542-6A1342137",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131542-6A1342137"
+    },
+    {
+      "ticker": "STN",
+      "company": "SATURN METALS LIMITED",
+      "headline": "Appendix 4G",
+      "document_key": "2924-03131399-6A1342084",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131399-6A1342084"
+    },
+    {
+      "ticker": "TAR",
+      "company": "TARUGA MINERALS LIMITED",
+      "headline": "Cleansing Notice",
+      "document_key": "2924-03131501-6A1342113",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131501-6A1342113"
+    },
+    {
+      "ticker": "TAR",
+      "company": "TARUGA MINERALS LIMITED",
+      "headline": "Application for quotation of securities - TAR",
+      "document_key": "2924-03131495-6A1342112",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03131495-6A1342112"
+    }
+  ],
+  "commodities": [
+    [
+      "Au",
+      "Gold"
+    ],
+    [
+      "Cu",
+      "Copper"
+    ],
+    [
+      "U",
+      "Uranium"
+    ],
+    [
+      "DCP",
+      "DCP Watches"
+    ]
+  ],
+  "commodity_of": {
+    "SGC": "Au",
+    "ARV": "Au",
+    "AS1": "Au",
+    "BM1": "Au",
+    "BNZ": "Au",
+    "GBR": "Au",
+    "GBM": "Au",
+    "GG8": "Au",
+    "GML": "Au",
+    "GSN": "Au",
+    "JAV": "Au",
+    "KAL": "Au",
+    "LCL": "Au",
+    "LEX": "Au",
+    "OZM": "Au",
+    "BH6": "Au",
+    "SLS": "Au",
+    "STK": "Au",
+    "TOK": "Au",
+    "TOR": "Au",
+    "TTM": "Au",
+    "YRL": "Au",
+    "MPK": "Au",
+    "NVO": "Au",
+    "AAM": "Au",
+    "GA8": "Au",
+    "MBK": "Au",
+    "NWM": "Au",
+    "SMS": "Au",
+    "SKM": "Au",
+    "ARI": "Au",
+    "AAR": "Au",
+    "LAC": "Au",
+    "AUC": "Au",
+    "AUE": "Au",
+    "AZY": "Au",
+    "BGD": "Au",
+    "WAU": "Au",
+    "CAV": "Au",
+    "GPR": "Au",
+    "HRN": "Au",
+    "MRT": "Au",
+    "KZR": "Au",
+    "LGM": "Au",
+    "MAT": "Au",
+    "MI6": "Au",
+    "MM8": "Au",
+    "NXM": "Au",
+    "ODY": "Au",
+    "PDI": "Au",
+    "PTN": "Au",
+    "RXL": "Au",
+    "SMI": "Au",
+    "STM": "Au",
+    "STN": "Au",
+    "TAM": "Au",
+    "TCG": "Au",
+    "TSO": "Au",
+    "WGR": "Au",
+    "WIA": "Au",
+    "MEK": "Au",
+    "PRX": "Au",
+    "PGL": "Au",
+    "CRS": "Au",
+    "IDA": "Au",
+    "MAU": "Au",
+    "RDN": "Au",
+    "TMB": "Au",
+    "WSR": "Au",
+    "ADD": "Au",
+    "M3M": "Au",
+    "DTM": "Au",
+    "EVN": "Au",
+    "NST": "Au",
+    "BGL": "Au",
+    "BC8": "Au",
+    "BTR": "Au",
+    "CMM": "Au",
+    "CYL": "Au",
+    "EMR": "Au",
+    "GGP": "Au",
+    "GMD": "Au",
+    "KCN": "Au",
+    "NMG": "Au",
+    "OBM": "Au",
+    "PNR": "Au",
+    "PRU": "Au",
+    "RMS": "Au",
+    "RRL": "Au",
+    "RSG": "Au",
+    "SBM": "Au",
+    "VAU": "Au",
+    "WAF": "Au",
+    "WGX": "Au",
+    "ORE": "Au",
+    "BCN": "Au",
+    "29M": "Cu",
+    "SFR": "Cu",
+    "AIS": "Cu",
+    "CSC": "Cu",
+    "AUQ": "Cu",
+    "KAN": "Cu",
+    "ANX": "Cu",
+    "CVV": "Cu",
+    "NFM": "Cu",
+    "COD": "Cu",
+    "CYM": "Cu",
+    "EM2": "Cu",
+    "FFM": "Cu",
+    "GRE": "Cu",
+    "HAV": "Cu",
+    "HCH": "Cu",
+    "KGL": "Cu",
+    "NRX": "Cu",
+    "ORN": "Cu",
+    "PEX": "Cu",
+    "QML": "Cu",
+    "RRR": "Cu",
+    "SVY": "Cu",
+    "CLA": "Cu",
+    "CST": "Cu",
+    "PSC": "Cu",
+    "PXX": "Cu",
+    "ALY": "Cu",
+    "HMX": "Cu",
+    "HOR": "Cu",
+    "AM5": "Cu",
+    "WCN": "Cu",
+    "KAO": "Cu",
+    "PDN": "U",
+    "BOE": "U",
+    "PEN": "U",
+    "LOT": "U",
+    "NXG": "U",
+    "AGE": "U",
+    "BMN": "U",
+    "DYL": "U",
+    "AEU": "U",
+    "BKY": "U",
+    "LAM": "U",
+    "AEE": "U",
+    "ETM": "U",
+    "1AE": "U",
+    "AKN": "U",
+    "OSM": "U",
+    "USC": "U",
+    "HAR": "U",
+    "AMU": "U",
+    "MHC": "U",
+    "EME": "U",
+    "BRY": "U",
+    "AS2": "U",
+    "ASN": "U",
+    "BSN": "U",
+    "CML": "U",
+    "CR3": "U",
+    "DEV": "U",
+    "EPM": "U",
+    "FSY": "U",
+    "HRE": "U",
+    "I88": "U",
+    "KOB": "U",
+    "MEX": "U",
+    "MOM": "U",
+    "ORP": "U",
+    "PR2": "U",
+    "REC": "U",
+    "SBR": "U",
+    "T92": "U",
+    "THR": "U",
+    "C29": "U",
+    "ALV": "DCP",
+    "CZN": "DCP",
+    "EL8": "DCP",
+    "ENT": "DCP",
+    "GHM": "DCP",
+    "T88": "DCP",
+    "TAR": "DCP",
+    "SNM": "DCP",
+    "DYM": "DCP",
+    "TRE": "DCP",
+    "PGD": "DCP",
+    "ALR": "DCP",
+    "BSX": "DCP",
+    "PC2": "DCP",
+    "CXU": "DCP",
+    "VAL": "DCP",
+    "CMO": "DCP"
+  }
+}
