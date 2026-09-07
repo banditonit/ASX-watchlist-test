@@ -25,6 +25,7 @@
 
 # ---- Explorers / developers --------------------------------
 # AQI   Au    # Sinclair Gold, re-coded to SGC
+MHC    Au     # Manhattan Gold Corp 
 SGC    Au    # Sinclair Gold, formerly AQI
 ARV    Au    # Artemis Resources Limited
 AS1    Au    # Asara Resources Limited
@@ -186,7 +187,6 @@ OSM    U     # Osmond Resources Limited
 USC    U     # US1 Critical Minerals Moved to 
 HAR    U     # Haranga Resources Limited
 AMU    U     # American Uranium Limited
-MHC    U     # Manhattan Gold Corp 
 EME    U     # Energy Metals Ltd
 BRY    U     # Barys Resources Limited
 AS2    U     # Askari Metals Limited
