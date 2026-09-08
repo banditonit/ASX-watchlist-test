@@ -1,0 +1,882 @@
+{
+  "lead": "Two trading halts frame the day's more material moves: PolarX is suspended pending assay results from Caribou Dome in Alaska, expected back by 9 September 2026, following its 2 September report of massive sulphide drilling with visible chalcopyrite, while Antares Metals is halted ahead of a capital raise announcement due by 10 September 2026, with no size or price yet disclosed. Around them, gold and copper explorers kept extending known zones rather than breaking new ground, led by Astral's high-grade infill hits at Theia (weighted average 1.54g/t Au against a 1.1g/t Au Stage 1 MRE grade) and Hot Chili's 398m at 0.45% CuEq from surface at La Verde.",
+  "subtitle": "Two halts, one at PolarX pending assays and one at Antares ahead of a raise, bracket a run of high-grade extensional drilling across gold and copper names.",
+  "subject": "PXX halted pending Caribou Dome assays, AM5 halted ahead of capital raise",
+  "watch_items": [
+    "PXX: halt expected to lift by commencement of trading on 9 September 2026, or earlier on release of Caribou Dome assay results",
+    "AM5: halt expected to lift by commencement of trading on 10 September 2026, or earlier on release of capital raise terms",
+    "TTM: 17 pending diamond holes (approximately 4,600m) at Cerro Verde to feed a Dynasty resource update and Scoping Study, both targeted early 2027",
+    "AAR: 206 of 431 planned Stage 1 infill holes at Theia still to drill",
+    "HCH: assays from 22 further La Verde holes pending ahead of a maiden Mineral Resource Estimate targeted later this year",
+    "REC: drone magnetics start in September to test the 2.5km geophysical target at Brandy Hill South"
+  ],
+  "day_in_brief": "Trading halts: PolarX has suspended trading pending assay results from current drilling at Caribou Dome, Alaska, expected back by 9 September 2026, building on its 2 September report of massive sulphide with visible chalcopyrite. Antares Metals is halted pending a material announcement on a capital raise, with resumption due by 10 September 2026 and no terms yet released.\n\nDrilling and extensions: Astral's 41-hole infill program at Theia (Mandilla) returned a weighted average of 1.54g/t Au, well above the 1.1g/t Au Stage 1 MRE grade, headlined by 7m at 10.4g/t Au from 133m and a standout 1m at 219g/t Au from 25m before early termination. Titan extended the high-grade zone at Cerro Verde's Brecha-Comanche target with 16.0m at 2.8g/t Au from 433.9m confirming a 30m lateral extension, adding a fourth diamond rig ahead of an early-2027 resource update. Yandal pushed its Domain C zone at Arrakis a further 80m down-plunge with 24.2m at 1.4g/t Au from 237.8m, still open at depth, and Hot Chili reported 398m at 0.45% CuEq from surface at La Verde including a high-grade 62m core, feeding a maiden MRE and revised Costa Fuego PFS. Pine Creek defined a new 1.5km gold anomaly at the J25 target with four rigs still active, and Revenue Mining's tungsten re-assays at Brandy Hill South, using lithium borate fusion, lifted WO3 grades up to 49% versus the original method, pointing to an under-reported Cu-W-Mo system ahead of September drone magnetics.\n\nCorporate and funding: Encore Minerals' positive FID on Windarra Tailings triggers a A$400,000 payment to Maritana subsidiary Poseidon Nickel, a retained 3% net smelter return royalty and a further A$1.6 million rehabilitation bond contribution, taking total payments to date to A$1.25 million. Lotus Resources set 9 September 2026 as the issue date for its A$35.0 million convertible notes (converting at A$0.253 per share) and for 66,287,879 associated warrants exercisable at A$0.8500 per share, both tied to shareholder approval obtained 2 September 2026. Noronex applied to quote 88,843,956 new shares issued as non-cash consideration and facilitation fee for the Sleitat Project acquisition, lifting total shares on issue to 736,484,805. Revolver Resources confirmed no undisclosed information behind a share price spike from A$0.052 to A$0.067, and Piche Resources began a strategic portfolio review alongside a search for a new CEO, retaining its Cerro Chacon, Ashburton and Sierra Cuadrada projects.\n\nStudies and approvals: Barton Gold's Tunkillia project cleared South Australia's environmental Scoping Report approval, setting terms of reference for Mining Lease and development approvals ahead of a pending updated JORC resource and a targeted Q1 CY27 Ore Reserve and Pre-Feasibility Study. Prodigy Gold's PhotonAssay check assays at Tanami North confirmed prior Fire Assay grades (11.57g/t Au versus 11.56g/t Au, R² approximately 98.8%), validating the QAQC process without changing resource methodology.\n\nQuarterly: Elmenteh Minerals' half-year filing showed a narrower net loss of A$15.7 million (from A$11.8 million in H2'25) and cash of A$41.7 million at 30 June 2026 (up from A$31.8 million), with A$1.8 million of the roughly A$9.28 million Penouta acquisition cap now advanced.",
+  "rows": [
+    {
+      "ticker": "TTM",
+      "company": "TITAN MINERALS LIMITED",
+      "announcement": "22.1m @ 2.5g/t Au, 5.9g/t Ag from 324.6m (CVDD26-205)",
+      "type": null,
+      "date": "8 September 2026",
+      "document_key": "2924-03132921-6A1342698",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132921-6A1342698"
+    },
+    {
+      "ticker": "PTN",
+      "company": "PATRONUS RESOURCES LIMITED",
+      "announcement": "1.5km surface gold anomaly at new J25 target, up to 0.99g/t Au",
+      "type": null,
+      "date": "8 September 2026",
+      "document_key": "2924-03132838-6A1342651",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132838-6A1342651"
+    },
+    {
+      "ticker": "AAR",
+      "company": "ASTRAL RESOURCES NL",
+      "announcement": "7m @ 10.4g/t Au from 133m (AMRC446)",
+      "type": null,
+      "date": "8 September 2026",
+      "document_key": "2924-03133006-6A1342729",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133006-6A1342729"
+    },
+    {
+      "ticker": "BGD",
+      "company": "BARTON GOLD HOLDINGS LIMITED",
+      "announcement": "Environmental Scoping Report approved for Tunkillia by SA DEM",
+      "type": null,
+      "date": "8 September 2026",
+      "document_key": "2924-03132919-6A1342700",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132919-6A1342700"
+    },
+    {
+      "ticker": "MRT",
+      "company": "MARITANA MINERALS LIMITED",
+      "announcement": "Encore FID triggers A$400,000 payment, 3% NSR on Windarra tailings",
+      "type": null,
+      "date": "8 September 2026",
+      "document_key": "2924-03132996-6A1342725",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132996-6A1342725"
+    },
+    {
+      "ticker": "HCH",
+      "company": "HOT CHILI LIMITED",
+      "announcement": "62m @ 0.91% CuEq from 20m (DKP063)",
+      "type": null,
+      "date": "8 September 2026",
+      "document_key": "2924-03132817-6A1342643",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132817-6A1342643"
+    },
+    {
+      "ticker": "PR2",
+      "company": "PICHE RESOURCES LIMITED",
+      "announcement": "Strategic portfolio review launched, CEO search underway",
+      "type": null,
+      "date": "8 September 2026",
+      "document_key": "2924-03132836-6A1342649",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132836-6A1342649"
+    },
+    {
+      "ticker": "YRL",
+      "company": "YANDAL RESOURCES LIMITED",
+      "announcement": "24.2m @ 1.4g/t Au from 237.8m (26IWBRC0117D)",
+      "type": null,
+      "date": "8 September 2026",
+      "document_key": "2924-03132835-6A1342648",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132835-6A1342648"
+    },
+    {
+      "ticker": "REC",
+      "company": "RECHARGE METALS LIMITED",
+      "announcement": "7.5m @ 1.65% Cu and 0.13% WO3 from 375.5m (BHRCD027)",
+      "type": null,
+      "date": "8 September 2026",
+      "document_key": "2924-03132909-6A1342695",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132909-6A1342695"
+    },
+    {
+      "ticker": "PRX",
+      "company": "PRODIGY GOLD NL",
+      "announcement": "3m @ 29.4g/t Au from 59m (TGRC25007), PhotonAssay confirmed",
+      "type": null,
+      "date": "8 September 2026",
+      "document_key": "2924-03132813-6A1342639",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132813-6A1342639"
+    },
+    {
+      "ticker": "RRR",
+      "company": "REVOLVER RESOURCES HOLDINGS LTD",
+      "announcement": "No undisclosed information behind share price and volume rise",
+      "type": null,
+      "date": "7 September 2026",
+      "document_key": "2924-03132551-6A1342515",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132551-6A1342515"
+    },
+    {
+      "ticker": "PXX",
+      "company": "POLARX LIMITED",
+      "announcement": "Halted pending assay results, resuming 9 September 2026",
+      "type": null,
+      "date": "8 September 2026",
+      "document_key": "2924-03132980-6A1342719",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132980-6A1342719"
+    },
+    {
+      "ticker": "NRX",
+      "company": "NORONEX LIMITED",
+      "announcement": "88,843,956 shares quoted for Sleitat Project acquisition",
+      "type": null,
+      "date": "7 September 2026",
+      "document_key": "2924-03132724-6A1342580",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132724-6A1342580"
+    },
+    {
+      "ticker": "AM5",
+      "company": "ANTARES METALS LIMITED",
+      "announcement": "Halted pending capital raise, resumes by 10 Sept 2026",
+      "type": null,
+      "date": "8 September 2026",
+      "document_key": "2924-03132976-6A1342717",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132976-6A1342717"
+    },
+    {
+      "ticker": "LOT",
+      "company": "LOTUS RESOURCES LIMITED",
+      "announcement": "A$35M convertible notes to issue 9 September 2026",
+      "type": null,
+      "date": "7 September 2026",
+      "document_key": "2924-03132768-6A1342609",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132768-6A1342609"
+    },
+    {
+      "ticker": "LOT",
+      "company": "LOTUS RESOURCES LIMITED",
+      "announcement": "66,287,879 warrants to be issued 9 September 2026",
+      "type": null,
+      "date": "7 September 2026",
+      "document_key": "2924-03132767-6A1342605",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132767-6A1342605"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "TTM",
+      "heading": "Titan extends high-grade gold-silver zone at Dynasty's Cerro Verde",
+      "body": "Extensional and infill drilling at the Brecha-Comanche target has widened mineralisation at Titan's Dynasty Gold Project in Ecuador, including 16.0m @ 2.8g/t Au, 9.1g/t Ag from 433.9m (CVDD25-158) confirming a 30m lateral extension, and 22.1m @ 2.5g/t Au, 5.9g/t Ag from 324.6m among several broad infill hits at CVDD26-205. A fourth diamond rig has been added and an RC rig will start in October, with results from 17 pending holes (approximately 4,600m) to feed into a Dynasty resource update and Scoping Study, both now targeted for early 2027.",
+      "document_key": "2924-03132921-6A1342698",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132921-6A1342698"
+    },
+    {
+      "ticker": "PTN",
+      "heading": "New 1.5km J25 gold target defined at Pine Creek",
+      "body": "In-fill surface sampling has delineated a coherent 1.5km-long gold anomaly at the new J25 prospect along the Western Shear Zone, with results up to 0.99g/t Au. Sampling also refined additional targets at Burnside SW and Mt Margaret. Four drill rigs remain active testing the pipeline, with about 500 samples from the Jessops area still outstanding.",
+      "document_key": "2924-03132838-6A1342651",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132838-6A1342651"
+    },
+    {
+      "ticker": "AAR",
+      "heading": "Astral drills more high-grade infill hits at Theia Stage 1, Mandilla",
+      "body": "Astral reported assays for 41 more infill RC holes (4,456m) at the Theia deposit within the Stage 1 open pit at 100%-owned Mandilla, with a weighted average grade of 1.54g/t Au against the Stage 1 MRE grade of 1.1g/t Au. Best hits included 7m @ 10.4g/t Au from 133m (AMRC446) and 4m @ 13.5g/t Au from 106m (AMRC410). A separate RC hole with diamond tail, AMRCD374, collared inside the pit returned 1m @ 219g/t Au from 25m before being terminated early at 318.9m due to deviation. The Stage 1 infill program has now completed 225 of 431 planned holes, with a further 206 holes still to drill.",
+      "document_key": "2924-03133006-6A1342729",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133006-6A1342729"
+    },
+    {
+      "ticker": "BGD",
+      "heading": "Tunkillia environmental scoping report approved",
+      "body": "South Australia's Department for Energy & Mining has approved the environmental Scoping Report for the Tunkillia gold project, setting the terms of reference for Mining Lease and development approvals. An updated JORC Mineral Resource Estimate is pending following about 58,000m of upgrade drilling. Barton is targeting Ore Reserves and a Pre-feasibility Study during Q1 CY27, with a Mining Lease application to follow.",
+      "document_key": "2924-03132919-6A1342700",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132919-6A1342700"
+    },
+    {
+      "ticker": "MRT",
+      "heading": "Encore FID on Windarra Tailings brings payment and royalty to Maritana",
+      "body": "Encore Minerals has made a positive Final Investment Decision on the Windarra Tailings Project and exercised its option to proceed to the Development Period, triggering a non-refundable A$400,000 payment to subsidiary Poseidon Nickel. Encore funds all development using Draslovka's glycine leaching technology, while Maritana retains a 3% net smelter return royalty (1.5% on Lancefield tailings) and is due a further A$1.6 million rehabilitation bond contribution on execution of the full form agreement. Total cash payments to date under the agreement reach A$1.25 million.",
+      "document_key": "2924-03132996-6A1342725",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132996-6A1342725"
+    },
+    {
+      "ticker": "HCH",
+      "heading": "Hot Chili extends high-grade enrichment zone at La Verde",
+      "body": "New RC drilling at La Verde has returned 398m grading 0.45% CuEq from surface in DKP063, including 62m at 0.91% CuEq from 20m depth. DKP075 and DKP064 also returned wide shallow intersections, while an updated DKD060 result extended mineralisation to 765.2m down-hole depth. Assays from 22 further holes are pending, ahead of a maiden Mineral Resource Estimate targeted later this year and integration into a revised Costa Fuego Pre-Feasibility Study.",
+      "document_key": "2924-03132817-6A1342643",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132817-6A1342643"
+    },
+    {
+      "ticker": "PR2",
+      "heading": "Piche reviews portfolio, hunts for new CEO",
+      "body": "Piche Resources has commenced a strategic review of its project portfolio and potential new opportunities, assisted by Dahrouge Geological Consultants. The company retains three projects: Cerro Chacon in Argentina (rock chips up to 11.65g/t Au, 333.7g/t Ag, 9.48% Pb, 8.52% Zn and 0.21% Cu), Ashburton uranium in Australia (up to 7m @ 0.87% U3O8) and Sierra Cuadrada in Argentina. The Board is also progressing a search for a new Chief Executive Officer.",
+      "document_key": "2924-03132836-6A1342649",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132836-6A1342649"
+    },
+    {
+      "ticker": "YRL",
+      "heading": "Yandal extends Domain C high-grade gold zone at Arrakis",
+      "body": "Yandal Resources reported 24.2m @ 1.4g/t Au from 237.8m, including 8.3m @ 3.0g/t Au from 240.7m and 3.0m @ 5.4g/t Au from 246.0m, in 26IWBRC0117D. The intercept extends the newly defined Domain C approximately 80m down-plunge within the 1.3km Arrakis mineralised system, remaining open at depth. Results from the final diamond tail, 26IWBRC0116D, are expected during September, along with first results from the Anders target and further Flushing Meadows drilling.",
+      "document_key": "2924-03132835-6A1342648",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132835-6A1342648"
+    },
+    {
+      "ticker": "REC",
+      "heading": "Tungsten re-assays point to major Cu-W-Mo system at Brandy Hill South",
+      "body": "Re-assaying of pulps from two 2022 diamond holes using lithium borate fusion returned tungsten grades up to 49% higher than the original 4-acid ICP-MS method, which had under-reported WO3. Best results include 7.5m @ 1.65% Cu and 0.13% WO3 from 375.5m and 11m @ 0.33% Cu and 0.15% WO3 from 124m, both coincident with existing Cu-Mo mineralisation defined over 500m strike and 400m depth. More than 1,000 pulps have been flagged for priority re-assay, and drone magnetics start in September to test a 2.5km geophysical target.",
+      "document_key": "2924-03132909-6A1342695",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132909-6A1342695"
+    },
+    {
+      "ticker": "PRX",
+      "heading": "PhotonAssay check assays confirm prior Fire Assay grades at Tanami North",
+      "body": "Prodigy Gold's PhotonAssay analysis of 27 high-grade RC samples from 12 drill holes at Hyperion and Tregony averaged 11.57g/t Au versus 11.56g/t Au by original Fire Assay, an R² of approximately 98.8%. The best interval, TGRC25007 from 59m to 62m, averaged 29.4g/t Au by Fire Assay and 28.9g/t Au by PhotonAssay, with a single sample as high as 41.6g/t Au. Fire Assay remains the primary method for resource estimation, with PhotonAssay used as a QAQC check.",
+      "document_key": "2924-03132813-6A1342639",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132813-6A1342639"
+    },
+    {
+      "ticker": "RRR",
+      "heading": "RRR says no undisclosed information explains price and volume spike",
+      "body": "Revolver Resources responded to an ASX query after shares rose from A$0.052 to an intra-day high of A$0.067 with a significant increase in trading volume. The company said it holds no undisclosed information explaining the move and pointed to ongoing work at the Dianne Copper Mine Project towards a Final Investment Decision. RRR confirmed compliance with Listing Rule 3.1.",
+      "document_key": "2924-03132551-6A1342515",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132551-6A1342515"
+    },
+    {
+      "ticker": "PXX",
+      "heading": "PolarX halted pending Caribou Dome assay results",
+      "body": "PolarX has entered a trading halt at its own request pending release of assay results from the current drilling program at the Caribou Dome Project in Alaska. The halt is expected to remain until the commencement of trading on 9 September 2026, or earlier release of the announcement. The move follows the company's 2 September 2026 report of massive sulphide drilling with visible chalcopyrite at the same project.",
+      "document_key": "2924-03132980-6A1342719",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132980-6A1342719"
+    },
+    {
+      "ticker": "NRX",
+      "heading": "Noronex quotes shares for Sleitat Project consideration and fee",
+      "body": "Noronex has applied for quotation of 88,843,956 new fully paid ordinary shares, comprising 73,843,956 shares issued as consideration for the Sleitat Project acquisition and 15,000,000 shares as a facilitation fee. Neither issue was for cash. Following quotation, total NRX shares on issue reach 736,484,805.",
+      "document_key": "2924-03132724-6A1342580",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132724-6A1342580"
+    },
+    {
+      "ticker": "AM5",
+      "heading": "Antares Metals halted ahead of capital raise announcement",
+      "body": "Antares Metals has entered a trading halt pending a material announcement regarding a capital raise. The halt will remain in place until the announcement is released or the commencement of trading on 10 September 2026, whichever is earlier. No raise size or price has yet been disclosed.",
+      "document_key": "2924-03132976-6A1342717",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132976-6A1342717"
+    },
+    {
+      "ticker": "LOT",
+      "heading": "Lotus confirms shareholder approval, sets note issue date",
+      "body": "Lotus Resources received shareholder approval on 2 September 2026 for its previously proposed A$35.0 million convertible note issue and has now set the issue date for 9 September 2026. The 350 notes, zero coupon and maturing 7 September 2031, convert at A$0.253 per share, equivalent to 138,339,921 shares. Proceeds fund working capital and ramp-up costs at the Kayelekera Uranium Mine, including near-term offtake obligations.",
+      "document_key": "2924-03132768-6A1342609",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132768-6A1342609"
+    },
+    {
+      "ticker": "LOT",
+      "heading": "Lotus Resources sets warrant issue date under CVI note facility",
+      "body": "Lotus Resources will issue 66,287,879 unlisted warrants on 9 September 2026, exercisable at A$0.8500 per share until 7 September 2031, tied to the A$35 million convertible note facility with CVI Investment Inc. The warrants carry nil cash consideration and follow shareholder approval obtained at the 2 September 2026 EGM.",
+      "document_key": "2924-03132767-6A1342605",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132767-6A1342605"
+    }
+  ],
+  "other": [
+    {
+      "ticker": "ETM",
+      "company": "ENERGY TRANSITION MINERALS LTD",
+      "headline": "Half Yearly Report and Accounts",
+      "summary": "H1 net loss A$15.7m (H2'25: A$11.8m); cash A$41.7m at 30 Jun 2026 (A$31.8m); Penouta acquisition advanced A$1.8m of ~A$9.28m cap",
+      "document_key": "2924-03132793-6A1342626",
+      "market_cap": 108412527,
+      "cap_label": "$108m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132793-6A1342626"
+    }
+  ],
+  "_unverified": [],
+  "also_lodged": [
+    {
+      "ticker": "CR3",
+      "company": "CORE ENERGY MINERALS LTD",
+      "headline": "Core Energy Minerals Webinar Invitation",
+      "document_key": "2924-03132460-2A1695661",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132460-2A1695661"
+    },
+    {
+      "ticker": "MEX",
+      "company": "MINERALS EXPLORATION LIMITED",
+      "headline": "Appointment of Non-Executive Director & Appendix 3X",
+      "document_key": "2924-03132574-6A1342525",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132574-6A1342525"
+    },
+    {
+      "ticker": "BC8",
+      "company": "BLACK CAT SYNDICATE LIMITED",
+      "headline": "Appointment of Acting Managing Director",
+      "document_key": "2924-03132897-6A1342691",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132897-6A1342691"
+    },
+    {
+      "ticker": "AAM",
+      "company": "AUMEGA METALS LTD",
+      "headline": "Application for quotation of securities - AAM",
+      "document_key": "2924-03132803-6A1342635",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132803-6A1342635"
+    },
+    {
+      "ticker": "AS2",
+      "company": "ASKARI METALS LIMITED",
+      "headline": "Cleansing Statement",
+      "document_key": "2924-03132697-6A1342573",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132697-6A1342573"
+    },
+    {
+      "ticker": "AS2",
+      "company": "ASKARI METALS LIMITED",
+      "headline": "Application for quotation of securities - AS2",
+      "document_key": "2924-03132626-6A1342542",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132626-6A1342542"
+    },
+    {
+      "ticker": "AUC",
+      "company": "AUSGOLD LIMITED",
+      "headline": "Notice of Annual General Meeting/Proxy Form",
+      "document_key": "2924-03132932-6A1342701",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132932-6A1342701"
+    },
+    {
+      "ticker": "EVN",
+      "company": "EVOLUTION MINING LIMITED",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03132636-2A1695842",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132636-2A1695842"
+    },
+    {
+      "ticker": "GMD",
+      "company": "GENESIS MINERALS LIMITED",
+      "headline": "Ceasing to be a substantial holder",
+      "document_key": "2924-03132740-6A1342590",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132740-6A1342590"
+    },
+    {
+      "ticker": "NRX",
+      "company": "NORONEX LIMITED",
+      "headline": "Becoming a substantial holder",
+      "document_key": "2924-03132739-6A1342589",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132739-6A1342589"
+    },
+    {
+      "ticker": "NRX",
+      "company": "NORONEX LIMITED",
+      "headline": "Becoming a substantial holder",
+      "document_key": "2924-03132738-6A1342588",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132738-6A1342588"
+    },
+    {
+      "ticker": "NRX",
+      "company": "NORONEX LIMITED",
+      "headline": "Notice Under Section 708A",
+      "document_key": "2924-03132729-6A1342583",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132729-6A1342583"
+    },
+    {
+      "ticker": "NRX",
+      "company": "NORONEX LIMITED",
+      "headline": "Notification regarding unquoted securities - NRX",
+      "document_key": "2924-03132716-6A1342578",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132716-6A1342578"
+    },
+    {
+      "ticker": "NRX",
+      "company": "NORONEX LIMITED",
+      "headline": "Notification regarding unquoted securities - NRX",
+      "document_key": "2924-03132715-6A1342577",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132715-6A1342577"
+    },
+    {
+      "ticker": "NRX",
+      "company": "NORONEX LIMITED",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03132459-6A1342479",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132459-6A1342479"
+    },
+    {
+      "ticker": "PNR",
+      "company": "PANTORO GOLD LIMITED",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03132657-6A1342552",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132657-6A1342552"
+    },
+    {
+      "ticker": "RMS",
+      "company": "RAMELIUS RESOURCES LIMITED",
+      "headline": "Ceasing to be a substantial holder",
+      "document_key": "2924-03132743-6A1342593",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132743-6A1342593"
+    },
+    {
+      "ticker": "RMS",
+      "company": "RAMELIUS RESOURCES LIMITED",
+      "headline": "Becoming a substantial holder from RMS",
+      "document_key": "2924-03132458-6A1342478",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132458-6A1342478"
+    },
+    {
+      "ticker": "RSG",
+      "company": "RESOLUTE MINING LIMITED",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03132779-6A1342618",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132779-6A1342618"
+    },
+    {
+      "ticker": "STN",
+      "company": "SATURN METALS LIMITED",
+      "headline": "Becoming a substantial holder",
+      "document_key": "2924-03132513-6A1342493",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132513-6A1342493"
+    },
+    {
+      "ticker": "WGX",
+      "company": "WESTGOLD RESOURCES LIMITED.",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03132787-6A1342623",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132787-6A1342623"
+    },
+    {
+      "ticker": "WGX",
+      "company": "WESTGOLD RESOURCES LIMITED.",
+      "headline": "Westgold FY27 Guidance and Three Year Outlook Webinar",
+      "document_key": "2924-03132557-6A1342517",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132557-6A1342517"
+    },
+    {
+      "ticker": "AEU",
+      "company": "ATOMIC EAGLE LTD",
+      "headline": "Application for quotation of securities - AEU",
+      "document_key": "2924-03132517-6A1342495",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132517-6A1342495"
+    },
+    {
+      "ticker": "AIS",
+      "company": "AERIS RESOURCES LIMITED",
+      "headline": "Application for quotation of securities - AIS",
+      "document_key": "2924-03132568-6A1342522",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132568-6A1342522"
+    },
+    {
+      "ticker": "AUE",
+      "company": "AURUM RESOURCES LIMITED",
+      "headline": "Cleansing Notice",
+      "document_key": "2924-03132749-6A1342597",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132749-6A1342597"
+    },
+    {
+      "ticker": "AUE",
+      "company": "AURUM RESOURCES LIMITED",
+      "headline": "Application for quotation of securities - AUE",
+      "document_key": "2924-03132745-6A1342595",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132745-6A1342595"
+    },
+    {
+      "ticker": "AUQ",
+      "company": "ALARA RESOURCES LIMITED",
+      "headline": "62nd Copper Concentrate Shipment Dispatched from Sohar Port",
+      "document_key": "2924-03132885-6A1342682",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132885-6A1342682"
+    },
+    {
+      "ticker": "BC8",
+      "company": "BLACK CAT SYNDICATE LIMITED",
+      "headline": "Initial and Amended Final Director Interest Notices",
+      "document_key": "2924-03132801-6A1342632",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132801-6A1342632"
+    },
+    {
+      "ticker": "BM1",
+      "company": "BALLARD MINING LIMITED",
+      "headline": "Change of Director's Interest Notice - SL",
+      "document_key": "2924-03132640-6A1342548",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132640-6A1342548"
+    },
+    {
+      "ticker": "BM1",
+      "company": "BALLARD MINING LIMITED",
+      "headline": "Change of Director's Interest Notice - JC",
+      "document_key": "2924-03132639-6A1342547",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132639-6A1342547"
+    },
+    {
+      "ticker": "BM1",
+      "company": "BALLARD MINING LIMITED",
+      "headline": "Change of Director's Interest Notice - SM",
+      "document_key": "2924-03132638-6A1342546",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132638-6A1342546"
+    },
+    {
+      "ticker": "BM1",
+      "company": "BALLARD MINING LIMITED",
+      "headline": "Change of Director's Interest Notice - PB",
+      "document_key": "2924-03132635-6A1342545",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132635-6A1342545"
+    },
+    {
+      "ticker": "BM1",
+      "company": "BALLARD MINING LIMITED",
+      "headline": "Change of Director's Interest Notice - TM",
+      "document_key": "2924-03132632-6A1342543",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132632-6A1342543"
+    },
+    {
+      "ticker": "BTR",
+      "company": "BRIGHTSTAR RESOURCES LIMITED",
+      "headline": "Cleansing notice under s708A",
+      "document_key": "2924-03132528-6A1342502",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132528-6A1342502"
+    },
+    {
+      "ticker": "BTR",
+      "company": "BRIGHTSTAR RESOURCES LIMITED",
+      "headline": "Application for quotation of securities - BTR",
+      "document_key": "2924-03132521-6A1342499",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132521-6A1342499"
+    },
+    {
+      "ticker": "BTR",
+      "company": "BRIGHTSTAR RESOURCES LIMITED",
+      "headline": "Application for quotation of securities - BTR",
+      "document_key": "2924-03132518-6A1342497",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132518-6A1342497"
+    },
+    {
+      "ticker": "DYM",
+      "company": "DYNAMIC METALS LIMITED",
+      "headline": "Final Director's Interest Notice",
+      "document_key": "2924-03132590-6A1342532",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132590-6A1342532"
+    },
+    {
+      "ticker": "DYM",
+      "company": "DYNAMIC METALS LIMITED",
+      "headline": "Resignation of Director",
+      "document_key": "2924-03132589-6A1342531",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132589-6A1342531"
+    },
+    {
+      "ticker": "GGP",
+      "company": "GREATLAND RESOURCES LIMITED",
+      "headline": "2026 AGM and Director Nomination Closing Dates",
+      "document_key": "2924-03132925-6A1342699",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132925-6A1342699"
+    },
+    {
+      "ticker": "GMD",
+      "company": "GENESIS MINERALS LIMITED",
+      "headline": "Application for quotation of securities - GMD",
+      "document_key": "2924-03132579-6A1342527",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132579-6A1342527"
+    },
+    {
+      "ticker": "HRN",
+      "company": "HORIZON GOLD LIMITED",
+      "headline": "Notice under Section 708A",
+      "document_key": "2924-03132742-6A1342592",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132742-6A1342592"
+    },
+    {
+      "ticker": "HRN",
+      "company": "HORIZON GOLD LIMITED",
+      "headline": "Application for quotation of securities - HRN",
+      "document_key": "2924-03132736-6A1342586",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132736-6A1342586"
+    },
+    {
+      "ticker": "KCN",
+      "company": "KINGSGATE CONSOLIDATED LIMITED.",
+      "headline": "Application for quotation of securities - KCN",
+      "document_key": "2924-03132992-2A1696035",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132992-2A1696035"
+    },
+    {
+      "ticker": "MM8",
+      "company": "MEDALLION METALS LIMITED.",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03132490-6A1342485",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132490-6A1342485"
+    },
+    {
+      "ticker": "NRX",
+      "company": "NORONEX LIMITED",
+      "headline": "Change of Director's Interest Notice - RK",
+      "document_key": "2924-03132737-6A1342587",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132737-6A1342587"
+    },
+    {
+      "ticker": "NRX",
+      "company": "NORONEX LIMITED",
+      "headline": "Change of Director's Interest Notice - PL",
+      "document_key": "2924-03132734-6A1342585",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132734-6A1342585"
+    },
+    {
+      "ticker": "NRX",
+      "company": "NORONEX LIMITED",
+      "headline": "Change of Director's Interest Notice - DP",
+      "document_key": "2924-03132732-6A1342584",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132732-6A1342584"
+    },
+    {
+      "ticker": "NRX",
+      "company": "NORONEX LIMITED",
+      "headline": "Application for quotation of securities - NRX",
+      "document_key": "2924-03132726-6A1342581",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132726-6A1342581"
+    },
+    {
+      "ticker": "NRX",
+      "company": "NORONEX LIMITED",
+      "headline": "Notification regarding unquoted securities - NRX",
+      "document_key": "2924-03132714-6A1342575",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132714-6A1342575"
+    },
+    {
+      "ticker": "NRX",
+      "company": "NORONEX LIMITED",
+      "headline": "Notification regarding unquoted securities - NRX",
+      "document_key": "2924-03132713-6A1342572",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132713-6A1342572"
+    },
+    {
+      "ticker": "NST",
+      "company": "NORTHERN STAR RESOURCES LTD",
+      "headline": "Change of Director's Interest Notice",
+      "document_key": "2924-03132651-6A1342551",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132651-6A1342551"
+    },
+    {
+      "ticker": "PGD",
+      "company": "PEREGRINE GOLD LTD",
+      "headline": "Notification regarding unquoted securities - PGD",
+      "document_key": "2924-03132644-6A1342549",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132644-6A1342549"
+    },
+    {
+      "ticker": "RMS",
+      "company": "RAMELIUS RESOURCES LIMITED",
+      "headline": "Application for quotation of securities - RMS",
+      "document_key": "2924-03132631-6A1342544",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132631-6A1342544"
+    },
+    {
+      "ticker": "RXL",
+      "company": "ROX RESOURCES LIMITED",
+      "headline": "Notification regarding unquoted securities - RXL",
+      "document_key": "2924-03132752-6A1342600",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132752-6A1342600"
+    },
+    {
+      "ticker": "VAU",
+      "company": "VAULT MINERALS LIMITED",
+      "headline": "Update - Notification of buy-back - VAU",
+      "document_key": "2924-03132489-6A1342486",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03132489-6A1342486"
+    }
+  ],
+  "commodities": [
+    [
+      "Au",
+      "Gold"
+    ],
+    [
+      "Cu",
+      "Copper"
+    ],
+    [
+      "U",
+      "Uranium"
+    ],
+    [
+      "DCP",
+      "DCP Watches"
+    ]
+  ],
+  "commodity_of": {
+    "MHC": "Au",
+    "SGC": "Au",
+    "ARV": "Au",
+    "AS1": "Au",
+    "BM1": "Au",
+    "BNZ": "Au",
+    "GBR": "Au",
+    "GBM": "Au",
+    "GG8": "Au",
+    "GML": "Au",
+    "GSN": "Au",
+    "JAV": "Au",
+    "KAL": "Au",
+    "LCL": "Au",
+    "LEX": "Au",
+    "OZM": "Au",
+    "BH6": "Au",
+    "SLS": "Au",
+    "STK": "Au",
+    "TOK": "Au",
+    "TOR": "Au",
+    "TTM": "Au",
+    "YRL": "Au",
+    "MPK": "Au",
+    "NVO": "Au",
+    "AAM": "Au",
+    "GA8": "Au",
+    "MBK": "Au",
+    "NWM": "Au",
+    "SMS": "Au",
+    "SKM": "Au",
+    "ARI": "Au",
+    "AAR": "Au",
+    "LAC": "Au",
+    "AUC": "Au",
+    "AUE": "Au",
+    "AZY": "Au",
+    "BGD": "Au",
+    "WAU": "Au",
+    "CAV": "Au",
+    "GPR": "Au",
+    "HRN": "Au",
+    "MRT": "Au",
+    "KZR": "Au",
+    "LGM": "Au",
+    "MAT": "Au",
+    "MI6": "Au",
+    "MM8": "Au",
+    "NXM": "Au",
+    "ODY": "Au",
+    "PDI": "Au",
+    "PTN": "Au",
+    "RXL": "Au",
+    "SMI": "Au",
+    "STM": "Au",
+    "STN": "Au",
+    "TAM": "Au",
+    "TCG": "Au",
+    "TSO": "Au",
+    "WGR": "Au",
+    "WIA": "Au",
+    "MEK": "Au",
+    "PRX": "Au",
+    "PGL": "Au",
+    "CRS": "Au",
+    "IDA": "Au",
+    "MAU": "Au",
+    "RDN": "Au",
+    "TMB": "Au",
+    "WSR": "Au",
+    "ADD": "Au",
+    "M3M": "Au",
+    "DTM": "Au",
+    "EVN": "Au",
+    "NST": "Au",
+    "BGL": "Au",
+    "BC8": "Au",
+    "BTR": "Au",
+    "CMM": "Au",
+    "CYL": "Au",
+    "EMR": "Au",
+    "GGP": "Au",
+    "GMD": "Au",
+    "KCN": "Au",
+    "NMG": "Au",
+    "OBM": "Au",
+    "PNR": "Au",
+    "PRU": "Au",
+    "RMS": "Au",
+    "RRL": "Au",
+    "RSG": "Au",
+    "SBM": "Au",
+    "VAU": "Au",
+    "WAF": "Au",
+    "WGX": "Au",
+    "ORE": "Au",
+    "BCN": "Au",
+    "29M": "Cu",
+    "SFR": "Cu",
+    "AIS": "Cu",
+    "CSC": "Cu",
+    "AUQ": "Cu",
+    "KAN": "Cu",
+    "ANX": "Cu",
+    "CVV": "Cu",
+    "NFM": "Cu",
+    "COD": "Cu",
+    "CYM": "Cu",
+    "EM2": "Cu",
+    "FFM": "Cu",
+    "GRE": "Cu",
+    "HAV": "Cu",
+    "HCH": "Cu",
+    "KGL": "Cu",
+    "NRX": "Cu",
+    "ORN": "Cu",
+    "PEX": "Cu",
+    "QML": "Cu",
+    "RRR": "Cu",
+    "SVY": "Cu",
+    "CLA": "Cu",
+    "CST": "Cu",
+    "PSC": "Cu",
+    "PXX": "Cu",
+    "ALY": "Cu",
+    "HMX": "Cu",
+    "HOR": "Cu",
+    "AM5": "Cu",
+    "WCN": "Cu",
+    "KAO": "Cu",
+    "PDN": "U",
+    "BOE": "U",
+    "PEN": "U",
+    "LOT": "U",
+    "NXG": "U",
+    "AGE": "U",
+    "BMN": "U",
+    "DYL": "U",
+    "AEU": "U",
+    "BKY": "U",
+    "LAM": "U",
+    "AEE": "U",
+    "ETM": "U",
+    "1AE": "U",
+    "AKN": "U",
+    "OSM": "U",
+    "USC": "U",
+    "HAR": "U",
+    "AMU": "U",
+    "EME": "U",
+    "BRY": "U",
+    "AS2": "U",
+    "ASN": "U",
+    "BSN": "U",
+    "CML": "U",
+    "CR3": "U",
+    "DEV": "U",
+    "EPM": "U",
+    "FSY": "U",
+    "HRE": "U",
+    "I88": "U",
+    "KOB": "U",
+    "MEX": "U",
+    "MOM": "U",
+    "ORP": "U",
+    "PR2": "U",
+    "REC": "U",
+    "SBR": "U",
+    "T92": "U",
+    "THR": "U",
+    "C29": "U",
+    "ALV": "DCP",
+    "CZN": "DCP",
+    "EL8": "DCP",
+    "ENT": "DCP",
+    "GHM": "DCP",
+    "T88": "DCP",
+    "TAR": "DCP",
+    "SNM": "DCP",
+    "DYM": "DCP",
+    "TRE": "DCP",
+    "PGD": "DCP",
+    "ALR": "DCP",
+    "BSX": "DCP",
+    "PC2": "DCP",
+    "CXU": "DCP",
+    "VAL": "DCP",
+    "CMO": "DCP"
+  }
+}
