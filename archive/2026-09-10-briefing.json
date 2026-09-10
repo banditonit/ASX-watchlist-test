@@ -1,0 +1,945 @@
+{
+  "lead": "Dominated by St Barbara's binding agreement to sell its remaining stake in the New Simberi Gold Project to Lingbao Gold Group for A$410 million cash plus a A$43 million capital repayment, a deal expected to leave the company with pro-forma cash of approximately A$880 million on completion and no debt or hedging, with a further A$0.13 per share fully franked special dividend under Board consideration.",
+  "subtitle": "St Barbara's Simberi exit and Bannerman's A$124 million Etango raise headline a day thick with gold drilling and reserve upgrades.",
+  "subject": "SBM sells Simberi to Lingbao for A$410M, A$880M pro-forma cash",
+  "watch_items": [
+    "AM5: Tranche 2 shares and options subject to shareholder approval at a general meeting expected 19 October 2026"
+  ],
+  "day_in_brief": "Corporate and funding: St Barbara's Simberi sale to Lingbao Gold Group for A$410 million cash plus A$43 million capital repayment was the day's largest transaction, alongside Bannerman's completed A$124 million placement at A$4.00 per share to fund Etango through construction. Antares Metals detailed a two-tranche A$2.57 million placement for Quinns and Mt Isa North drilling, Alligator Energy closed a A$2.121 million SPP for Blackbush, Plumbush and Samphire work, and Kalgoorlie Gold Mining halted trading to plan a capital raising, expected to resume 14 September 2026.\n\nReserves and resources: Kingsgate lifted Nueva Esperanza Ore Reserves 31% to 51.9 million ounces silver and 37% to 0.26 million ounces gold, extending mine life past 12 years, while Westgold's Group Ore Reserve rose 41% in FY26 to 4.1Moz underpinning new FY27 guidance of 385koz to 425koz and a path to approximately 500kozpa by FY29.\n\nDrilling and targets: Ora Banda's step-out drilling south of Waihi defined a new high-grade prospect, Midnight, including 11.5m @ 26.0g/t Au and 1.6m @ 65.9g/t Au, as underground mining began at Waihi itself. Odyssey Gold reported a new mineralised structure at Cable West (5m @ 16.1g/t Au from 30m) and an extended Argos lode at Tuckanarra, Gateway Mining outlined an untested 3km Pewy target sharing hallmarks of its Cowza discovery, and Gold 8 (GG8) extended Lakeview at depth (7.0m @ 12.6g/t Au from 392.7m) while securing the final Sovereign underground permit and strong 94.6% gold extraction metallurgy.\n\nStudies and development: Legacy Minerals recapped Mt Carrington's A$514 million pre-tax NPV scoping study and active Mascotte and Emu drilling, QMines engaged BurnVoir to arrange Mt Chalmers development funding, and Rox Resources began resource conversion drilling at Youanmi following its 2,195koz Mineral Resource update.\n\nOther: West African Resources posted record H1 2026 NPAT of A$437 million and declared a 20 cent unfranked special dividend, Alara Resources found no explanation for a share price and volume spike, and Cosmo Metals was granted a new NSW copper licence with a 4.69% Cu rock chip result.",
+  "rows": [
+    {
+      "ticker": "GHM",
+      "company": "GOLDEN HORSE MINERALS LIMITED",
+      "announcement": "Half-year MD&A for period ended 30 June 2026 lodged",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03133917-6A1343125",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133917-6A1343125"
+    },
+    {
+      "ticker": "LGM",
+      "company": "LEGACY MINERALS HOLDINGS LIMITED",
+      "announcement": "Investor presentation: Mt Carrington 1.6Moz AuEq, scoping study review",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03134018-2A1696464",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134018-2A1696464"
+    },
+    {
+      "ticker": "KCN",
+      "company": "KINGSGATE CONSOLIDATED LIMITED.",
+      "announcement": "Ore Reserves up 31% to 51.9Moz silver, 37% to 0.26Moz gold",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03133974-2A1696450",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133974-2A1696450"
+    },
+    {
+      "ticker": "OBM",
+      "company": "ORA BANDA MINING LTD",
+      "announcement": "11.5m @ 26.0g/t Au from Midnight Prospect, Waihi",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03133833-6A1343089",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133833-6A1343089"
+    },
+    {
+      "ticker": "ODY",
+      "company": "ODYSSEY GOLD LTD",
+      "announcement": "5m @ 16.1g/t Au from 30m (CBRC0451)",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03133970-6A1343146",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133970-6A1343146"
+    },
+    {
+      "ticker": "GML",
+      "company": "GATEWAY MINING LIMITED",
+      "announcement": "8m @ 1.0g/t Au from 84m (SCAC0003)",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03133896-2A1696422",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133896-2A1696422"
+    },
+    {
+      "ticker": "QML",
+      "company": "QMINES LIMITED",
+      "announcement": "BurnVoir appointed financial adviser for Mt Chalmers funding",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03134006-6A1343153",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134006-6A1343153"
+    },
+    {
+      "ticker": "BMN",
+      "company": "BANNERMAN ENERGY LTD",
+      "announcement": "A$124M placement completed at A$4.00/share to fund Etango",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03133966-6A1343124",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133966-6A1343124"
+    },
+    {
+      "ticker": "WGX",
+      "company": "WESTGOLD RESOURCES LIMITED.",
+      "announcement": "FY27 guidance 385-425koz, targets ~500kozpa by FY29",
+      "type": null,
+      "date": "9 September 2026",
+      "document_key": "2924-03133557-6A1342962",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133557-6A1342962"
+    },
+    {
+      "ticker": "GG8",
+      "company": "GORILLA GOLD MINES LTD",
+      "announcement": "7.0m @ 12.6g/t Au from 392.7m (LVEX173)",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03134017-6A1343163",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134017-6A1343163"
+    },
+    {
+      "ticker": "RXL",
+      "company": "ROX RESOURCES LIMITED",
+      "announcement": "Growth drilling begins at Youanmi, resource 12.4Mt @ 5.5g/t Au",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03133815-6A1343076",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133815-6A1343076"
+    },
+    {
+      "ticker": "WSR",
+      "company": "WESTAR RESOURCES LIMITED",
+      "announcement": "Three high-priority Au targets defined at Jerrys Bore soil survey",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03133826-2A1696390",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133826-2A1696390"
+    },
+    {
+      "ticker": "JAV",
+      "company": "JAVELIN MINERALS LIMITED",
+      "announcement": "Coogee North diamond hole at 150m, targeting zone from ~550m to 800m",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03134003-6A1343157",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134003-6A1343157"
+    },
+    {
+      "ticker": "SBM",
+      "company": "ST BARBARA LIMITED",
+      "announcement": "Sells Simberi interest to Lingbao for A$453 million cash",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03133867-3A701444",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133867-3A701444"
+    },
+    {
+      "ticker": "AM5",
+      "company": "ANTARES METALS LIMITED",
+      "announcement": "A$2.57M placement at A$0.005/share to fund exploration",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03133975-6A1343083",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133975-6A1343083"
+    },
+    {
+      "ticker": "CMO",
+      "company": "COSMO METALS LIMITED",
+      "announcement": "4.69% Cu (rock chip, Carters Road)",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03133806-6A1343073",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133806-6A1343073"
+    },
+    {
+      "ticker": "WAF",
+      "company": "WEST AFRICAN RESOURCES LIMITED",
+      "announcement": "NPAT A$437 million, special dividend 20 cents per share",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03133802-6A1343068",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133802-6A1343068"
+    },
+    {
+      "ticker": "AUQ",
+      "company": "ALARA RESOURCES LIMITED",
+      "announcement": "Confirms no undisclosed information behind price and volume rise",
+      "type": null,
+      "date": "9 September 2026",
+      "document_key": "2924-03133792-6A1343064",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133792-6A1343064"
+    },
+    {
+      "ticker": "CLA",
+      "company": "CELSIUS RESOURCES LIMITED.",
+      "announcement": "New constitution adopted by shareholder special resolution",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03133805-6A1343072",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133805-6A1343072"
+    },
+    {
+      "ticker": "KAL",
+      "company": "KALGOORLIE GOLD MINING LIMITED",
+      "announcement": "Halted for capital raising, resumes by 14 September 2026",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03133978-6A1343148",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133978-6A1343148"
+    },
+    {
+      "ticker": "AGE",
+      "company": "ALLIGATOR ENERGY LIMITED",
+      "announcement": "SPP raises A$2.121M at A$0.045 per share",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03133988-2A1696454",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133988-2A1696454"
+    },
+    {
+      "ticker": "AM5",
+      "company": "ANTARES METALS LIMITED",
+      "announcement": "Placement to raise A$2.57M at A$0.005 with free options",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03133976-6A1343085",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133976-6A1343085"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "GHM",
+      "heading": "Golden Horse lodges June 2026 half-year MD&A",
+      "body": "Golden Horse Minerals has lodged its management discussion and analysis for the six months ended 30 June 2026, covering activities, results of operations, liquidity and capital resources. The document contains standard forward-looking statement disclosures and directs readers to the reviewed interim financial statements for the period. No new financial figures, exploration results or corporate developments are disclosed in the text provided.",
+      "document_key": "2924-03133917-6A1343125",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133917-6A1343125"
+    },
+    {
+      "ticker": "LGM",
+      "heading": "Legacy Minerals presents Mt Carrington growth and drilling story",
+      "body": "Legacy Minerals' Resource Rising Stars presentation recaps Mt Carrington's 47.9Mt at 1.0g/t AuEq (714koz Au, 35Moz Ag) resource and the May 2026 scoping study, which estimated a A$514 million pre-tax NPV, 12 year mine life and A$220.5 million capex at spot pricing. It highlights active drilling at Mascotte (40m @ 1.0g/t Au from 151m) and pending assays from an 8-hole diamond program at the Emu copper target, alongside a scoping study optimisation review underway.",
+      "document_key": "2924-03134018-2A1696464",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134018-2A1696464"
+    },
+    {
+      "ticker": "KCN",
+      "heading": "Nueva Esperanza reserve upgrade extends mine life past 12 years",
+      "body": "Kingsgate's updated Nueva Esperanza (Chile) Ore Reserves rose 31% to 51.9 million ounces of silver and 37% to 0.26 million ounces of gold, at US$35/oz silver and US$2,500/oz gold, lifting reserve life beyond 12 years at a 2Mtpa processing rate. Mineral Resources also grew to 62.4 million ounces of silver and 0.36 million ounces of gold. The increase reflects higher price assumptions and reduced royalty costs following the 2026 Anglo American royalty purchase.",
+      "document_key": "2924-03133974-2A1696450",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133974-2A1696450"
+    },
+    {
+      "ticker": "OBM",
+      "heading": "Underground mining starts at Waihi, new high-grade Midnight prospect",
+      "body": "Ora Banda has commenced underground mining at Waihi, its third underground mine in three years and one of four mines underpinning the DRIVE to 300 strategy targeting 300,000 ounces in FY29. Step-out drilling 500m south of the Waihi portal defined a new prospect, Midnight, with intercepts including 11.5m @ 26.0g/t Au (incl. 8.9m @ 32.4g/t) and 1.6m @ 65.9g/t Au (incl. 1.0m @ 104.0g/t). Waihi Underground is scheduled to deliver first high-grade ore from mid CY2027, ahead of the new 3.0Mtpa processing plant due in early CY2028.",
+      "document_key": "2924-03133833-6A1343089",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133833-6A1343089"
+    },
+    {
+      "ticker": "ODY",
+      "heading": "New high-grade lode and Argos extension at Cable West, Tuckanarra",
+      "body": "RC drilling west of the Cable deposit at Tuckanarra has returned 5m @ 16.1g/t Au from 30m, including 2m @ 36.7g/t Au, and 9m @ 6.8g/t Au from 99m in hole CBRC0451, identifying a new mineralised structure not in the current geological model. Infill drilling has also confirmed and extended the Argos lode beneath historical laterite mineralisation, with 5m @ 6.7g/t Au from 18m (CBRC0440) and 7m @ 2.6g/t Au from 42m (CBRC0441). Results are from 18 of 60 pending holes from a 20,000m program, with follow-up drilling planned to step further west across a 3km by 1km target area before an updated resource and Stage 1 Feasibility Study.",
+      "document_key": "2924-03133970-6A1343146",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133970-6A1343146"
+    },
+    {
+      "ticker": "GML",
+      "heading": "Gateway defines new 3km Pewy gold target on Cowza trend",
+      "body": "Gateway Mining has identified Pewy, a 3km-long demagnetised structural corridor south of Ward along the Celia Shear, sharing the geological hallmarks seen at Cowza before its discovery hole of 41m @ 2.0g/t Au from 104m. Flanking aircore results of 8m @ 1.0g/t Au from 84m (SCAC0003) and 4m @ 1.4g/t Au from 48m (WAAC0230) bracket the untested core, which remains completely undrilled. First-pass aircore drilling is scheduled for early October, funded by the recently completed A$45 million placement plus a A$15.1 million cash and liquids balance at 30 June 2026.",
+      "document_key": "2924-03133896-2A1696422",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133896-2A1696422"
+    },
+    {
+      "ticker": "QML",
+      "heading": "QMines engages BurnVoir to arrange Mt Chalmers project financing",
+      "body": "QMines has appointed BurnVoir Corporate Finance as financial adviser to arrange a development funding package for its 100% owned Mt Chalmers copper and gold project near Rockhampton, Queensland. The mandate runs alongside Definitive Feasibility Study work, aiming to compress the timeline to a Final Investment Decision. Mt Chalmers carries a Proved and Probable Ore Reserve of 9.6Mt at 0.65% Cu and 0.48g/t Au.",
+      "document_key": "2924-03134006-6A1343153",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134006-6A1343153"
+    },
+    {
+      "ticker": "BMN",
+      "heading": "Bannerman completes A$124 million placement to fund Etango",
+      "body": "Bannerman has completed a fully underwritten A$124 million institutional placement at A$4.00 per share, issuing approximately 31 million new shares. Alongside existing cash and CNOL's working capital contributions, the raise is expected to fully fund the Etango Uranium Project through construction and ramp-up. A non-underwritten SPP targeting up to A$10 million opens 18 September 2026, with Final Investment Decision expected in Q4 2026.",
+      "document_key": "2924-03133966-6A1343124",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133966-6A1343124"
+    },
+    {
+      "ticker": "WGX",
+      "heading": "Westgold sets three-year outlook to ~500kozpa by FY29",
+      "body": "Westgold has issued FY27 production guidance of 385koz to 425koz at an AISC range of A$2,841/oz to A$2,980/oz, building to a group production base of approximately 500kozpa by FY29 with processing capacity above 7Mtpa. The Group Ore Reserve rose 41% during FY26 to 4.1Moz, underpinning the plan, with A$50 million to A$75 million earmarked for exploration and resource definition across the outlook period. Fletcher is described as upside to, not required for, the three-year outlook.",
+      "document_key": "2924-03133557-6A1342962",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133557-6A1342962"
+    },
+    {
+      "ticker": "GG8",
+      "heading": "Lakeview extension, Sovereign permit and strong Comet Vale metallurgy",
+      "body": "Growth drilling at Lakeview returned 7.0m @ 12.6g/t Au from 392.7m in LVEX173, extending high-grade mineralisation at depth. Gorilla also received the final permit allowing underground mining at the 410,000oz at 4.2g/t Au Sovereign deposit. Metallurgical test work at a coarse 150 micron grind across Sovereign, Cheer and Lakeview returned average total gold extraction of 94.6% and 42.3% average gravity recoverable gold. Drilling continues across the North Kalgoorlie Hub and at Vivien.",
+      "document_key": "2924-03134017-6A1343163",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134017-6A1343163"
+    },
+    {
+      "ticker": "RXL",
+      "heading": "Rox starts resource conversion and growth drilling at Youanmi",
+      "body": "Rox Resources has commenced surface diamond drilling at its 100%-owned Youanmi Gold Mine, targeting resource conversion and growth around United North following the updated Mineral Resource Estimate of 12.4Mt at 5.5g/t Au for 2,195koz. Structural re-logging of diamond core identified a southward plunge direction for high-grade mineralisation, informing plunge exploration targeting extensions from beneath United North to Youanmi Main. Drilling is expected to continue into early CY2027, with a second diamond rig planned from early CY2027 alongside ongoing underground drilling.",
+      "document_key": "2924-03133815-6A1343076",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133815-6A1343076"
+    },
+    {
+      "ticker": "WSR",
+      "heading": "Soil sampling defines three gold targets at Jerrys Bore",
+      "body": "UltraFine+ soil sampling across 1,167 samples at the Jerrys Bore project, 165km north of Laverton, has outlined three high-priority gold targets (T1 to T3) plus a fourth secondary target. Anomalism is defined by coincident gold with pathfinder elements As, Bi, Mo, Sb and Te, with target strike lengths of more than 2km each. Aircore drilling is planned to test the targets.",
+      "document_key": "2924-03133826-2A1696390",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133826-2A1696390"
+    },
+    {
+      "ticker": "JAV",
+      "heading": "Deep diamond hole progressing at Coogee North gold-copper target",
+      "body": "Javelin's first diamond hole testing the Coogee North intrusive gold-copper target is drilling ahead on schedule, currently at 150m depth toward a planned total depth of 800 to 1,000m. The modelled magnetic anomaly is expected to be intersected at approximately 550m depth. Coogee sits on a granted Mining Lease with a JORC Resource of 3.6Mt at 1.08g/t Au for 127,000oz gold and 1.0Mt at 0.41% Cu for 4,122t copper. The 5 to 6 week campaign, co-funded under the WA Government Exploration Incentive Scheme, will next drill the Coogee West target.",
+      "document_key": "2924-03134003-6A1343157",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134003-6A1343157"
+    },
+    {
+      "ticker": "SBM",
+      "heading": "St Barbara to sell remaining Simberi stake to Lingbao",
+      "body": "St Barbara has signed a binding agreement to sell its remaining interest in the New Simberi Gold Project to Lingbao Gold Group for A$410 million cash plus A$43 million capital repayment, retaining a 2.75% NSR royalty on Simberi and a 1.5% NSR royalty on the Tabar Islands exploration licences. Pro-forma cash on completion is expected to be approximately A$880 million, with no debt or hedging. Completion is targeted for the March quarter 2027, and the Board is considering a further A$0.13 per share fully franked special dividend subject to completion.",
+      "document_key": "2924-03133867-3A701444",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133867-3A701444"
+    },
+    {
+      "ticker": "AM5",
+      "heading": "Antares raises A$2.57 million for Quinns and Mt Isa North drilling",
+      "body": "Antares Metals has secured firm commitments for a two-tranche placement of 514,025,723 shares at A$0.005 each, raising A$2,570,129 before costs, with one free attaching option for every two shares exercisable at A$0.012. Proceeds fund maiden drilling at the Quinns gold and copper-zinc VMS project and further exploration at the Mt Isa North copper-uranium project, plus Ravensthorpe and Katanning commitments. Tranche 2 (A$1.5 million) needs shareholder approval at a general meeting expected on 19 October 2026.",
+      "document_key": "2924-03133975-6A1343083",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133975-6A1343083"
+    },
+    {
+      "ticker": "CMO",
+      "heading": "Cosmo grabs 4.69% Cu at new NSW copper licence",
+      "body": "Cosmo Metals has been granted the Carters Road exploration licence (EL9946), 40km south east of its Nundle Project in the New England Orogen, NSW. A single reconnaissance rock chip sample returned 4.69% Cu and 5.78g/t Ag from outcropping mineralisation within a Tonalite intrusion adjacent to the Peel-Manning Fault. The company is targeting large scale intrusion related Cu-Au mineralisation and will compile historical data to guide on ground follow up.",
+      "document_key": "2924-03133806-6A1343073",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133806-6A1343073"
+    },
+    {
+      "ticker": "WAF",
+      "heading": "West African Resources posts record H1 2026 profit",
+      "body": "West African Resources reported H1 2026 revenue of A$1.46 billion and NPAT of A$437 million, with operating cash flow of A$690 million and a cash and bullion balance of A$876 million plus 42,453oz of unsold gold. Production totalled 232,905oz at US$1,823/oz AISC, with 214,883oz sold at US$4,744/oz realised. A 20 cent per share unfranked special dividend was declared, record date 18 September 2026, payment 7 October 2026, and the company intends to accelerate debt repayments over the next 12 months.",
+      "document_key": "2924-03133802-6A1343068",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133802-6A1343068"
+    },
+    {
+      "ticker": "AUQ",
+      "heading": "Alara finds no reason for share price and volume spike",
+      "body": "Alara Resources responded to an ASX price and volume query after shares rose from a close of $0.045 on 8 September 2026 to a high of $0.058 on 9 September 2026 on heavy volume. The company said it holds no undisclosed information that could explain the move and confirmed compliance with Listing Rule 3.1.",
+      "document_key": "2924-03133792-6A1343064",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133792-6A1343064"
+    },
+    {
+      "ticker": "CLA",
+      "heading": "Celsius Resources adopts updated constitution",
+      "body": "Celsius Resources has lodged an updated company constitution, adopted by special resolution of shareholders on 9 September 2026. The document is a routine governance filing setting out share capital, meeting and voting provisions, with no operational or financial impact disclosed.",
+      "document_key": "2924-03133805-6A1343072",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133805-6A1343072"
+    },
+    {
+      "ticker": "KAL",
+      "heading": "KalGold halts trading to plan capital raising",
+      "body": "Kalgoorlie Gold Mining requested a trading halt while it considers, plans and executes a capital raising. The halt will remain until normal trading resumes on Monday, 14 September 2026, or an earlier announcement is made. No raising terms have yet been disclosed.",
+      "document_key": "2924-03133978-6A1343148",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133978-6A1343148"
+    },
+    {
+      "ticker": "AGE",
+      "heading": "Alligator Energy completes Share Purchase Plan raising A$2.121 million",
+      "body": "Alligator Energy has raised A$2,121,000 before costs under its Share Purchase Plan, which closed 3 September 2026, issuing 47,133,479 new shares at A$0.045 each. This follows the company's earlier A$15.0 million institutional placement. Funds will support resource drilling at Blackbush, Plumbush and the corridor between them, complete the Big Lake drilling program ahead of a 2027 exploration target, and advance the Samphire Uranium Project mining lease application and feasibility study, targeted for completion in Q3 2027.",
+      "document_key": "2924-03133988-2A1696454",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133988-2A1696454"
+    },
+    {
+      "ticker": "AM5",
+      "heading": "Antares Metals details placement following trading halt",
+      "body": "Antares Metals will issue 514,025,723 shares at A$0.005 to raise A$2.57 million, with one free attaching unlisted option (exercise price A$0.012, expiring three years from issue) for every two shares subscribed, totalling 257,012,862 options. Tranche 1 of 214,025,723 shares proceeds under placement capacity on 17 September 2026, with Tranche 2 of 300,000,000 shares and the options subject to shareholder approval at a general meeting expected on 19 October 2026. Funds will support drilling at the Quinns gold and copper-zinc VMS project, exploration at Mt Isa North, and working capital.",
+      "document_key": "2924-03133976-6A1343085",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133976-6A1343085"
+    }
+  ],
+  "other": [
+    {
+      "ticker": "WAF",
+      "company": "WEST AFRICAN RESOURCES LIMITED",
+      "headline": "June 2026 Half Year Financial Report",
+      "summary": "Half year to 30 June 2026 financial report; no operating or financial figures disclosed in excerpt",
+      "document_key": "2924-03133801-6A1343067",
+      "market_cap": 4323386370,
+      "cap_label": "$4.3B",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133801-6A1343067"
+    },
+    {
+      "ticker": "TRE",
+      "company": "TOUBANI RESOURCES LIMITED",
+      "headline": "Half Year Accounts",
+      "summary": "Loss after tax A$25.8m (H1 FY25: A$4.0m); cash A$73.5m (Dec 2025: A$117.0m); PP&E up to A$103.3m as Kobada construction spend capitalised",
+      "document_key": "2924-03133679-6A1343009",
+      "market_cap": 348988445,
+      "cap_label": "$349m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133679-6A1343009"
+    },
+    {
+      "ticker": "GHM",
+      "company": "GOLDEN HORSE MINERALS LIMITED",
+      "headline": "Half Year Accounts",
+      "summary": "Cash A$30.6m at 30 Jun 2026, down from A$43.7m; net loss A$4.4m; exploration spend A$12.3m added to deferred costs (A$52.2m)",
+      "document_key": "2924-03133910-6A1343121",
+      "market_cap": 140059565,
+      "cap_label": "$140m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133910-6A1343121"
+    },
+    {
+      "ticker": "CMO",
+      "company": "COSMO METALS LIMITED",
+      "headline": "Annual Report to shareholders",
+      "summary": "FY26 annual report: exploration focus Kanowna, Bingara, Nundle; no financial figures disclosed",
+      "document_key": "2924-03133582-6A1342971",
+      "market_cap": 2776508,
+      "cap_label": "$3m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133582-6A1342971"
+    },
+    {
+      "ticker": "CMO",
+      "company": "COSMO METALS LIMITED",
+      "headline": "Corporate Governance Statement",
+      "summary": "Corporate governance statement, no change to board composition",
+      "document_key": "2924-03133583-6A1342972",
+      "market_cap": 2776508,
+      "cap_label": "$3m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133583-6A1342972"
+    }
+  ],
+  "_unverified": [
+    {
+      "ticker": "AM5",
+      "headline": "Proposed issue of securities - AM5",
+      "figures": [
+        "2.57 m",
+        "2.57M"
+      ]
+    },
+    {
+      "ticker": "GHM",
+      "headline": "Half Year Accounts",
+      "figures": [
+        "4.4m"
+      ]
+    }
+  ],
+  "also_lodged": [
+    {
+      "ticker": "SBM",
+      "company": "ST BARBARA LIMITED",
+      "headline": "Simberi Transaction Presentation",
+      "document_key": "2924-03133869-3A701445",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133869-3A701445"
+    },
+    {
+      "ticker": "COD",
+      "company": "CODA MINERALS LTD",
+      "headline": "RRS Gold Coast Investor Presentation",
+      "document_key": "2924-03133704-6A1343018",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133704-6A1343018"
+    },
+    {
+      "ticker": "MEX",
+      "company": "MINERALS EXPLORATION LIMITED",
+      "headline": "Investor Presentation - Resources Rising Stars",
+      "document_key": "2924-03134024-6A1343164",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134024-6A1343164"
+    },
+    {
+      "ticker": "ARI",
+      "company": "ARIKA RESOURCES LIMITED",
+      "headline": "Resource Rising Stars Gold Coast Conference Presentation",
+      "document_key": "2924-03133997-6A1343152",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133997-6A1343152"
+    },
+    {
+      "ticker": "GBR",
+      "company": "GREAT BOULDER RESOURCES LIMITED",
+      "headline": "Investor Presentation - Resources Rising Stars Conference",
+      "document_key": "2924-03133587-6A1342976",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133587-6A1342976"
+    },
+    {
+      "ticker": "AIS",
+      "company": "AERIS RESOURCES LIMITED",
+      "headline": "RRS Conference Presentation",
+      "document_key": "2924-03133598-6A1342981",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133598-6A1342981"
+    },
+    {
+      "ticker": "GSN",
+      "company": "GREAT SOUTHERN MINING LIMITED",
+      "headline": "Resources Rising Stars 2026 Presentation",
+      "document_key": "2924-03133549-6A1342960",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133549-6A1342960"
+    },
+    {
+      "ticker": "JAV",
+      "company": "JAVELIN MINERALS LIMITED",
+      "headline": "RRS Gold Coast Investor Presentation",
+      "document_key": "2924-03133620-6A1342992",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133620-6A1342992"
+    },
+    {
+      "ticker": "GG8",
+      "company": "GORILLA GOLD MINES LTD",
+      "headline": "Resources Rising Stars Investor Presentation",
+      "document_key": "2924-03133563-6A1342964",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133563-6A1342964"
+    },
+    {
+      "ticker": "PGD",
+      "company": "PEREGRINE GOLD LTD",
+      "headline": "Heritage Survey Commences at Mallina Gold Project",
+      "document_key": "2924-03133832-6A1343088",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133832-6A1343088"
+    },
+    {
+      "ticker": "AGE",
+      "company": "ALLIGATOR ENERGY LIMITED",
+      "headline": "Change of Director's Interest Notice x 5",
+      "document_key": "2924-03133993-2A1696458",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133993-2A1696458"
+    },
+    {
+      "ticker": "AM5",
+      "company": "ANTARES METALS LIMITED",
+      "headline": "Proposed issue of securities - AM5",
+      "document_key": "2924-03133977-6A1343090",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133977-6A1343090"
+    },
+    {
+      "ticker": "ARI",
+      "company": "ARIKA RESOURCES LIMITED",
+      "headline": "Notice of General Meeting/Proxy Form",
+      "document_key": "2924-03133604-6A1342982",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133604-6A1342982"
+    },
+    {
+      "ticker": "CLA",
+      "company": "CELSIUS RESOURCES LIMITED.",
+      "headline": "Results of Meeting",
+      "document_key": "2924-03133649-6A1343001",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133649-6A1343001"
+    },
+    {
+      "ticker": "LOT",
+      "company": "LOTUS RESOURCES LIMITED",
+      "headline": "Notification regarding unquoted securities - LOT",
+      "document_key": "2924-03133586-6A1342975",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133586-6A1342975"
+    },
+    {
+      "ticker": "LOT",
+      "company": "LOTUS RESOURCES LIMITED",
+      "headline": "Notification regarding unquoted securities - LOT",
+      "document_key": "2924-03133585-6A1342974",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133585-6A1342974"
+    },
+    {
+      "ticker": "OBM",
+      "company": "ORA BANDA MINING LTD",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03133721-6A1343024",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133721-6A1343024"
+    },
+    {
+      "ticker": "WAF",
+      "company": "WEST AFRICAN RESOURCES LIMITED",
+      "headline": "Ceasing to be a substantial holder",
+      "document_key": "2924-03133735-6A1343030",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133735-6A1343030"
+    },
+    {
+      "ticker": "WAF",
+      "company": "WEST AFRICAN RESOURCES LIMITED",
+      "headline": "Becoming a substantial holder from MUFG",
+      "document_key": "2924-03133696-6A1343015",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133696-6A1343015"
+    },
+    {
+      "ticker": "29M",
+      "company": "29METALS LIMITED",
+      "headline": "Notification regarding unquoted securities - 29M",
+      "document_key": "2924-03133920-3A701470",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133920-3A701470"
+    },
+    {
+      "ticker": "AGE",
+      "company": "ALLIGATOR ENERGY LIMITED",
+      "headline": "Application for quotation of securities - AGE",
+      "document_key": "2924-03133991-2A1696455",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133991-2A1696455"
+    },
+    {
+      "ticker": "ARI",
+      "company": "ARIKA RESOURCES LIMITED",
+      "headline": "Letter to Shareholders",
+      "document_key": "2924-03133607-6A1342985",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133607-6A1342985"
+    },
+    {
+      "ticker": "BM1",
+      "company": "BALLARD MINING LIMITED",
+      "headline": "Notification regarding unquoted securities - BM1",
+      "document_key": "2924-03133762-6A1343044",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133762-6A1343044"
+    },
+    {
+      "ticker": "BOE",
+      "company": "BOSS ENERGY LTD",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03133639-6A1342998",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133639-6A1342998"
+    },
+    {
+      "ticker": "CLA",
+      "company": "CELSIUS RESOURCES LIMITED.",
+      "headline": "Cancellation of Consolidation",
+      "document_key": "2924-03133656-6A1343003",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133656-6A1343003"
+    },
+    {
+      "ticker": "CLA",
+      "company": "CELSIUS RESOURCES LIMITED.",
+      "headline": "Cancel - Consolidation/Split - CLA",
+      "document_key": "2924-03133653-6A1343002",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133653-6A1343002"
+    },
+    {
+      "ticker": "CMO",
+      "company": "COSMO METALS LIMITED",
+      "headline": "Appendix 4G",
+      "document_key": "2924-03133584-6A1342973",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133584-6A1342973"
+    },
+    {
+      "ticker": "FFM",
+      "company": "FIREFLY METALS LTD",
+      "headline": "Notification of cessation of securities - FFM",
+      "document_key": "2924-03133777-6A1343053",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133777-6A1343053"
+    },
+    {
+      "ticker": "NMG",
+      "company": "NEW MURCHISON GOLD LIMITED",
+      "headline": "Change of Director's Interest Notice",
+      "document_key": "2924-03133630-6A1342995",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133630-6A1342995"
+    },
+    {
+      "ticker": "NMG",
+      "company": "NEW MURCHISON GOLD LIMITED",
+      "headline": "Cleansing Notice under section 708A",
+      "document_key": "2924-03133626-6A1342994",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133626-6A1342994"
+    },
+    {
+      "ticker": "NMG",
+      "company": "NEW MURCHISON GOLD LIMITED",
+      "headline": "Application for quotation of securities - NMG",
+      "document_key": "2924-03133608-6A1342986",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133608-6A1342986"
+    },
+    {
+      "ticker": "NST",
+      "company": "NORTHERN STAR RESOURCES LTD",
+      "headline": "Date of AGM and Closing of Director Nominations",
+      "document_key": "2924-03133622-6A1342993",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133622-6A1342993"
+    },
+    {
+      "ticker": "PSC",
+      "company": "PROSPECT RESOURCES LIMITED",
+      "headline": "Change of Director's Interest Notice x4",
+      "document_key": "2924-03133951-6A1343140",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133951-6A1343140"
+    },
+    {
+      "ticker": "PSC",
+      "company": "PROSPECT RESOURCES LIMITED",
+      "headline": "Application for quotation of securities - PSC",
+      "document_key": "2924-03133950-6A1343139",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133950-6A1343139"
+    },
+    {
+      "ticker": "RMS",
+      "company": "RAMELIUS RESOURCES LIMITED",
+      "headline": "Update - Notification of buy-back - RMS",
+      "document_key": "2924-03133807-6A1343074",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133807-6A1343074"
+    },
+    {
+      "ticker": "RMS",
+      "company": "RAMELIUS RESOURCES LIMITED",
+      "headline": "Application for quotation of securities - RMS",
+      "document_key": "2924-03133706-6A1343019",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133706-6A1343019"
+    },
+    {
+      "ticker": "RRR",
+      "company": "REVOLVER RESOURCES HOLDINGS LTD",
+      "headline": "Cleansing Notice",
+      "document_key": "2924-03133728-6A1343028",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133728-6A1343028"
+    },
+    {
+      "ticker": "RRR",
+      "company": "REVOLVER RESOURCES HOLDINGS LTD",
+      "headline": "Application for quotation of securities - RRR",
+      "document_key": "2924-03133724-6A1343026",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133724-6A1343026"
+    },
+    {
+      "ticker": "TRE",
+      "company": "TOUBANI RESOURCES LIMITED",
+      "headline": "Notification of cessation of securities - TRE",
+      "document_key": "2924-03133757-6A1343039",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133757-6A1343039"
+    },
+    {
+      "ticker": "TRE",
+      "company": "TOUBANI RESOURCES LIMITED",
+      "headline": "Change of Director's Interest Notice",
+      "document_key": "2924-03133755-6A1343037",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133755-6A1343037"
+    },
+    {
+      "ticker": "WAF",
+      "company": "WEST AFRICAN RESOURCES LIMITED",
+      "headline": "Dividend/Distribution - WAF",
+      "document_key": "2924-03133803-6A1343069",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133803-6A1343069"
+    },
+    {
+      "ticker": "WIA",
+      "company": "WIA GOLD LIMITED",
+      "headline": "Notification of cessation of securities - WIA",
+      "document_key": "2924-03133719-6A1343023",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133719-6A1343023"
+    },
+    {
+      "ticker": "WIA",
+      "company": "WIA GOLD LIMITED",
+      "headline": "Notification regarding unquoted securities - WIA",
+      "document_key": "2924-03133716-6A1343022",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03133716-6A1343022"
+    }
+  ],
+  "commodities": [
+    [
+      "Au",
+      "Gold"
+    ],
+    [
+      "Cu",
+      "Copper"
+    ],
+    [
+      "U",
+      "Uranium"
+    ],
+    [
+      "DCP",
+      "DCP Watches"
+    ]
+  ],
+  "commodity_of": {
+    "MHC": "Au",
+    "SGC": "Au",
+    "ARV": "Au",
+    "AS1": "Au",
+    "BM1": "Au",
+    "BNZ": "Au",
+    "GBR": "Au",
+    "GBM": "Au",
+    "GG8": "Au",
+    "GML": "Au",
+    "GSN": "Au",
+    "JAV": "Au",
+    "KAL": "Au",
+    "LCL": "Au",
+    "LEX": "Au",
+    "OZM": "Au",
+    "BH6": "Au",
+    "SLS": "Au",
+    "STK": "Au",
+    "TOK": "Au",
+    "TOR": "Au",
+    "TTM": "Au",
+    "YRL": "Au",
+    "MPK": "Au",
+    "NVO": "Au",
+    "AAM": "Au",
+    "GA8": "Au",
+    "MBK": "Au",
+    "NWM": "Au",
+    "SMS": "Au",
+    "SKM": "Au",
+    "ARI": "Au",
+    "AAR": "Au",
+    "LAC": "Au",
+    "AUC": "Au",
+    "AUE": "Au",
+    "AZY": "Au",
+    "BGD": "Au",
+    "WAU": "Au",
+    "CAV": "Au",
+    "GPR": "Au",
+    "HRN": "Au",
+    "MRT": "Au",
+    "KZR": "Au",
+    "LGM": "Au",
+    "MAT": "Au",
+    "MI6": "Au",
+    "MM8": "Au",
+    "NXM": "Au",
+    "ODY": "Au",
+    "PDI": "Au",
+    "PTN": "Au",
+    "RXL": "Au",
+    "SMI": "Au",
+    "STM": "Au",
+    "STN": "Au",
+    "TAM": "Au",
+    "TCG": "Au",
+    "TSO": "Au",
+    "WGR": "Au",
+    "WIA": "Au",
+    "MEK": "Au",
+    "PRX": "Au",
+    "PGL": "Au",
+    "CRS": "Au",
+    "IDA": "Au",
+    "MAU": "Au",
+    "RDN": "Au",
+    "TMB": "Au",
+    "WSR": "Au",
+    "ADD": "Au",
+    "M3M": "Au",
+    "DTM": "Au",
+    "EVN": "Au",
+    "NST": "Au",
+    "BGL": "Au",
+    "BC8": "Au",
+    "BTR": "Au",
+    "CMM": "Au",
+    "CYL": "Au",
+    "EMR": "Au",
+    "GGP": "Au",
+    "GMD": "Au",
+    "KCN": "Au",
+    "NMG": "Au",
+    "OBM": "Au",
+    "PNR": "Au",
+    "PRU": "Au",
+    "RMS": "Au",
+    "RRL": "Au",
+    "RSG": "Au",
+    "SBM": "Au",
+    "VAU": "Au",
+    "WAF": "Au",
+    "WGX": "Au",
+    "ORE": "Au",
+    "BCN": "Au",
+    "29M": "Cu",
+    "SFR": "Cu",
+    "AIS": "Cu",
+    "CSC": "Cu",
+    "AUQ": "Cu",
+    "KAN": "Cu",
+    "ANX": "Cu",
+    "CVV": "Cu",
+    "NFM": "Cu",
+    "COD": "Cu",
+    "CYM": "Cu",
+    "EM2": "Cu",
+    "FFM": "Cu",
+    "GRE": "Cu",
+    "HAV": "Cu",
+    "HCH": "Cu",
+    "KGL": "Cu",
+    "NRX": "Cu",
+    "ORN": "Cu",
+    "PEX": "Cu",
+    "QML": "Cu",
+    "RRR": "Cu",
+    "SVY": "Cu",
+    "CLA": "Cu",
+    "CST": "Cu",
+    "PSC": "Cu",
+    "PXX": "Cu",
+    "ALY": "Cu",
+    "HMX": "Cu",
+    "HOR": "Cu",
+    "AM5": "Cu",
+    "WCN": "Cu",
+    "KAO": "Cu",
+    "PDN": "U",
+    "BOE": "U",
+    "PEN": "U",
+    "LOT": "U",
+    "NXG": "U",
+    "AGE": "U",
+    "BMN": "U",
+    "DYL": "U",
+    "AEU": "U",
+    "BKY": "U",
+    "LAM": "U",
+    "AEE": "U",
+    "ETM": "U",
+    "1AE": "U",
+    "AKN": "U",
+    "OSM": "U",
+    "USC": "U",
+    "HAR": "U",
+    "AMU": "U",
+    "EME": "U",
+    "BRY": "U",
+    "AS2": "U",
+    "ASN": "U",
+    "BSN": "U",
+    "CML": "U",
+    "CR3": "U",
+    "DEV": "U",
+    "EPM": "U",
+    "FSY": "U",
+    "HRE": "U",
+    "I88": "U",
+    "KOB": "U",
+    "MEX": "U",
+    "MOM": "U",
+    "ORP": "U",
+    "PR2": "U",
+    "REC": "U",
+    "SBR": "U",
+    "T92": "U",
+    "THR": "U",
+    "C29": "U",
+    "ALV": "DCP",
+    "CZN": "DCP",
+    "EL8": "DCP",
+    "ENT": "DCP",
+    "GHM": "DCP",
+    "T88": "DCP",
+    "TAR": "DCP",
+    "SNM": "DCP",
+    "DYM": "DCP",
+    "TRE": "DCP",
+    "PGD": "DCP",
+    "ALR": "DCP",
+    "BSX": "DCP",
+    "PC2": "DCP",
+    "CXU": "DCP",
+    "VAL": "DCP",
+    "CMO": "DCP"
+  }
+}
