@@ -1,0 +1,658 @@
+{
+  "lead": "Maritana Resources dominated the window with a 62% jump in the Burbanks Gold Project Mineral Resource to 755koz, lifting the company's group-wide total above 2.1Moz and pointing to a further update and Ore Reserve studies ahead.",
+  "subtitle": "Burbanks resource growth headlines a day otherwise led by drilling updates and Anson's Utah tax credit stack.",
+  "subject": "MRT lifts Burbanks resource 62% to 755koz, group tops 2.1Moz",
+  "watch_items": [
+    "MRT: remaining Burbanks Phase 2 assays due September quarter 2026, ahead of a further resource update in December quarter 2026 and follow-on Ore Reserve studies",
+    "MHC: trading halt expected to lift on the earlier of a capital raising announcement or the start of trading on 15 September 2026",
+    "AMU: general meeting to be convened to approve Facility Options and a further A$1.3 million of Convertible Loan Notes",
+    "ASN: Green River Definitive Feasibility Study to assess the financial impact of the combined A$569,119,979 in Utah incentives",
+    "BC8: further extensional and infill drilling planned at Trojan to support a Resource upgrade and updated life of mine planning"
+  ],
+  "item": "Alchemy Resources: RC drilling results at Yellow Mountain and Overflow expected in due course",
+  "day_in_brief": "Resources and reserves: Maritana Resources' updated Burbanks Mineral Resource rose 62% to 13.7Mt at 1.7g/t Au for 755koz, driven by Burbanks North's growth to 11.1Mt at 1.47g/t Au for 523koz, taking group-wide resources past 2.1Moz. Black Cat Syndicate reported RC drilling at Trojan extending mineralisation beyond the existing 202koz @ 1.1g/t Au Resource in both the northern down-dip and southeastern oxide zones, with best results of 3m @ 6.88g/t Au from 142m and 7m @ 3.02g/t Au from 257m.\n\nDrilling: Alchemy Resources began RC drilling at its Yellow Mountain and Overflow project in NSW, testing extensions of prior high-grade copper-gold intercepts including 113m @ 1.17% CuEq and 31m @ 1.54% CuEq, alongside the 342koz AuEq Overflow resource. Stavely Minerals used the Resources Rising Stars conference to recap its Thursday's Gossan scoping study economics (A$818 million pre-tax NPV, 40% IRR, 60Mt at 0.58% CuEq) without new drilling or financial disclosures.\n\nCorporate and funding: Anson Resources secured a second Utah incentive, a post-performance tax credit of approximately A$212 million, taking combined state incentives for the Green River Lithium Project to US$406,514,271 (A$569,119,979), with the financial impact to be assessed in the Green River DFS. Manhattan Gold entered a trading halt pending a material capital raising announcement, expected to resume by 15 September 2026 or the announcement, whichever comes first. American Uranium completed its A$1.235 million Convertible Loan Note raising to fund Lo Herma ISR Uranium Project studies, with a general meeting to follow on facility approvals and a further A$1.3 million note tranche.\n\nQuarterlies: Six recurring filings were lodged, including Gilgama Resources' DFS economics and Hawthorn Resources' maiden Lincoln JORC estimate of 2.46Mt at 5.1g/t Au for 402koz, alongside half-year losses from Galan Lithium subsidiaries, Sunstone Metals, Tesoro Resources and Alvo Minerals.",
+  "rows": [
+    {
+      "ticker": "BC8",
+      "company": "BLACK CAT SYNDICATE LIMITED",
+      "announcement": "3m @ 6.88g/t Au from 142m (26TRRC008A)",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03134081-6A1343190",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134081-6A1343190"
+    },
+    {
+      "ticker": "MRT",
+      "company": "MARITANA MINERALS LIMITED",
+      "announcement": "Burbanks MRE up 62% to 13.7Mt @ 1.7g/t Au for 755koz",
+      "type": null,
+      "date": "11 September 2026",
+      "document_key": "2924-03134296-6A1343303",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134296-6A1343303"
+    },
+    {
+      "ticker": "SVY",
+      "company": "STAVELY MINERALS LIMITED",
+      "announcement": "Conference deck reprises A$818M NPV, no new figures",
+      "type": null,
+      "date": "10 September 2026",
+      "document_key": "2924-03134048-6A1343172",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134048-6A1343172"
+    },
+    {
+      "ticker": "ASN",
+      "company": "ANSON RESOURCES LIMITED",
+      "announcement": "A$212M tax credit approved for Green River Lithium Project",
+      "type": null,
+      "date": "11 September 2026",
+      "document_key": "2924-03134428-6A1343352",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134428-6A1343352"
+    },
+    {
+      "ticker": "ASN",
+      "company": "ANSON RESOURCES LIMITED",
+      "announcement": "A$212 million tax credit approved for Green River project",
+      "type": null,
+      "date": "11 September 2026",
+      "document_key": "2924-03134423-6A1343350",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134423-6A1343350"
+    },
+    {
+      "ticker": "ALY",
+      "company": "ALCHEMY RESOURCES LIMITED",
+      "announcement": "RC drilling begins at Yellow Mountain and Overflow, up to 15 holes",
+      "type": null,
+      "date": "11 September 2026",
+      "document_key": "2924-03134297-6A1343304",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134297-6A1343304"
+    },
+    {
+      "ticker": "MHC",
+      "company": "MANHATTAN GOLD CORPORATION LIMITED",
+      "announcement": "Halted pending capital raising, to resume by 15 September 2026",
+      "type": null,
+      "date": "11 September 2026",
+      "document_key": "2924-03134420-6A1343349",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134420-6A1343349"
+    },
+    {
+      "ticker": "AMU",
+      "company": "AMERICAN URANIUM LTD",
+      "announcement": "A$1.235M convertible loan notes completed, funds received",
+      "type": null,
+      "date": "11 September 2026",
+      "document_key": "2924-03134443-6A1343359",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134443-6A1343359"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "BC8",
+      "heading": "Extensional drilling extends Trojan mineralised footprint",
+      "body": "Black Cat's 56-hole RC program at the 100%-owned Trojan deposit, part of Kal East, intersected mineralisation beyond the current 202koz @ 1.1g/t Au Resource in both the northern down-dip zone and the southeastern flat-lying oxide zone. Best results included 3m @ 6.88g/t Au from 142m (26TRRC008A) and 7m @ 3.02g/t Au from 257m (26TRRC010A). Further extensional and infill drilling is planned to support a Resource upgrade and updated life of mine planning.",
+      "document_key": "2924-03134081-6A1343190",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134081-6A1343190"
+    },
+    {
+      "ticker": "MRT",
+      "heading": "Burbanks resource jumps 62% to 755koz, group total tops 2.1Moz",
+      "body": "Maritana's updated Burbanks Gold Project Mineral Resource has grown to 13.7Mt at 1.7g/t Au for 755koz, up 290koz from the prior 6.1Mt at 2.4g/t Au for 466koz estimate, lifting company-wide resources above 2.1Moz. Growth was driven almost entirely by Burbanks North, now 11.1Mt at 1.47g/t Au for 523koz, with the Indicated component rising to 29%. Remaining Phase 2 assays are due in the September quarter 2026, ahead of a further resource update in the December quarter 2026 and follow-on Ore Reserve studies.",
+      "document_key": "2924-03134296-6A1343303",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134296-6A1343303"
+    },
+    {
+      "ticker": "SVY",
+      "heading": "Stavely presents Thursday's Gossan story at Rising Stars",
+      "body": "Stavely Minerals used the Resources Rising Stars conference to recap its Thursday's Gossan scoping study, including a pre-tax NPV of A$818 million, 40% IRR and 60Mt at 0.58% CuEq resource, alongside Freddy's Find gold-silver results. No new drilling or financial data was disclosed. Next catalysts remain further Freddy's Find and Junction drilling and assessment of development options.",
+      "document_key": "2924-03134048-6A1343172",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134048-6A1343172"
+    },
+    {
+      "ticker": "ASN",
+      "heading": "Anson secures further A$212 million Utah tax credit",
+      "body": "Utah's Governor's Office of Economic Development has approved a post-performance tax credit of approximately A$212 million for the Green River Lithium Project, under the REDTIF program, equal to 50% of projected state tax revenue of approximately A$425 million over 20 years. Combined with the earlier Utah Inland Port Authority rebate, total incentives now stand at US$406,514,271 (A$569,119,979). The financial impact will be assessed in the Green River Definitive Feasibility Study.",
+      "document_key": "2924-03134428-6A1343352",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134428-6A1343352"
+    },
+    {
+      "ticker": "ASN",
+      "heading": "Anson secures second Utah tax credit, combined incentives top A$569 million",
+      "body": "Utah's Governor's Office of Economic Development has approved a post-performance tax credit of approximately A$212 million for the Green River Lithium Project, under the REDTIF program based on projected state tax revenue of approximately A$425 million over 20 years. Combined with the earlier Utah Inland Port Authority rebate, total incentives now stand at US$406,514,271 (A$569,119,979). The financial impact will be assessed in the Green River Definitive Feasibility Study.",
+      "document_key": "2924-03134423-6A1343350",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134423-6A1343350"
+    },
+    {
+      "ticker": "ALY",
+      "heading": "Alchemy starts RC drilling at NSW gold-copper targets",
+      "body": "Alchemy Resources has commenced RC drilling at its 80%-owned Yellow Mountain and Overflow project in NSW, with up to 15 holes planned. Yellow Mountain will test the northern extension of 2025 intercepts of 113m @ 1.17% CuEq (YMRC004) and 31m @ 1.54% CuEq (YMRC005), plus two IP-defined targets including a 750m anomaly east of prior drilling. Overflow drilling targets high-grade gold shoots and the northern extension of the existing 342koz AuEq resource beneath shallow cover. Results are expected in due course.",
+      "document_key": "2924-03134297-6A1343304",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134297-6A1343304"
+    },
+    {
+      "ticker": "MHC",
+      "heading": "Manhattan Gold halted ahead of material capital raising",
+      "body": "Manhattan Gold has entered a voluntary trading halt pending an announcement on a material capital raising. Trading is expected to remain suspended until the earlier of the raising announcement or the start of trading on 15 September 2026. The halt follows last week's Jaws drilling results.",
+      "document_key": "2924-03134420-6A1343349",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134420-6A1343349"
+    },
+    {
+      "ticker": "AMU",
+      "heading": "American Uranium completes A$1.235 million loan note raising",
+      "body": "American Uranium has received funds and issued Convertible Loan Notes under its previously announced A$1.235 million Facility, supporting the Lo Herma ISR Uranium Project's Scoping Study and permitting work. A general meeting will be convened to approve the Facility Options, shares issued in lieu of interest, and a further A$1.3 million of Convertible Loan Notes on similar terms.",
+      "document_key": "2924-03134443-6A1343359",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134443-6A1343359"
+    }
+  ],
+  "other": [
+    {
+      "ticker": "TSO",
+      "company": "TESORO GOLD LTD",
+      "headline": "Half Year Report and Accounts",
+      "summary": "H1 FY26 net loss A$2.41m (H1 FY25: A$2.16m); Ternera infill drilling of 25,210m substantially complete; DFS advancing at El Zorro",
+      "document_key": "2924-03134329-6A1343317",
+      "market_cap": 182432210,
+      "cap_label": "$182m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134329-6A1343317"
+    },
+    {
+      "ticker": "GPR",
+      "company": "GEOPACIFIC RESOURCES LTD",
+      "headline": "Half Yearly Report and Accounts",
+      "summary": "FID targeted late CY2026 to early CY2027; DFS post-tax NPV A$1.3bn, IRR 50.6%, AISC A$1,966/oz",
+      "document_key": "2924-03134111-6A1343205",
+      "market_cap": 87136074,
+      "cap_label": "$87m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134111-6A1343205"
+    },
+    {
+      "ticker": "SNM",
+      "company": "SENTINEL METALS LIMITED",
+      "headline": "Half Year Accounts",
+      "summary": "Loss A$1.32m (H1 2025: A$0.46m); cash A$3.70m at 30 June 2026, down from A$6.98m",
+      "document_key": "2924-03134157-6A1343232",
+      "market_cap": 81450421,
+      "cap_label": "$81m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134157-6A1343232"
+    },
+    {
+      "ticker": "GA8",
+      "company": "GOLDARC RESOURCES LIMITED",
+      "headline": "Half Year Accounts",
+      "summary": "H1 FY26 net loss A$2.90m (H1 FY25: profit A$0.51m); 21,000m+ drilling completed at Leonora North/South",
+      "document_key": "2924-03134183-6A1343241",
+      "market_cap": 39290156,
+      "cap_label": "$39m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134183-6A1343241"
+    },
+    {
+      "ticker": "HAR",
+      "company": "HARANGA RESOURCES LIMITED.",
+      "headline": "Interim report - 30 June 2026",
+      "summary": "Maiden Lincoln JORC MRE 2.46Mt at 5.1g/t Au for 402koz; new MD appointed post-period",
+      "document_key": "2924-03134275-6A1343295",
+      "market_cap": 32618662,
+      "cap_label": "$33m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134275-6A1343295"
+    },
+    {
+      "ticker": "ALV",
+      "company": "ALVO MINERALS LIMITED",
+      "headline": "Half Year Accounts",
+      "summary": "Loss A$2.37m (1H25: A$1.75m); cash A$1.11m at 30 June 2026 (Dec25: A$1.91m); A$1.25m placement completed",
+      "document_key": "2924-03134375-3A701540",
+      "market_cap": 5739717,
+      "cap_label": "$6m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134375-3A701540"
+    }
+  ],
+  "_unverified": [
+    {
+      "ticker": "SNM",
+      "headline": "Half Year Accounts",
+      "figures": [
+        "0.46m"
+      ]
+    }
+  ],
+  "also_lodged": [
+    {
+      "ticker": "IDA",
+      "company": "INDIANA RESOURCES LIMITED",
+      "headline": "Heritage Survey Completed at Ealbara",
+      "document_key": "2924-03134298-6A1343305",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134298-6A1343305"
+    },
+    {
+      "ticker": "AKN",
+      "company": "AUKING MINING LIMITED",
+      "headline": "Notice of Extraordinary General Meeting/Proxy Form",
+      "document_key": "2924-03134216-2A1696553",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134216-2A1696553"
+    },
+    {
+      "ticker": "AMU",
+      "company": "AMERICAN URANIUM LTD",
+      "headline": "Notification regarding unquoted securities - AMU",
+      "document_key": "2924-03134439-6A1343354",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134439-6A1343354"
+    },
+    {
+      "ticker": "AS2",
+      "company": "ASKARI METALS LIMITED",
+      "headline": "Proposed issue of securities - AS2",
+      "document_key": "2924-03134264-6A1343283",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134264-6A1343283"
+    },
+    {
+      "ticker": "AS2",
+      "company": "ASKARI METALS LIMITED",
+      "headline": "Proposed issue of securities - AS2",
+      "document_key": "2924-03134262-6A1343281",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134262-6A1343281"
+    },
+    {
+      "ticker": "CMO",
+      "company": "COSMO METALS LIMITED",
+      "headline": "Cleansing Notice",
+      "document_key": "2924-03134067-6A1343185",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134067-6A1343185"
+    },
+    {
+      "ticker": "CMO",
+      "company": "COSMO METALS LIMITED",
+      "headline": "Application for quotation of securities - CMO",
+      "document_key": "2924-03134052-6A1343177",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134052-6A1343177"
+    },
+    {
+      "ticker": "CR3",
+      "company": "CORE ENERGY MINERALS LTD",
+      "headline": "Application for quotation of securities - CR3",
+      "document_key": "2924-03134405-2A1696630",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134405-2A1696630"
+    },
+    {
+      "ticker": "CZN",
+      "company": "CORAZON MINING LIMITED",
+      "headline": "Becoming a substantial holder",
+      "document_key": "2924-03134273-6A1343294",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134273-6A1343294"
+    },
+    {
+      "ticker": "GA8",
+      "company": "GOLDARC RESOURCES LIMITED",
+      "headline": "Notice of General Meeting/Proxy Form",
+      "document_key": "2924-03134192-6A1343244",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134192-6A1343244"
+    },
+    {
+      "ticker": "GGP",
+      "company": "GREATLAND RESOURCES LIMITED",
+      "headline": "Becoming a substantial holder",
+      "document_key": "2924-03134255-6A1343278",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134255-6A1343278"
+    },
+    {
+      "ticker": "LOT",
+      "company": "LOTUS RESOURCES LIMITED",
+      "headline": "Becoming a substantial holder",
+      "document_key": "2924-03134053-6A1343178",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134053-6A1343178"
+    },
+    {
+      "ticker": "NST",
+      "company": "NORTHERN STAR RESOURCES LTD",
+      "headline": "Becoming a substantial holder",
+      "document_key": "2924-03134195-6A1343247",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134195-6A1343247"
+    },
+    {
+      "ticker": "OBM",
+      "company": "ORA BANDA MINING LTD",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03134131-6A1343221",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134131-6A1343221"
+    },
+    {
+      "ticker": "OSM",
+      "company": "OSMOND RESOURCES LIMITED",
+      "headline": "Notice of Annual General Meeting/Proxy Form",
+      "document_key": "2924-03134160-6A1343231",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134160-6A1343231"
+    },
+    {
+      "ticker": "PDN",
+      "company": "PALADIN ENERGY LTD",
+      "headline": "Ceasing to be a substantial holder",
+      "document_key": "2924-03134301-6A1343307",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134301-6A1343307"
+    },
+    {
+      "ticker": "PEN",
+      "company": "PENINSULA ENERGY LIMITED",
+      "headline": "Notification regarding unquoted securities - PEN",
+      "document_key": "2924-03134110-6A1343204",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134110-6A1343204"
+    },
+    {
+      "ticker": "RSG",
+      "company": "RESOLUTE MINING LIMITED",
+      "headline": "Ceasing to be a substantial holder",
+      "document_key": "2924-03134309-6A1343311",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134309-6A1343311"
+    },
+    {
+      "ticker": "WAF",
+      "company": "WEST AFRICAN RESOURCES LIMITED",
+      "headline": "Ceasing to be a substantial holder from MUFG",
+      "document_key": "2924-03134170-6A1343236",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134170-6A1343236"
+    },
+    {
+      "ticker": "WGX",
+      "company": "WESTGOLD RESOURCES LIMITED.",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03134263-6A1343282",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134263-6A1343282"
+    },
+    {
+      "ticker": "AKN",
+      "company": "AUKING MINING LIMITED",
+      "headline": "Letter to Shareholders",
+      "document_key": "2924-03134218-2A1696557",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134218-2A1696557"
+    },
+    {
+      "ticker": "BCN",
+      "company": "BEACON MINERALS LIMITED",
+      "headline": "Application for quotation of securities - BCN",
+      "document_key": "2924-03134181-6A1343240",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134181-6A1343240"
+    },
+    {
+      "ticker": "BGD",
+      "company": "BARTON GOLD HOLDINGS LIMITED",
+      "headline": "Application for quotation of securities - BGD",
+      "document_key": "2924-03134049-6A1343173",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134049-6A1343173"
+    },
+    {
+      "ticker": "CR3",
+      "company": "CORE ENERGY MINERALS LTD",
+      "headline": "Cleansing Statement",
+      "document_key": "2924-03134408-2A1696633",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134408-2A1696633"
+    },
+    {
+      "ticker": "CR3",
+      "company": "CORE ENERGY MINERALS LTD",
+      "headline": "Application for quotation of securities - CR3",
+      "document_key": "2924-03134407-2A1696632",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134407-2A1696632"
+    },
+    {
+      "ticker": "IDA",
+      "company": "INDIANA RESOURCES LIMITED",
+      "headline": "AGM and Listing Rule 3.13.1 Notice",
+      "document_key": "2924-03134236-6A1343266",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134236-6A1343266"
+    },
+    {
+      "ticker": "MHC",
+      "company": "MANHATTAN GOLD CORPORATION LIMITED",
+      "headline": "Date of 2026 AGM and Closing Date for Director Nominations",
+      "document_key": "2924-03134233-6A1343264",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134233-6A1343264"
+    },
+    {
+      "ticker": "MRT",
+      "company": "MARITANA MINERALS LIMITED",
+      "headline": "Change of Director's Interest Notice",
+      "document_key": "2924-03134280-6A1343296",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134280-6A1343296"
+    },
+    {
+      "ticker": "MRT",
+      "company": "MARITANA MINERALS LIMITED",
+      "headline": "Notification of cessation of securities - MRT",
+      "document_key": "2924-03134115-6A1343209",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134115-6A1343209"
+    },
+    {
+      "ticker": "OSM",
+      "company": "OSMOND RESOURCES LIMITED",
+      "headline": "Letter to Shareholders - Annual General Meeting",
+      "document_key": "2924-03134163-6A1343235",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134163-6A1343235"
+    },
+    {
+      "ticker": "WAF",
+      "company": "WEST AFRICAN RESOURCES LIMITED",
+      "headline": "Update - Dividend/Distribution - WAF",
+      "document_key": "2924-03134194-6A1343246",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134194-6A1343246"
+    },
+    {
+      "ticker": "WIA",
+      "company": "WIA GOLD LIMITED",
+      "headline": "Cleansing Notice",
+      "document_key": "2924-03134267-6A1343286",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134267-6A1343286"
+    },
+    {
+      "ticker": "WIA",
+      "company": "WIA GOLD LIMITED",
+      "headline": "Application for quotation of securities - WIA",
+      "document_key": "2924-03134266-6A1343285",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03134266-6A1343285"
+    }
+  ],
+  "commodities": [
+    [
+      "Au",
+      "Gold"
+    ],
+    [
+      "Cu",
+      "Copper"
+    ],
+    [
+      "U",
+      "Uranium"
+    ],
+    [
+      "DCP",
+      "DCP Watches"
+    ]
+  ],
+  "commodity_of": {
+    "MHC": "Au",
+    "SGC": "Au",
+    "ARV": "Au",
+    "AS1": "Au",
+    "BM1": "Au",
+    "BNZ": "Au",
+    "GBR": "Au",
+    "GBM": "Au",
+    "GG8": "Au",
+    "GML": "Au",
+    "GSN": "Au",
+    "JAV": "Au",
+    "KAL": "Au",
+    "LCL": "Au",
+    "LEX": "Au",
+    "OZM": "Au",
+    "BH6": "Au",
+    "SLS": "Au",
+    "STK": "Au",
+    "TOK": "Au",
+    "TOR": "Au",
+    "TTM": "Au",
+    "YRL": "Au",
+    "MPK": "Au",
+    "NVO": "Au",
+    "AAM": "Au",
+    "GA8": "Au",
+    "MBK": "Au",
+    "NWM": "Au",
+    "SMS": "Au",
+    "SKM": "Au",
+    "ARI": "Au",
+    "AAR": "Au",
+    "LAC": "Au",
+    "AUC": "Au",
+    "AUE": "Au",
+    "AZY": "Au",
+    "BGD": "Au",
+    "WAU": "Au",
+    "CAV": "Au",
+    "GPR": "Au",
+    "HRN": "Au",
+    "MRT": "Au",
+    "KZR": "Au",
+    "LGM": "Au",
+    "MAT": "Au",
+    "MI6": "Au",
+    "MM8": "Au",
+    "NXM": "Au",
+    "ODY": "Au",
+    "PDI": "Au",
+    "PTN": "Au",
+    "RXL": "Au",
+    "SMI": "Au",
+    "STM": "Au",
+    "STN": "Au",
+    "TAM": "Au",
+    "TCG": "Au",
+    "TSO": "Au",
+    "WGR": "Au",
+    "WIA": "Au",
+    "MEK": "Au",
+    "PRX": "Au",
+    "PGL": "Au",
+    "CRS": "Au",
+    "IDA": "Au",
+    "MAU": "Au",
+    "RDN": "Au",
+    "TMB": "Au",
+    "WSR": "Au",
+    "ADD": "Au",
+    "M3M": "Au",
+    "DTM": "Au",
+    "EVN": "Au",
+    "NST": "Au",
+    "BGL": "Au",
+    "BC8": "Au",
+    "BTR": "Au",
+    "CMM": "Au",
+    "CYL": "Au",
+    "EMR": "Au",
+    "GGP": "Au",
+    "GMD": "Au",
+    "KCN": "Au",
+    "NMG": "Au",
+    "OBM": "Au",
+    "PNR": "Au",
+    "PRU": "Au",
+    "RMS": "Au",
+    "RRL": "Au",
+    "RSG": "Au",
+    "SBM": "Au",
+    "VAU": "Au",
+    "WAF": "Au",
+    "WGX": "Au",
+    "ORE": "Au",
+    "BCN": "Au",
+    "29M": "Cu",
+    "SFR": "Cu",
+    "AIS": "Cu",
+    "CSC": "Cu",
+    "AUQ": "Cu",
+    "KAN": "Cu",
+    "ANX": "Cu",
+    "CVV": "Cu",
+    "NFM": "Cu",
+    "COD": "Cu",
+    "CYM": "Cu",
+    "EM2": "Cu",
+    "FFM": "Cu",
+    "GRE": "Cu",
+    "HAV": "Cu",
+    "HCH": "Cu",
+    "KGL": "Cu",
+    "NRX": "Cu",
+    "ORN": "Cu",
+    "PEX": "Cu",
+    "QML": "Cu",
+    "RRR": "Cu",
+    "SVY": "Cu",
+    "CLA": "Cu",
+    "CST": "Cu",
+    "PSC": "Cu",
+    "PXX": "Cu",
+    "ALY": "Cu",
+    "HMX": "Cu",
+    "HOR": "Cu",
+    "AM5": "Cu",
+    "WCN": "Cu",
+    "KAO": "Cu",
+    "PDN": "U",
+    "BOE": "U",
+    "PEN": "U",
+    "LOT": "U",
+    "NXG": "U",
+    "AGE": "U",
+    "BMN": "U",
+    "DYL": "U",
+    "AEU": "U",
+    "BKY": "U",
+    "LAM": "U",
+    "AEE": "U",
+    "ETM": "U",
+    "1AE": "U",
+    "AKN": "U",
+    "OSM": "U",
+    "USC": "U",
+    "HAR": "U",
+    "AMU": "U",
+    "EME": "U",
+    "BRY": "U",
+    "AS2": "U",
+    "ASN": "U",
+    "BSN": "U",
+    "CML": "U",
+    "CR3": "U",
+    "DEV": "U",
+    "EPM": "U",
+    "FSY": "U",
+    "HRE": "U",
+    "I88": "U",
+    "KOB": "U",
+    "MEX": "U",
+    "MOM": "U",
+    "ORP": "U",
+    "PR2": "U",
+    "REC": "U",
+    "SBR": "U",
+    "T92": "U",
+    "THR": "U",
+    "C29": "U",
+    "ALV": "DCP",
+    "CZN": "DCP",
+    "EL8": "DCP",
+    "ENT": "DCP",
+    "GHM": "DCP",
+    "T88": "DCP",
+    "TAR": "DCP",
+    "SNM": "DCP",
+    "DYM": "DCP",
+    "TRE": "DCP",
+    "PGD": "DCP",
+    "ALR": "DCP",
+    "BSX": "DCP",
+    "PC2": "DCP",
+    "CXU": "DCP",
+    "VAL": "DCP",
+    "CMO": "DCP"
+  }
+}
