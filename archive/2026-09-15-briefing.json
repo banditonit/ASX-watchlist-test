@@ -1,0 +1,900 @@
+{
+  "lead": "Evolution's investor briefing dominated the window, laying out FY27 discovery and development plans across Cowal, Northparkes and Ernest Henry alongside record capital returns, while corporate activity elsewhere centred on Hancock Prospecting's A$8.8 million strategic stake in White Cliff Minerals and a wave of placements funding drilling from Manhattan Gold to Barys Resources.",
+  "subtitle": "Evolution's Tier 1 growth pipeline and Hancock's White Cliff stake set the pace, with placements and entitlement offers funding drilling across the smaller end.",
+  "subject": "EVN lifts FY27 exploration to A$130-160M, WCN lands Hancock's A$8.8M stake",
+  "watch_items": [
+    "EVN: FY27 guidance of 660,000 to 730,000oz gold and 63,000 to 70,000t copper at AISC A$1,795 to A$1,995/oz, with studies at Northparkes' MJH and E44 expansions due FY27.",
+    "WCN: EGM expected around 19 October 2026 to approve Hancock's 13.5% placement; drilling at Rae to accelerate on completion.",
+    "MHC: Tranche 1 of the A$4.5 million placement settles 21 September 2026, Tranche 2 subject to shareholder approval at the 6 November 2026 AGM.",
+    "MAT: Devon Gold Project in administration with KordaMentha after receivership dispute with contractor Blue Cap Mining; shares remain suspended pending operational review.",
+    "PGL: PFS infill drilling due in October 2026 with an updated Mt York MRE targeted for early 2027.",
+    "BH6: Geophysics at Icebreaker due to finish mid-October 2026, ahead of second rig sulphide drilling and a Q4 2026 oxide MRE."
+  ],
+  "day_in_brief": "Corporate and funding: Hancock Prospecting will subscribe for A$8,768,457 in White Cliff Minerals at A$0.017 per share, taking approximately 13.5% subject to an EGM around 19 October 2026, to accelerate drilling at the Rae Copper Project. Manhattan Gold moved on two fronts, a A$4.5 million placement explaining its 11 September 2026 trading halt to fund over 4,000m of further RC drilling at Hook Lake, and a separate A$3.36 million tranche under its 7.1/7.1A capacity for shares due 21 September 2026. Barys Resources launched a 1-for-1 renounceable entitlement offer at A$0.01 per share to raise up to A$2,640,339 (41% discount to last close), partially underwritten by Mahe Capital, closing 7 October 2026. Kalgoorlie Gold Mining re-lodged corrected paperwork for its unchanged 1-for-10 offer at A$0.02, closing 6 October 2026. Evolution and project studies: Evolution's investor briefing set FY27 group exploration guidance of A$130 million to A$160 million and 360km to 400km of drilling, up from A$88 million and 260km in FY26, spanning Cowal's new underground and E41 expansion, Northparkes' 20km open pit program, and a 2.5km deep directional program at Ernest Henry. Four projects are in execution, Cowal's A$430 million Open Pit Continuation, Northparkes' A$545 million E22 block cave (first ore end FY30), a A$75 million coarse particle flotation upgrade, and the A$160 million Bert project at Ernest Henry (first ore FY29). Capital returns hit a record annual dividend of 41cps fully franked (A$833 million), with net cash and A$1.9 billion liquidity at June 2026. Drilling and resources: Astral reported Theia Deeps intercepts of 22m at 2.73g/t Au from 361m (including 0.3m at 133g/t Au) and 2m at 12.8g/t Au from 390m, extending mineralisation beneath the 1.74Moz Mandilla resource shell, with an updated estimate due March 2027. Patronus Gold's Mt York drilling returned 22m @ 1.29g/t Au from 321m and 9m @ 2.11g/t Au from 416m about 100m below the 2.1Moz resource, ahead of PFS infill in October. Broken Hill Gold began geophysics across Icebreaker and regional targets ahead of second-rig sulphide drilling, while Cosmo Metals secured approval to drill the Mona Cu-Au-Ag prospect following dump samples up to 4.93% Cu, 11.65g/t Au and 204g/t Ag. Corporate stress and smaller deals: Matsa's Devon Gold Project went into administration with KordaMentha after receivership action by contractor Blue Cap Mining despite a A$22.8 million payment to clear invoices, with shares suspended pending review. Brightstar and Panther struck a A$350,000 Mikado tenement sale plus a 50:50 Burtville East processing HOA, referencing a prior scoping study outlining 112kt @ 2.46g/t Au (~8,900oz) and an NPV of A$26.6 million. Thor Energy received the first A$1,312,500 deferred payment from the Molyhil sale, lifting cash to A$2.95 million, while Maritana settled drilling invoices via a A$242,099 scrip issue.",
+  "rows": [
+    {
+      "ticker": "BRY",
+      "company": "BARYS RESOURCES LIMITED",
+      "announcement": "1-for-1 entitlement offer at A$0.01, up to A$2.64 million",
+      "type": null,
+      "date": "14 September 2026",
+      "document_key": "2924-03135318-6A1343735",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135318-6A1343735"
+    },
+    {
+      "ticker": "EVN",
+      "company": "EVOLUTION MINING LIMITED",
+      "announcement": "FY27 exploration guidance A$52M to A$62M, 360km to 400km drilling",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135569-2A1697185",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135569-2A1697185"
+    },
+    {
+      "ticker": "BNZ",
+      "company": "BENZ MINING CORP.",
+      "announcement": "Quarterly loss widens to C$28.1M on higher exploration spend",
+      "type": null,
+      "date": "14 September 2026",
+      "document_key": "2924-03135325-6A1343739",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135325-6A1343739"
+    },
+    {
+      "ticker": "MHC",
+      "company": "MANHATTAN GOLD CORPORATION LIMITED",
+      "announcement": "A$4.5m Placement at $0.02 to fund Hook Lake drilling",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135520-6A1343802",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135520-6A1343802"
+    },
+    {
+      "ticker": "EVN",
+      "company": "EVOLUTION MINING LIMITED",
+      "announcement": "Investor briefing sets out growth studies across Cowal, Northparkes, Ernest Henry",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135567-2A1697184",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135567-2A1697184"
+    },
+    {
+      "ticker": "PGL",
+      "company": "PILBARA GOLD LIMITED",
+      "announcement": "5m @ 7.91g/t Au from 29m (26MYRC025)",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135437-3A701736",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135437-3A701736"
+    },
+    {
+      "ticker": "BTR",
+      "company": "BRIGHTSTAR RESOURCES LIMITED",
+      "announcement": "Acquires Mikado tenements for A$350,000, Panther HOA on Burtville East",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135401-6A1343770",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135401-6A1343770"
+    },
+    {
+      "ticker": "AAR",
+      "company": "ASTRAL RESOURCES NL",
+      "announcement": "22m @ 2.73g/t Au from 361m (AMRCD375)",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135524-6A1343822",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135524-6A1343822"
+    },
+    {
+      "ticker": "BH6",
+      "company": "BROKEN HILL GOLD LTD",
+      "announcement": "IP and magnetics survey underway at White Dam, 2nd rig mobilising",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135367-3A701717",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135367-3A701717"
+    },
+    {
+      "ticker": "BTR",
+      "company": "BRIGHTSTAR RESOURCES LIMITED",
+      "announcement": "Sells Mikado tenure to Brightstar for A$350,000 cash",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135375-6A1343777",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135375-6A1343777"
+    },
+    {
+      "ticker": "WCN",
+      "company": "WHITE CLIFF MINERALS LIMITED",
+      "announcement": "Hancock Prospecting takes 13.5% stake via A$8.8M placement",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135475-6A1343788",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135475-6A1343788"
+    },
+    {
+      "ticker": "EVN",
+      "company": "EVOLUTION MINING LIMITED",
+      "announcement": "Record FY26 dividend 41cps fully franked, A$833M",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135570-2A1697186",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135570-2A1697186"
+    },
+    {
+      "ticker": "CMO",
+      "company": "COSMO METALS LIMITED",
+      "announcement": "Approval granted for maiden 8-hole, ~2,200m drilling at Mona",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135362-6A1343772",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135362-6A1343772"
+    },
+    {
+      "ticker": "MAT",
+      "company": "MATSA RESOURCES LIMITED",
+      "announcement": "Receivers appointed to Devon subsidiaries after BCM contractor dispute",
+      "type": null,
+      "date": "14 September 2026",
+      "document_key": "2924-03135076-6A1343640",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135076-6A1343640"
+    },
+    {
+      "ticker": "BRY",
+      "company": "BARYS RESOURCES LIMITED",
+      "announcement": "1-for-1 entitlement offer at 1.0 cent to raise up to A$2.6M",
+      "type": null,
+      "date": "14 September 2026",
+      "document_key": "2924-03135313-6A1343730",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135313-6A1343730"
+    },
+    {
+      "ticker": "CR3",
+      "company": "CORE ENERGY MINERALS LTD",
+      "announcement": "Drill tender launched for 2,500m/15-hole RC/D program, Barking Gecko",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135485-2A1697151",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135485-2A1697151"
+    },
+    {
+      "ticker": "BRY",
+      "company": "BARYS RESOURCES LIMITED",
+      "announcement": "1-for-1 entitlement offer to raise up to A$2.64M at A$0.01",
+      "type": null,
+      "date": "14 September 2026",
+      "document_key": "2924-03135324-6A1343743",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135324-6A1343743"
+    },
+    {
+      "ticker": "SLS",
+      "company": "SOLSTICE MINERALS LIMITED",
+      "announcement": "500,000 shares issued at A$2.30 for Yundamindra ground rights",
+      "type": null,
+      "date": "14 September 2026",
+      "document_key": "2924-03135302-6A1343725",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135302-6A1343725"
+    },
+    {
+      "ticker": "MHC",
+      "company": "MANHATTAN GOLD CORPORATION LIMITED",
+      "announcement": "Placement of 57.0M shares at A$0.02 to raise A$1.14 million",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135522-6A1343815",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135522-6A1343815"
+    },
+    {
+      "ticker": "MHC",
+      "company": "MANHATTAN GOLD CORPORATION LIMITED",
+      "announcement": "Placement of 168.0M shares at A$0.02 to raise A$3.36M",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135521-6A1343809",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135521-6A1343809"
+    },
+    {
+      "ticker": "MRT",
+      "company": "MARITANA MINERALS LIMITED",
+      "announcement": "347,797 shares issued to driller in lieu of cash, A$242,099",
+      "type": null,
+      "date": "14 September 2026",
+      "document_key": "2924-03135335-6A1343751",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135335-6A1343751"
+    },
+    {
+      "ticker": "THR",
+      "company": "THOR ENERGY PLC",
+      "announcement": "A$1.3125m first deferred payment received from Tivan",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135533-2A1697164",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135533-2A1697164"
+    },
+    {
+      "ticker": "WCN",
+      "company": "WHITE CLIFF MINERALS LIMITED",
+      "announcement": "515.8M shares at A$0.017 to raise ~A$8.8M",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135476-6A1343789",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135476-6A1343789"
+    },
+    {
+      "ticker": "AKN",
+      "company": "AUKING MINING LIMITED",
+      "announcement": "Board approves ~1,000m diamond hole at Tundulu",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135416-2A1697122",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135416-2A1697122"
+    },
+    {
+      "ticker": "KAL",
+      "company": "KALGOORLIE GOLD MINING LIMITED",
+      "announcement": "Corrects issue date on entitlement offer Appendix 3B",
+      "type": null,
+      "date": "14 September 2026",
+      "document_key": "2924-03135340-6A1343755",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135340-6A1343755"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "BRY",
+      "heading": "Barys Resources launches renounceable entitlement offer",
+      "body": "Barys Resources has lodged a prospectus for a 1-for-1 renounceable entitlement offer priced at A$0.01 per share, seeking to raise up to A$2,640,339 before costs via up to 264,033,878 new shares. The raise is partially underwritten by Mahe Capital. The offer opens 23 September 2026 and is expected to close 7 October 2026.",
+      "document_key": "2924-03135318-6A1343735",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135318-6A1343735"
+    },
+    {
+      "ticker": "EVN",
+      "heading": "Evolution lifts FY27 exploration spend and drilling metres",
+      "body": "Evolution's investor briefing sets out FY27 discovery plans across Cowal, Northparkes and Ernest Henry, with group exploration guidance of A$130 million to A$160 million and 360km to 400km of planned drilling, up from A$88 million and 260km in FY26. Cowal targets a new underground mine and E41 expansion, Northparkes an aggressive 20km open pit program following maiden Major Tom and E51 Mineral Resources, and Ernest Henry a 2.5km deep directional drilling program to test main orebody extensions at depth.",
+      "document_key": "2924-03135569-2A1697185",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135569-2A1697185"
+    },
+    {
+      "ticker": "BNZ",
+      "heading": "Benz Mining reports sharply higher quarterly exploration spend and loss",
+      "body": "Benz Mining's unaudited accounts for the three months to 31 July 2026 show exploration and evaluation costs of C$26.97 million, up from C$3.31 million a year earlier, driving a net loss of C$28.11 million. Cash fell to C$53.05 million from C$81.25 million at 30 April 2026 after C$28.32 million used in operating activities. Accumulated deficit stands at C$108.36 million.",
+      "document_key": "2924-03135325-6A1343739",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135325-6A1343739"
+    },
+    {
+      "ticker": "MHC",
+      "heading": "Manhattan secures A$4.5 million to progress Hook Lake drilling",
+      "body": "Manhattan Gold has received firm commitments for a two-tranche placement of up to A$4.5 million at $0.02 per share, a 20% discount to last close, explaining the trading halt entered on 11 September 2026. Proceeds fund over 4,000m of further RC drilling and 14 drillhole assays across Hook Lake, including Jaws, Spectre, Quantum, Lotus and Omega. Tranche 1 settles 21 September 2026, with Tranche 2 subject to shareholder approval at the 6 November 2026 AGM.",
+      "document_key": "2924-03135520-6A1343802",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135520-6A1343802"
+    },
+    {
+      "ticker": "EVN",
+      "heading": "Evolution details project pipeline and Tier 1 growth studies",
+      "body": "Evolution's investor briefing outlines four projects in execution: Cowal's A$430 million Open Pit Continuation, Northparkes' A$545 million E22 block cave (first ore end FY30), a A$75 million coarse particle flotation upgrade targeting about 2% recovery uplift and 8Mtpa throughput, and the A$160 million Bert project at Ernest Henry for first ore in FY29. Cowal is framed around a 10Moz mineral resource and pathway to a Tier 1 asset, while Northparkes carries a 630Mt mineral resource. Studies at Northparkes' expansion, including MJH and E44, are due for completion in FY27.",
+      "document_key": "2924-03135567-2A1697184",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135567-2A1697184"
+    },
+    {
+      "ticker": "PGL",
+      "heading": "More wide, high-grade hits at Mt York ahead of PFS",
+      "body": "Infill and extensional drilling at Main Hill and Breccia Hill continues to support growth of the 2.1Moz Mt York resource, with mineralisation traced over a 4.2km strike and remaining open at depth. Hole 26MYRCD007 hit 22m @ 1.29g/t Au from 321m and 9m @ 2.11g/t Au from 416m, about 100m below the current resource. The 60,000m program is 36,600m complete, with PFS infill drilling due in October and an updated MRE targeted for early 2027.",
+      "document_key": "2924-03135437-3A701736",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135437-3A701736"
+    },
+    {
+      "ticker": "BTR",
+      "heading": "Brightstar buys Mikado tenements, strikes Panther processing HOA",
+      "body": "Brightstar has signed a binding agreement to acquire Panther Metals' five Mikado exploration licences adjacent to its 1.5Mtpa Laverton plant for A$350,000 cash, supporting a haul road and future 2.5Mtpa expansion. It has also signed a non-binding Heads of Agreement to mine and process Panther's Burtville East deposit, sharing net proceeds 50:50 after cost recovery. Panther's 2025 scoping study on Burtville East outlined production of 112kt @ 2.46g/t Au (~8,900oz) with an NPV of A$26.6 million. Next milestone is definitive agreements for the Strategic Partnership.",
+      "document_key": "2924-03135401-6A1343770",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135401-6A1343770"
+    },
+    {
+      "ticker": "AAR",
+      "heading": "Theia Deeps diamond drilling extends high-grade gold below resource",
+      "body": "Astral reports assay results from two further diamond holes at the Theia Deposit within its 100%-owned Mandilla Gold Project. AMRCD375 returned 22m at 2.73g/t Au from 361m, including 0.3m at 133g/t Au, while AMRCD424 returned 2m at 12.8g/t Au from 390m, both extending mineralisation beneath the April 2026 1.74Moz Mineral Resource shell. Fifteen of the planned 21 diamond holes (11,000m) are complete, with results to feed an updated Mandilla resource estimate expected in the March 2027 quarter.",
+      "document_key": "2924-03135524-6A1343822",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135524-6A1343822"
+    },
+    {
+      "ticker": "BH6",
+      "heading": "Icebreaker geophysics program begins ahead of deeper sulphide drilling",
+      "body": "Broken Hill Gold has started a 48 line-km IP and 670 line-km ground magnetics survey across Icebreaker and regional prospects including Vertigo, White Dam East, Mary Mine, Green & Gold and Wilkins. Geophysics is due to finish by mid-October 2026, after which a second rig mobilising this week will drill test the Icebreaker sulphide zone at depth and targets beneath the Vertigo and Hannaford pits. An updated oxide Mineral Resource Estimate is expected in the fourth quarter of 2026.",
+      "document_key": "2924-03135367-3A701717",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135367-3A701717"
+    },
+    {
+      "ticker": "BTR",
+      "heading": "Panther sells Mikado tenure to Brightstar, HOA on Burtville East",
+      "body": "Panther has signed a binding agreement to sell its five-licence Mikado Gold Project to Brightstar Resources for A$350,000 cash, tenure adjacent to Brightstar's developing Laverton processing infrastructure. The companies have also entered a non-binding Heads of Agreement for Brightstar to fund and manage mining and processing of Panther's Burtville East Gold Project, sharing net proceeds 50:50 after cost recovery. The arrangement remains subject to a Mine Plan and Budget and binding documentation.",
+      "document_key": "2924-03135375-6A1343777",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135375-6A1343777"
+    },
+    {
+      "ticker": "WCN",
+      "heading": "Hancock Prospecting acquires 13.5% strategic stake in White Cliff",
+      "body": "Hancock Prospecting will subscribe for 515,791,601 shares at A$0.017 each, raising A$8,768,457 and taking approximately 13.5% of White Cliff, subject to shareholder approval at an EGM expected around 19 October 2026. Proceeds will accelerate drilling at Rae, including Danvers 1, 2 and 3, sediment-hosted copper targets and regional prospects Thor, Rocket, Vision and Stark. This follows the prior day's trading halt.",
+      "document_key": "2924-03135475-6A1343788",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135475-6A1343788"
+    },
+    {
+      "ticker": "EVN",
+      "heading": "Evolution details capital management and record shareholder returns",
+      "body": "Evolution's CFO investor presentation highlights a record annual dividend of 41cps fully franked (A$833 million), including a 21cps final dividend up 62%, its 27th consecutive dividend. The company holds a net cash position with A$1.9 billion liquidity at June 2026 and no debt due until FY29. FY27 guidance targets 660,000 to 730,000oz gold and 63,000 to 70,000 tonnes copper at group AISC of A$1,795 to A$1,995 per ounce.",
+      "document_key": "2924-03135570-2A1697186",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135570-2A1697186"
+    },
+    {
+      "ticker": "CMO",
+      "heading": "Cosmo gets green light to drill Mona Cu-Au-Ag prospect",
+      "body": "Cosmo Metals has received NSW Resources Regulator approval for its first ever drilling beneath the historic Mona VMS mine at Bingara, up to 8 holes for about 2,200m. The program follows mine dump samples grading up to 4.93% Cu, 11.65g/t Au and 204g/t Ag, targeting both the copper-rich VMS lode and a potential precious metals feeder zone. Drilling contractor mobilisation is being progressed alongside landholder engagement.",
+      "document_key": "2924-03135362-6A1343772",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135362-6A1343772"
+    },
+    {
+      "ticker": "MAT",
+      "heading": "Devon Gold Project thrown into receivership amid contractor dispute",
+      "body": "Mining contractor Blue Cap Mining suspended Devon operations and, despite Matsa paying A$22.8 million to clear invoices, appointed KPMG as receivers over Devon-related assets, prompting Matsa to place Matsa Gold and Devon Gold Mining into administration with KordaMentha. Matsa disputes BCM's further profit-share claim and will defend the action. Shares stay suspended pending completion of the Devon operational review.",
+      "document_key": "2924-03135076-6A1343640",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135076-6A1343640"
+    },
+    {
+      "ticker": "BRY",
+      "heading": "Barys launches A$2.6 million renounceable entitlement offer",
+      "body": "Barys Resources is raising up to A$2.6 million via a 1 for 1 renounceable entitlement offer at 1.0 cent per share, a 41% discount to the last close of A$0.017. The offer is partially underwritten to A$800,000 by Mahe Capital and closes 7 October 2026. Proceeds will fund exploration at the Dalnee and Karakul gold projects in Kazakhstan and gold-focused business development in Central Asia.",
+      "document_key": "2924-03135313-6A1343730",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135313-6A1343730"
+    },
+    {
+      "ticker": "CR3",
+      "heading": "CR3 starts drill contractor tender for maiden Barking Gecko program",
+      "body": "Core Energy Minerals has begun a tender process with local drilling contractors for a maiden RC/diamond program at the Barking Gecko prospect within the Nova JV project in Namibia. The initial campaign is planned at approximately 2,500m across 15 holes, including oriented diamond core to build a structural model and step-out traverses to test extensions to the known high-grade uranium mineralisation. A specialist structural geologist is being engaged to relog existing core ahead of rig mobilisation.",
+      "document_key": "2924-03135485-2A1697151",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135485-2A1697151"
+    },
+    {
+      "ticker": "BRY",
+      "heading": "Barys launches 1-for-1 renounceable entitlement offer",
+      "body": "Barys Resources will issue up to 264,033,878 new shares on a 1-for-1 basis at A$0.01 each, partially underwritten for A$800,000 (80,000,000 shares) by Mahe Capital. The offer closes on 7 October 2026 with issue on 14 October 2026, and proceeds will fund exploration on existing projects, project generation and new acquisitions.",
+      "document_key": "2924-03135324-6A1343743",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135324-6A1343743"
+    },
+    {
+      "ticker": "SLS",
+      "heading": "Solstice quotes shares issued for Yundamindra ground acquisition",
+      "body": "Solstice Minerals has applied for quotation of 500,000 fully paid ordinary shares, issued as non-cash consideration for rights over ground in the Yundamindra area of the Eastern Goldfields, Western Australia. The shares are valued at A$2.30 each, based on the closing price on 14 September 2026. Total quoted capital following the issue reaches 172,660,386 shares.",
+      "document_key": "2924-03135302-6A1343725",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135302-6A1343725"
+    },
+    {
+      "ticker": "MHC",
+      "heading": "Manhattan Gold to raise A$1.14 million via placement",
+      "body": "Manhattan Gold plans to issue 57,000,000 shares at A$0.02 each, raising A$1.14 million, with proceeds directed to completing the 2026 exploration drilling program at the Hook Lake Project. Joint lead managers Euroz Hartleys and Alpine Capital, and co-manager Leeuwin Wealth, will also receive 37,500,000 unlisted options exercisable at A$0.04 expiring 13 November 2029. The issue requires shareholder approval at a meeting on 6 November 2026, with securities to be issued 13 November 2026.",
+      "document_key": "2924-03135522-6A1343815",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135522-6A1343815"
+    },
+    {
+      "ticker": "MHC",
+      "heading": "Manhattan Gold to raise A$3.36 million via placement",
+      "body": "Manhattan Gold plans to issue 168,000,000 shares at A$0.02 each, raising A$3.36 million under its 7.1 and 7.1A placement capacity. Proceeds are earmarked for completing the 2026 exploration drilling program at the Hook Lake Project. Shares are due for issue on 21 September 2026, with Euroz Hartleys and Alpine Capital as joint lead managers.",
+      "document_key": "2924-03135521-6A1343809",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135521-6A1343809"
+    },
+    {
+      "ticker": "MRT",
+      "heading": "Maritana pays drilling contractor in scrip, not cash",
+      "body": "Maritana Minerals will issue 347,797 fully paid ordinary shares to Raglan Drilling Pty Ltd to settle August drilling invoices, in lieu of cash payment. The shares are priced at an average of 0.6961 cents each, worth about A$242,099, and issued under the company's 15% placement capacity without shareholder approval.",
+      "document_key": "2924-03135335-6A1343751",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135335-6A1343751"
+    },
+    {
+      "ticker": "THR",
+      "heading": "Thor receives first A$1.3m deferred payment from Molyhil sale",
+      "body": "Thor Energy has received A$1,312,500, its 75% share of the first of three annual deferred completion payments from Tivan Limited under the A$8.75 million Molyhil FRAM Joint Venture sale. The payment was split 50% cash and 50% Tivan shares (half escrowed for 6 months), lifting Thor's cash to A$2.95 million. Two further payments of A$1.3125m are due in September 2027 and September 2028, funding the HY-Range 2D seismic survey planned for Q4 2026.",
+      "document_key": "2924-03135533-2A1697164",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135533-2A1697164"
+    },
+    {
+      "ticker": "WCN",
+      "heading": "Placement to raise A$8.8 million at A$0.017 per share",
+      "body": "White Cliff Minerals plans to issue 515,791,601 new shares at A$0.017 each, raising approximately A$8.8 million, subject to shareholder approval at a meeting on 19 October 2026. Proceeds will fund expanded and accelerated drilling and exploration at the Rae Copper Project. Issue is expected on 23 October 2026.",
+      "document_key": "2924-03135476-6A1343789",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135476-6A1343789"
+    },
+    {
+      "ticker": "AKN",
+      "heading": "AuKing plans major 1,000m diamond hole at Tundulu",
+      "body": "AuKing's board has approved planning for a diamond drill hole targeting approximately 1,000m depth at the Tundulu Rare Earths Project in Malawi, testing the mineralised system at greater depth. The first two diamond holes reached 510.6m and 400.4m respectively, both intersecting carbonatite lithologies to end of hole. The deep hole forms part of the current budgeted program, following exceptional TREO assay results from the maiden RC drilling.",
+      "document_key": "2924-03135416-2A1697122",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135416-2A1697122"
+    },
+    {
+      "ticker": "KAL",
+      "heading": "KAL fixes administrative error in entitlement offer timetable",
+      "body": "Kalgoorlie Gold Mining has re-lodged its Appendix 3B solely to correct an incorrect issue date in the earlier filing. The 1-for-10 non-renounceable entitlement offer at A$0.02 per share remains unchanged, with a record date of 21 September 2026 and closing date of 6 October 2026. New shares are expected to be issued on 13 October 2026, with proceeds earmarked for exploration at the Pinjin Gold Project.",
+      "document_key": "2924-03135340-6A1343755",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135340-6A1343755"
+    }
+  ],
+  "other": [],
+  "_unverified": [
+    {
+      "ticker": "EVN",
+      "headline": "Discovery and exploration",
+      "figures": [
+        "52M"
+      ]
+    },
+    {
+      "ticker": "EVN",
+      "headline": "Capital management",
+      "figures": [
+        "1.9 billion"
+      ]
+    },
+    {
+      "ticker": "BRY",
+      "headline": "Proposed issue of securities - BRY",
+      "figures": [
+        "2.64M"
+      ]
+    },
+    {
+      "ticker": "MHC",
+      "headline": "Proposed issue of securities - MHC",
+      "figures": [
+        "1.14 m",
+        "1.14 m"
+      ]
+    },
+    {
+      "ticker": "MHC",
+      "headline": "Proposed issue of securities - MHC",
+      "figures": [
+        "3.36 m",
+        "3.36M"
+      ]
+    },
+    {
+      "ticker": "WCN",
+      "headline": "Proposed issue of securities - WCN",
+      "figures": [
+        "8.8 m",
+        "8.8M"
+      ]
+    }
+  ],
+  "also_lodged": [
+    {
+      "ticker": "KAL",
+      "company": "KALGOORLIE GOLD MINING LIMITED",
+      "headline": "Investor Presentation",
+      "document_key": "2924-03135482-6A1343808",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135482-6A1343808"
+    },
+    {
+      "ticker": "BOE",
+      "company": "BOSS ENERGY LTD",
+      "headline": "Boss Energy - 2026 Market Day Presentation",
+      "document_key": "2924-03135366-6A1343776",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135366-6A1343776"
+    },
+    {
+      "ticker": "EVN",
+      "company": "EVOLUTION MINING LIMITED",
+      "headline": "2026 Investor Briefing Presentations",
+      "document_key": "2924-03135557-2A1697175",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135557-2A1697175"
+    },
+    {
+      "ticker": "AKN",
+      "company": "AUKING MINING LIMITED",
+      "headline": "Investor Webinar Thursday 17 September 2026",
+      "document_key": "2924-03135431-2A1697082",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135431-2A1697082"
+    },
+    {
+      "ticker": "AUC",
+      "company": "AUSGOLD LIMITED",
+      "headline": "Becoming a substantial holder",
+      "document_key": "2924-03135374-6A1343782",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135374-6A1343782"
+    },
+    {
+      "ticker": "BMN",
+      "company": "BANNERMAN ENERGY LTD",
+      "headline": "Application for quotation of securities - BMN",
+      "document_key": "2924-03135472-6A1343799",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135472-6A1343799"
+    },
+    {
+      "ticker": "BMN",
+      "company": "BANNERMAN ENERGY LTD",
+      "headline": "Ceasing to be a substantial holder",
+      "document_key": "2924-03135331-6A1343752",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135331-6A1343752"
+    },
+    {
+      "ticker": "BMN",
+      "company": "BANNERMAN ENERGY LTD",
+      "headline": "Becoming a substantial holder",
+      "document_key": "2924-03135174-6A1343674",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135174-6A1343674"
+    },
+    {
+      "ticker": "BRY",
+      "company": "BARYS RESOURCES LIMITED",
+      "headline": "Proposed issue of securities - BRY",
+      "document_key": "2924-03135327-6A1343744",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135327-6A1343744"
+    },
+    {
+      "ticker": "CMO",
+      "company": "COSMO METALS LIMITED",
+      "headline": "Notice of General Meeting/Proxy Form",
+      "document_key": "2924-03135213-6A1343686",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135213-6A1343686"
+    },
+    {
+      "ticker": "DYL",
+      "company": "DEEP YELLOW LIMITED",
+      "headline": "Becoming a substantial holder",
+      "document_key": "2924-03135373-6A1343781",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135373-6A1343781"
+    },
+    {
+      "ticker": "KAL",
+      "company": "KALGOORLIE GOLD MINING LIMITED",
+      "headline": "Cleansing Statement",
+      "document_key": "2924-03135499-6A1343816",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135499-6A1343816"
+    },
+    {
+      "ticker": "KAO",
+      "company": "KAOKO METALS LIMITED",
+      "headline": "Issue of Shares and Cleansing Notice",
+      "document_key": "2924-03135551-6A1343830",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135551-6A1343830"
+    },
+    {
+      "ticker": "KAO",
+      "company": "KAOKO METALS LIMITED",
+      "headline": "Application for quotation of securities - KAO",
+      "document_key": "2924-03135519-6A1343823",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135519-6A1343823"
+    },
+    {
+      "ticker": "LOT",
+      "company": "LOTUS RESOURCES LIMITED",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03135185-6A1343678",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135185-6A1343678"
+    },
+    {
+      "ticker": "MPK",
+      "company": "MANY PEAKS MINERALS LTD",
+      "headline": "Application for quotation of securities - MPK",
+      "document_key": "2924-03135136-6A1343657",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135136-6A1343657"
+    },
+    {
+      "ticker": "PDI",
+      "company": "PDI GOLD LIMITED",
+      "headline": "Becoming a substantial holder",
+      "document_key": "2924-03135188-6A1343679",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135188-6A1343679"
+    },
+    {
+      "ticker": "PRU",
+      "company": "PERSEUS MINING LIMITED",
+      "headline": "Ceasing to be a substantial holder from MQG",
+      "document_key": "2924-03135311-6A1343729",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135311-6A1343729"
+    },
+    {
+      "ticker": "RRL",
+      "company": "REGIS RESOURCES LIMITED",
+      "headline": "Ceasing to be a substantial holder from MQG",
+      "document_key": "2924-03135312-6A1343731",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135312-6A1343731"
+    },
+    {
+      "ticker": "SLS",
+      "company": "SOLSTICE MINERALS LIMITED",
+      "headline": "Issue of Shares and Cleansing Notice",
+      "document_key": "2924-03135299-6A1343722",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135299-6A1343722"
+    },
+    {
+      "ticker": "WGX",
+      "company": "WESTGOLD RESOURCES LIMITED.",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03135296-6A1343720",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135296-6A1343720"
+    },
+    {
+      "ticker": "AAR",
+      "company": "ASTRAL RESOURCES NL",
+      "headline": "Change in substantial holding",
+      "document_key": "2924-03135330-6A1343750",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135330-6A1343750"
+    },
+    {
+      "ticker": "AUC",
+      "company": "AUSGOLD LIMITED",
+      "headline": "Notification of cessation of securities - AUC",
+      "document_key": "2924-03135241-6A1343693",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135241-6A1343693"
+    },
+    {
+      "ticker": "BGL",
+      "company": "BELLEVUE GOLD LIMITED",
+      "headline": "Notification regarding unquoted securities - BGL",
+      "document_key": "2924-03135297-6A1343721",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135297-6A1343721"
+    },
+    {
+      "ticker": "CLA",
+      "company": "CELSIUS RESOURCES LIMITED.",
+      "headline": "Notification regarding unquoted securities - CLA",
+      "document_key": "2924-03135206-6A1343683",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135206-6A1343683"
+    },
+    {
+      "ticker": "CMO",
+      "company": "COSMO METALS LIMITED",
+      "headline": "Letter to Shareholders - Notice of GM",
+      "document_key": "2924-03135215-6A1343687",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135215-6A1343687"
+    },
+    {
+      "ticker": "GG8",
+      "company": "GORILLA GOLD MINES LTD",
+      "headline": "Voluntary Escrow Release",
+      "document_key": "2924-03135202-6A1343681",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135202-6A1343681"
+    },
+    {
+      "ticker": "KAN",
+      "company": "KANTRA COPPER LTD",
+      "headline": "Appendix 2A",
+      "document_key": "2924-03135581-2A1697187",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135581-2A1697187"
+    },
+    {
+      "ticker": "MPK",
+      "company": "MANY PEAKS MINERALS LTD",
+      "headline": "Section 708(A) Cleansing Notice - Share Issue",
+      "document_key": "2924-03135138-6A1343658",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135138-6A1343658"
+    },
+    {
+      "ticker": "NST",
+      "company": "NORTHERN STAR RESOURCES LTD",
+      "headline": "Change of Director's Interest Notice",
+      "document_key": "2924-03135337-6A1343753",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135337-6A1343753"
+    },
+    {
+      "ticker": "SGC",
+      "company": "SINCLAIR GOLD LTD",
+      "headline": "Notification of cessation of securities - SGC",
+      "document_key": "2924-03135344-6A1343756",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135344-6A1343756"
+    },
+    {
+      "ticker": "WGX",
+      "company": "WESTGOLD RESOURCES LIMITED.",
+      "headline": "Update - Notification of buy-back - WGX",
+      "document_key": "2924-03135492-6A1343814",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135492-6A1343814"
+    }
+  ],
+  "commodities": [
+    [
+      "Au",
+      "Gold"
+    ],
+    [
+      "Cu",
+      "Copper"
+    ],
+    [
+      "U",
+      "Uranium"
+    ],
+    [
+      "DCP",
+      "DCP Watches"
+    ]
+  ],
+  "commodity_of": {
+    "MHC": "Au",
+    "SGC": "Au",
+    "ARV": "Au",
+    "AS1": "Au",
+    "BM1": "Au",
+    "BNZ": "Au",
+    "GBR": "Au",
+    "GBM": "Au",
+    "GG8": "Au",
+    "GML": "Au",
+    "GSN": "Au",
+    "JAV": "Au",
+    "KAL": "Au",
+    "LCL": "Au",
+    "LEX": "Au",
+    "OZM": "Au",
+    "BH6": "Au",
+    "SLS": "Au",
+    "STK": "Au",
+    "TOK": "Au",
+    "TOR": "Au",
+    "TTM": "Au",
+    "YRL": "Au",
+    "MPK": "Au",
+    "NVO": "Au",
+    "AAM": "Au",
+    "GA8": "Au",
+    "MBK": "Au",
+    "NWM": "Au",
+    "SMS": "Au",
+    "SKM": "Au",
+    "ARI": "Au",
+    "AAR": "Au",
+    "LAC": "Au",
+    "AUC": "Au",
+    "AUE": "Au",
+    "AZY": "Au",
+    "BGD": "Au",
+    "WAU": "Au",
+    "CAV": "Au",
+    "GPR": "Au",
+    "HRN": "Au",
+    "MRT": "Au",
+    "KZR": "Au",
+    "LGM": "Au",
+    "MAT": "Au",
+    "MI6": "Au",
+    "MM8": "Au",
+    "NXM": "Au",
+    "ODY": "Au",
+    "PDI": "Au",
+    "PTN": "Au",
+    "RXL": "Au",
+    "SMI": "Au",
+    "STM": "Au",
+    "STN": "Au",
+    "TAM": "Au",
+    "TCG": "Au",
+    "TSO": "Au",
+    "WGR": "Au",
+    "WIA": "Au",
+    "MEK": "Au",
+    "PRX": "Au",
+    "PGL": "Au",
+    "CRS": "Au",
+    "IDA": "Au",
+    "MAU": "Au",
+    "RDN": "Au",
+    "TMB": "Au",
+    "WSR": "Au",
+    "ADD": "Au",
+    "M3M": "Au",
+    "DTM": "Au",
+    "EVN": "Au",
+    "NST": "Au",
+    "BGL": "Au",
+    "BC8": "Au",
+    "BTR": "Au",
+    "CMM": "Au",
+    "CYL": "Au",
+    "EMR": "Au",
+    "GGP": "Au",
+    "GMD": "Au",
+    "KCN": "Au",
+    "NMG": "Au",
+    "OBM": "Au",
+    "PNR": "Au",
+    "PRU": "Au",
+    "RMS": "Au",
+    "RRL": "Au",
+    "RSG": "Au",
+    "SBM": "Au",
+    "VAU": "Au",
+    "WAF": "Au",
+    "WGX": "Au",
+    "ORE": "Au",
+    "BCN": "Au",
+    "29M": "Cu",
+    "SFR": "Cu",
+    "AIS": "Cu",
+    "CSC": "Cu",
+    "AUQ": "Cu",
+    "KAN": "Cu",
+    "ANX": "Cu",
+    "CVV": "Cu",
+    "NFM": "Cu",
+    "COD": "Cu",
+    "CYM": "Cu",
+    "EM2": "Cu",
+    "FFM": "Cu",
+    "GRE": "Cu",
+    "HAV": "Cu",
+    "HCH": "Cu",
+    "KGL": "Cu",
+    "NRX": "Cu",
+    "ORN": "Cu",
+    "PEX": "Cu",
+    "QML": "Cu",
+    "RRR": "Cu",
+    "SVY": "Cu",
+    "CLA": "Cu",
+    "CST": "Cu",
+    "PSC": "Cu",
+    "PXX": "Cu",
+    "ALY": "Cu",
+    "HMX": "Cu",
+    "HOR": "Cu",
+    "AM5": "Cu",
+    "WCN": "Cu",
+    "KAO": "Cu",
+    "PDN": "U",
+    "BOE": "U",
+    "PEN": "U",
+    "LOT": "U",
+    "NXG": "U",
+    "AGE": "U",
+    "BMN": "U",
+    "DYL": "U",
+    "AEU": "U",
+    "BKY": "U",
+    "LAM": "U",
+    "AEE": "U",
+    "ETM": "U",
+    "1AE": "U",
+    "AKN": "U",
+    "OSM": "U",
+    "USC": "U",
+    "HAR": "U",
+    "AMU": "U",
+    "EME": "U",
+    "BRY": "U",
+    "AS2": "U",
+    "ASN": "U",
+    "BSN": "U",
+    "CML": "U",
+    "CR3": "U",
+    "DEV": "U",
+    "EPM": "U",
+    "FSY": "U",
+    "HRE": "U",
+    "I88": "U",
+    "KOB": "U",
+    "MEX": "U",
+    "MOM": "U",
+    "ORP": "U",
+    "PR2": "U",
+    "REC": "U",
+    "SBR": "U",
+    "T92": "U",
+    "THR": "U",
+    "C29": "U",
+    "ALV": "DCP",
+    "CZN": "DCP",
+    "EL8": "DCP",
+    "ENT": "DCP",
+    "GHM": "DCP",
+    "T88": "DCP",
+    "TAR": "DCP",
+    "SNM": "DCP",
+    "DYM": "DCP",
+    "TRE": "DCP",
+    "PGD": "DCP",
+    "ALR": "DCP",
+    "BSX": "DCP",
+    "PC2": "DCP",
+    "CXU": "DCP",
+    "VAL": "DCP",
+    "CMO": "DCP"
+  }
+}
