@@ -1,0 +1,790 @@
+{
+  "lead": "Minerals 260's A$250 million placement, anchored by a A$30 million Franco-Nevada cornerstone, dominated the session, funding development of the 6.2Moz Bullabulling Gold Project toward a Final Investment Decision in early 2027 and lifting pro-forma cash to about A$633 million against an estimated A$855 million pre-production capital bill. Close behind, First Au's binding takeover of Javelin Minerals, an all-scrip deal valuing Javelin at approximately A$46.5 million and combining Gimlet, Riverina East, Eureka and Coogee into a roughly 350,600oz Kalgoorlie portfolio, reshapes the ownership map even as Javelin separately unwound its Eureka right-to-mine agreement with MEGA Resources.",
+  "subtitle": "Capital raisings and M&A reshape the Kalgoorlie gold scene while drilling extends resources from Serbia to Mali.",
+  "subject": "MI6 raises A$250M for Bullabulling; FirstAU to acquire JAV in scrip deal",
+  "watch_items": [
+    "USC's Bradda Head licence sale completion subject to Tanzanian regulatory approval by 15 October 2026 exclusivity deadline"
+  ],
+  "day_in_brief": "Corporate and funding: Minerals 260 secured firm commitments for A$250 million (including a A$30 million Franco-Nevada cornerstone) to advance Bullabulling toward FID in early 2027, while First Au agreed a binding all-scrip takeover of Javelin Minerals valuing it at approximately A$46.5 million and creating a combined ~350,600oz Kalgoorlie gold portfolio; Javelin separately terminated its Eureka right-to-mine agreement with MEGA Resources. Emerald Resources signed a US$200 million (scalable to US$400 million) acquisition facility with Sprott and Macquarie to pursue further gold project M&A, alongside ordering two SAG mills for Dingo Range and Memot at a combined circa A$30 million. Gateway Mining confirmed a Listing Rule 15.7 disclosure breach around its earlier A$45 million placement, since completed via a cleansing notice for 562,500,000 shares at A$0.08 each.\n\nResources and reserves: Meeka Metals lifted group resources to approximately 1.5Moz at 2.8g/t Au on the back of a maiden 270koz Mt Holland resource, with Ore Reserves at 355koz at 2.8g/t Au after depletion; Tolu Minerals grew Tolukuma to 909koz gold (4.31Mt at 6.57g/t Au) including a maiden 199koz Indicated component, lifting total reported gold resources to 1.04Moz with Saki included. Orezone's updated Casa Berardi plan outlined a 14-year, 1,630,000oz mine life at AISC of US$1,877/oz for an after-tax NPV5% of US$1.05 billion, rising to US$1.43 billion at spot gold prices.\n\nDrilling: Barton reported shallow high-grade hits at Tunkillia including 11m @ 8.73g/t Au from 68m, Turaco extended Begnopan's resource footprint with intercepts to 15m @ 3.41g/t Au from 124m, and Pantoro confirmed a 900m high-grade strike at Norseman's Racetrack Discovery including 2.0m @ 24.11g/t Au from 236.66m. Terrace Mining hit bonanza grades at Foroko near the Kobada plant (28m @ 8.86g/t Au from 188m, including 3m @ 61.2g/t), Strickland defined a new large-scale MT target at Obradov within its 9.25Moz Rogozna project, and Alvo secured its environmental licence for Phase 2 drilling at Palma's Touro corridor. Elsewhere, Atomic Eagle extended uranium mineralisation zones at Muntanga North and Namakande in Zambia, Dart Mining confirmed high-grade tin at Walwa in Victoria ahead of October drilling, and Kalamazoo consolidated a 15km gold-antimony corridor at Mt Piper.\n\nOther: US1 Critical Minerals agreed to divest its Mkuju, Foxy and Eland uranium licences to Bradda Head Lithium for up to US$1.8 million while retaining Lilombe, Basin Energy signed a no-cost federally backed research pact with James Cook University on rare earth extraction, and Maritana Minerals quoted shares issued to settle driller invoices. Quarterly filings from Chalice (FY26 net loss A$7.98 million including a A$5.85 million Lynn Lake impairment) and Deep Yellow (FY26 net cash A$160.0 million, debt-free, with Tumas FID delayed) round out the period, alongside routine governance statements.",
+  "rows": [
+    {
+      "ticker": "BGD",
+      "company": "BARTON GOLD HOLDINGS LIMITED",
+      "announcement": "11m @ 8.73g/t Au from 68m (TKB0674)",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135918-6A1343965",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135918-6A1343965"
+    },
+    {
+      "ticker": "MEK",
+      "company": "MEEKA METALS LIMITED",
+      "announcement": "Mineral Resource grows to ~1.5Moz @ 2.8g/t Au, Reserve 355koz @ 2.8g/t Au",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135953-6A1343975",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135953-6A1343975"
+    },
+    {
+      "ticker": "JAV",
+      "company": "JAVELIN MINERALS LIMITED",
+      "announcement": "All-scrip takeover by FirstAU at implied A$0.1153/share",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135986_PS-6A1343989",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135986_PS-6A1343989"
+    },
+    {
+      "ticker": "MI6",
+      "company": "MINERALS 260 LIMITED",
+      "announcement": "A$250 million placement at A$0.88/share for Bullabulling development",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135968-6A1343953",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135968-6A1343953"
+    },
+    {
+      "ticker": "MEK",
+      "company": "MEEKA METALS LIMITED",
+      "announcement": "Initial resource of 270koz @ 2.4g/t Au at Mt Holland",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135937-6A1343970",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135937-6A1343970"
+    },
+    {
+      "ticker": "STK",
+      "company": "STRICKLAND METALS LIMITED",
+      "announcement": "MT survey defines large new target at Obradov, Rogozna",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135957-6A1343981",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135957-6A1343981"
+    },
+    {
+      "ticker": "TCG",
+      "company": "TURACO GOLD LIMITED",
+      "announcement": "11m @ 4.33g/t Au from 72m (BEGRC0089)",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135860-6A1343940",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135860-6A1343940"
+    },
+    {
+      "ticker": "ORE",
+      "company": "OREZONE GOLD CORPORATION",
+      "announcement": "14yr LOM: 1.63Moz Au, AISC US$1,877/oz, after-tax NPV5% US$1.05B",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135878-6A1343948",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135878-6A1343948"
+    },
+    {
+      "ticker": "JAV",
+      "company": "JAVELIN MINERALS LIMITED",
+      "announcement": "Recommended all-scrip takeover by First Au at A$0.1153/share",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135988_NPS-6A1343996",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135988_NPS-6A1343996"
+    },
+    {
+      "ticker": "ALV",
+      "company": "ALVO MINERALS LIMITED",
+      "announcement": "9.3m @ 0.7% Cu, 1.6% Zn (1.4% CuEq) from 55.3m (PDT-117)",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135985-3A701864",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135985-3A701864"
+    },
+    {
+      "ticker": "TOK",
+      "company": "TOLU MINERALS LIMITED.",
+      "announcement": "Tolukuma MRE up 81% to 4.31Mt @ 6.57g/t Au for 909koz",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03136001-6A1343999",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03136001-6A1343999"
+    },
+    {
+      "ticker": "GML",
+      "company": "GATEWAY MINING LIMITED",
+      "announcement": "Admits breach of Listing Rule 15.7 over early slide disclosure",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135761-2A1697291",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135761-2A1697291"
+    },
+    {
+      "ticker": "PNR",
+      "company": "PANTORO GOLD LIMITED",
+      "announcement": "11.12m @ 5.48g/t Au from 488.6m (RXRCD26_038)",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135856-6A1343939",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135856-6A1343939"
+    },
+    {
+      "ticker": "TRE",
+      "company": "TOUBANI RESOURCES LIMITED",
+      "announcement": "28m @ 8.86g/t Au from 188m incl. 3m @ 61.2g/t Au (FORC26_107)",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135877-6A1343949",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135877-6A1343949"
+    },
+    {
+      "ticker": "AEU",
+      "company": "ATOMIC EAGLE LTD",
+      "announcement": "1.5m @ 1342ppm U3O8 from 22.1m (NADTH2357)",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135946-6A1343978",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135946-6A1343978"
+    },
+    {
+      "ticker": "DTM",
+      "company": "DART MINING NL",
+      "announcement": "3.96% Sn, 165ppm Ta grab sample confirms Walwa tin-tantalum",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135881-3A701832",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135881-3A701832"
+    },
+    {
+      "ticker": "KZR",
+      "company": "KALAMAZOO RESOURCES LIMITED",
+      "announcement": "Aircore drilling returns up to 155ppm Sb, 68ppb Au (WH26AC06)",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135922-6A1343967",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135922-6A1343967"
+    },
+    {
+      "ticker": "JAV",
+      "company": "JAVELIN MINERALS LIMITED",
+      "announcement": "Eureka right to mine deal with MEGA terminated by consent",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135965-6A1343959",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135965-6A1343959"
+    },
+    {
+      "ticker": "BSN",
+      "company": "BASIN ENERGY LIMITED",
+      "announcement": "CRA with JCU under RTCM Trailblazer program, no cash cost",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135799-6A1343915",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135799-6A1343915"
+    },
+    {
+      "ticker": "GML",
+      "company": "GATEWAY MINING LIMITED",
+      "announcement": "Cleansing notice for 562.5M shares at A$0.08",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135990-2A1697367",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135990-2A1697367"
+    },
+    {
+      "ticker": "USC",
+      "company": "US1 CRITICAL MINERALS LIMITED",
+      "announcement": "Sells Tanzanian uranium PLs to Bradda Head for up to US$1.8M",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135899-6A1343956",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135899-6A1343956"
+    },
+    {
+      "ticker": "MRT",
+      "company": "MARITANA MINERALS LIMITED",
+      "announcement": "347,797 shares quoted for drilling services payment",
+      "type": null,
+      "date": "15 September 2026",
+      "document_key": "2924-03135776-6A1343907",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135776-6A1343907"
+    },
+    {
+      "ticker": "EMR",
+      "company": "EMERALD RESOURCES NL",
+      "announcement": "US$200M acquisition facility from Sprott and Macquarie, scalable to US$400M",
+      "type": null,
+      "date": "16 September 2026",
+      "document_key": "2924-03135907-6A1343960",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135907-6A1343960"
+    }
+  ],
+  "summaries": [
+    {
+      "ticker": "BGD",
+      "heading": "Barton reports further high-grade shallow assays at Tunkillia",
+      "body": "New Phase 2 RC assays from Tunkillia's Starter Pits reinforce a shallow high-grade zone sitting above previously modelled mineralisation in the S1 and S2 pits. Best results include 11m @ 8.73g/t Au from 68m (TKB0674) and 50m @ 1.45g/t Au from 62m (TKB0668). Final assays are still pending, after which Barton will update its gold and silver JORC Mineral Resource Estimates ahead of a PFS targeted for Q1 CY27.",
+      "document_key": "2924-03135918-6A1343965",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135918-6A1343965"
+    },
+    {
+      "ticker": "MEK",
+      "heading": "Meeka lifts group resource to 1.5Moz on Mt Holland acquisition",
+      "body": "Meeka Metals' annual statement shows Group Mineral Resources growing to approximately 1.5Moz at 2.8g/t Au, driven by the newly acquired Mt Holland project in the Forrestania greenstone belt, which contributes an initial 270koz at 2.4g/t Au. Ore Reserves stand at 355koz at 2.8g/t Au after mining depletion and removal of the St Anne's open pit reserve. Management points to further growth from drilling at Murchison targets including Rosapenna and Turnberry, and from upcoming drilling at Mt Holland.",
+      "document_key": "2924-03135953-6A1343975",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135953-6A1343975"
+    },
+    {
+      "ticker": "JAV",
+      "heading": "FirstAU to acquire Javelin in recommended all-scrip takeover",
+      "body": "First Au has agreed to acquire Javelin under a binding Takeover Implementation Deed, offering 11.7647 FirstAU shares per Javelin share (0.5882 post 20:1 consolidation), implying A$0.1153 per share and valuing Javelin at approximately A$46.5 million. The deal combines Gimlet, Riverina East, Eureka and Coogee into a portfolio holding about 350,600oz of gold near Kalgoorlie. Javelin's Board unanimously recommends the offer, subject to an independent expert's report, with the offer period expected to run from 30 October 2026 to 30 November 2026.",
+      "document_key": "2924-03135986_PS-6A1343989",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135986_PS-6A1343989"
+    },
+    {
+      "ticker": "MI6",
+      "heading": "Minerals 260 raises A$250 million to fund Bullabulling development",
+      "body": "Minerals 260 has secured firm commitments for a two-tranche placement raising A$250 million at A$0.88 per share, including a A$30 million cornerstone from Franco-Nevada, to fund development of the 6.2Moz Bullabulling Gold Project near Kalgoorlie. A further A$30 million share purchase plan is also planned. Pro-forma cash rises to about A$633 million, against an estimated A$855 million pre-production capital requirement, with remaining funding targeted via project finance ahead of a Final Investment Decision in early 2027.",
+      "document_key": "2924-03135968-6A1343953",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135968-6A1343953"
+    },
+    {
+      "ticker": "MEK",
+      "heading": "Meeka defines maiden 270koz gold resource at Mt Holland",
+      "body": "Meeka Metals has reported an initial Mineral Resource of 270koz @ 2.4g/t Au across three deposits, Blue Vein, Bushpig and Razorback, on its 71km2 Mt Holland tenure in the Forrestania greenstone belt. The ground sits near the historic Bounty mine, which produced ~1.2Moz @ 5.12g/t Au, and all deposits remain open at depth. Little modern exploration has occurred on the tenure in around 15 years, with further drilling planned over the next 12 to 18 months.",
+      "document_key": "2924-03135937-6A1343970",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135937-6A1343970"
+    },
+    {
+      "ticker": "STK",
+      "heading": "New large-scale MT target emerges at Obradov, Rogozna",
+      "body": "A newly completed Magnetotelluric survey has defined a large low-resistivity/high chargeability anomaly beneath the Obradov prospect at Strickland's 9.25Moz AuEq Rogozna project in Serbia, coinciding with 2025 drilling that hit carbonate replacement style Pb-Zn-Ag mineralisation suggestive of a porphyry/skarn system. A new target has also emerged at Jezerska North, and MT shows a conductive feature extending 900m east of the known Jezerska porphyry. Strickland held $72 million cash and liquids at 30 June 2026, with drill testing of Obradov planned in coming months.",
+      "document_key": "2924-03135957-6A1343981",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135957-6A1343981"
+    },
+    {
+      "ticker": "TCG",
+      "heading": "Begnopan drilling extends Afema resource and strike",
+      "body": "Turaco's infill and step-out drilling at the Begnopan deposit, part of the 4.65Moz Afema project in Côte d'Ivoire, has confirmed both depth and strike extensions beyond the maiden 5.1Mt at 1.5g/t gold for 260koz resource. Best results from the first 69 of 113 new holes include 11m @ 4.33g/t Au from 72m and 15m @ 3.41g/t Au from 124m. Results will feed into an updated Afema MRE targeted for Q4 CY2026, ahead of the Definitive Feasibility Study.",
+      "document_key": "2924-03135860-6A1343940",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135860-6A1343940"
+    },
+    {
+      "ticker": "ORE",
+      "heading": "Orezone unveils Casa Berardi life-of-mine plan, US$1.05B NPV",
+      "body": "Orezone's updated Casa Berardi plan shows a 14-year mine life (2027 to 2040) producing 1,630,000oz gold at an average 116,000oz per annum, AISC of US$1,877/oz, and after-tax NPV5% of US$1.05 billion. NPV rises to US$1.43 billion at the US$4,350/oz spot gold price. Exploration is ramping toward 100,000m per annum, with a Heva-Hosco PEA due in the fourth quarter.",
+      "document_key": "2924-03135878-6A1343948",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135878-6A1343948"
+    },
+    {
+      "ticker": "JAV",
+      "heading": "First Au to acquire Javelin Minerals in scrip takeover",
+      "body": "First Au and Javelin have signed a binding Takeover Implementation Deed under which Javelin holders get 11.7647 new FirstAU shares per Javelin share (0.5882 post-consolidation), implying A$0.1153 per share and valuing Javelin at approximately A$46.5 million, a 40.6% premium to its 11 September 2026 close. The combined group would hold about 350,600oz of gold across Gimlet, Eureka and Coogee, with Javelin holders owning approximately 48.7% of the enlarged FirstAU. The offer is unanimously recommended, subject to a 50.1% minimum acceptance condition and an independent expert opinion, with the offer period expected to run to 30 November 2026.",
+      "document_key": "2924-03135988_NPS-6A1343996",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135988_NPS-6A1343996"
+    },
+    {
+      "ticker": "ALV",
+      "heading": "New targets defined along Touro corridor as drilling permit secured",
+      "body": "Reinterpretation of DHEM, IP and structural data has defined multiple untested targets along the 1.1km Touro corridor at the Palma Cu-Zn project in Brazil, including a new off-hole conductor around 10 times stronger than the original surface survey. Alvo has also received the environmental licence needed to start Phase 2 drilling, opening about 500m of previously inaccessible strike. Best results from the maiden campaign included 9.3m @ 0.7% Cu, 1.6% Zn (1.4% CuEq) from 55.3m (PDT-117). Phase 2 drilling is being planned to target the highest-conductance and Metal Factor anomalies.",
+      "document_key": "2924-03135985-3A701864",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135985-3A701864"
+    },
+    {
+      "ticker": "TOK",
+      "heading": "Tolukuma resource grows 81% to 909koz gold",
+      "body": "Tolu Minerals lifted the Tolukuma Gold Mine resource to 4.31Mt at 6.57g/t Au and 28.2g/t Ag for 909koz gold and 3.9Moz silver, including a maiden 199koz Indicated component. Combined with the Saki resource, Tolu's reported gold resources now total 1.04Moz. Only 10 of 44 interpreted veins are in the estimate, with a further drilling update due next quarter and a return to production targeted for early 2027.",
+      "document_key": "2924-03136001-6A1343999",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03136001-6A1343999"
+    },
+    {
+      "ticker": "GML",
+      "heading": "Gateway admits early disclosure breach at Gold Coast conference",
+      "body": "Gateway Mining has responded to an ASX query confirming a conference slide referencing its A$45 million placement was shown at 9:18am on 9 September 2026, before the placement announcement was released on MAP at 9:35am. The company accepts the display breached Listing Rule 15.7, though notes ASX trading had not yet opened so no trades occurred on the information. Gateway has outlined enhanced internal protocols, including real time MAP monitoring and buffer scheduling, to prevent recurrence.",
+      "document_key": "2924-03135761-2A1697291",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135761-2A1697291"
+    },
+    {
+      "ticker": "PNR",
+      "heading": "Racetrack drilling extends Norseman strike to 900m",
+      "body": "Pantoro Gold's infill and extensional drilling at the Racetrack Discovery, part of its 100%-owned Norseman Gold Project, has confirmed a high-grade mineralised zone over a strike extent of approximately 900m, from near surface to 600m depth and remaining open to the east and at depth. Best new results include 11.12m @ 5.48g/t Au from 488.6m and 2.0m @ 24.11g/t Au from 236.66m. An exploration decline from the OK Underground Mine will begin in the December 2026 quarter, providing access ahead of a maiden Mineral Resource estimate.",
+      "document_key": "2924-03135856-6A1343939",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135856-6A1343939"
+    },
+    {
+      "ticker": "TRE",
+      "heading": "Bonanza grades hit at Foroko, near Kobada plant",
+      "body": "Resource delineation drilling at Foroko, part of the Kobada Gold Project in Mali, has returned high grade results including 28m at 8.86g/t gold from 188m (incl. 3m at 61.2g/t) and 12m at 12.1g/t gold from 106m. Foroko sits 3km from the Kobada plant under construction, with first gold targeted Q3 2027. Results will feed into an updated Mineral Resource Estimate due early October 2026, ahead of an Ore Reserve and mine plan update in Q4 2026.",
+      "document_key": "2924-03135877-6A1343949",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135877-6A1343949"
+    },
+    {
+      "ticker": "AEU",
+      "heading": "Wide-spaced drilling extends Muntanga North and Namakande targets",
+      "body": "Atomic Eagle's exploration drilling has outlined a 600m by 200m mineralised zone at Muntanga North Target 5, open along strike and down dip, plus a 1,000m by 400m zone at Namakande Target 2, with best intercepts including 1.5m @ 1342ppm U3O8 from 22.1m and 5.55m @ 135.41ppm U3O8 at Muntanga North. Both zones remain early-stage, with follow-up drilling planned and Muntanga North Targets 6 to 8 still to be tested, expected to complete in Q4 2026.",
+      "document_key": "2924-03135946-6A1343978",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135946-6A1343978"
+    },
+    {
+      "ticker": "DTM",
+      "heading": "Dart Mining confirms high-grade tin at historic Walwa mine",
+      "body": "Rock chip assays from Dart Mining's June 2026 site visit to the historic Walwa (Mt Alwa) tin mine in Victoria returned up to 3.96% Sn with 165ppm Ta and 197ppm Nb, alongside elevated lithium, rubidium and caesium pointing to a fractionated tin-tantalum pegmatite system. A compilation of historical sampling, including up to 2.91% Sn at Mt Alwa South, supports the targets. Maiden diamond drilling is scheduled to start in October 2026 across nine planned sites.",
+      "document_key": "2924-03135881-3A701832",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135881-3A701832"
+    },
+    {
+      "ticker": "KZR",
+      "heading": "Kalamazoo secures 15km gold-antimony corridor at Mt Piper, Victoria",
+      "body": "Kalamazoo has consolidated a 100%-owned 1,574km2 exploration position at Mt Piper, including newly granted tenure at Seymour and Hughes Creek giving continuous coverage over a 15km structural corridor. First-pass aircore drilling at Whiteheads Hill (15 holes, 328m) returned up to 155ppm Sb and 68ppb Au, confirming in-situ mineralisation along a west-dipping structure. Rock chips at Kurkuruk returned up to 3.2g/t Au and 1,428ppm Sb over 670m of strike. Next phase work includes hyperspectral imagery and airborne gravity gradiometry to rank targets for staged drill testing.",
+      "document_key": "2924-03135922-6A1343967",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135922-6A1343967"
+    },
+    {
+      "ticker": "JAV",
+      "heading": "Javelin, MEGA end Eureka right to mine agreement",
+      "body": "Javelin Minerals and MEGA Resources have mutually terminated the right to mine agreement covering the Eureka Gold Project near Kalgoorlie, which had included A$25 million in project financing plus geological, engineering, mining and transport services. The parties cited developments around ore processing capacity availability in the Kalgoorlie region. MEGA remains a material shareholder after investing A$1,000,000 in Javelin's September 2025 placement.",
+      "document_key": "2924-03135965-6A1343959",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135965-6A1343959"
+    },
+    {
+      "ticker": "BSN",
+      "heading": "Basin signs federally backed research pact with JCU on REE extraction",
+      "body": "Basin Energy has executed a Collaborative Research Agreement with James Cook University under the Australian Government's RTCM Trailblazer program, running to 1 June 2029 at no cash cost to the company. The research targets improved extraction and project-specific flowsheets for heavy rare earth elements from the Sybella-Barkly / Newmans mineralisation in northwest Queensland. Basin contributes project data and sample archives, JCU owns resulting IP, and Basin receives a royalty-free, worldwide licence to apply it.",
+      "document_key": "2924-03135799-6A1343915",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135799-6A1343915"
+    },
+    {
+      "ticker": "GML",
+      "heading": "Gateway Mining issues cleansing notice for completed placement",
+      "body": "Gateway Mining formally issued 562,500,000 fully paid ordinary shares at A$0.08 each to institutional, professional and sophisticated investors, completing the placement announced on 9 September 2026. The notice confirms compliance with Chapter 2M and section 674 disclosure obligations, allowing the shares to trade without a prospectus. Results from ongoing exploration at the Yandal Project and other projects remain pending and will be released as available.",
+      "document_key": "2924-03135990-2A1697367",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135990-2A1697367"
+    },
+    {
+      "ticker": "USC",
+      "heading": "USC divests Mkuju, Foxy and Eland uranium licences to Bradda Head",
+      "body": "US1 Critical Minerals has agreed to transfer six Tanzanian PLs covering the Mkuju, Foxy and Eland projects to LSE AIM-listed Bradda Head Lithium. Consideration totals up to US$1.8 million: US$1,000,000 cash on completion, US$300,000 on BHL defining at least 25Mlb U3O8 (Indicated/Measured, NI 43-101), and US$500,000 on a definitive feasibility study leading to a mine-build decision. USC retains 100% of the Lilombe Project (PL13571/2025) and will keep evaluating it via detailed geological mapping. Completion is subject to Tanzanian regulatory approval, with a US$120,000 exclusivity fee repayable if completion does not occur by 15 October 2026.",
+      "document_key": "2924-03135899-6A1343956",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135899-6A1343956"
+    },
+    {
+      "ticker": "MRT",
+      "heading": "Maritana quotes shares issued to settle driller invoices",
+      "body": "Maritana Minerals has applied for quotation of 347,797 fully paid ordinary shares issued as non-cash consideration for drilling services. The shares were issued at an average price of 0.6961 cents, based on the 10-day VWAP across invoices received in August, valuing the issue at A$242,099. Total quoted ordinary shares on issue now stand at 372,883,195.",
+      "document_key": "2924-03135776-6A1343907",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135776-6A1343907"
+    },
+    {
+      "ticker": "EMR",
+      "heading": "Emerald secures US$200M acquisition facility from Sprott and Macquarie",
+      "body": "Emerald Resources has signed a mandate with Sprott Resource Lending and Macquarie Bank for a US$200 million Corporate Acquisition Facility, scalable to US$400 million via an accordion feature, to fund future gold project acquisitions. The five year facility sits alongside Emerald's circa A$500 million cash position, which fully funds development of the Dingo Range and Memot Gold Projects. The company has also ordered two 8,000kW Metso SAG mills and a crushing circuit at a combined cost of circa A$30 million for those projects.",
+      "document_key": "2924-03135907-6A1343960",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135907-6A1343960"
+    }
+  ],
+  "other": [
+    {
+      "ticker": "DYL",
+      "company": "DEEP YELLOW LIMITED",
+      "headline": "2026 Annual Report",
+      "summary": "FY26 net cash A$160.0m, debt free; Tumas FID delayed, no production revenue yet",
+      "document_key": "2924-03135892-6A1343954",
+      "market_cap": 1261647522,
+      "cap_label": "$1.3B",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135892-6A1343954"
+    },
+    {
+      "ticker": "DYL",
+      "company": "DEEP YELLOW LIMITED",
+      "headline": "Appendix 4G and Corporate Governance Statement",
+      "summary": "Corporate governance statement, no change to board",
+      "document_key": "2924-03135890-6A1343951",
+      "market_cap": 1261647522,
+      "cap_label": "$1.3B",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135890-6A1343951"
+    },
+    {
+      "ticker": "CZN",
+      "company": "CORAZON MINING LIMITED",
+      "headline": "Annual Report to shareholders",
+      "summary": "FY26 net loss A$7.98m (FY25: A$1.02m) incl A$5.85m non-cash Lynn Lake impairment; underlying loss A$1.19m; no dividend",
+      "document_key": "2924-03135734-6A1343883",
+      "market_cap": 26292218,
+      "cap_label": "$26m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135734-6A1343883"
+    },
+    {
+      "ticker": "CZN",
+      "company": "CORAZON MINING LIMITED",
+      "headline": "Corporate Governance Statement",
+      "summary": "Corporate governance statement, no change to board",
+      "document_key": "2924-03135738-6A1343885",
+      "market_cap": 26292218,
+      "cap_label": "$26m",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135738-6A1343885"
+    }
+  ],
+  "_unverified": [
+    {
+      "ticker": "USC",
+      "headline": "Tanzanian Uranium Tenements",
+      "figures": [
+        "1.8 m",
+        "1.8M"
+      ]
+    }
+  ],
+  "also_lodged": [
+    {
+      "ticker": "AS1",
+      "company": "ASARA RESOURCES LIMITED",
+      "headline": "Application for quotation of securities - AS1",
+      "document_key": "2924-03135720-3A701794",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135720-3A701794"
+    },
+    {
+      "ticker": "BMN",
+      "company": "BANNERMAN ENERGY LTD",
+      "headline": "Cleansing Notice",
+      "document_key": "2924-03135863-6A1343946",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135863-6A1343946"
+    },
+    {
+      "ticker": "BMN",
+      "company": "BANNERMAN ENERGY LTD",
+      "headline": "Change in substantial holding - MMAM",
+      "document_key": "2924-03135807-6A1343918",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135807-6A1343918"
+    },
+    {
+      "ticker": "GMD",
+      "company": "GENESIS MINERALS LIMITED",
+      "headline": "Becoming a substantial holder",
+      "document_key": "2924-03135822-6A1343931",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135822-6A1343931"
+    },
+    {
+      "ticker": "GML",
+      "company": "GATEWAY MINING LIMITED",
+      "headline": "Application for quotation of securities - GML",
+      "document_key": "2924-03135963-2A1697363",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135963-2A1697363"
+    },
+    {
+      "ticker": "MI6",
+      "company": "MINERALS 260 LIMITED",
+      "headline": "Proposed issue of securities - MI6",
+      "document_key": "2924-03135970-6A1343962",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135970-6A1343962"
+    },
+    {
+      "ticker": "MI6",
+      "company": "MINERALS 260 LIMITED",
+      "headline": "Proposed issue of securities - MI6",
+      "document_key": "2924-03135969-6A1343958",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135969-6A1343958"
+    },
+    {
+      "ticker": "MRT",
+      "company": "MARITANA MINERALS LIMITED",
+      "headline": "Cleansing Statement",
+      "document_key": "2924-03135775-6A1343908",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135775-6A1343908"
+    },
+    {
+      "ticker": "RMS",
+      "company": "RAMELIUS RESOURCES LIMITED",
+      "headline": "FY27 Guidance and Four Year plan conference call details",
+      "document_key": "2924-03135811-6A1343922",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135811-6A1343922"
+    },
+    {
+      "ticker": "CLA",
+      "company": "CELSIUS RESOURCES LIMITED.",
+      "headline": "Change of Director's Interest Notice",
+      "document_key": "2924-03135681-6A1343868",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135681-6A1343868"
+    },
+    {
+      "ticker": "CZN",
+      "company": "CORAZON MINING LIMITED",
+      "headline": "Appendix 4G",
+      "document_key": "2924-03135736-6A1343884",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135736-6A1343884"
+    },
+    {
+      "ticker": "DYL",
+      "company": "DEEP YELLOW LIMITED",
+      "headline": "2026 Annual General Meeting - Key Dates",
+      "document_key": "2924-03135859-6A1343944",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135859-6A1343944"
+    },
+    {
+      "ticker": "KAN",
+      "company": "KANTRA COPPER LTD",
+      "headline": "Notice under section 708A(5)(e) of the Corporations Act",
+      "document_key": "2924-03135743-2A1697287",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135743-2A1697287"
+    },
+    {
+      "ticker": "KZR",
+      "company": "KALAMAZOO RESOURCES LIMITED",
+      "headline": "Appendix 3Y",
+      "document_key": "2924-03135770-6A1343903",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135770-6A1343903"
+    },
+    {
+      "ticker": "LOT",
+      "company": "LOTUS RESOURCES LIMITED",
+      "headline": "Notification of cessation of securities - LOT",
+      "document_key": "2924-03135658-6A1343859",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135658-6A1343859"
+    },
+    {
+      "ticker": "PC2",
+      "company": "PC GOLD LTD",
+      "headline": "Date of AGM and Closing Date for Director Nominations",
+      "document_key": "2924-03135649-6A1343854",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135649-6A1343854"
+    },
+    {
+      "ticker": "QML",
+      "company": "QMINES LIMITED",
+      "headline": "Notification of cessation of securities - QML",
+      "document_key": "2924-03135739-6A1343886",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135739-6A1343886"
+    },
+    {
+      "ticker": "STN",
+      "company": "SATURN METALS LIMITED",
+      "headline": "Change of Director's Interest Notice",
+      "document_key": "2924-03135701-6A1343876",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135701-6A1343876"
+    },
+    {
+      "ticker": "STN",
+      "company": "SATURN METALS LIMITED",
+      "headline": "Notice Under Section 708A(5)(e) of the Corporations Act",
+      "document_key": "2924-03135699-6A1343875",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135699-6A1343875"
+    },
+    {
+      "ticker": "STN",
+      "company": "SATURN METALS LIMITED",
+      "headline": "Notification of cessation of securities - STN",
+      "document_key": "2924-03135697-6A1343874",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135697-6A1343874"
+    },
+    {
+      "ticker": "STN",
+      "company": "SATURN METALS LIMITED",
+      "headline": "Application for quotation of securities - STN",
+      "document_key": "2924-03135695-6A1343873",
+      "url": "https://asx.api.markitdigital.com/asx-research/1.0/file/2924-03135695-6A1343873"
+    }
+  ],
+  "commodities": [
+    [
+      "Au",
+      "Gold"
+    ],
+    [
+      "Cu",
+      "Copper"
+    ],
+    [
+      "U",
+      "Uranium"
+    ],
+    [
+      "DCP",
+      "DCP Watches"
+    ]
+  ],
+  "commodity_of": {
+    "MHC": "Au",
+    "SGC": "Au",
+    "ARV": "Au",
+    "AS1": "Au",
+    "BM1": "Au",
+    "BNZ": "Au",
+    "GBR": "Au",
+    "GBM": "Au",
+    "GG8": "Au",
+    "GML": "Au",
+    "GSN": "Au",
+    "JAV": "Au",
+    "KAL": "Au",
+    "LCL": "Au",
+    "LEX": "Au",
+    "OZM": "Au",
+    "BH6": "Au",
+    "SLS": "Au",
+    "STK": "Au",
+    "TOK": "Au",
+    "TOR": "Au",
+    "TTM": "Au",
+    "YRL": "Au",
+    "MPK": "Au",
+    "NVO": "Au",
+    "AAM": "Au",
+    "GA8": "Au",
+    "MBK": "Au",
+    "NWM": "Au",
+    "SMS": "Au",
+    "SKM": "Au",
+    "ARI": "Au",
+    "AAR": "Au",
+    "LAC": "Au",
+    "AUC": "Au",
+    "AUE": "Au",
+    "AZY": "Au",
+    "BGD": "Au",
+    "WAU": "Au",
+    "CAV": "Au",
+    "GPR": "Au",
+    "HRN": "Au",
+    "MRT": "Au",
+    "KZR": "Au",
+    "LGM": "Au",
+    "MAT": "Au",
+    "MI6": "Au",
+    "MM8": "Au",
+    "NXM": "Au",
+    "ODY": "Au",
+    "PDI": "Au",
+    "PTN": "Au",
+    "RXL": "Au",
+    "SMI": "Au",
+    "STM": "Au",
+    "STN": "Au",
+    "TAM": "Au",
+    "TCG": "Au",
+    "TSO": "Au",
+    "WGR": "Au",
+    "WIA": "Au",
+    "MEK": "Au",
+    "PRX": "Au",
+    "PGL": "Au",
+    "CRS": "Au",
+    "IDA": "Au",
+    "MAU": "Au",
+    "RDN": "Au",
+    "TMB": "Au",
+    "WSR": "Au",
+    "ADD": "Au",
+    "M3M": "Au",
+    "DTM": "Au",
+    "EVN": "Au",
+    "NST": "Au",
+    "BGL": "Au",
+    "BC8": "Au",
+    "BTR": "Au",
+    "CMM": "Au",
+    "CYL": "Au",
+    "EMR": "Au",
+    "GGP": "Au",
+    "GMD": "Au",
+    "KCN": "Au",
+    "NMG": "Au",
+    "OBM": "Au",
+    "PNR": "Au",
+    "PRU": "Au",
+    "RMS": "Au",
+    "RRL": "Au",
+    "RSG": "Au",
+    "SBM": "Au",
+    "VAU": "Au",
+    "WAF": "Au",
+    "WGX": "Au",
+    "ORE": "Au",
+    "BCN": "Au",
+    "29M": "Cu",
+    "SFR": "Cu",
+    "AIS": "Cu",
+    "CSC": "Cu",
+    "AUQ": "Cu",
+    "KAN": "Cu",
+    "ANX": "Cu",
+    "CVV": "Cu",
+    "NFM": "Cu",
+    "COD": "Cu",
+    "CYM": "Cu",
+    "EM2": "Cu",
+    "FFM": "Cu",
+    "GRE": "Cu",
+    "HAV": "Cu",
+    "HCH": "Cu",
+    "KGL": "Cu",
+    "NRX": "Cu",
+    "ORN": "Cu",
+    "PEX": "Cu",
+    "QML": "Cu",
+    "RRR": "Cu",
+    "SVY": "Cu",
+    "CLA": "Cu",
+    "CST": "Cu",
+    "PSC": "Cu",
+    "PXX": "Cu",
+    "ALY": "Cu",
+    "HMX": "Cu",
+    "HOR": "Cu",
+    "AM5": "Cu",
+    "WCN": "Cu",
+    "KAO": "Cu",
+    "PDN": "U",
+    "BOE": "U",
+    "PEN": "U",
+    "LOT": "U",
+    "NXG": "U",
+    "AGE": "U",
+    "BMN": "U",
+    "DYL": "U",
+    "AEU": "U",
+    "BKY": "U",
+    "LAM": "U",
+    "AEE": "U",
+    "ETM": "U",
+    "1AE": "U",
+    "AKN": "U",
+    "OSM": "U",
+    "USC": "U",
+    "HAR": "U",
+    "AMU": "U",
+    "EME": "U",
+    "BRY": "U",
+    "AS2": "U",
+    "ASN": "U",
+    "BSN": "U",
+    "CML": "U",
+    "CR3": "U",
+    "DEV": "U",
+    "EPM": "U",
+    "FSY": "U",
+    "HRE": "U",
+    "I88": "U",
+    "KOB": "U",
+    "MEX": "U",
+    "MOM": "U",
+    "ORP": "U",
+    "PR2": "U",
+    "REC": "U",
+    "SBR": "U",
+    "T92": "U",
+    "THR": "U",
+    "C29": "U",
+    "ALV": "DCP",
+    "CZN": "DCP",
+    "EL8": "DCP",
+    "ENT": "DCP",
+    "GHM": "DCP",
+    "T88": "DCP",
+    "TAR": "DCP",
+    "SNM": "DCP",
+    "DYM": "DCP",
+    "TRE": "DCP",
+    "PGD": "DCP",
+    "ALR": "DCP",
+    "BSX": "DCP",
+    "PC2": "DCP",
+    "CXU": "DCP",
+    "VAL": "DCP",
+    "CMO": "DCP"
+  }
+}
