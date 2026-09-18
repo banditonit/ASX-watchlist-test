@@ -26,9 +26,9 @@ Kale Pervan <kp@discoverycapital.com.au>
 Darcy Frazer <df@discoverycapital.com.au>
 #intern@discoverycapital.com.au
 df@discoverycapital.com.au
-mp@discoverycapital.com.au
-kw@discoverycapital.com.au
-am@discoverycapital.com.au
-kp@discoverycapital.com.au
+#mp@discoverycapital.com.au
+#kw@discoverycapital.com.au
+#am@discoverycapital.com.au
+#kp@discoverycapital.com.au
 ck@discoverycapital.com.au
-tye@collard.net.au
+#tye@collard.net.au
